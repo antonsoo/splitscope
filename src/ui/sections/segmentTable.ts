@@ -5,10 +5,33 @@ import { pick } from "../../core/types.js";
 import { el } from "../dom.js";
 import { formatPercent, formatSeconds } from "../format.js";
 
+/**
+ * Default "near-gold" tolerance: a percentage of the segment's own gold, floored at 1s —
+ * relative because a fixed number of seconds reads as "broken" on segments whose gold is
+ * well under a minute, where even normal run-to-run wobble exceeds it.
+ *
+ * 8%, not the 2% a first pass reached for: a gold is usually a genuine low-tail outlier —
+ * on this project's own sample data, gold sits roughly 15-25% below the *median* segment
+ * time, not a few percent. At 2% tolerance, 13 of 14 segments come out at flat 0% (checked
+ * empirically, not assumed); at 15%, several segments cross 70-80%, which stops meaning
+ * anything as "near gold". 8% is the value that actually produces a real spread on real
+ * data (0% to ~30% across this sample's segments) instead of a column that's uniformly
+ * one extreme or the other.
+ */
+const NEAR_GOLD_RELATIVE_TOLERANCE = 0.08;
+const NEAR_GOLD_MIN_TOLERANCE_SECONDS = 1;
+
 export interface SegmentTableOptions {
   readonly method: TimingMethod;
   readonly consistencyWindow: number;
-  readonly toleranceSeconds: number;
+  /** `null` means "auto": max(1s, {@link NEAR_GOLD_RELATIVE_TOLERANCE} of that segment's own gold). A number overrides it as a flat tolerance for every segment. */
+  readonly toleranceSeconds: number | null;
+}
+
+export function resolveTolerance(override: number | null, gold: number | null): number {
+  if (override !== null) return override;
+  if (gold === null) return NEAR_GOLD_MIN_TOLERANCE_SECONDS;
+  return Math.max(NEAR_GOLD_MIN_TOLERANCE_SECONDS, gold * NEAR_GOLD_RELATIVE_TOLERANCE);
 }
 
 /**
@@ -36,13 +59,8 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
     const pbDuration = pbSegmentDuration(run, i, options.method);
     const gold = pick(segment.bestSegmentTime, options.method);
     const save = saves[i] ?? null;
-    const stats = segmentConsistency(
-      run,
-      i,
-      options.method,
-      options.consistencyWindow,
-      options.toleranceSeconds,
-    );
+    const tolerance = resolveTolerance(options.toleranceSeconds, gold);
+    const stats = segmentConsistency(run, i, options.method, options.consistencyWindow, tolerance);
     const tier = consistencyTier(stats.stdDev, stats.median);
     const barWidth = save !== null && save > 0 ? Math.max(4, (save / maxSave) * 100) : 0;
 
@@ -68,6 +86,11 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
     ]);
   });
 
+  const toleranceRule =
+    options.toleranceSeconds === null
+      ? `within ${formatPercent(NEAR_GOLD_RELATIVE_TOLERANCE, 0)} of gold`
+      : `within ±${formatSeconds(options.toleranceSeconds, 1)}`;
+
   return el("div", { class: "panel", style: "overflow-x:auto" }, [
     el("table", { class: "seg-table" }, [
       el("thead", {}, [
@@ -79,7 +102,13 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
           el("th", {}, ["Median"]),
           el("th", {}, ["± IQR/2"]),
           el("th", {}, ["Consistency"]),
-          el("th", { title: "Share of recent attempts within tolerance of gold" }, ["Near-gold %"]),
+          el(
+            "th",
+            {
+              title: `Share of recent attempts ${toleranceRule} (min ${NEAR_GOLD_MIN_TOLERANCE_SECONDS}s)`,
+            },
+            [`Near-gold % (${toleranceRule})`],
+          ),
         ]),
       ]),
       el("tbody", {}, rows),

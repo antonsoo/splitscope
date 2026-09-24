@@ -25,7 +25,8 @@ interface AppState {
   isSample: boolean;
   method: TimingMethod;
   consistencyWindow: number;
-  toleranceSeconds: number;
+  /** null = auto (max(1s, 2% of that segment's gold)); a number is a flat-seconds override. */
+  toleranceSeconds: number | null;
   mcRecentWindow: number;
   mcSimulations: number;
   mcLookahead: number;
@@ -54,7 +55,7 @@ function defaultState(): AppState {
     isSample: false,
     method: "RealTime",
     consistencyWindow: 30,
-    toleranceSeconds: 1,
+    toleranceSeconds: null,
     mcRecentWindow: 30,
     mcSimulations: 8000,
     mcLookahead: 50,
@@ -347,6 +348,29 @@ export function mountApp(root: HTMLElement): void {
     ]);
   }
 
+  // The "near-gold" tolerance defaults to auto (see segmentTable.ts) rather than a flat number
+  // of seconds — this field is an override, not the primary control, so clearing it (empty
+  // input) goes back to auto instead of falling back to some other fixed number.
+  function toleranceField(value: number | null, onChange: (v: number | null) => void): HTMLElement {
+    return el("label", { class: "odds-field" }, [
+      "Near-gold tolerance",
+      el("input", {
+        type: "number",
+        min: "0",
+        max: "60",
+        step: "0.5",
+        placeholder: "auto",
+        value: value === null ? "" : String(value),
+        style: "width:70px",
+        onchange: (e: Event) => {
+          const raw = (e.target as HTMLInputElement).value.trim();
+          onChange(raw === "" ? null : Number(raw));
+        },
+      }),
+      el("span", { class: "val" }, [value === null ? "auto (8% of gold)" : `${value}s fixed`]),
+    ]);
+  }
+
   function renderContent(): HTMLElement {
     if (state.error) {
       return el("div", { class: "error-banner" }, [
@@ -428,9 +452,7 @@ export function mountApp(root: HTMLElement): void {
           numberField("Window", state.consistencyWindow, 3, Math.max(5, run.attempts.length), (v) =>
             setState({ consistencyWindow: v }),
           ),
-          numberField("Tolerance (s)", state.toleranceSeconds, 0, 30, (v) =>
-            setState({ toleranceSeconds: v }),
-          ),
+          toleranceField(state.toleranceSeconds, (v) => setState({ toleranceSeconds: v })),
         ],
         renderSegmentTable(run, {
           method: state.method,
