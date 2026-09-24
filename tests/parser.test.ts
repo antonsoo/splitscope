@@ -124,6 +124,27 @@ describe("parseRun — error handling", () => {
   });
 });
 
+describe("parseRun — malformed individual records don't abort the whole parse", () => {
+  it("skips an <Attempt> with no id attribute rather than throwing", () => {
+    const xml = `<?xml version="1.0"?><Run version="1.8.1">
+      <GameName>G</GameName><CategoryName>C</CategoryName>
+      <Offset>00:00:00</Offset><AttemptCount>2</AttemptCount>
+      <AttemptHistory>
+        <Attempt id="1" started="1/1/2026 0:00:00" isStartedSynced="True" ended="1/1/2026 0:01:00" isEndedSynced="True">
+          <RealTime>00:01:00.0000000</RealTime>
+        </Attempt>
+        <Attempt started="1/1/2026 0:02:00" isStartedSynced="True" ended="1/1/2026 0:03:00" isEndedSynced="True">
+          <RealTime>00:01:00.0000000</RealTime>
+        </Attempt>
+      </AttemptHistory>
+      <Segments><Segment><Name>A</Name></Segment></Segments>
+    </Run>`;
+    const run = parseRun(xml);
+    expect(run.attempts).toHaveLength(1);
+    expect(run.attempts[0]?.id).toBe(1);
+  });
+});
+
 describe("parseRun — odd but valid encodings (real files vary by editor/OS)", () => {
   const base = fixture("modern-full.lss");
 

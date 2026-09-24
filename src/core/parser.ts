@@ -130,17 +130,21 @@ function parseBool(text: string | undefined): boolean {
   return text === "True";
 }
 
-/** `AttemptHistory` (>= 1.5.0): one entry per attempt, with timestamps and pause time. */
+/**
+ * `AttemptHistory` (>= 1.5.0): one entry per attempt, with timestamps and pause time.
+ * An `<Attempt>` with no `id` attribute is skipped rather than aborting the whole parse —
+ * consistent with `parseRunHistory` below, and with `parseSegment`'s handling of a
+ * `SegmentHistory` `<Time>` with no `id`: one malformed record shouldn't cost a runner
+ * their entire history over a single corrupted entry.
+ */
 function parseAttemptHistory(version: Version, root: XmlNode): Attempt[] {
   return childArray(root, "AttemptHistory")
     .flatMap((container) => childArray(container, "Attempt"))
     .map((node): Attempt => {
       const idText = attr(node, "id");
-      if (idText === undefined) {
-        throw new LssParseError("An <Attempt> is missing its required id attribute.");
-      }
+      const id = idText === undefined ? Number.NaN : Number.parseInt(idText, 10);
       return {
-        id: Number.parseInt(idText, 10),
+        id,
         started: attr(node, "started") ?? null,
         isStartedSynced: parseBool(attr(node, "isStartedSynced")),
         ended: attr(node, "ended") ?? null,
