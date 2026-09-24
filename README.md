@@ -59,7 +59,8 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
 - **Reset analysis**: a survival curve (what share of attempts reach each
   segment) and a "where do runs die" histogram.
 - **Per-segment time distributions** as strip plots, so "inconsistent" is a
-  picture, not a guess.
+  picture, not a guess, plus each segment's full **gold history** — a
+  step-chart of every time a new record was set, across the whole run.
 - **PB odds** — the one number LiveSplit can't show you: a Monte Carlo
   simulation of your probability of beating your PB, on the next attempt or
   within the next *K*, with a confidence interval and its assumptions stated

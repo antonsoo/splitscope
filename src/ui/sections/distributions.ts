@@ -1,7 +1,11 @@
-/** Per-segment strip plot: every recent attempt's time as a dot, gold marked, median ticked. */
+/**
+ * Per-segment strip plot (every recent time as a dot, gold marked, median
+ * ticked) plus a gold-history sparkline: the step-down record of when each
+ * new segment gold was actually set, across the run's full history.
+ */
 
 import { mulberry32 } from "../../core/rng.js";
-import { segmentConsistency } from "../../core/stats.js";
+import { goldHistory, segmentConsistency } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { pick } from "../../core/types.js";
 import { niceDomain, scaleLinear } from "../charts/scale.js";
@@ -12,6 +16,9 @@ const WIDTH = 280;
 const HEIGHT = 86;
 const PAD_X = 12;
 const STRIP_Y = 46;
+
+const SPARK_HEIGHT = 40;
+const SPARK_PAD = 8;
 
 export interface DistributionsOptions {
   readonly method: TimingMethod;
@@ -105,6 +112,53 @@ function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGS
   );
 }
 
+/** Step-down sparkline of every new segment record, across the run's entire history. */
+function goldSparkline(run: Run, index: number, method: TimingMethod): HTMLElement {
+  const segment = run.segments[index];
+  const points = segment ? goldHistory(run, index, method) : [];
+
+  if (points.length === 0) {
+    return el("p", { class: "dist-cell-sub" }, ["no gold history yet"]);
+  }
+
+  const values = points.map((p) => p.seconds);
+  const [dMin, dMax] = niceDomain(Math.min(...values), Math.max(...values), 0.2);
+  const x = scaleLinear([0, Math.max(1, points.length - 1)], [SPARK_PAD, WIDTH - SPARK_PAD]);
+  const y = scaleLinear([dMin, dMax], [SPARK_PAD, SPARK_HEIGHT - SPARK_PAD]);
+
+  // A step-after path: hold each record's time flat until the attempt that beat it.
+  let path = `M${x(0)},${y(values[0] as number)}`;
+  for (let i = 1; i < points.length; i++) {
+    path += ` H${x(i)} V${y(values[i] as number)}`;
+  }
+  path += ` H${WIDTH - SPARK_PAD}`;
+
+  const svg = svgEl(
+    "svg",
+    {
+      viewBox: `0 0 ${WIDTH} ${SPARK_HEIGHT}`,
+      class: "chart-svg",
+      role: "img",
+      "aria-label": `${segment?.name ?? "segment"} gold history: ${points.length} record${points.length === 1 ? "" : "s"}, most recently ${formatSeconds(values[values.length - 1] ?? null)}`,
+    },
+    [
+      svgEl("path", { d: path, fill: "none", stroke: "var(--gold)", "stroke-width": "1.5" }),
+      ...points.map((p, i) =>
+        svgEl("circle", { cx: x(i), cy: y(p.seconds), r: 2, fill: "var(--gold)" }),
+      ),
+    ],
+  );
+
+  const first = formatSeconds(values[0] ?? null);
+  const latest = formatSeconds(values[values.length - 1] ?? null);
+  return el("div", {}, [
+    el("p", { class: "dist-cell-sub" }, [
+      `gold history: ${points.length} record${points.length === 1 ? "" : "s"}${points.length > 1 ? ` · ${first} → ${latest}` : ""}`,
+    ]),
+    svg,
+  ]);
+}
+
 export function renderDistributions(run: Run, options: DistributionsOptions): HTMLElement {
   const cells = run.segments.map((segment, i) => {
     const gold = pick(segment.bestSegmentTime, options.method);
@@ -112,6 +166,7 @@ export function renderDistributions(run: Run, options: DistributionsOptions): HT
       el("p", { class: "dist-cell-name" }, [segment.name]),
       el("p", { class: "dist-cell-sub" }, [`gold ${formatSeconds(gold)} · last ${options.window}`]),
       stripPlot(run, i, options),
+      goldSparkline(run, i, options.method),
     ]);
   });
 

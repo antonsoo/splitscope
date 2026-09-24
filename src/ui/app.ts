@@ -418,8 +418,8 @@ export function mountApp(root: HTMLElement): void {
 
       section(
         "Per-segment shape",
-        "Time distributions",
-        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap. The dashed line is gold; the blue tick is the median.`,
+        "Time distributions & gold history",
+        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap (dashed line is gold, blue tick is median), plus each segment's full gold history — every time a new record was set, across all ${run.attempts.length} attempts.`,
         [],
         renderDistributions(run, { method: state.method, window: state.consistencyWindow }),
       ),
