@@ -154,7 +154,7 @@ export function mountApp(root: HTMLElement): void {
       [state.theme === "dark" ? "Light" : "Dark"],
     );
 
-    return el("div", { class: "topbar" }, [
+    return el("header", { class: "topbar" }, [
       el("div", { class: "topbar-inner" }, [
         el("div", { class: "brand" }, [
           "split",
@@ -311,7 +311,9 @@ export function mountApp(root: HTMLElement): void {
   function renderContent(): HTMLElement {
     if (state.error) {
       return el("div", { class: "error-banner" }, [
-        el("h2", {}, ["Couldn't read that file"]),
+        // h1: with an error, this replaces the empty state's h1 as the page's top heading —
+        // there's no hero heading rendered in this state to be a level below.
+        el("h1", {}, ["Couldn't read that file"]),
         el("p", {}, [state.error]),
       ]);
     }
@@ -478,9 +480,15 @@ export function mountApp(root: HTMLElement): void {
     ]);
   }
 
+  // Visually hidden and out of the tab order: it's a programmatic target for the visible
+  // "Choose a .lss file" / "Load file" buttons (via .click()), not a control of its own —
+  // a sighted keyboard user tabbing onto an invisible 0×0 element would otherwise see focus
+  // seem to vanish, since a zero-size element can't show a focus ring.
   const fileInput = el("input", {
     type: "file",
     id: "file-input",
+    tabindex: "-1",
+    "aria-hidden": "true",
     accept: ".lss,text/xml,application/xml",
     onchange: (e: Event) => {
       const file = (e.target as HTMLInputElement).files?.[0];
@@ -491,9 +499,10 @@ export function mountApp(root: HTMLElement): void {
   function render(): void {
     root.replaceChildren(
       el("div", { class: "shell" }, [
+        el("a", { class: "skip-link", href: "#main-content" }, ["Skip to content"]),
         el("hr", { class: "rule" }),
         renderTopbar(),
-        el("main", {}, [renderContent()]),
+        el("main", { id: "main-content" }, [renderContent()]),
         fileInput,
         el("footer", {}, [
           el("div", { class: "footer-inner" }, [

@@ -100,7 +100,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
     el("div", { class: "odds-head" }, [
       el("div", {}, [
         el("span", { class: "odds-badge" }, ["Monte Carlo"]),
-        el("h3", { class: "section-title", style: "margin:0" }, ["PB odds"]),
+        el("h2", { class: "section-title", style: "margin:0" }, ["PB odds"]),
       ]),
     ]),
     body,
