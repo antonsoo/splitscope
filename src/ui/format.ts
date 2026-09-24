@@ -7,14 +7,6 @@ export function formatDelta(seconds: number | null): string {
   return `${sign}${formatSeconds(Math.abs(seconds))}`;
 }
 
-/** Which semantic color a delta should render in: green if ahead, red if behind, gold if exactly gold-tying. */
-export function deltaClass(seconds: number | null): "is-green" | "is-red" | "is-flat" {
-  if (seconds === null) return "is-flat";
-  if (seconds < 0) return "is-green";
-  if (seconds > 0) return "is-red";
-  return "is-flat";
-}
-
 export function formatPercent(fraction: number | null, digits = 1): string {
   if (fraction === null || Number.isNaN(fraction)) return "—";
   return `${(fraction * 100).toFixed(digits)}%`;

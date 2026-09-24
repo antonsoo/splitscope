@@ -5,6 +5,9 @@
   "type": "module",
   "author": "Anton Soloviev",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "homepage": "https://antonsoo.github.io/splitscope/",
   "repository": {
     "type": "git",
