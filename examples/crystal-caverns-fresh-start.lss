@@ -2,7 +2,7 @@
 <Run version="1.8.1">
   <GameIcon />
   <GameName>Crystal Caverns</GameName>
-  <CategoryName>Any% — fresh splits (synthetic sample data)</CategoryName>
+  <CategoryName>Any% — fresh splits</CategoryName>
   <LayoutPath />
   <Metadata>
     <Run id="" />
@@ -11,41 +11,45 @@
     <Variables />
   </Metadata>
   <Offset>00:00:00</Offset>
-  <AttemptCount>9</AttemptCount>
+  <AttemptCount>10</AttemptCount>
   <AttemptHistory>
-    <Attempt id="1" started="1/5/2026 18:00:10" isStartedSynced="True" ended="1/5/2026 18:03:13" isEndedSynced="True">
+    <Attempt id="1" started="1/5/2026 18:00:10" isStartedSynced="True" ended="1/5/2026 18:02:57" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
-    <Attempt id="2" started="1/5/2026 18:03:41" isStartedSynced="True" ended="1/5/2026 18:06:48" isEndedSynced="True">
+    <Attempt id="2" started="1/5/2026 18:03:25" isStartedSynced="True" ended="1/5/2026 18:08:35" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
-    <Attempt id="3" started="1/5/2026 18:06:59" isStartedSynced="True" ended="1/5/2026 18:11:46" isEndedSynced="True">
-      <RealTime>00:04:46.8190935</RealTime>
-      <GameTime></GameTime>
-    </Attempt>
-    <Attempt id="4" started="1/5/2026 18:13:15" isStartedSynced="True" ended="1/5/2026 18:16:26" isEndedSynced="True">
+    <Attempt id="3" started="1/5/2026 18:08:42" isStartedSynced="True" ended="1/5/2026 18:13:27" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
-    <Attempt id="5" started="1/5/2026 18:17:13" isStartedSynced="True" ended="1/5/2026 18:21:48" isEndedSynced="True">
-      <RealTime>00:04:35.2257859</RealTime>
-      <GameTime></GameTime>
-    </Attempt>
-    <Attempt id="6" started="1/5/2026 18:22:08" isStartedSynced="True" ended="1/5/2026 18:24:02" isEndedSynced="True">
+    <Attempt id="4" started="1/5/2026 18:14:22" isStartedSynced="True" ended="1/5/2026 18:27:38" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
-    <Attempt id="7" started="1/5/2026 18:24:59" isStartedSynced="True" ended="1/5/2026 18:30:02" isEndedSynced="True">
-      <RealTime>00:05:02.7512523</RealTime>
-      <GameTime></GameTime>
-    </Attempt>
-    <Attempt id="8" started="1/5/2026 18:31:28" isStartedSynced="True" ended="1/5/2026 18:34:43" isEndedSynced="True">
+    <Attempt id="5" started="1/5/2026 18:29:04" isStartedSynced="True" ended="1/5/2026 18:30:50" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
-    <Attempt id="9" started="1/5/2026 18:35:08" isStartedSynced="True" ended="1/5/2026 18:35:44" isEndedSynced="True">
+    <Attempt id="6" started="1/5/2026 18:31:15" isStartedSynced="True" ended="1/5/2026 18:31:49" isEndedSynced="True">
+      <RealTime></RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+    <Attempt id="7" started="1/5/2026 18:32:40" isStartedSynced="True" ended="1/5/2026 18:37:33" isEndedSynced="True">
+      <RealTime></RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+    <Attempt id="8" started="1/5/2026 18:38:11" isStartedSynced="True" ended="1/5/2026 18:40:47" isEndedSynced="True">
+      <RealTime></RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+    <Attempt id="9" started="1/5/2026 18:41:00" isStartedSynced="True" ended="1/5/2026 18:43:45" isEndedSynced="True">
+      <RealTime></RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+    <Attempt id="10" started="1/5/2026 18:44:18" isStartedSynced="True" ended="1/5/2026 18:52:51" isEndedSynced="True">
       <RealTime></RealTime>
       <GameTime></GameTime>
     </Attempt>
@@ -56,49 +60,105 @@
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best">
-          <RealTime>00:00:42.0784527</RealTime>
+          <RealTime></RealTime>
           <GameTime></GameTime>
         </SplitTime>
       </SplitTimes>
       <BestSegmentTime>
-        <RealTime>00:00:34.6751238</RealTime>
-        <GameTime>00:00:31.9011139</GameTime>
+        <RealTime>00:00:33.8207705</RealTime>
+        <GameTime>00:00:31.1151088</GameTime>
       </BestSegmentTime>
       <SegmentHistory>
         <Time id="1">
-          <RealTime>00:00:37.9383319</RealTime>
+          <RealTime>00:00:35.9383319</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="2">
-          <RealTime>00:00:46.9754877</RealTime>
+          <RealTime>00:00:44.9920385</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="3">
-          <RealTime>00:00:43.1432268</RealTime>
+          <RealTime>00:00:35.7760493</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="4">
-          <RealTime>00:00:42.6452406</RealTime>
+          <RealTime>00:00:48.3723391</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="5">
-          <RealTime>00:00:42.0784527</RealTime>
+          <RealTime>00:00:50.9060441</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="6">
-          <RealTime>00:00:38.2969627</RealTime>
+          <RealTime>00:00:33.8207705</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="7">
-          <RealTime>00:00:42.5368703</RealTime>
+          <RealTime>00:00:37.4635605</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="8">
-          <RealTime>00:00:34.6751238</RealTime>
+          <RealTime>00:00:35.6672306</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="9">
-          <RealTime>00:00:35.5714679</RealTime>
+          <RealTime>00:00:40.1058258</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:00:42.5602698</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Glowing Passage</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:41.8355464</RealTime>
+        <GameTime>00:00:38.4887027</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:57.0486774</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="2">
+          <RealTime>00:00:47.4698080</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:01:02.5726888</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="4">
+          <RealTime>00:00:45.1419435</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:54.7040002</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="7">
+          <RealTime>00:00:41.8355464</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="8">
+          <RealTime>00:00:49.6996696</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="9">
+          <RealTime>00:00:50.8928063</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:00:59.1865342</RealTime>
           <GameTime></GameTime>
         </Time>
       </SegmentHistory>
@@ -108,45 +168,81 @@
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best">
-          <RealTime>00:02:03.5975091</RealTime>
+          <RealTime></RealTime>
           <GameTime></GameTime>
         </SplitTime>
       </SplitTimes>
       <BestSegmentTime>
-        <RealTime>00:01:00.7250341</RealTime>
-        <GameTime>00:00:55.8670314</GameTime>
+        <RealTime>00:01:04.3754065</RealTime>
+        <GameTime>00:00:59.2253740</GameTime>
       </BestSegmentTime>
       <SegmentHistory>
         <Time id="1">
-          <RealTime>00:01:21.0730161</RealTime>
+          <RealTime>00:01:13.5641052</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="2">
-          <RealTime>00:01:06.7178539</RealTime>
+          <RealTime>00:01:23.1993451</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="3">
-          <RealTime>00:01:15.3700794</RealTime>
+          <RealTime>00:01:04.3754065</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="4">
-          <RealTime>00:01:28.8728596</RealTime>
-          <GameTime></GameTime>
-        </Time>
-        <Time id="5">
-          <RealTime>00:01:21.5190564</RealTime>
-          <GameTime></GameTime>
-        </Time>
-        <Time id="6">
-          <RealTime>00:01:15.2432371</RealTime>
+          <RealTime>00:01:12.8747265</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="7">
-          <RealTime>00:01:00.7250341</RealTime>
+          <RealTime>00:01:14.2245576</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="8">
-          <RealTime>00:01:36.1462290</RealTime>
+          <RealTime>00:01:11.0415959</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="9">
+          <RealTime>00:01:14.2670466</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:01:21.9751243</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Sunken Ruins</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:04.7703581</RealTime>
+        <GameTime>00:00:59.5887294</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:01:12.0003046</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:01:04.7807026</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="4">
+          <RealTime>00:01:04.7703581</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="7">
+          <RealTime>00:01:12.5129294</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:01:19.2722522</RealTime>
           <GameTime></GameTime>
         </Time>
       </SegmentHistory>
@@ -156,43 +252,204 @@
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best">
-          <RealTime>00:03:12.9972851</RealTime>
+          <RealTime></RealTime>
           <GameTime></GameTime>
         </SplitTime>
       </SplitTimes>
       <BestSegmentTime>
-        <RealTime>00:00:58.1781154</RealTime>
-        <GameTime>00:00:53.5238662</GameTime>
+        <RealTime>00:00:57.4175988</RealTime>
+        <GameTime>00:00:52.8241909</GameTime>
       </BestSegmentTime>
       <SegmentHistory>
-        <Time id="1">
-          <RealTime>00:01:03.5641052</RealTime>
-          <GameTime></GameTime>
-        </Time>
         <Time id="2">
-          <RealTime>00:01:13.2261399</RealTime>
+          <RealTime>00:01:02.0171362</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="3">
-          <RealTime>00:00:58.1781154</RealTime>
+          <RealTime>00:00:57.4175988</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="4">
-          <RealTime>00:00:59.4080207</RealTime>
-          <GameTime></GameTime>
-        </Time>
-        <Time id="5">
-          <RealTime>00:01:09.3997760</RealTime>
+          <RealTime>00:01:03.3229467</RealTime>
           <GameTime></GameTime>
         </Time>
         <Time id="7">
-          <RealTime>00:01:14.8755292</RealTime>
+          <RealTime>00:01:06.8727764</RealTime>
           <GameTime></GameTime>
         </Time>
-        <Time id="8">
-          <RealTime>00:01:04.0197339</RealTime>
+        <Time id="10">
+          <RealTime>00:01:06.8459978</RealTime>
           <GameTime></GameTime>
         </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Mossy Tunnels</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:11.5754313</RealTime>
+        <GameTime>00:01:05.8493968</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:01:18.4976496</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:01:11.5754313</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Echo Chamber</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:45.8039568</RealTime>
+        <GameTime>00:00:42.1396403</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:00:57.6265087</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:00:45.8039568</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Frozen Grotto</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:05.9637864</RealTime>
+        <GameTime>00:01:00.6866835</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:01:23.9370209</RealTime>
+          <GameTime></GameTime>
+        </Time>
+        <Time id="10">
+          <RealTime>00:01:05.9637864</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Obsidian Spire</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:38.6676675</RealTime>
+        <GameTime>00:01:30.7742541</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:01:38.6676675</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Collapsing Path</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:55.7655801</RealTime>
+        <GameTime>00:00:51.3043337</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:00:55.7655801</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Lantern Bridge</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:50.1728673</RealTime>
+        <GameTime>00:00:46.1590379</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:00:50.1728673</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Ember Hollow</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:16.9730008</RealTime>
+        <GameTime>00:01:10.8151608</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="4">
+          <RealTime>00:01:16.9730008</RealTime>
+          <GameTime></GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Shadow Gate</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime></RealTime>
+        <GameTime></GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+
       </SegmentHistory>
     </Segment>
     <Segment>
@@ -200,27 +457,16 @@
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best">
-          <RealTime>00:04:35.2257859</RealTime>
+          <RealTime></RealTime>
           <GameTime></GameTime>
         </SplitTime>
       </SplitTimes>
       <BestSegmentTime>
-        <RealTime>00:01:22.2285008</RealTime>
-        <GameTime>00:01:15.6502207</GameTime>
+        <RealTime></RealTime>
+        <GameTime></GameTime>
       </BestSegmentTime>
       <SegmentHistory>
-        <Time id="3">
-          <RealTime>00:01:50.1276718</RealTime>
-          <GameTime></GameTime>
-        </Time>
-        <Time id="5">
-          <RealTime>00:01:22.2285008</RealTime>
-          <GameTime></GameTime>
-        </Time>
-        <Time id="7">
-          <RealTime>00:02:04.6138187</RealTime>
-          <GameTime></GameTime>
-        </Time>
+
       </SegmentHistory>
     </Segment>
   </Segments>

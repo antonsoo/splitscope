@@ -1,10 +1,14 @@
 /**
  * Generates synthetic `.lss` sample files for a fictional game, "Crystal
  * Caverns — Any%". There is no such game; every number in these files is
- * simulated by this script, not recorded from a real run. `docs/format.md`
- * and the README say so, and the in-app "Load sample" button labels it
- * "synthetic" too — this is sample data for trying the tool, never a claim
- * about a real speedrun.
+ * simulated by this script, not recorded from a real run. `GameName` and
+ * `CategoryName` are left clean ("Crystal Caverns" / "Any%") on purpose —
+ * they're displayed inline in the app's headline sentence, so a synthetic
+ * marker stuffed into either would read as part of the category. The app
+ * labels sample data as synthetic itself (a badge shown whenever a run was
+ * loaded via "Load sample", driven by how the file was loaded, not by
+ * parsing anything out of the file), and `docs/format.md` and the README
+ * say so too.
  *
  * The simulation is a simple random walk with a learning curve, run once
  * with a fixed seed so the output is reproducible:
@@ -12,8 +16,13 @@
  *     (`mean(t) = floor + (base - floor) * decay^t`), and its standard
  *     deviation shrinks the same way (a runner gets both faster and more
  *     consistent with practice).
- *   - A per-segment, decaying reset hazard: early attempts die on hard
- *     segments a lot; later attempts rarely do.
+ *   - A per-segment, decaying reset hazard: early attempts die a lot;
+ *     later attempts rarely do, but never at literally zero — three
+ *     "run-killer" segments (spread across the early, middle, and late
+ *     game, not just stacked at the end, the way a real category usually
+ *     has more than one trouble spot) keep a meaningfully nonzero hazard
+ *     even at the skill floor, the way an execution-heavy trick stays
+ *     risky no matter how practiced a runner is.
  *   - GameTime is RealTime minus a random load-time deduction, and is left
  *     unset for the first stretch of attempts, to model a runner who turned
  *     on load-time removal partway through — a realistic instance of the
@@ -38,43 +47,138 @@ interface SegmentSpec {
   readonly floorHazard: number;
 }
 
+// 14 segments: a realistic split count for a full-category any% run. Three are
+// designated "run-killers" (Mossy Tunnels, Shadow Gate, Boss Room) — spread across
+// the early, late-middle, and end game rather than all clustered at the finish —
+// with a floor hazard well above the others, so even a near-optimal recent stretch
+// still has real risk in it, not a flat 100% finish rate.
 const SEGMENTS: readonly SegmentSpec[] = [
   {
     name: "Cave Entrance",
-    baseMean: 42,
-    floorMean: 33,
-    baseSd: 5,
-    floorSd: 1.2,
+    baseMean: 40,
+    floorMean: 32,
+    baseSd: 5.0,
+    floorSd: 1.3,
+    baseHazard: 0.02,
+    floorHazard: 0.006,
+  },
+  {
+    name: "Glowing Passage",
+    baseMean: 55,
+    floorMean: 43,
+    baseSd: 6.0,
+    floorSd: 1.6,
     baseHazard: 0.03,
-    floorHazard: 0.005,
+    floorHazard: 0.01,
   },
   {
     name: "Crystal Lake",
-    baseMean: 78,
-    floorMean: 61,
-    baseSd: 9,
-    floorSd: 2.5,
-    baseHazard: 0.12,
+    baseMean: 75,
+    floorMean: 58,
+    baseSd: 8.0,
+    floorSd: 2.2,
+    baseHazard: 0.06,
+    floorHazard: 0.015,
+  },
+  {
+    name: "Sunken Ruins",
+    baseMean: 70,
+    floorMean: 55,
+    baseSd: 8.0,
+    floorSd: 2.0,
+    baseHazard: 0.08,
     floorHazard: 0.02,
   },
   {
     name: "Underground Falls",
-    baseMean: 65,
-    floorMean: 50,
-    baseSd: 8,
-    floorSd: 2.0,
-    baseHazard: 0.18,
+    baseMean: 62,
+    floorMean: 48,
+    baseSd: 7.0,
+    floorSd: 1.8,
+    baseHazard: 0.07,
+    floorHazard: 0.018,
+  },
+  {
+    name: "Mossy Tunnels",
+    baseMean: 85,
+    floorMean: 66,
+    baseSd: 12.0,
+    floorSd: 3.5,
+    baseHazard: 0.4,
+    floorHazard: 0.07,
+  }, // run-killer
+  {
+    name: "Echo Chamber",
+    baseMean: 50,
+    floorMean: 39,
+    baseSd: 6.0,
+    floorSd: 1.5,
+    baseHazard: 0.05,
+    floorHazard: 0.012,
+  },
+  {
+    name: "Frozen Grotto",
+    baseMean: 68,
+    floorMean: 53,
+    baseSd: 8.0,
+    floorSd: 2.1,
+    baseHazard: 0.09,
+    floorHazard: 0.02,
+  },
+  {
+    name: "Obsidian Spire",
+    baseMean: 90,
+    floorMean: 70,
+    baseSd: 11.0,
+    floorSd: 3.0,
+    baseHazard: 0.15,
     floorHazard: 0.03,
   },
   {
-    name: "Boss Room",
-    baseMean: 95,
-    floorMean: 70,
-    baseSd: 12,
-    floorSd: 3.5,
-    baseHazard: 0.28,
-    floorHazard: 0.06,
+    name: "Collapsing Path",
+    baseMean: 58,
+    floorMean: 45,
+    baseSd: 7.0,
+    floorSd: 1.9,
+    baseHazard: 0.1,
+    floorHazard: 0.025,
   },
+  {
+    name: "Lantern Bridge",
+    baseMean: 48,
+    floorMean: 37,
+    baseSd: 6.0,
+    floorSd: 1.4,
+    baseHazard: 0.06,
+    floorHazard: 0.015,
+  },
+  {
+    name: "Ember Hollow",
+    baseMean: 72,
+    floorMean: 56,
+    baseSd: 8.0,
+    floorSd: 2.2,
+    baseHazard: 0.11,
+    floorHazard: 0.025,
+  },
+  {
+    name: "Shadow Gate",
+    baseMean: 65,
+    floorMean: 50,
+    baseSd: 10.0,
+    floorSd: 3.0,
+    baseHazard: 0.35,
+    floorHazard: 0.06,
+  }, // run-killer
+  {
+    name: "Boss Room",
+    baseMean: 110,
+    floorMean: 82,
+    baseSd: 14.0,
+    floorSd: 4.0,
+    baseHazard: 0.3,
+    floorHazard: 0.05,
+  }, // run-killer
 ];
 
 function decay(base: number, floor: number, t: number, rate: number): number {
@@ -276,21 +380,25 @@ ${segmentsXml}
 
 mkdirSync(outDir, { recursive: true });
 
-const veteran = simulate(220, 1337, 0.65);
+const veteran = simulate(450, 1337, 0.65);
 writeFileSync(
   join(outDir, "crystal-caverns-any.lss"),
-  buildLss("Crystal Caverns", "Any% (synthetic sample data)", veteran),
+  buildLss("Crystal Caverns", "Any%", veteran),
 );
 
-const freshStart = simulate(9, 2026, 0);
+const freshStart = simulate(10, 2026, 0);
 writeFileSync(
   join(outDir, "crystal-caverns-fresh-start.lss"),
-  buildLss("Crystal Caverns", "Any% — fresh splits (synthetic sample data)", freshStart),
+  buildLss("Crystal Caverns", "Any% — fresh splits", freshStart),
 );
 
 const finishedCount = veteran.filter((a) => a.finished).length;
+const recentWindow = veteran.slice(-30);
+const recentFinished = recentWindow.filter((a) => a.finished).length;
 console.log(
-  `Wrote examples/crystal-caverns-any.lss: ${veteran.length} attempts, ${finishedCount} finishes.`,
+  `Wrote examples/crystal-caverns-any.lss: ${veteran.length} attempts, ${finishedCount} finishes ` +
+    `(${((finishedCount / veteran.length) * 100).toFixed(0)}% all-time, ` +
+    `${((recentFinished / recentWindow.length) * 100).toFixed(0)}% in the last 30).`,
 );
 console.log(
   `Wrote examples/crystal-caverns-fresh-start.lss: ${freshStart.length} attempts (early-game, sparse data).`,
