@@ -47,7 +47,7 @@ export interface PbOddsResult {
   readonly pbProbabilityGivenFinish: number | null;
   /** Unconditional probability a single future attempt both finishes and beats PB. */
   readonly pbProbabilityPerAttempt: number;
-  /** 95% Wald confidence interval on {@link pbProbabilityPerAttempt}. */
+  /** 95% Wilson score confidence interval on {@link pbProbabilityPerAttempt}. */
   readonly pbProbabilityPerAttemptCi: readonly [number, number];
   readonly lookaheadAttempts: number;
   /** P(at least one PB in the next `lookaheadAttempts`), assuming independent attempts. */
@@ -65,10 +65,22 @@ const ASSUMPTIONS = [
   "Attempts are treated as independent trials when combining single-attempt odds into a multi-attempt probability.",
 ];
 
-function wilsonOrWaldCi(p: number, n: number): [number, number] {
+/**
+ * 95% Wilson score interval for a binomial proportion. Preferred over the
+ * simpler Wald interval (`p ± z·√(p(1−p)/n)`) here specifically because PB
+ * probabilities in this domain are frequently under 1%: Wald's coverage
+ * degrades badly for proportions near 0 or 1 (it can even produce a
+ * negative lower bound before clamping), while Wilson stays well-calibrated
+ * across the whole range without needing an ad hoc clamp.
+ */
+function wilsonCi(p: number, n: number): [number, number] {
   if (n === 0) return [0, 0];
-  const margin = 1.96 * Math.sqrt((p * (1 - p)) / n);
-  return [Math.max(0, p - margin), Math.min(1, p + margin)];
+  const z = 1.96;
+  const z2 = z * z;
+  const denominator = 1 + z2 / n;
+  const center = (p + z2 / (2 * n)) / denominator;
+  const margin = (z * Math.sqrt((p * (1 - p)) / n + z2 / (4 * n * n))) / denominator;
+  return [Math.max(0, center - margin), Math.min(1, center + margin)];
 }
 
 interface SegmentModel {
@@ -153,7 +165,7 @@ export function simulatePbOdds(
     finishProbability,
     pbProbabilityGivenFinish,
     pbProbabilityPerAttempt,
-    pbProbabilityPerAttemptCi: wilsonOrWaldCi(pbProbabilityPerAttempt, S),
+    pbProbabilityPerAttemptCi: wilsonCi(pbProbabilityPerAttempt, S),
     lookaheadAttempts: K,
     probabilityAtLeastOnePb,
     expectedAttemptsUntilPb,

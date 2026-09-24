@@ -116,12 +116,18 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* !important is the point here: this is a universal accessibility override that must win
+     over every component's own animation/transition declarations, regardless of specificity. */
   *,
   *::before,
   *::after {
+    /* biome-ignore lint/complexity/noImportantStyles: intentional a11y override, see comment above */
     animation-duration: 0.001ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: intentional a11y override, see comment above */
     animation-iteration-count: 1 !important;
+    /* biome-ignore lint/complexity/noImportantStyles: intentional a11y override, see comment above */
     transition-duration: 0.001ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: intentional a11y override, see comment above */
     scroll-behavior: auto !important;
   }
 }

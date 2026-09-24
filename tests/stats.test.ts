@@ -86,6 +86,31 @@ describe("PB, gold, and time-save math", () => {
     };
     expect(sumOfBest(withMissingGold, "RealTime")).toEqual({ value: 8, complete: false });
   });
+
+  it("propagates a missing middle PB split forward, rather than diffing across the gap", () => {
+    // Segment B's "Personal Best" comparison is missing (e.g. an older/partial comparison
+    // file). B's own duration is unknowable, and so is C's — C's cumulative (40) minus B's
+    // *unknown* cumulative is not a valid duration, even though C's own value is present.
+    const withGap: Run = {
+      ...run,
+      segments: [
+        segment("A", 10, 8, []),
+        { ...(run.segments[1] as Segment), splitTimes: new Map([["Personal Best", dt(null)]]) },
+        segment("C", 40, 12, []),
+      ],
+    };
+    expect(pbSegmentDuration(withGap, 0, "RealTime")).toBe(10);
+    expect(pbSegmentDuration(withGap, 1, "RealTime")).toBeNull();
+    expect(pbSegmentDuration(withGap, 2, "RealTime")).toBeNull();
+    expect(possibleTimeSave(withGap, "RealTime")).toEqual([2, null, null]);
+  });
+
+  it("returns null/empty for a run with no segments at all", () => {
+    const noSegments: Run = { ...run, segments: [] };
+    expect(pbTotal(noSegments, "RealTime")).toBeNull();
+    expect(sumOfBest(noSegments, "RealTime")).toEqual({ value: 0, complete: true });
+    expect(possibleTimeSave(noSegments, "RealTime")).toEqual([]);
+  });
 });
 
 describe("segmentConsistency", () => {
@@ -228,6 +253,14 @@ describe("reset/survival analysis", () => {
     expect(analysis.points[1]).toMatchObject({ survivalRate: 2 / 3, deaths: 1 }); // attempt 2 dies at B
     // Only attempt 3 attempts segment C: 1/3, nobody dies there (it finishes).
     expect(analysis.points[2]).toMatchObject({ survivalRate: 1 / 3, deaths: 0 });
+  });
+
+  it("handles a run with zero attempts without dividing by zero", () => {
+    const fresh: Run = { ...run, attempts: [] };
+    const analysis = resetAnalysis(fresh);
+    expect(analysis.totalAttempts).toBe(0);
+    expect(analysis.finishedAttempts).toBe(0);
+    expect(analysis.points.every((p) => p.survivalRate === 0 && p.deaths === 0)).toBe(true);
   });
 });
 

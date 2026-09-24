@@ -7,6 +7,7 @@ import {
   sumOfBest,
 } from "../core/stats.js";
 import type { Run, TimingMethod } from "../core/types.js";
+import { pick } from "../core/types.js";
 import { el } from "./dom.js";
 import { buildMarkdownSummary, downloadText, exportPngCard } from "./export.js";
 import { formatCount, formatHours, formatPercent, formatSeconds } from "./format.js";
@@ -190,35 +191,29 @@ export function mountApp(root: HTMLElement): void {
     const reset = resetAnalysis(run);
     const playtime = playtimeSummary(run);
 
-    // Preview: the PB run's own segments, i.e. what a runner already knows from the timer.
+    // Preview: the PB run's own segments — what a runner already knows from the timer, plus
+    // one thing it doesn't show: how each of those segments compares to its own gold. This is
+    // deliberately not colored green/red (this panel has no "current run" to be ahead or
+    // behind — those colors are reserved for an actual comparison elsewhere on the page); a
+    // segment reads gold only when it *is* that segment's gold, and faint otherwise. `cumulative`
+    // starts at 0 (the run start) and, like pbSegmentDuration in core/stats.ts, propagates null
+    // forward once a comparison split is missing, so a gap invalidates every duration after it too.
     const previewSegments = run.segments.slice(0, 6);
-    let cumulative = 0;
+    let cumulative: number | null = 0;
     const previewRows = previewSegments.map((segment, i) => {
       const split = segment.splitTimes.get("Personal Best");
-      const cumulativeTime = split
-        ? state.method === "RealTime"
-          ? split.realTime
-          : split.gameTime
-        : null;
-      const delta = cumulativeTime !== null ? cumulativeTime - cumulative : null;
-      cumulative = cumulativeTime ?? cumulative;
-      const gold =
-        state.method === "RealTime"
-          ? segment.bestSegmentTime.realTime
-          : segment.bestSegmentTime.gameTime;
-      const isGold = delta !== null && gold !== null && Math.abs(delta - gold) < 1e-6;
-      const cls = isGold
-        ? "is-gold"
-        : delta === null
-          ? "is-flat"
-          : i % 2 === 0
-            ? "is-green"
-            : "is-red";
+      const cumulativeTime = split ? pick(split, state.method) : null;
+      const duration =
+        cumulativeTime !== null && cumulative !== null ? cumulativeTime - cumulative : null;
+      cumulative = cumulativeTime;
+      const gold = pick(segment.bestSegmentTime, state.method);
+      const isGold = duration !== null && gold !== null && Math.abs(duration - gold) < 1e-6;
+      const vsGold = duration !== null && gold !== null ? duration - gold : null;
       return el("div", { class: "split-row", style: `animation-delay:${i * 60}ms` }, [
         el("span", { class: "split-row-name" }, [segment.name]),
         el("span", { class: "split-row-time" }, [formatSeconds(cumulativeTime)]),
-        el("span", { class: `split-row-delta ${cls}` }, [
-          delta === null ? "—" : formatSeconds(delta),
+        el("span", { class: `split-row-delta ${isGold ? "is-gold" : "is-flat"}` }, [
+          isGold ? "GOLD" : vsGold === null ? "—" : `+${formatSeconds(vsGold)}`,
         ]),
       ]);
     });

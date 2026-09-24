@@ -178,8 +178,10 @@ a duration by **bootstrap resampling** (sampling with replacement) from that
 segment's own recent `SegmentHistory` times. Run tens of thousands of times,
 this gives:
 
-- P(a single future attempt both finishes and beats PB), with a 95% Wald
-  confidence interval on the Monte Carlo proportion;
+- P(a single future attempt both finishes and beats PB), with a 95% Wilson
+  score confidence interval on the Monte Carlo proportion (Wilson rather
+  than the simpler Wald interval because PB probabilities here are often
+  under 1%, where Wald's coverage is known to degrade);
 - P(at least one PB in the next *K* attempts), via `1 − (1 − p)^K` — a
   closed-form combination of the per-attempt estimate under an independence
   assumption, not a second, nested simulation;
