@@ -2,7 +2,6 @@
 
 **Your LiveSplit file knows more than your timer shows.**
 
-[![CI](https://github.com/antonsoo/splitscope/actions/workflows/ci.yml/badge.svg)](https://github.com/antonsoo/splitscope/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/live%20demo-antonsoo.github.io%2Fsplitscope-6fb7ff)](https://antonsoo.github.io/splitscope/)
 
