@@ -175,10 +175,10 @@ export function simulatePbOdds(
 }
 
 /**
- * Closed-form P(total < threshold) for independent normal segment times,
- * used as the oracle in `tests/montecarlo.test.ts`. Exported so the UI can
- * (optionally) show it as a sanity comparison for the "constant-times"
- * edge case in a diagnostics panel, but its primary purpose is the test.
+ * Closed-form P(total < threshold) for independent normal segment times.
+ * Not used by the running app — it exists purely as the oracle
+ * `tests/montecarlo.test.ts` checks `simulatePbOdds` against, exported so
+ * the test can import it rather than duplicating the formula inline.
  */
 export function normalSumBeatsThreshold(
   means: readonly number[],

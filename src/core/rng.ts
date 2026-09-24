@@ -2,10 +2,14 @@
  * A small, seeded pseudo-random number generator (mulberry32).
  *
  * The Monte Carlo simulator is built on this instead of `Math.random()` so
- * that a) the core library stays pure and deterministic — the same run and
- * seed always produce the same simulated odds, which is what makes it
- * testable against a closed-form oracle — and b) the UI can offer a
- * "reshuffle" button without needing to re-parse anything.
+ * the core library stays pure and deterministic — the same run and seed
+ * always produce the same simulated odds. That's what makes it testable
+ * against a closed-form oracle (see `tests/montecarlo.test.ts`), and it's
+ * also why the PB-odds panel doesn't flicker as its sliders move: the seed
+ * is derived from the run's own identity (`seedFromString`, below), not
+ * from the slider values, so dragging "recent form" or "simulations"
+ * changes the estimate without the displayed numbers jittering from a
+ * fresh random seed on every render.
  *
  * Reference: mulberry32, a public-domain 32-bit generator by Tommy Ettinger,
  * widely used for exactly this purpose (small, fast, decent statistical

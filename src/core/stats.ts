@@ -305,10 +305,10 @@ export function goldHistory(run: Run, index: number, method: TimingMethod): Gold
 
 /**
  * Standard normal CDF via the Abramowitz & Stegun 7.1.26 rational
- * approximation (max absolute error ~1.5e-7). Used to cross-check the Monte
- * Carlo PB-odds simulation against the closed-form answer for independent
- * normal segment times (see `tests/montecarlo.test.ts`), and exposed for the
- * UI's confidence-interval display.
+ * approximation (max absolute error ~1.5e-7). Not used by the running app —
+ * it's the building block for `normalSumBeatsThreshold` in
+ * `core/montecarlo.ts`, which is itself only the closed-form oracle
+ * `tests/montecarlo.test.ts` checks the Monte Carlo simulation against.
  */
 export function normalCdf(z: number): number {
   const sign = z < 0 ? -1 : 1;
