@@ -123,3 +123,19 @@ describe("parseRun — error handling", () => {
     ).toThrow(/Offset|AttemptCount|Segments/);
   });
 });
+
+describe("parseRun — odd but valid encodings (real files vary by editor/OS)", () => {
+  const base = fixture("modern-full.lss");
+
+  it("handles a leading UTF-8 byte-order mark", () => {
+    const run = parseRun(`﻿${base}`);
+    expect(run.gameName).toBe("Crystal Caverns");
+    expect(run.attempts).toHaveLength(3);
+  });
+
+  it("handles Windows CRLF line endings (LiveSplit itself runs on Windows)", () => {
+    const run = parseRun(base.replace(/\n/g, "\r\n"));
+    expect(run.gameName).toBe("Crystal Caverns");
+    expect(run.attempts).toHaveLength(3);
+  });
+});
