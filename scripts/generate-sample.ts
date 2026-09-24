@@ -39,10 +39,42 @@ interface SegmentSpec {
 }
 
 const SEGMENTS: readonly SegmentSpec[] = [
-  { name: "Cave Entrance", baseMean: 42, floorMean: 33, baseSd: 5, floorSd: 1.2, baseHazard: 0.03, floorHazard: 0.005 },
-  { name: "Crystal Lake", baseMean: 78, floorMean: 61, baseSd: 9, floorSd: 2.5, baseHazard: 0.12, floorHazard: 0.02 },
-  { name: "Underground Falls", baseMean: 65, floorMean: 50, baseSd: 8, floorSd: 2.0, baseHazard: 0.18, floorHazard: 0.03 },
-  { name: "Boss Room", baseMean: 95, floorMean: 70, baseSd: 12, floorSd: 3.5, baseHazard: 0.28, floorHazard: 0.06 },
+  {
+    name: "Cave Entrance",
+    baseMean: 42,
+    floorMean: 33,
+    baseSd: 5,
+    floorSd: 1.2,
+    baseHazard: 0.03,
+    floorHazard: 0.005,
+  },
+  {
+    name: "Crystal Lake",
+    baseMean: 78,
+    floorMean: 61,
+    baseSd: 9,
+    floorSd: 2.5,
+    baseHazard: 0.12,
+    floorHazard: 0.02,
+  },
+  {
+    name: "Underground Falls",
+    baseMean: 65,
+    floorMean: 50,
+    baseSd: 8,
+    floorSd: 2.0,
+    baseHazard: 0.18,
+    floorHazard: 0.03,
+  },
+  {
+    name: "Boss Room",
+    baseMean: 95,
+    floorMean: 70,
+    baseSd: 12,
+    floorSd: 3.5,
+    baseHazard: 0.28,
+    floorHazard: 0.06,
+  },
 ];
 
 function decay(base: number, floor: number, t: number, rate: number): number {
@@ -66,7 +98,11 @@ interface SimAttempt {
   readonly loadTimeTotal: number;
 }
 
-function simulate(attemptCount: number, seed: number, gameTimeAdoptionFraction: number): SimAttempt[] {
+function simulate(
+  attemptCount: number,
+  seed: number,
+  gameTimeAdoptionFraction: number,
+): SimAttempt[] {
   const rng = mulberry32(seed);
   const decayRate = 0.985;
   let clock = new Date(Date.UTC(2026, 0, 5, 18, 0, 0));
@@ -101,7 +137,15 @@ function simulate(attemptCount: number, seed: number, gameTimeAdoptionFraction: 
     const hasGameTime = t / attemptCount >= 1 - gameTimeAdoptionFraction;
     const loadTimeTotal = hasGameTime ? 2 + rng() * 6 : 0;
 
-    attempts.push({ id: t + 1, started, ended, finished, segmentDurations, hasGameTime, loadTimeTotal });
+    attempts.push({
+      id: t + 1,
+      started,
+      ended,
+      finished,
+      segmentDurations,
+      hasGameTime,
+      loadTimeTotal,
+    });
   }
 
   return attempts;
@@ -137,7 +181,8 @@ function buildLss(gameName: string, categoryName: string, attempts: readonly Sim
   for (const a of attempts) {
     if (!a.finished) continue;
     const total = a.segmentDurations.reduce((s, v) => s + v, 0);
-    const pbTotal = pbAttempt?.segmentDurations.reduce((s, v) => s + v, 0) ?? Number.POSITIVE_INFINITY;
+    const pbTotal =
+      pbAttempt?.segmentDurations.reduce((s, v) => s + v, 0) ?? Number.POSITIVE_INFINITY;
     if (total < pbTotal) pbAttempt = a;
   }
 
@@ -164,16 +209,19 @@ function buildLss(gameName: string, categoryName: string, attempts: readonly Sim
       ? pbAttempt.segmentDurations.slice(0, i + 1).reduce((s, v) => s + v, 0)
       : null;
     const pbLoadShare = pbAttempt?.hasGameTime ? (pbAttempt.loadTimeTotal * (i + 1)) / n : null;
-    const pbCumulativeGame = pbCumulative !== null && pbLoadShare !== null ? pbCumulative - pbLoadShare : null;
+    const pbCumulativeGame =
+      pbCumulative !== null && pbLoadShare !== null ? pbCumulative - pbLoadShare : null;
 
-    const gold = goldPerSegment[i];
+    const gold = goldPerSegment[i] ?? null;
     const goldLoadFraction = 0.08; // approximate share of a segment's own time that's "load"
 
     const historyXml = attempts
       .map((a) => {
         if (i >= a.segmentDurations.length) return null; // never reached (reset before this segment)
         const duration = a.segmentDurations[i] as number;
-        const gameDuration = a.hasGameTime ? duration * (1 - goldLoadFraction * (0.5 + 0.5 * (i / n))) : null;
+        const gameDuration = a.hasGameTime
+          ? duration * (1 - goldLoadFraction * (0.5 + 0.5 * (i / n)))
+          : null;
         return `        <Time id="${a.id}">
           <RealTime>${fmtTime(duration)}</RealTime>
           <GameTime>${fmtTime(gameDuration)}</GameTime>
@@ -241,5 +289,9 @@ writeFileSync(
 );
 
 const finishedCount = veteran.filter((a) => a.finished).length;
-console.log(`Wrote examples/crystal-caverns-any.lss: ${veteran.length} attempts, ${finishedCount} finishes.`);
-console.log(`Wrote examples/crystal-caverns-fresh-start.lss: ${freshStart.length} attempts (early-game, sparse data).`);
+console.log(
+  `Wrote examples/crystal-caverns-any.lss: ${veteran.length} attempts, ${finishedCount} finishes.`,
+);
+console.log(
+  `Wrote examples/crystal-caverns-fresh-start.lss: ${freshStart.length} attempts (early-game, sparse data).`,
+);

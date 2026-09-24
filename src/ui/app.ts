@@ -1,0 +1,520 @@
+import { LssParseError } from "../core/errors.js";
+import { parseRun } from "../core/parser.js";
+import {
+  pbTotal as computePbTotal,
+  playtimeSummary,
+  resetAnalysis,
+  sumOfBest,
+} from "../core/stats.js";
+import type { Run, TimingMethod } from "../core/types.js";
+import { el } from "./dom.js";
+import { buildMarkdownSummary, downloadText, exportPngCard } from "./export.js";
+import { formatCount, formatHours, formatPercent, formatSeconds } from "./format.js";
+import { renderDeltaChart } from "./sections/deltaChart.js";
+import { renderDistributions } from "./sections/distributions.js";
+import { renderPbOdds } from "./sections/pbOdds.js";
+import { renderSegmentTable } from "./sections/segmentTable.js";
+import { renderSurvivalChart } from "./sections/survivalChart.js";
+
+interface AppState {
+  run: Run | null;
+  error: string | null;
+  loadedFrom: string | null;
+  method: TimingMethod;
+  consistencyWindow: number;
+  toleranceSeconds: number;
+  mcRecentWindow: number;
+  mcSimulations: number;
+  mcLookahead: number;
+  theme: "dark" | "light";
+}
+
+const SAMPLE_FILES = [
+  { label: "Load sample (220 attempts)", path: "crystal-caverns-any.lss" },
+  {
+    label: "Load sample (fresh splits, 9 attempts)",
+    path: "crystal-caverns-fresh-start.lss",
+  },
+];
+
+function defaultState(): AppState {
+  const stored = (() => {
+    try {
+      return localStorage.getItem("splitscope:theme");
+    } catch {
+      return null;
+    }
+  })();
+  return {
+    run: null,
+    error: null,
+    loadedFrom: null,
+    method: "RealTime",
+    consistencyWindow: 30,
+    toleranceSeconds: 1,
+    mcRecentWindow: 30,
+    mcSimulations: 8000,
+    mcLookahead: 50,
+    theme: stored === "light" ? "light" : "dark",
+  };
+}
+
+export function mountApp(root: HTMLElement): void {
+  const state = defaultState();
+  document.documentElement.dataset.theme = state.theme;
+
+  function setState(patch: Partial<AppState>): void {
+    Object.assign(state, patch);
+    render();
+  }
+
+  async function loadFile(file: File): Promise<void> {
+    try {
+      const text = await file.text();
+      const run = parseRun(text);
+      setState({
+        run,
+        error: null,
+        loadedFrom: file.name,
+        consistencyWindow: Math.min(30, Math.max(5, run.attempts.length)),
+        mcRecentWindow: Math.min(30, Math.max(5, run.attempts.length)),
+      });
+    } catch (cause) {
+      const message =
+        cause instanceof LssParseError
+          ? cause.message
+          : `Unexpected error: ${(cause as Error).message}`;
+      setState({ run: null, error: message, loadedFrom: file.name });
+    }
+  }
+
+  async function loadSample(path: string, label: string): Promise<void> {
+    try {
+      const base = import.meta.env.BASE_URL;
+      const response = await fetch(`${base}${path}`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const text = await response.text();
+      const run = parseRun(text);
+      setState({
+        run,
+        error: null,
+        loadedFrom: `${label} (synthetic sample data)`,
+        consistencyWindow: Math.min(30, Math.max(5, run.attempts.length)),
+        mcRecentWindow: Math.min(30, Math.max(5, run.attempts.length)),
+      });
+    } catch (cause) {
+      setState({ run: null, error: `Could not load the sample file: ${(cause as Error).message}` });
+    }
+  }
+
+  function renderTopbar(): HTMLElement {
+    const methodToggle = el(
+      "div",
+      { class: "segmented", role: "group", "aria-label": "Timing method" },
+      [
+        el(
+          "button",
+          {
+            type: "button",
+            "aria-pressed": String(state.method === "RealTime"),
+            onclick: () => setState({ method: "RealTime" }),
+          },
+          ["RTA"],
+        ),
+        el(
+          "button",
+          {
+            type: "button",
+            "aria-pressed": String(state.method === "GameTime"),
+            onclick: () => setState({ method: "GameTime" }),
+          },
+          ["IGT"],
+        ),
+      ],
+    );
+
+    const themeToggle = el(
+      "button",
+      {
+        type: "button",
+        class: "btn",
+        title: "Toggle light/dark",
+        onclick: () => {
+          const next = state.theme === "dark" ? "light" : "dark";
+          document.documentElement.dataset.theme = next;
+          try {
+            localStorage.setItem("splitscope:theme", next);
+          } catch {
+            /* private browsing / storage disabled — theme just won't persist */
+          }
+          setState({ theme: next });
+        },
+      },
+      [state.theme === "dark" ? "Light" : "Dark"],
+    );
+
+    return el("div", { class: "topbar" }, [
+      el("div", { class: "topbar-inner" }, [
+        el("div", { class: "brand" }, [
+          "split",
+          el("span", { class: "brand-dot" }, ["scope"]),
+          el("span", { class: "brand-tag" }, ["speedrun split analyzer"]),
+        ]),
+        state.run
+          ? el("div", { class: "run-id" }, [
+              el("strong", {}, [state.run.gameName]),
+              ` — ${state.run.categoryName}`,
+            ])
+          : el("div", { class: "run-id" }),
+        el("div", { class: "topbar-controls" }, [
+          state.run ? methodToggle : null,
+          el(
+            "button",
+            {
+              type: "button",
+              class: "btn",
+              hidden: !state.run,
+              onclick: () => fileInput.click(),
+            },
+            ["Load file"],
+          ),
+          themeToggle,
+        ]),
+      ]),
+    ]);
+  }
+
+  function renderHero(run: Run): HTMLElement {
+    const pb = computePbTotal(run, state.method);
+    const sob = sumOfBest(run, state.method);
+    const reset = resetAnalysis(run);
+    const playtime = playtimeSummary(run);
+
+    // Preview: the PB run's own segments, i.e. what a runner already knows from the timer.
+    const previewSegments = run.segments.slice(0, 6);
+    let cumulative = 0;
+    const previewRows = previewSegments.map((segment, i) => {
+      const split = segment.splitTimes.get("Personal Best");
+      const cumulativeTime = split
+        ? state.method === "RealTime"
+          ? split.realTime
+          : split.gameTime
+        : null;
+      const delta = cumulativeTime !== null ? cumulativeTime - cumulative : null;
+      cumulative = cumulativeTime ?? cumulative;
+      const gold =
+        state.method === "RealTime"
+          ? segment.bestSegmentTime.realTime
+          : segment.bestSegmentTime.gameTime;
+      const isGold = delta !== null && gold !== null && Math.abs(delta - gold) < 1e-6;
+      const cls = isGold
+        ? "is-gold"
+        : delta === null
+          ? "is-flat"
+          : i % 2 === 0
+            ? "is-green"
+            : "is-red";
+      return el("div", { class: "split-row", style: `animation-delay:${i * 60}ms` }, [
+        el("span", { class: "split-row-name" }, [segment.name]),
+        el("span", { class: "split-row-time" }, [formatSeconds(cumulativeTime)]),
+        el("span", { class: `split-row-delta ${cls}` }, [
+          delta === null ? "—" : formatSeconds(delta),
+        ]),
+      ]);
+    });
+
+    return el("section", { class: "hero" }, [
+      el("div", {}, [
+        el("p", { class: "hero-thesis" }, ["Your timer only shows the comparison"]),
+        el("h1", { class: "hero-title" }, [
+          "Here's what your ",
+          el("strong", {}, [run.categoryName]),
+          " splits actually know.",
+        ]),
+        el("p", { class: "hero-clock-label" }, ["Personal best"]),
+        el("p", { class: "hero-clock mono" }, [formatSeconds(pb)]),
+        el("div", { class: "hero-stats" }, [
+          el("div", { class: "hero-stat" }, [
+            el("p", { class: "hero-stat-label" }, ["Sum of best"]),
+            el("p", { class: "hero-stat-value" }, [formatSeconds(sob.value)]),
+          ]),
+          el("div", { class: "hero-stat" }, [
+            el("p", { class: "hero-stat-label" }, ["Time on the table"]),
+            el("p", { class: "hero-stat-value" }, [
+              pb !== null ? formatSeconds(pb - sob.value) : "—",
+            ]),
+          ]),
+          el("div", { class: "hero-stat" }, [
+            el("p", { class: "hero-stat-label" }, ["Attempts"]),
+            el("p", { class: "hero-stat-value" }, [formatCount(run.attempts.length)]),
+          ]),
+          el("div", { class: "hero-stat" }, [
+            el("p", { class: "hero-stat-label" }, ["Finish rate"]),
+            el("p", { class: "hero-stat-value" }, [
+              formatPercent(
+                reset.totalAttempts ? reset.finishedAttempts / reset.totalAttempts : null,
+                0,
+              ),
+            ]),
+          ]),
+          el("div", { class: "hero-stat" }, [
+            el("p", { class: "hero-stat-label" }, ["Playtime"]),
+            el("p", { class: "hero-stat-value" }, [formatHours(playtime.totalPlaytimeSeconds)]),
+          ]),
+        ]),
+      ]),
+      el("div", { class: "split-preview" }, [
+        el("div", { class: "split-preview-head" }, [
+          "Personal best splits",
+          el("span", {}, [state.method === "RealTime" ? "RTA" : "IGT"]),
+        ]),
+        ...previewRows,
+      ]),
+    ]);
+  }
+
+  function section(
+    eyebrow: string,
+    title: string,
+    desc: string,
+    controls: (Node | null)[],
+    body: Node,
+  ): HTMLElement {
+    return el("section", { class: "section" }, [
+      el("div", { class: "section-head" }, [
+        el("div", {}, [
+          el("p", { class: "section-eyebrow" }, [eyebrow]),
+          el("h2", { class: "section-title" }, [title]),
+        ]),
+        el("div", { class: "section-controls" }, controls),
+      ]),
+      el("p", { class: "section-desc" }, [desc]),
+      body,
+    ]);
+  }
+
+  function numberField(
+    label: string,
+    value: number,
+    min: number,
+    max: number,
+    onChange: (v: number) => void,
+  ): HTMLElement {
+    return el("label", { class: "odds-field" }, [
+      label,
+      el("input", {
+        type: "number",
+        min: String(min),
+        max: String(max),
+        value: String(value),
+        style: "width:60px",
+        onchange: (e: Event) => onChange(Number((e.target as HTMLInputElement).value)),
+      }),
+    ]);
+  }
+
+  function renderContent(): HTMLElement {
+    if (state.error) {
+      return el("div", { class: "error-banner" }, [
+        el("h2", {}, ["Couldn't read that file"]),
+        el("p", {}, [state.error]),
+      ]);
+    }
+
+    if (!state.run) {
+      return el("div", { class: "empty" }, [
+        el("h1", {}, ["Your LiveSplit file knows more than your timer shows."]),
+        el("p", { class: "lede" }, [
+          "Find your realistic time save, your reset habits, and your odds of a PB — from the .lss file you already have. Everything runs in your browser; nothing is uploaded.",
+        ]),
+        el(
+          "div",
+          {
+            class: "dropzone",
+            id: "dropzone",
+            ondragover: (e: Event) => {
+              e.preventDefault();
+              (e.currentTarget as HTMLElement).classList.add("drag-over");
+            },
+            ondragleave: (e: Event) =>
+              (e.currentTarget as HTMLElement).classList.remove("drag-over"),
+            ondrop: (e: Event) => {
+              e.preventDefault();
+              (e.currentTarget as HTMLElement).classList.remove("drag-over");
+              const file = (e as DragEvent).dataTransfer?.files?.[0];
+              if (file) void loadFile(file);
+            },
+          },
+          [
+            el("div", { class: "empty-actions" }, [
+              el(
+                "button",
+                { type: "button", class: "btn btn-accent", onclick: () => fileInput.click() },
+                ["Choose a .lss file"],
+              ),
+              ...SAMPLE_FILES.map((s) =>
+                el(
+                  "button",
+                  { type: "button", class: "btn", onclick: () => void loadSample(s.path, s.label) },
+                  [s.label],
+                ),
+              ),
+            ]),
+            el("p", {}, ["or drop a file here · splits.lss lives in your LiveSplit folder"]),
+          ],
+        ),
+        el("p", { class: "privacy-note" }, [
+          el("span", { class: "dot" }),
+          "Parsed entirely client-side. Nothing is uploaded, logged, or stored anywhere but your browser.",
+        ]),
+      ]);
+    }
+
+    const run = state.run;
+    const mcOnChange = (
+      patch: Partial<{ recentWindow: number; simulations: number; lookaheadAttempts: number }>,
+    ) => {
+      setState({
+        mcRecentWindow: patch.recentWindow ?? state.mcRecentWindow,
+        mcSimulations: patch.simulations ?? state.mcSimulations,
+        mcLookahead: patch.lookaheadAttempts ?? state.mcLookahead,
+      });
+    };
+
+    return el("div", {}, [
+      renderHero(run),
+
+      section(
+        "Segment breakdown",
+        "Time save & consistency",
+        "Possible time save is your PB's own segment duration minus that segment's gold (the best it's ever been split). Consistency is computed over the last N attempts.",
+        [
+          numberField("Window", state.consistencyWindow, 3, Math.max(5, run.attempts.length), (v) =>
+            setState({ consistencyWindow: v }),
+          ),
+          numberField("Tolerance (s)", state.toleranceSeconds, 0, 30, (v) =>
+            setState({ toleranceSeconds: v }),
+          ),
+        ],
+        renderSegmentTable(run, {
+          method: state.method,
+          consistencyWindow: state.consistencyWindow,
+          toleranceSeconds: state.toleranceSeconds,
+        }),
+      ),
+
+      section(
+        "Progression",
+        "Delta vs. PB, over attempts",
+        "Every finished attempt's total time, relative to your current PB. Gold dots are attempts that beat everything before them — your PB's own history.",
+        [],
+        renderDeltaChart(run, state.method),
+      ),
+
+      section(
+        "Reset analysis",
+        "Where do your runs die?",
+        "The survival curve is the share of attempts that reached each segment at all; the red bars are how many attempts specifically reset during that segment.",
+        [],
+        renderSurvivalChart(run),
+      ),
+
+      section(
+        "Per-segment shape",
+        "Time distributions",
+        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap. The dashed line is gold; the blue tick is the median.`,
+        [],
+        renderDistributions(run, { method: state.method, window: state.consistencyWindow }),
+      ),
+
+      el("section", { class: "section" }, [
+        renderPbOdds(run, {
+          method: state.method,
+          recentWindow: state.mcRecentWindow,
+          simulations: state.mcSimulations,
+          lookaheadAttempts: state.mcLookahead,
+          onChange: mcOnChange,
+        }),
+      ]),
+
+      el("section", { class: "section" }, [
+        el("div", { class: "section-head" }, [
+          el("div", {}, [
+            el("p", { class: "section-eyebrow" }, ["Share"]),
+            el("h2", { class: "section-title" }, ["Export"]),
+          ]),
+        ]),
+        el("div", { class: "export-row" }, [
+          el(
+            "button",
+            {
+              type: "button",
+              class: "btn btn-accent",
+              onclick: () =>
+                downloadText(
+                  `splitscope-${run.gameName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.md`,
+                  buildMarkdownSummary(run, {
+                    method: state.method,
+                    recentWindow: state.mcRecentWindow,
+                    simulations: state.mcSimulations,
+                    lookaheadAttempts: state.mcLookahead,
+                  }),
+                ),
+            },
+            ["Download Markdown summary"],
+          ),
+          el(
+            "button",
+            {
+              type: "button",
+              class: "btn",
+              onclick: () =>
+                exportPngCard(run, {
+                  method: state.method,
+                  recentWindow: state.mcRecentWindow,
+                  simulations: state.mcSimulations,
+                  lookaheadAttempts: state.mcLookahead,
+                }),
+            },
+            ["Download PNG card"],
+          ),
+        ]),
+      ]),
+    ]);
+  }
+
+  const fileInput = el("input", {
+    type: "file",
+    id: "file-input",
+    accept: ".lss,text/xml,application/xml",
+    onchange: (e: Event) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (file) void loadFile(file);
+    },
+  });
+
+  function render(): void {
+    root.replaceChildren(
+      el("div", { class: "shell" }, [
+        el("hr", { class: "rule" }),
+        renderTopbar(),
+        el("main", {}, [renderContent()]),
+        fileInput,
+        el("footer", {}, [
+          el("div", { class: "footer-inner" }, [
+            el("span", {}, [
+              "splitscope · ",
+              el("a", { href: "https://github.com/antonsoo/splitscope" }, ["source"]),
+              " · MIT licensed",
+            ]),
+            el("span", {}, [
+              "Parses LiveSplit .lss files entirely in your browser. No accounts, no analytics, no uploads.",
+            ]),
+          ]),
+        ]),
+      ]),
+    );
+  }
+
+  render();
+}
