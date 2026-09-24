@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.8.1">
+  <GameIcon />
+  <GameName>Crystal Caverns</GameName>
+  <CategoryName>Any% (fresh splits)</CategoryName>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <AttemptHistory />
+  <Segments>
+    <Segment>
+      <Name>Cave Entrance</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime></RealTime>
+        <GameTime></GameTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Crystal Lake</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime></RealTime>
+          <GameTime></GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime></RealTime>
+        <GameTime></GameTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+  </Segments>
+</Run>

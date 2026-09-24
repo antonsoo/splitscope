@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.0.0.0">
+  <GameName>Crystal Caverns</GameName>
+  <CategoryName>Any%</CategoryName>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>2</AttemptCount>
+  <RunHistory>
+    <Time id="1">00:04:20.0000000</Time>
+    <Time id="2">00:04:05.0000000</Time>
+  </RunHistory>
+  <Segments>
+    <Segment>
+      <Name>Cave Entrance</Name>
+      <PersonalBestSplitTime>00:01:05.0000000</PersonalBestSplitTime>
+      <BestSegmentTime>00:01:00.0000000</BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">00:01:10.0000000</Time>
+        <Time id="2">00:01:05.0000000</Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Boss Room</Name>
+      <PersonalBestSplitTime>00:04:05.0000000</PersonalBestSplitTime>
+      <BestSegmentTime>00:02:55.0000000</BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">00:03:10.0000000</Time>
+        <Time id="2">00:03:00.0000000</Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+</Run>

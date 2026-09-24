@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.8.1">
+  <GameIcon />
+  <GameName>Crystal Caverns</GameName>
+  <CategoryName>Any%</CategoryName>
+  <LayoutPath />
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False"></Platform>
+    <Region></Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>3</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="09/01/2026 10:00:00" isStartedSynced="True" ended="09/01/2026 10:00:50" isEndedSynced="True">
+      <RealTime></RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+    <Attempt id="2" started="09/02/2026 10:00:00" isStartedSynced="True" ended="09/02/2026 10:04:00" isEndedSynced="True">
+      <RealTime>00:04:00.0000000</RealTime>
+      <GameTime>00:03:50.0000000</GameTime>
+    </Attempt>
+    <Attempt id="3" started="09/03/2026 10:00:00" isStartedSynced="True" ended="09/03/2026 10:04:10" isEndedSynced="True">
+      <RealTime>00:04:10.0000000</RealTime>
+      <GameTime></GameTime>
+    </Attempt>
+  </AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Cave Entrance</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:01:00.0000000</RealTime>
+          <GameTime>00:00:58.0000000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:55.0000000</RealTime>
+        <GameTime>00:00:53.0000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:50.0000000</RealTime>
+          <GameTime>00:00:48.0000000</GameTime>
+        </Time>
+        <Time id="2">
+          <RealTime>00:01:00.0000000</RealTime>
+          <GameTime>00:00:58.0000000</GameTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:00:55.0000000</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Crystal Lake</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:02:30.0000000</RealTime>
+          <GameTime>00:02:25.0000000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:25.0000000</RealTime>
+        <GameTime>00:01:22.0000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:01:30.0000000</RealTime>
+          <GameTime>00:01:27.0000000</GameTime>
+        </Time>
+        <Time id="3">
+          <RealTime></RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Boss Room</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:04:00.0000000</RealTime>
+          <GameTime>00:03:50.0000000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:20.0000000</RealTime>
+        <GameTime>00:01:15.0000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:01:30.0000000</RealTime>
+          <GameTime>00:01:25.0000000</GameTime>
+        </Time>
+        <Time id="3">
+          <RealTime>00:01:45.0000000</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>

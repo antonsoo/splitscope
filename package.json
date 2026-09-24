@@ -1,0 +1,53 @@
+{
+  "name": "splitscope",
+  "version": "0.1.0",
+  "description": "In-browser analyzer for LiveSplit (.lss) speedrun files: time save, segment consistency, reset survival, and Monte Carlo PB odds.",
+  "type": "module",
+  "author": "Anton Soloviev",
+  "license": "MIT",
+  "homepage": "https://antonsoo.github.io/splitscope/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonsoo/splitscope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antonsoo/splitscope/issues"
+  },
+  "keywords": [
+    "speedrunning",
+    "livesplit",
+    "lss",
+    "statistics",
+    "monte-carlo",
+    "data-visualization",
+    "typescript"
+  ],
+  "dependencies": {
+    "fast-xml-parser": "^5.11.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sample:generate": "tsx scripts/generate-sample.ts",
+    "ci": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.14",
+    "@types/node": "^26.6.2",
+    "@vitest/coverage-v8": "^5.0.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3",
+    "vitest": "^5.0.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  }
+}
