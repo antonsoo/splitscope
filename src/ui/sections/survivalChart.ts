@@ -11,11 +11,14 @@ import { el, svgEl } from "../dom.js";
 import { formatCount, formatPercent } from "../format.js";
 
 const WIDTH = 900;
-const HEIGHT = 280;
+const HEIGHT = 340;
 const PAD_L = 46;
 const PAD_R = 16;
 const PAD_T = 16;
-const PAD_B = 34;
+// Segment counts range from a handful to 15+ in the wild, and there's no fixed width per
+// label that reads cleanly horizontal at every count — so labels are rotated (see `labels`
+// below), which needs vertical room instead. PAD_B accounts for that.
+const PAD_B = 100;
 const BAR_ZONE = 64;
 const CURVE_BOTTOM = HEIGHT - PAD_B - BAR_ZONE;
 
@@ -73,16 +76,22 @@ export function renderSurvivalChart(run: Run): HTMLElement {
     ]);
   });
 
+  // Rotated rather than horizontal: at a dozen-plus segments (a typical full-category split
+  // count), horizontal labels this close together overlap into an unreadable mess. Rotated
+  // and right-aligned to its own tick, each label reads as a normal diagonal axis label
+  // regardless of segment count.
+  const labelY = HEIGHT - PAD_B + 16;
   const labels = analysis.points.map((p, i) =>
     svgEl(
       "text",
       {
         x: x(i),
-        y: HEIGHT - 6,
+        y: labelY,
         class: "chart-axis-label",
-        "text-anchor": "middle",
+        "text-anchor": "end",
+        transform: `rotate(-40 ${x(i)} ${labelY})`,
       },
-      [p.segmentName.length > 18 ? `${p.segmentName.slice(0, 17)}…` : p.segmentName],
+      [p.segmentName.length > 16 ? `${p.segmentName.slice(0, 15)}…` : p.segmentName],
     ),
   );
 

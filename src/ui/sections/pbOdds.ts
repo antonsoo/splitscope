@@ -6,7 +6,7 @@
  * building toward, not just another stat panel.
  */
 import { simulatePbOdds } from "../../core/montecarlo.js";
-import { pbTotal } from "../../core/stats.js";
+import { pbTotal, resetAnalysis } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { el } from "../dom.js";
 import { formatCount, formatPercent, formatSeconds } from "../format.js";
@@ -50,6 +50,13 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
     simulations: options.simulations,
     lookaheadAttempts: options.lookaheadAttempts,
   });
+  // The simulation's "finish rate" is the model's own recent-window estimate — it can
+  // legitimately read very differently from the run's all-time rate (that's the whole point of
+  // a "recent form" window), but shown alone and unlabeled it reads as a contradiction against
+  // the hero's all-time figure. Show both, explicitly labeled.
+  const allTime = resetAnalysis(run);
+  const allTimeFinishRate =
+    allTime.totalAttempts > 0 ? allTime.finishedAttempts / allTime.totalAttempts : null;
 
   const body =
     pb === null
@@ -87,7 +94,10 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
                     : formatCount(Math.round(result.expectedAttemptsUntilPb)),
                 ]),
                 el("p", { class: "odds-metric-ci" }, [
-                  `finish rate ${formatPercent(result.finishProbability, 1)} · PB rate | finish ${formatPercent(result.pbProbabilityGivenFinish, 2)}`,
+                  `finish rate (last ${options.recentWindow}) ${formatPercent(result.finishProbability, 1)} · all-time ${formatPercent(allTimeFinishRate, 1)}`,
+                ]),
+                el("p", { class: "odds-metric-ci" }, [
+                  `P(beat PB ∣ finish) ${formatPercent(result.pbProbabilityGivenFinish, 2)}`,
                 ]),
               ]),
             ]),
@@ -96,7 +106,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
             ]),
           ]);
 
-  return el("div", { class: "odds-panel" }, [
+  return el("div", { class: "odds-panel", id: "pb-odds" }, [
     el("div", { class: "odds-head" }, [
       el("div", {}, [
         el("span", { class: "odds-badge" }, ["Monte Carlo"]),

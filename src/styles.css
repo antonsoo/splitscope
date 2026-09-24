@@ -209,17 +209,35 @@ button {
 }
 
 .run-id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
   color: var(--text-muted);
+  flex: 1 1 auto;
+  min-width: 80px;
+  overflow: hidden;
+}
+.run-id-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex: 1 1 auto;
-  min-width: 80px;
 }
 .run-id strong {
   color: var(--text);
   font-weight: 600;
+}
+.sample-badge {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
 }
 
 .topbar-controls {
@@ -457,13 +475,15 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
 }
+/* Self-bordered, not the gap-over-colored-background trick — see the longer note on
+   .dist-grid. Five stats wrapping to an incomplete last row at some viewport widths would
+   otherwise leave a stray colored box in the unfilled column. */
 .hero-stat {
   background: var(--surface);
+  border: 1px solid var(--border);
   padding: 12px 14px;
 }
 .hero-stat-label {
@@ -480,12 +500,66 @@ main {
   color: var(--text);
 }
 
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .split-preview {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-panel);
   overflow: hidden;
+}
+
+/* A teaser for the PB-odds panel further down the page, so the unique feature isn't
+   buried below the fold under an otherwise-empty column. */
+.odds-teaser {
+  display: block;
+  border: 1px solid var(--blue);
+  border-radius: var(--radius-lg);
+  background: var(--blue-dim);
+  padding: 16px 18px;
+  text-decoration: none;
+  transition:
+    background 0.15s var(--ease),
+    border-color 0.15s var(--ease);
+}
+.odds-teaser:hover {
+  background: color-mix(in srgb, var(--blue) 22%, var(--surface));
+}
+.odds-teaser-label {
+  margin: 0 0 8px;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 700;
+}
+.odds-teaser-value {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.3;
+}
+.odds-teaser-value.mono {
+  font-family: var(--font-mono);
+  color: var(--blue);
+}
+.odds-teaser-sub {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.odds-teaser-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
 }
 .split-preview-head {
   display: flex;
@@ -732,13 +806,18 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
+/* Each cell carries its own border rather than the usual "1px gap over a border-colored
+   background" trick: with a segment count that doesn't evenly divide the column count (any
+   count that isn't a multiple of the row width — 14 segments in 5 columns, say), the gap
+   trick leaves a stray colored box in the unfilled grid cell. A border per cell has no such
+   artifact, at the cost of doubled-up borders between cells, which reads as a slightly bolder
+   line — an acceptable trade for never showing an empty colored box. */
 .dist-cell {
   background: var(--surface);
+  border: 1px solid var(--border);
   padding: 14px;
 }
 .dist-cell-name {
