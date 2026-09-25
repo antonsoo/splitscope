@@ -261,3 +261,7 @@ and changes to the parser should come with a fixture and an update to
 ## License
 
 [MIT](LICENSE) © 2026 Anton Soloviev
+
+---
+
+<sub>Part of [Officina](https://antonsoo.github.io/officina/), a set of small open-source tools by [Anton Soloviev](https://github.com/antonsoo).</sub>
