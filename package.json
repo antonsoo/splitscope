@@ -1,6 +1,6 @@
 {
   "name": "splitscope",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "In-browser analyzer for LiveSplit (.lss) speedrun files: time save, segment consistency, reset survival, and Monte Carlo PB odds.",
   "type": "module",
   "author": "Anton Soloviev",
