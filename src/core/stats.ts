@@ -231,6 +231,28 @@ export function improvementTrend(run: Run, method: TimingMethod): Trend {
   return { points, slopePerAttempt };
 }
 
+const furthestCache = new WeakMap<Run, ReadonlyMap<number, number>>();
+
+/**
+ * Attempt id -> the furthest segment index its `SegmentHistory` entries reach,
+ * built in one pass over the history and cached per run. (Scanning every
+ * segment's history once per attempt made reset analysis quadratic: about
+ * four seconds for 5,000 attempts of 30 segments, run several times a render.)
+ */
+function furthestSegmentIndices(run: Run): ReadonlyMap<number, number> {
+  let furthest = furthestCache.get(run);
+  if (!furthest) {
+    const map = new Map<number, number>();
+    run.segments.forEach((segment, index) => {
+      for (const h of segment.history)
+        map.set(h.attemptId, Math.max(index, map.get(h.attemptId) ?? -1));
+    });
+    furthest = map;
+    furthestCache.set(run, furthest);
+  }
+  return furthest;
+}
+
 /**
  * The furthest segment index (0-based) an attempt's `SegmentHistory` entries
  * reach. `-1` means the attempt has no recorded segment history at all (it
@@ -238,11 +260,7 @@ export function improvementTrend(run: Run, method: TimingMethod): Trend {
  * reset/survival analysis and the Monte Carlo hazard model.
  */
 export function furthestSegmentIndex(run: Run, attemptId: number): number {
-  let furthest = -1;
-  run.segments.forEach((segment, index) => {
-    if (segment.history.some((h) => h.attemptId === attemptId)) furthest = index;
-  });
-  return furthest;
+  return furthestSegmentIndices(run).get(attemptId) ?? -1;
 }
 
 /** Whether an attempt finished the run (has an overall RealTime — the wall-clock completion signal). */

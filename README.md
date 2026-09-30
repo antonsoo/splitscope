@@ -228,6 +228,11 @@ project's own dev box (14 vCPU WSL2 Linux, 48 GB RAM). The real 450-attempt,
 about 49&nbsp;ms on the same machine — a 30-iteration average, also
 `performance.now()`.
 
+The analyses index each attempt's furthest segment in one pass over the
+segment history. On a generated 5,000-attempt, 30-segment run, the reset
+analysis takes 35&nbsp;ms; it took about 4&nbsp;s when each attempt rescanned
+every segment's history, and the page runs it several times per render.
+
 ## Accuracy and limitations
 
 - **PB odds is a model, not a prophecy.** It assumes segments are
