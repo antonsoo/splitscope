@@ -223,3 +223,49 @@ describe("simulatePbOdds — skipped splits", () => {
     expect(result.pbProbabilityPerAttempt).toBe(1);
   });
 });
+
+describe("simulatePbOdds — derived intervals", () => {
+  const n = 10;
+  const run: Run = {
+    gameName: "G",
+    categoryName: "C",
+    formatVersion: "1.8.1.0",
+    offset: 0,
+    attemptCount: n,
+    attempts: Array.from({ length: n }, (_, i) => makeAttempt(i + 1, 20)),
+    segments: [
+      makeSegment("A", [9, 10, 11, 9, 10, 11, 9, 10, 11, 10]),
+      makeSegment("B", [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]),
+    ],
+  };
+
+  it("carries the per-attempt interval through the K-attempt and expected-attempts formulas", () => {
+    const r = simulatePbOdds(run, 19.5, {
+      method: "RealTime",
+      recentWindow: n,
+      simulations: 4_000,
+      lookaheadAttempts: 5,
+      seed: 3,
+    });
+    const [lo, hi] = r.pbProbabilityPerAttemptCi;
+    expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo) ** 5, 12);
+    expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi) ** 5, 12);
+    expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb);
+    expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb);
+    expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi, 9);
+    expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo, 9);
+  });
+
+  it("has no finite upper bound on expected attempts when no simulated attempt beat PB", () => {
+    const r = simulatePbOdds(run, 18, {
+      method: "RealTime",
+      recentWindow: n,
+      simulations: 1_000,
+      lookaheadAttempts: 5,
+      seed: 3,
+    });
+    expect(r.pbProbabilityPerAttempt).toBe(0);
+    expect(r.expectedAttemptsUntilPbCi[1]).toBeNull();
+    expect(r.expectedAttemptsUntilPbCi[0]).toBeGreaterThan(200);
+  });
+});

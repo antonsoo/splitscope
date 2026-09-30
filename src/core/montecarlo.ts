@@ -51,8 +51,12 @@ export interface PbOddsResult {
   readonly lookaheadAttempts: number;
   /** P(at least one PB in the next `lookaheadAttempts`), assuming independent attempts. */
   readonly probabilityAtLeastOnePb: number;
+  /** {@link pbProbabilityPerAttemptCi} carried through the same formula (it is monotonic in p). */
+  readonly probabilityAtLeastOnePbCi: readonly [number, number];
   /** Geometric-distribution expected attempts to first PB; `null` if the per-attempt probability is 0. */
   readonly expectedAttemptsUntilPb: number | null;
+  /** `1 / p` at the CI's upper and lower ends; the upper bound is `null` (unbounded) when the CI reaches 0. */
+  readonly expectedAttemptsUntilPbCi: readonly [number | null, number | null];
   readonly insufficientData: boolean;
   readonly assumptions: readonly string[];
 }
@@ -62,6 +66,7 @@ const ASSUMPTIONS = [
   "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving.",
   "Reset hazard per segment is estimated from historical frequency and assumed constant going forward.",
   "Attempts are treated as independent trials when combining single-attempt odds into a multi-attempt probability.",
+  "The 95% intervals cover simulation noise only: they narrow as you add simulations, not as you add attempts, so they don't measure how well the recent-form window represents you.",
 ];
 
 /**
@@ -157,8 +162,10 @@ export function simulatePbOdds(
   const pbProbabilityPerAttempt = insufficientData ? 0 : beatPb / S;
   const pbProbabilityGivenFinish = finished === 0 ? null : beatPb / finished;
   const K = options.lookaheadAttempts;
-  const probabilityAtLeastOnePb = 1 - (1 - pbProbabilityPerAttempt) ** K;
+  const atLeastOne = (p: number) => 1 - (1 - p) ** K;
+  const probabilityAtLeastOnePb = atLeastOne(pbProbabilityPerAttempt);
   const expectedAttemptsUntilPb = pbProbabilityPerAttempt > 0 ? 1 / pbProbabilityPerAttempt : null;
+  const [ciLow, ciHigh] = wilsonCi(pbProbabilityPerAttempt, S);
 
   return {
     simulations: S,
@@ -166,10 +173,12 @@ export function simulatePbOdds(
     finishProbability,
     pbProbabilityGivenFinish,
     pbProbabilityPerAttempt,
-    pbProbabilityPerAttemptCi: wilsonCi(pbProbabilityPerAttempt, S),
+    pbProbabilityPerAttemptCi: [ciLow, ciHigh],
     lookaheadAttempts: K,
     probabilityAtLeastOnePb,
+    probabilityAtLeastOnePbCi: [atLeastOne(ciLow), atLeastOne(ciHigh)],
     expectedAttemptsUntilPb,
+    expectedAttemptsUntilPbCi: [ciHigh > 0 ? 1 / ciHigh : null, ciLow > 0 ? 1 / ciLow : null],
     insufficientData,
     assumptions: ASSUMPTIONS,
   };

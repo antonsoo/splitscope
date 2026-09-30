@@ -14,7 +14,7 @@ import {
 } from "../core/stats.js";
 import { formatSeconds } from "../core/timespan.js";
 import type { Run, TimingMethod } from "../core/types.js";
-import { formatCount, formatHours, formatPercent } from "./format.js";
+import { formatAttemptsRange, formatCount, formatHours, formatPercent } from "./format.js";
 
 export interface ExportParams {
   readonly method: TimingMethod;
@@ -69,9 +69,9 @@ export function buildMarkdownSummary(run: Run, params: ExportParams): string {
       ? "_Not enough segment history in the selected window to simulate._"
       : [
           `- **P(next attempt beats PB):** ${formatPercent(odds.pbProbabilityPerAttempt, 2)} (95% CI ${formatPercent(odds.pbProbabilityPerAttemptCi[0], 2)}–${formatPercent(odds.pbProbabilityPerAttemptCi[1], 2)})`,
-          `- **P(≥ 1 PB in next ${odds.lookaheadAttempts} attempts):** ${formatPercent(odds.probabilityAtLeastOnePb, 1)}`,
-          `- **Expected attempts to next PB:** ${odds.expectedAttemptsUntilPb === null ? "—" : formatCount(Math.round(odds.expectedAttemptsUntilPb))}`,
-          `- Based on ${formatCount(odds.simulations)} simulated attempts, resampled from the last ${params.recentWindow} attempts. Assumes independent segments and a stationary recent-form window — see the app for full assumptions.`,
+          `- **P(≥ 1 PB in next ${odds.lookaheadAttempts} attempts):** ${formatPercent(odds.probabilityAtLeastOnePb, 1)} (95% CI ${formatPercent(odds.probabilityAtLeastOnePbCi[0], 1)}–${formatPercent(odds.probabilityAtLeastOnePbCi[1], 1)})`,
+          `- **Expected attempts to next PB:** ${odds.expectedAttemptsUntilPb === null ? "—" : formatCount(Math.round(odds.expectedAttemptsUntilPb))} (95% CI ${formatAttemptsRange(odds.expectedAttemptsUntilPbCi)})`,
+          `- Based on ${formatCount(odds.simulations)} simulated attempts, resampled from the last ${params.recentWindow} attempts. The intervals cover simulation noise only. Assumes independent segments and a stationary recent-form window — see the app for full assumptions.`,
         ].join("\n"),
     "",
   ];

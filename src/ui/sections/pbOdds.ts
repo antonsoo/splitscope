@@ -9,7 +9,7 @@ import { simulatePbOdds } from "../../core/montecarlo.js";
 import { pbTotal, resetAnalysis } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { el } from "../dom.js";
-import { formatCount, formatPercent, formatSeconds } from "../format.js";
+import { formatAttemptsRange, formatCount, formatPercent, formatSeconds } from "../format.js";
 
 export interface PbOddsOptions {
   readonly method: TimingMethod;
@@ -76,6 +76,9 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
                 el("p", { class: "odds-metric-value is-primary" }, [
                   formatPercent(result.probabilityAtLeastOnePb, 1),
                 ]),
+                el("p", { class: "odds-metric-ci" }, [
+                  `95% CI ${formatPercent(result.probabilityAtLeastOnePbCi[0], 1)} – ${formatPercent(result.probabilityAtLeastOnePbCi[1], 1)}`,
+                ]),
               ]),
               el("div", {}, [
                 el("p", { class: "odds-metric-label" }, ["Chance the very next attempt beats PB"]),
@@ -92,6 +95,9 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
                   result.expectedAttemptsUntilPb === null
                     ? "—"
                     : formatCount(Math.round(result.expectedAttemptsUntilPb)),
+                ]),
+                el("p", { class: "odds-metric-ci" }, [
+                  `95% CI ${formatAttemptsRange(result.expectedAttemptsUntilPbCi)}`,
                 ]),
                 el("p", { class: "odds-metric-ci" }, [
                   `finish rate (last ${options.recentWindow}) ${formatPercent(result.finishProbability, 1)} · all-time ${formatPercent(allTimeFinishRate, 1)}`,

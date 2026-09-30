@@ -21,3 +21,11 @@ export function formatHours(seconds: number): string {
 }
 
 export { formatSeconds };
+
+/** An attempts-count interval; an upper bound of `null` means the interval has no finite end. */
+export function formatAttemptsRange(range: readonly [number | null, number | null]): string {
+  const [lo, hi] = range;
+  if (lo === null) return "—";
+  const low = formatCount(Math.round(lo));
+  return hi === null ? `${low} or more` : `${low} – ${formatCount(Math.round(hi))}`;
+}
