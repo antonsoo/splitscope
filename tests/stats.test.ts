@@ -11,6 +11,7 @@ import {
   possibleTimeSave,
   resetAnalysis,
   segmentConsistency,
+  segmentTimes,
   sumOfBest,
 } from "../src/core/stats.js";
 import type { Attempt, DualTime, Run, Segment } from "../src/core/types.js";
@@ -150,6 +151,17 @@ describe("segmentConsistency", () => {
     const withSkip: Run = { ...run, segments: [segment("A", 10, 8, [8, null, 10, 11, 12])] };
     const stats = segmentConsistency(withSkip, 0, "RealTime", 5, 2);
     expect(stats.n).toBe(4);
+  });
+
+  it("also excludes the combined time LiveSplit records for the segment after a skipped split", () => {
+    // Attempt 2 skipped A's split, so its B entry (19) is A and B together.
+    const skipped: Run = {
+      ...run,
+      segments: [segment("A", 10, 8, [8, null, 10]), segment("B", 20, 9, [9, 19, 10])],
+    };
+    const stats = segmentConsistency(skipped, 1, "RealTime", 3, 1);
+    expect(stats.n).toBe(2);
+    expect(stats.median).toBe(9.5);
   });
 
   it("returns an all-null result for a segment with no history", () => {
@@ -326,5 +338,81 @@ describe("normalCdf", () => {
     expect(normalCdf(0)).toBeCloseTo(0.5, 6);
     expect(normalCdf(1.959964)).toBeCloseTo(0.975, 4);
     expect(normalCdf(-1.959964)).toBeCloseTo(0.025, 4);
+  });
+});
+
+describe("segmentTimes", () => {
+  const withIds = (name: string, entries: ReadonlyArray<readonly [number, DualTime]>): Segment => ({
+    name,
+    splitTimes: new Map(),
+    bestSegmentTime: dt(null),
+    history: entries.map(([attemptId, time]) => ({ attemptId, time })),
+  });
+  const base = { gameName: "G", categoryName: "C", formatVersion: "1.8.1", offset: 0 };
+
+  it("drops a skipped split and the combined entry after it, matching livesplit-core's rule", () => {
+    const run: Run = {
+      ...base,
+      attemptCount: 3,
+      attempts: [attempt(1, 30), attempt(2, 31), attempt(3, 29)],
+      segments: [
+        withIds("A", [
+          [1, dt(10)],
+          [2, dt(null)],
+          [3, dt(9)],
+        ]),
+        withIds("B", [
+          [1, dt(10)],
+          [2, dt(21)],
+          [3, dt(10)],
+        ]),
+        withIds("C", [
+          [1, dt(10)],
+          [2, dt(10)],
+          [3, dt(10)],
+        ]),
+      ],
+    };
+    expect(segmentTimes(run, 0, "RealTime").map((t) => t.seconds)).toEqual([10, null, 9]);
+    expect(segmentTimes(run, 1, "RealTime").map((t) => t.seconds)).toEqual([10, null, 10]);
+    expect(segmentTimes(run, 2, "RealTime").map((t) => t.seconds)).toEqual([10, 10, 10]);
+    expect(segmentTimes(run, 3, "RealTime")).toEqual([]);
+  });
+
+  it("keeps an entry whose previous-segment entry is missing, and judges each timing method on its own", () => {
+    const run: Run = {
+      ...base,
+      attemptCount: 2,
+      attempts: [attempt(1, 30), attempt(2, 30)],
+      segments: [
+        // Attempt 1 has GameTime missing on A (load removal off), attempt 2 has no A entry at all.
+        withIds("A", [[1, dt(10, null)]]),
+        withIds("B", [
+          [1, dt(20, 18)],
+          [2, dt(20, 18)],
+        ]),
+      ],
+    };
+    expect(segmentTimes(run, 1, "RealTime").map((t) => t.seconds)).toEqual([20, 20]);
+    expect(segmentTimes(run, 1, "GameTime").map((t) => t.seconds)).toEqual([null, 18]);
+  });
+
+  it("feeds gold history, so a combined time can't pose as a segment record", () => {
+    const run: Run = {
+      ...base,
+      attemptCount: 2,
+      attempts: [attempt(1, null), attempt(2, 20)],
+      segments: [
+        withIds("A", [
+          [1, dt(null)],
+          [2, dt(10)],
+        ]),
+        withIds("B", [
+          [1, dt(12)],
+          [2, dt(10)],
+        ]),
+      ],
+    };
+    expect(goldHistory(run, 1, "RealTime")).toEqual([{ attemptId: 2, seconds: 10 }]);
   });
 });

@@ -5,7 +5,7 @@
  */
 
 import { mulberry32 } from "../../core/rng.js";
-import { goldHistory, segmentConsistency } from "../../core/stats.js";
+import { goldHistory, recentSegmentSeconds, segmentConsistency } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { pick } from "../../core/types.js";
 import { niceDomain, scaleLinear } from "../charts/scale.js";
@@ -30,10 +30,7 @@ function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGS
   if (!segment) return svgEl("svg", { viewBox: `0 0 ${WIDTH} ${HEIGHT}` });
 
   const gold = pick(segment.bestSegmentTime, options.method);
-  const recent = segment.history.slice(-options.window);
-  const values = recent
-    .map((h) => pick(h.time, options.method))
-    .filter((v): v is number => v !== null);
+  const values = recentSegmentSeconds(run, index, options.method, options.window);
   const stats = segmentConsistency(run, index, options.method, options.window, 1);
 
   if (values.length === 0) {

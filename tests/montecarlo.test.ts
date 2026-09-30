@@ -190,3 +190,36 @@ describe("simulatePbOdds — reset hazard", () => {
     expect(result.pbProbabilityPerAttempt).toBeCloseTo(0.6, 1);
   });
 });
+
+describe("simulatePbOdds — skipped splits", () => {
+  // Every attempt runs A = 10 s and B = 10 s, except attempt 3, which skipped A's split: LiveSplit
+  // records A as empty and B as 20 s (A and B together). Those 20 s must not be resampled as a B.
+  const run: Run = {
+    gameName: "G",
+    categoryName: "C",
+    formatVersion: "1.8.1.0",
+    offset: 0,
+    attemptCount: 5,
+    attempts: Array.from({ length: 5 }, (_, i) => makeAttempt(i + 1, 20)),
+    segments: [
+      {
+        name: "A",
+        splitTimes: new Map(),
+        bestSegmentTime: dt(10),
+        history: [1, 2, 3, 4, 5].map((id) => ({ attemptId: id, time: dt(id === 3 ? null : 10) })),
+      },
+      makeSegment("B", [10, 10, 20, 10, 10]),
+    ],
+  };
+
+  it("resamples only the segment's own durations", () => {
+    const result = simulatePbOdds(run, 20.5, {
+      method: "RealTime",
+      recentWindow: 5,
+      simulations: 2_000,
+      lookaheadAttempts: 1,
+      seed: 7,
+    });
+    expect(result.pbProbabilityPerAttempt).toBe(1);
+  });
+});

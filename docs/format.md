@@ -136,6 +136,18 @@ treats that as "reached, not timed" and excludes it from consistency
 statistics, but still counts it toward "furthest segment reached" for reset
 analysis (`furthestSegmentIndex` in `src/core/stats.ts`).
 
+The segment *after* a skipped split is recorded differently from a normal
+one: LiveSplit writes each segment's history entry as its split time minus
+the last split time that was actually recorded (livesplit-core
+[`Run::update_segment_history`](https://github.com/LiveSplit/livesplit-core/blob/master/src/run/mod.rs)),
+so that entry is the duration of the skipped segment and this one together.
+livesplit-core's average and median comparisons skip an entry whenever the
+previous segment has an entry for the same attempt with no time
+([`comparison/average_segments.rs`](https://github.com/LiveSplit/livesplit-core/blob/master/src/comparison/average_segments.rs)).
+splitscope applies the same rule (`segmentTimes` in `src/core/stats.ts`)
+before any per-segment statistic, strip plot, gold history, or Monte Carlo
+sample; it only counts for "furthest segment reached."
+
 An attempt that resets, by contrast, has **no `SegmentHistory` entry at all**
 for the segments it never reached, and no overall `<RealTime>` on its
 `<AttemptHistory><Attempt>` entry (`readTime`/`readNestedTime` parse that

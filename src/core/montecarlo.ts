@@ -26,9 +26,8 @@
  * normal segment times (via `normalCdf`).
  */
 import { mulberry32, type Rng, seedFromString } from "./rng.js";
-import { furthestSegmentIndex, normalCdf } from "./stats.js";
+import { furthestSegmentIndex, normalCdf, segmentTimes } from "./stats.js";
 import type { Run, TimingMethod } from "./types.js";
-import { pick } from "./types.js";
 
 export interface PbOddsOptions {
   readonly method: TimingMethod;
@@ -98,10 +97,12 @@ function buildSegmentModels(run: Run, method: TimingMethod, window: number): Seg
     attemptsInWindow.filter((a) => a.time.realTime !== null).map((a) => a.id),
   );
 
-  return run.segments.map((segment, i) => {
-    const pool = segment.history
-      .filter((h) => idsInWindow.has(h.attemptId))
-      .map((h) => pick(h.time, method))
+  return run.segments.map((_segment, i) => {
+    // The segment's own durations only: a skipped split and the combined time
+    // recorded after one are left out (see `segmentTimes`).
+    const pool = segmentTimes(run, i, method)
+      .filter((t) => idsInWindow.has(t.attemptId))
+      .map((t) => t.seconds)
       .filter((v): v is number => v !== null);
 
     const started = attemptsInWindow.filter((a) => (furthestById.get(a.id) ?? -1) >= i - 1).length;

@@ -55,6 +55,70 @@ export function possibleTimeSave(run: Run, method: TimingMethod): (number | null
   });
 }
 
+export interface SegmentTime {
+  readonly attemptId: number;
+  /** The segment's own duration on this attempt; `null` for a skipped split and for the segment right after one. */
+  readonly seconds: number | null;
+}
+
+const segmentTimesCache = new WeakMap<
+  Run,
+  Map<TimingMethod, readonly (readonly SegmentTime[])[]>
+>();
+
+/**
+ * One segment's history as durations of that segment alone, aligned with
+ * `segment.history`. Two kinds of entry have no such duration:
+ *
+ * - a skipped split, recorded with no time;
+ * - the segment right after a skipped split. LiveSplit records it as the time
+ *   since the last split that was taken (livesplit-core
+ *   `Run::update_segment_history`), so it spans both segments and would read
+ *   as an outlier-slow run of this one. livesplit-core's own average and
+ *   median comparisons drop it with the same rule used here: the previous
+ *   segment has an entry for that attempt, with no time
+ *   (`comparison/average_segments.rs`).
+ */
+export function segmentTimes(
+  run: Run,
+  index: number,
+  method: TimingMethod,
+): readonly SegmentTime[] {
+  let byMethod = segmentTimesCache.get(run);
+  if (!byMethod) {
+    byMethod = new Map();
+    segmentTimesCache.set(run, byMethod);
+  }
+  let all = byMethod.get(method);
+  if (!all) {
+    all = run.segments.map((segment, i) => {
+      const previous = run.segments[i - 1];
+      const previousById = previous
+        ? new Map(previous.history.map((h) => [h.attemptId, pick(h.time, method)]))
+        : null;
+      return segment.history.map((h) => ({
+        attemptId: h.attemptId,
+        seconds: previousById?.get(h.attemptId) === null ? null : pick(h.time, method),
+      }));
+    });
+    byMethod.set(method, all);
+  }
+  return all[index] ?? [];
+}
+
+/** The segment's own durations over its last `window` history entries, oldest first (see `segmentTimes`). */
+export function recentSegmentSeconds(
+  run: Run,
+  index: number,
+  method: TimingMethod,
+  window: number,
+): number[] {
+  return segmentTimes(run, index, method)
+    .slice(-window)
+    .map((t) => t.seconds)
+    .filter((v): v is number => v !== null);
+}
+
 export interface ConsistencyStats {
   readonly n: number;
   readonly median: number | null;
@@ -80,7 +144,9 @@ function quantile(sorted: readonly number[], q: number): number {
  * Consistency of one segment over its last `window` attempts: median, IQR,
  * (sample) standard deviation, and the share of those attempts within
  * `toleranceSeconds` of the segment's own gold. Skipped splits (a history
- * entry with no time recorded) are excluded, not treated as zero.
+ * entry with no time recorded) are excluded, not treated as zero, and so is
+ * the combined time LiveSplit records for the segment after one (see
+ * `segmentTimes`).
  */
 export function segmentConsistency(
   run: Run,
@@ -102,11 +168,7 @@ export function segmentConsistency(
   if (!segment) return empty;
 
   const gold = pick(segment.bestSegmentTime, method);
-  const recent = segment.history.slice(-window);
-  const values = recent
-    .map((h) => pick(h.time, method))
-    .filter((v): v is number => v !== null)
-    .sort((a, b) => a - b);
+  const values = recentSegmentSeconds(run, index, method, window).sort((a, b) => a - b);
 
   if (values.length === 0) return empty;
 
@@ -289,12 +351,11 @@ export interface GoldHistoryPoint {
 
 /** The sequence of new segment records over time (a running minimum of the segment's history). */
 export function goldHistory(run: Run, index: number, method: TimingMethod): GoldHistoryPoint[] {
-  const segment = run.segments[index];
-  if (!segment) return [];
+  if (!run.segments[index]) return [];
   const points: GoldHistoryPoint[] = [];
   let best = Number.POSITIVE_INFINITY;
-  for (const entry of segment.history) {
-    const value = pick(entry.time, method);
+  for (const entry of segmentTimes(run, index, method)) {
+    const value = entry.seconds;
     if (value !== null && value < best) {
       best = value;
       points.push({ attemptId: entry.attemptId, seconds: value });

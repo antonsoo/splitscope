@@ -164,7 +164,11 @@ statistic in the app, so it's called out explicitly in code and in
   fixed number of seconds, so a 12-second segment and a 4-minute segment are
   judged on the same scale.
 - Skipped splits (LiveSplit records a segment-history entry with no time)
-  are excluded from these statistics rather than treated as zero.
+  are excluded from these statistics rather than treated as zero. So is the
+  entry right after one: LiveSplit records that segment as the time since the
+  last split taken, which covers both segments, and livesplit-core's own
+  average and median comparisons leave it out by the same rule. The same
+  durations feed the strip plots, gold history, and PB odds.
 
 ### Reset analysis
 
