@@ -169,7 +169,8 @@ export function exportPngCard(run: Run, params: ExportParams): void {
     a.href = url;
     a.download = `splitscope-${run.gameName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`;
     a.click();
-    URL.revokeObjectURL(url);
+    // Revoking in the same task can cancel the download in some browsers.
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }, "image/png");
 }
 
@@ -180,5 +181,6 @@ export function downloadText(filename: string, text: string): void {
   a.href = url;
   a.download = filename;
   a.click();
-  URL.revokeObjectURL(url);
+  // Revoking in the same task can cancel the download in some browsers.
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
