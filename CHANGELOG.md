@@ -2,6 +2,22 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.1] - 2026-10-01
+
+### Fixed
+
+- A file with thousands of unclosed `<Icon>`, `<GameIcon>` or
+  `<AutoSplitterSettings>` tags froze the page: the pattern that drops those
+  blobs before parsing rescanned to the end of the file from each opening tag
+  (2.8 s for 690 KB, four times that for each doubling). It is a single pass
+  now, 20 ms for the same file, and removes exactly what it removed before.
+
+### Added
+
+- A fuzz test: 1,500 mutated copies of the fixtures and examples (junk times
+  and ids, dropped and repeated elements, truncated files) are each either
+  rejected with a parse error or analyzed without a NaN in any statistic.
+
 ## [0.2.0] - 2026-09-30
 
 ### Fixed

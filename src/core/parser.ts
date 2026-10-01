@@ -53,11 +53,34 @@ const gte = (a: Version, b: Version) => compareVersion(a, b) >= 0;
  * Stripping their text before the general XML parse avoids holding megabytes
  * of irrelevant data in memory for a big splits collection.
  */
-function stripOpaqueBlobs(xml: string): string {
-  return xml
-    .replace(/<GameIcon>[\s\S]*?<\/GameIcon>/g, "<GameIcon/>")
-    .replace(/<Icon>[\s\S]*?<\/Icon>/g, "<Icon/>")
-    .replace(/<AutoSplitterSettings>[\s\S]*?<\/AutoSplitterSettings>/g, "<AutoSplitterSettings/>");
+export function stripOpaqueBlobs(xml: string): string {
+  let out = xml;
+  for (const tag of ["GameIcon", "Icon", "AutoSplitterSettings"]) out = emptyElements(out, tag);
+  return out;
+}
+
+/**
+ * Replaces every `<tag>...</tag>` with `<tag/>`, pairing each opening tag with the nearest
+ * closing tag after it. Done with `indexOf` rather than a lazy `[\s\S]*?` pattern: a file with
+ * thousands of opening tags and no closing one makes that pattern rescan to the end of the
+ * file from each of them (seconds for a few hundred kilobytes, minutes for a few megabytes).
+ */
+function emptyElements(xml: string, tag: string): string {
+  const open = `<${tag}>`;
+  const close = `</${tag}>`;
+  const kept: string[] = [];
+  let cursor = 0;
+  let from = xml.indexOf(open);
+  while (from !== -1) {
+    const end = xml.indexOf(close, from + open.length);
+    if (end === -1) break; // unclosed: the XML parser reports it
+    kept.push(xml.slice(cursor, from), `<${tag}/>`);
+    cursor = end + close.length;
+    from = xml.indexOf(open, cursor);
+  }
+  if (cursor === 0) return xml;
+  kept.push(xml.slice(cursor));
+  return kept.join("");
 }
 
 /**
