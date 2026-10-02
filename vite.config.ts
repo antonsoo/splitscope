@@ -1,8 +1,10 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from "vite";
+import { contentSecurityPolicy } from "./vite.csp";
 
 export default defineConfig({
   base: "/splitscope/",
+  plugins: [contentSecurityPolicy()],
   // The synthetic sample .lss files live in examples/ (see docs/format.md and the
   // sample generator script) and double as Vite's public dir, so "Load sample" fetches
   // the same files in dev and in the built/deployed site without duplicating them.

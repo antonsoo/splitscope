@@ -20,5 +20,5 @@
     "useDefineForClassFields": true,
     "types": ["vite/client"]
   },
-  "include": ["src", "tests", "scripts", "vite.config.ts"]
+  "include": ["src", "tests", "scripts", "vite.config.ts", "vite.csp.ts"]
 }
