@@ -95,27 +95,39 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
       ? `within ${formatPercent(NEAR_GOLD_RELATIVE_TOLERANCE, 0)} of gold`
       : `within ±${formatSeconds(options.toleranceSeconds, 1)}`;
 
-  return el("div", { class: "panel", style: "overflow-x:auto" }, [
-    el("table", { class: "seg-table" }, [
-      el("thead", {}, [
-        el("tr", {}, [
-          el("th", {}, ["Segment"]),
-          el("th", {}, ["PB"]),
-          el("th", {}, ["Gold"]),
-          el("th", {}, ["Time save"]),
-          el("th", {}, ["Median"]),
-          el("th", {}, ["± IQR/2"]),
-          el("th", {}, ["Consistency"]),
-          el(
-            "th",
-            {
-              title: `Share of recent attempts ${toleranceRule} (min ${NEAR_GOLD_MIN_TOLERANCE_SECONDS}s)`,
-            },
-            [`Near-gold % (${toleranceRule})`],
-          ),
+  // On a narrow screen the table scrolls sideways inside its panel; tabindex lets a keyboard
+  // user focus the panel and scroll it with the arrow keys.
+  return el(
+    "div",
+    {
+      class: "panel",
+      style: "overflow-x:auto",
+      tabindex: 0,
+      role: "region",
+      "aria-label": "Segment table",
+    },
+    [
+      el("table", { class: "seg-table" }, [
+        el("thead", {}, [
+          el("tr", {}, [
+            el("th", {}, ["Segment"]),
+            el("th", {}, ["PB"]),
+            el("th", {}, ["Gold"]),
+            el("th", {}, ["Time save"]),
+            el("th", {}, ["Median"]),
+            el("th", {}, ["± IQR/2"]),
+            el("th", {}, ["Consistency"]),
+            el(
+              "th",
+              {
+                title: `Share of recent attempts ${toleranceRule} (min ${NEAR_GOLD_MIN_TOLERANCE_SECONDS}s)`,
+              },
+              [`Near-gold % (${toleranceRule})`],
+            ),
+          ]),
         ]),
+        el("tbody", {}, rows),
       ]),
-      el("tbody", {}, rows),
-    ]),
-  ]);
+    ],
+  );
 }

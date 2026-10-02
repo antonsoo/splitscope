@@ -59,12 +59,12 @@
   --text-muted: #4c5561;
   --text-faint: #636c76; /* AA for small text: 4.85:1 on white, 4.67:1 on --bg */
   --gold-dim: rgb(184 132 0 / 12%);
-  --gold: #916500; /* AA: 5.17:1 on white, 4.69:1 on --bg */
-  --green: #0c7d43; /* AA: 5.21:1 on white, 4.73:1 on --bg */
+  --gold: #875e00; /* AA: 5.78:1 on white, 5.25:1 on --bg, 5.08:1 on --gold-dim */
+  --green: #0b743e; /* AA: 5.86:1 on white, 5.33:1 on --bg, 5.02:1 on --green-dim */
   --green-dim: rgb(14 138 75 / 12%);
-  --red: #c62f2f;
+  --red: #ba2c2c; /* AA: 6.03:1 on white, 5.48:1 on --bg, 5.01:1 on --red-dim */
   --red-dim: rgb(198 47 47 / 12%);
-  --blue: #1a67c4; /* AA: 5.55:1 on white, 5.05:1 on --bg */
+  --blue: #185eb2; /* AA: 6.40:1 on white, 5.81:1 on --bg, 5.12:1 on --blue-dim, 4.58:1 on a hovered teaser */
   --blue-dim: rgb(28 111 209 / 10%);
   --shadow-panel: 0 1px 0 0 var(--border) inset, 0 8px 24px -16px rgb(0 0 0 / 20%);
 }
