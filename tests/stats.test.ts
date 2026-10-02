@@ -29,6 +29,9 @@ function segment(
 ): Segment {
   return {
     name,
+    label: name,
+    group: null,
+    isSubsplit: false,
     splitTimes: new Map([["Personal Best", dt(pbCumulative)]]),
     bestSegmentTime: dt(gold),
     history: historyDurations.map((v, i) => ({ attemptId: i + 1, time: dt(v) })),
@@ -222,6 +225,9 @@ describe("reset/survival analysis", () => {
     segments: [
       {
         name: "A",
+        label: "A",
+        group: null,
+        isSubsplit: false,
         splitTimes: new Map(),
         bestSegmentTime: dt(null),
         history: [
@@ -231,12 +237,18 @@ describe("reset/survival analysis", () => {
       },
       {
         name: "B",
+        label: "B",
+        group: null,
+        isSubsplit: false,
         splitTimes: new Map(),
         bestSegmentTime: dt(null),
         history: [{ attemptId: 3, time: dt(10) }],
       },
       {
         name: "C",
+        label: "C",
+        group: null,
+        isSubsplit: false,
         splitTimes: new Map(),
         bestSegmentTime: dt(null),
         history: [{ attemptId: 3, time: dt(10) }],
@@ -344,6 +356,9 @@ describe("normalCdf", () => {
 describe("segmentTimes", () => {
   const withIds = (name: string, entries: ReadonlyArray<readonly [number, DualTime]>): Segment => ({
     name,
+    label: name,
+    group: null,
+    isSubsplit: false,
     splitTimes: new Map(),
     bestSegmentTime: dt(null),
     history: entries.map(([attemptId, time]) => ({ attemptId, time })),

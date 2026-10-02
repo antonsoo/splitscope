@@ -36,7 +36,14 @@ export interface SegmentHistoryEntry {
 
 /** One segment, combining its comparison times, gold, and per-attempt history. */
 export interface Segment {
+  /** The name as written in the file, subsplit prefixes (`-`, `{Section}`) included. */
   readonly name: string;
+  /** The name to show: `name` without those prefixes (see names.ts). */
+  readonly label: string;
+  /** The section a subsplit layout puts this segment in, if any. */
+  readonly group: string | null;
+  /** True when the segment is a step inside a section and not the split that ends it. */
+  readonly isSubsplit: boolean;
   /** Cumulative (from run start) times for each named comparison, e.g. "Personal Best". */
   readonly splitTimes: ReadonlyMap<string, DualTime>;
   /** The best (gold) duration ever recorded for this segment alone. */

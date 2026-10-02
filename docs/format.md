@@ -102,7 +102,7 @@ splitscope reproduces every gate the reference parser checks:
 | `< 1.5.0` | Attempts live in `<RunHistory><Time id="N">...</Time></RunHistory>` — just an id and an overall time, no timestamps, no pause time. |
 | `>= 1.5.0` | Attempts live in `<AttemptHistory><Attempt id="N" started="..." ended="...">` with full timestamps, sync flags, and `<PauseTime>`. |
 | `>= 1.6.0` | `<Metadata>` gains structured platform/region/variable data (splitscope doesn't read it). |
-| `>= 1.8.1` | Segment grouping becomes native (`<SegmentGroups>`); older files that used a `-`/`{Group}` prefix convention in segment names are reinterpreted by LiveSplit on load. splitscope doesn't need segment grouping and doesn't reproduce this step. |
+| `>= 1.8.1` | Segment grouping becomes native (`<SegmentGroups>`); older files that used a `-`/`{Group}` prefix convention in segment names are reinterpreted by LiveSplit on load. splitscope's numbers don't depend on grouping, but it reads the name convention for display (`src/core/names.ts`): a `-` name is a step inside a section, the next name without it ends the section, and `{Section}Split` names the section. The raw name stays in `Segment.name`. |
 
 `tests/parser.test.ts` includes a fixture at `1.0.0.0` (the oldest shape: no
 `SplitTimes`, `RunHistory` instead of `AttemptHistory`, direct-value times

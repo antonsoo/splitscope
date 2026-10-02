@@ -103,7 +103,7 @@ function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGS
       viewBox: `0 0 ${WIDTH} ${HEIGHT}`,
       class: "chart-svg",
       role: "img",
-      "aria-label": `${segment.name} time distribution`,
+      "aria-label": `${segment.label} time distribution`,
     },
     children.filter((c): c is SVGElement => c !== null),
   );
@@ -136,7 +136,7 @@ function goldSparkline(run: Run, index: number, method: TimingMethod): HTMLEleme
       viewBox: `0 0 ${WIDTH} ${SPARK_HEIGHT}`,
       class: "chart-svg",
       role: "img",
-      "aria-label": `${segment?.name ?? "segment"} gold history: ${points.length} record${points.length === 1 ? "" : "s"}, most recently ${formatSeconds(values[values.length - 1] ?? null)}`,
+      "aria-label": `${segment?.label ?? "segment"} gold history: ${points.length} record${points.length === 1 ? "" : "s"}, most recently ${formatSeconds(values[values.length - 1] ?? null)}`,
     },
     [
       svgEl("path", { d: path, fill: "none", stroke: "var(--gold)", "stroke-width": "1.5" }),
@@ -160,7 +160,14 @@ export function renderDistributions(run: Run, options: DistributionsOptions): HT
   const cells = run.segments.map((segment, i) => {
     const gold = pick(segment.bestSegmentTime, options.method);
     return el("div", { class: "dist-cell" }, [
-      el("p", { class: "dist-cell-name" }, [segment.name]),
+      el(
+        "p",
+        {
+          class: "dist-cell-name",
+          ...(segment.group ? { title: `${segment.group}: ${segment.label}` } : {}),
+        },
+        [segment.label],
+      ),
       el("p", { class: "dist-cell-sub" }, [`gold ${formatSeconds(gold)} · last ${options.window}`]),
       stripPlot(run, i, options),
       goldSparkline(run, i, options.method),

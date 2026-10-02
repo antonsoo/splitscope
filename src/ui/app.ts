@@ -234,7 +234,14 @@ export function mountApp(root: HTMLElement): void {
       const isGold = duration !== null && gold !== null && Math.abs(duration - gold) < 1e-6;
       const vsGold = duration !== null && gold !== null ? duration - gold : null;
       return el("div", { class: "split-row", style: `animation-delay:${i * 60}ms` }, [
-        el("span", { class: "split-row-name" }, [segment.name]),
+        el(
+          "span",
+          {
+            class: `split-row-name${segment.isSubsplit ? " is-subsplit" : ""}`,
+            ...(segment.group ? { title: `${segment.group}: ${segment.label}` } : {}),
+          },
+          [segment.label],
+        ),
         el("span", { class: "split-row-time" }, [formatSeconds(cumulativeTime)]),
         el("span", { class: `split-row-delta ${isGold ? "is-gold" : "is-flat"}` }, [
           isGold ? "GOLD" : vsGold === null ? "—" : `+${formatSeconds(vsGold)}`,

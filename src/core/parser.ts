@@ -8,8 +8,10 @@
  * See `docs/format.md` for the exact source citation and a walkthrough of
  * every version branch reproduced here.
  */
+
 import { XMLParser } from "fast-xml-parser";
 import { LssParseError } from "./errors.js";
+import { segmentLabels } from "./names.js";
 import { parseOptionalTimeSpan, parseTimeSpan } from "./timespan.js";
 import type { Attempt, DualTime, Run, Segment, SegmentHistoryEntry } from "./types.js";
 import { attr, childArray, childNode, childText, ownText, type XmlNode } from "./xml-helpers.js";
@@ -109,7 +111,10 @@ function readTime(
   return gte(version, V_1_4_1) ? readNestedTime(node) : readDirectTime(directText);
 }
 
-function parseSegment(version: Version, node: XmlNode): Segment {
+function parseSegment(
+  version: Version,
+  node: XmlNode,
+): Omit<Segment, "label" | "group" | "isSubsplit"> {
   const name = childText(node, "Name");
   if (name === undefined) {
     throw new LssParseError("A <Segment> is missing its required <Name> element.");
@@ -147,6 +152,12 @@ function parseSegment(version: Version, node: XmlNode): Segment {
   history.sort((a, b) => a.attemptId - b.attemptId);
 
   return { name, splitTimes, bestSegmentTime, history };
+}
+
+/** Adds each segment's display label and section, which depend on its neighbours' names. */
+function withLabels(segments: Omit<Segment, "label" | "group" | "isSubsplit">[]): Segment[] {
+  const labels = segmentLabels(segments.map((segment) => segment.name));
+  return segments.map((segment, i) => ({ ...segment, ...labels[i]! }));
 }
 
 function parseBool(text: string | undefined): boolean {
@@ -252,6 +263,6 @@ export function parseRun(xmlText: string): Run {
     offset: parseTimeSpan(offsetText ?? "00:00:00"),
     attemptCount: Number.parseInt(attemptCountText ?? "0", 10) || 0,
     attempts: attempts.sort((a, b) => a.id - b.id),
-    segments: segmentNodes.map((node) => parseSegment(version, node)),
+    segments: withLabels(segmentNodes.map((node) => parseSegment(version, node))),
   };
 }

@@ -30,6 +30,9 @@ function makeSegmentWithIds(
 ): Segment {
   return {
     name,
+    label: name,
+    group: null,
+    isSubsplit: false,
     splitTimes: new Map(),
     bestSegmentTime: dt(null),
     history: entries.map(([attemptId, v]) => ({ attemptId, time: dt(v) })),
@@ -204,6 +207,9 @@ describe("simulatePbOdds — skipped splits", () => {
     segments: [
       {
         name: "A",
+        label: "A",
+        group: null,
+        isSubsplit: false,
         splitTimes: new Map(),
         bestSegmentTime: dt(10),
         history: [1, 2, 3, 4, 5].map((id) => ({ attemptId: id, time: dt(id === 3 ? null : 10) })),

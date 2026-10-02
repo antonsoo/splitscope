@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.2] - 2026-10-01
+
+### Fixed
+
+- A run laid out with LiveSplit's subsplits showed its segment names with
+  the layout's prefixes: `-Cave Entrance`, `{Upper Caverns}Crystal Lake`.
+  The prefixes are read the way LiveSplit's Subsplits component reads them
+  and taken off for display, in the tables, the charts' labels and the
+  Markdown summary. Steps are indented under the split that ends their
+  section, which carries the section's name. Times and statistics are
+  untouched; `Segment.name` keeps the name as written.
+
 ## [0.2.1] - 2026-10-01
 
 ### Fixed

@@ -65,9 +65,13 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
     const barWidth = save !== null && save > 0 ? Math.max(4, (save / maxSave) * 100) : 0;
 
     return el("tr", {}, [
-      el("td", { class: "seg-name" }, [
+      el("td", { class: `seg-name${segment.isSubsplit ? " is-subsplit" : ""}` }, [
         el("span", { class: "idx" }, [String(i + 1).padStart(2, "0")]),
-        segment.name,
+        segment.label,
+        // The section is shown on the split that ends it; its steps are indented under it.
+        ...(segment.group !== null && !segment.isSubsplit && segment.group !== segment.label
+          ? [el("span", { class: "seg-group" }, [segment.group])]
+          : []),
       ]),
       el("td", {}, [formatSeconds(pbDuration)]),
       el("td", { class: "gold-text" }, [formatSeconds(gold)]),

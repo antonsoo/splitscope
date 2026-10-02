@@ -300,7 +300,7 @@ export function resetAnalysis(run: Run): ResetAnalysis {
     const deaths = furthest.filter((a) => !a.finished && a.furthest === i - 1).length;
     points.push({
       segmentIndex: i,
-      segmentName: run.segments[i]?.name ?? `Segment ${i + 1}`,
+      segmentName: run.segments[i]?.label ?? `Segment ${i + 1}`,
       survivalRate: total === 0 ? 0 : started / total,
       deaths,
     });

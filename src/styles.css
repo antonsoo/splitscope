@@ -710,6 +710,21 @@ main {
   font-weight: 600;
   color: var(--text);
 }
+/* A step inside a section (a LiveSplit subsplit) sits under the split that ends the section. */
+.seg-name.is-subsplit {
+  padding-left: 26px;
+  font-weight: 500;
+  color: var(--text-dim, var(--text));
+}
+.seg-name .seg-group {
+  margin-left: 8px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 .seg-name .idx {
   font-family: var(--font-mono);
   font-weight: 400;

@@ -47,7 +47,10 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
 - **Parses LiveSplit `.lss` files** — game/category, offset, full attempt
   history, per-segment PB/gold/history, both RealTime and GameTime — verified
   against LiveSplit's own reference parser, with graceful fallback back to
-  format `1.0.0.0`. See [`docs/format.md`](docs/format.md).
+  format `1.0.0.0`. See [`docs/format.md`](docs/format.md). Subsplit layouts
+  are shown the way LiveSplit shows them: `-Step` and `{Section}Split` lose
+  their prefixes, steps sit under the split that ends their section, and
+  the section's name is shown beside it.
 - **Segment breakdown**: PB, gold, and possible time save per segment (your
   PB's own segment duration minus that segment's gold), plus consistency
   (median, IQR, standard deviation, and % of recent attempts within a

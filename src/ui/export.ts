@@ -27,7 +27,7 @@ export function buildMarkdownSummary(run: Run, params: ExportParams): string {
   const pb = computePbTotal(run, params.method);
   const sob = sumOfBest(run, params.method);
   const saves = possibleTimeSave(run, params.method)
-    .map((save, i) => ({ name: run.segments[i]?.name ?? `Segment ${i + 1}`, save }))
+    .map((save, i) => ({ name: run.segments[i]?.label ?? `Segment ${i + 1}`, save }))
     .filter((s): s is { name: string; save: number } => s.save !== null && s.save > 0)
     .sort((a, b) => b.save - a.save)
     .slice(0, 5);
