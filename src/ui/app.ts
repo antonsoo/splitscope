@@ -1,3 +1,4 @@
+import { decodeText } from "../core/decode.js";
 import { LssParseError } from "../core/errors.js";
 import { simulatePbOdds } from "../core/montecarlo.js";
 import { parseRun } from "../core/parser.js";
@@ -74,7 +75,7 @@ export function mountApp(root: HTMLElement): void {
 
   async function loadFile(file: File): Promise<void> {
     try {
-      const text = await file.text();
+      const text = decodeText(new Uint8Array(await file.arrayBuffer()));
       const run = parseRun(text);
       setState({
         run,
@@ -97,7 +98,7 @@ export function mountApp(root: HTMLElement): void {
       const base = import.meta.env.BASE_URL;
       const response = await fetch(`${base}${path}`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const text = await response.text();
+      const text = decodeText(new Uint8Array(await response.arrayBuffer()));
       const run = parseRun(text);
       setState({
         run,
