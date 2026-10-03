@@ -76,7 +76,7 @@
 html {
   color-scheme: dark;
 }
-:root[data-theme="light"] html {
+:root[data-theme="light"] {
   color-scheme: light;
 }
 
@@ -339,8 +339,7 @@ main {
 /* ---------- empty state ---------- */
 
 .empty {
-  max-width: 640px;
-  margin: 12vh auto 0;
+  margin: 24px 0 0;
   text-align: center;
   padding: 0 20px;
 }
@@ -400,14 +399,13 @@ main {
 }
 
 .error-banner {
-  max-width: 640px;
-  margin: 12vh auto 0;
+  margin: 24px 0 0;
   padding: 20px 22px;
   border: 1px solid var(--red);
   background: var(--red-dim);
   border-radius: var(--radius-lg);
 }
-.error-banner h1 {
+.error-banner strong {
   margin: 0 0 6px;
   font-size: 16px;
   color: var(--red);
@@ -473,7 +471,7 @@ main {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -579,9 +577,6 @@ main {
   align-items: center;
   padding: 8px 14px;
   border-bottom: 1px solid var(--border);
-  opacity: 0;
-  transform: translateY(-4px);
-  animation: split-row-in 0.42s var(--ease) forwards;
 }
 .split-row:last-child {
   border-bottom: none;
@@ -616,13 +611,6 @@ main {
 }
 .split-row-delta.is-flat {
   color: var(--text-faint);
-}
-
-@keyframes split-row-in {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ---------- sections ---------- */
@@ -914,6 +902,7 @@ main {
 }
 .odds-field {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   font-size: 12px;
@@ -978,4 +967,48 @@ footer {
 }
 .footer-inner a {
   color: var(--text-muted);
+}
+
+.load-banner {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid var(--blue);
+  border-radius: var(--radius-lg);
+  background: var(--blue-dim);
+  overflow-wrap: anywhere;
+}
+.field-error {
+  max-width: 240px;
+  color: var(--red);
+  font-size: 12px;
+  white-space: normal;
+}
+.field-error:empty {
+  display: none;
+}
+.odds-field input[type="number"] {
+  width: 88px;
+  padding: 6px 8px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  font: inherit;
+}
+[aria-invalid="true"] {
+  outline: 2px solid var(--red);
+}
+.error-banner {
+  overflow-wrap: anywhere;
+}
+.error-banner .btn {
+  margin-right: 8px;
+}
+.hero-title,
+.hero-stat-value {
+  overflow-wrap: anywhere;
 }

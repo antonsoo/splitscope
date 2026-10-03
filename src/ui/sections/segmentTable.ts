@@ -79,6 +79,7 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
         el("span", { class: "save-bar", style: `width:${barWidth}%` }),
         el("span", {}, [save === null ? "—" : save <= 0 ? "—" : formatSeconds(save)]),
       ]),
+      el("td", {}, [String(stats.n)]),
       el("td", {}, [stats.median === null ? "—" : formatSeconds(stats.median)]),
       el("td", {}, [stats.iqr === null ? "—" : `±${formatSeconds(stats.iqr / 2, 1)}`]),
       el("td", {}, [
@@ -114,6 +115,9 @@ export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTML
             el("th", {}, ["PB"]),
             el("th", {}, ["Gold"]),
             el("th", {}, ["Time save"]),
+            el("th", { title: "Usable segment durations in the selected attempt window" }, [
+              "Timed n",
+            ]),
             el("th", {}, ["Median"]),
             el("th", {}, ["± IQR/2"]),
             el("th", {}, ["Consistency"]),

@@ -5,7 +5,7 @@
  * strictly for chrome) so it reads as the answer the rest of the page was
  * building toward, not just another stat panel.
  */
-import { simulatePbOdds } from "../../core/montecarlo.js";
+import type { PbOddsResult } from "../../core/montecarlo.js";
 import { pbTotal, resetAnalysis } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { el } from "../dom.js";
@@ -13,6 +13,7 @@ import { formatAttemptsRange, formatCount, formatPercent, formatSeconds } from "
 
 export interface PbOddsOptions {
   readonly method: TimingMethod;
+  readonly result: PbOddsResult;
   readonly recentWindow: number;
   readonly simulations: number;
   readonly lookaheadAttempts: number;
@@ -28,28 +29,28 @@ function slider(
   suffix: string,
   onInput: (v: number) => void,
 ): HTMLElement {
-  return el("label", { class: "odds-field" }, [
-    label,
-    el("input", {
-      type: "range",
-      min: String(min),
-      max: String(max),
-      step: String(step),
-      value: String(value),
-      oninput: (e: Event) => onInput(Number((e.target as HTMLInputElement).value)),
-    }),
-    el("span", { class: "val" }, [`${formatCount(value)}${suffix}`]),
+  const output = el("span", { class: "val", "aria-hidden": "true" }, [
+    `${formatCount(value)}${suffix}`,
   ]);
+  const input = el("input", {
+    id: `odds-${label.toLowerCase().replaceAll(" ", "-")}`,
+    type: "range",
+    min: String(min),
+    max: String(max),
+    step: String(step),
+    value: String(value),
+    oninput: () => {
+      output.textContent = `${formatCount(input.valueAsNumber)}${suffix}`;
+    },
+    // Commit on release, so a drag retains the original element throughout.
+    onchange: () => onInput(input.valueAsNumber),
+  });
+  return el("label", { class: "odds-field" }, [label, input, output]);
 }
 
 export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
   const pb = pbTotal(run, options.method);
-  const result = simulatePbOdds(run, pb, {
-    method: options.method,
-    recentWindow: options.recentWindow,
-    simulations: options.simulations,
-    lookaheadAttempts: options.lookaheadAttempts,
-  });
+  const result = options.result;
   // The simulation's "finish rate" is the model's own recent-window estimate — it can
   // legitimately read very differently from the run's all-time rate (that's the whole point of
   // a "recent form" window), but shown alone and unlabeled it reads as a contradiction against
@@ -64,9 +65,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
           "No PB recorded yet — nothing to compare simulated attempts against.",
         ])
       : result.insufficientData
-        ? el("p", { class: "odds-insufficient" }, [
-            "Not enough segment history in the selected window to simulate a full run yet. Try a larger recent-form window, or come back after a few more attempts.",
-          ])
+        ? el("p", { class: "odds-insufficient" }, [result.unavailableReason])
         : el("div", {}, [
             el("div", { class: "odds-grid" }, [
               el("div", {}, [
@@ -100,7 +99,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
                   `95% CI ${formatAttemptsRange(result.expectedAttemptsUntilPbCi)}`,
                 ]),
                 el("p", { class: "odds-metric-ci" }, [
-                  `finish rate (last ${options.recentWindow}) ${formatPercent(result.finishProbability, 1)} · all-time ${formatPercent(allTimeFinishRate, 1)}`,
+                  `finish rate (last ${result.recentAttempts}) ${formatPercent(result.finishProbability, 1)} · all-time ${formatPercent(allTimeFinishRate, 1)}`,
                 ]),
                 el("p", { class: "odds-metric-ci" }, [
                   `P(beat PB ∣ finish) ${formatPercent(result.pbProbabilityGivenFinish, 2)}`,
@@ -108,7 +107,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
               ]),
             ]),
             el("p", { class: "odds-metric-ci" }, [
-              `${formatCount(result.simulations)} simulated attempts, resampled from the last ${options.recentWindow} attempts. PB target: ${formatSeconds(pb)}.`,
+              `${formatCount(result.simulations)} simulated attempts, resampled from the last ${result.recentAttempts} attempts. PB target: ${formatSeconds(pb)}.`,
             ]),
           ]);
 
@@ -124,8 +123,8 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
       slider(
         "Recent form",
         options.recentWindow,
-        5,
-        Math.max(10, run.attempts.length),
+        1,
+        Math.max(1, run.attempts.length),
         1,
         " attempts",
         (v) => options.onChange({ recentWindow: v }),
@@ -137,7 +136,7 @@ export function renderPbOdds(run: Run, options: PbOddsOptions): HTMLElement {
         options.onChange({ simulations: v }),
       ),
     ]),
-    el("details", { class: "odds-assumptions" }, [
+    el("details", { class: "odds-assumptions", id: "odds-assumptions" }, [
       el("summary", {}, ["How this is modeled, and what it assumes"]),
       el("ul", {}, [
         el("li", {}, [

@@ -1,6 +1,6 @@
 import { decodeText } from "../core/decode.js";
 import { LssParseError } from "../core/errors.js";
-import { simulatePbOdds } from "../core/montecarlo.js";
+import { type PbOddsResult, simulatePbOdds } from "../core/montecarlo.js";
 import { parseRun } from "../core/parser.js";
 import {
   pbTotal as computePbTotal,
@@ -13,6 +13,7 @@ import { pick } from "../core/types.js";
 import { el } from "./dom.js";
 import { buildMarkdownSummary, downloadText, exportPngCard } from "./export.js";
 import { formatCount, formatHours, formatPercent, formatSeconds } from "./format.js";
+import { readFileBytes, readSampleBytes } from "./input.js";
 import { renderDeltaChart } from "./sections/deltaChart.js";
 import { renderDistributions } from "./sections/distributions.js";
 import { renderPbOdds } from "./sections/pbOdds.js";
@@ -22,11 +23,13 @@ import { renderSurvivalChart } from "./sections/survivalChart.js";
 interface AppState {
   run: Run | null;
   error: string | null;
+  loading: string | null;
+  exportStatus: string | null;
   /** True only when the current run was loaded via "Load sample" — drives the synthetic-data badge. */
   isSample: boolean;
   method: TimingMethod;
   consistencyWindow: number;
-  /** null = auto (max(1s, 2% of that segment's gold)); a number is a flat-seconds override. */
+  /** null = auto (max(1s, 8% of that segment's gold)); a number is a flat-seconds override. */
   toleranceSeconds: number | null;
   mcRecentWindow: number;
   mcSimulations: number;
@@ -53,6 +56,8 @@ function defaultState(): AppState {
   return {
     run: null,
     error: null,
+    loading: null,
+    exportStatus: null,
     isSample: false,
     method: "RealTime",
     consistencyWindow: 30,
@@ -68,48 +73,124 @@ export function mountApp(root: HTMLElement): void {
   const state = defaultState();
   document.documentElement.dataset.theme = state.theme;
 
-  function setState(patch: Partial<AppState>): void {
+  function setState(patch: Partial<AppState>, afterFocusTransfer = false): void {
     Object.assign(state, patch);
+    if (afterFocusTransfer) {
+      // Number-input change fires during blur, before Tab/click finishes moving
+      // focus. Keep the old DOM until that native transfer has completed.
+      const run = state.run;
+      setTimeout(() => {
+        if (state.run === run) render();
+      }, 0);
+    } else {
+      render();
+    }
+  }
+
+  let importController: AbortController | null = null;
+  let lastImport: (() => void) | null = null;
+  let oddsCache: { run: Run; key: string; result: PbOddsResult } | null = null;
+
+  function oddsFor(run: Run): PbOddsResult {
+    const key = [state.method, state.mcRecentWindow, state.mcSimulations, state.mcLookahead].join(
+      "|",
+    );
+    if (oddsCache?.run === run && oddsCache.key === key) return oddsCache.result;
+    const result = simulatePbOdds(run, computePbTotal(run, state.method), {
+      method: state.method,
+      recentWindow: state.mcRecentWindow,
+      simulations: state.mcSimulations,
+      lookaheadAttempts: state.mcLookahead,
+    });
+    oddsCache = { run, key, result };
+    return result;
+  }
+
+  function focusContent(): void {
+    root.querySelector<HTMLElement>("main h1")?.focus({ preventScroll: true });
+  }
+
+  function cancelImport(): void {
+    importController?.abort();
+    importController = null;
+    lastImport = null;
+    setState({ loading: null, error: null });
+    focusContent();
+  }
+
+  function reset(): void {
+    importController?.abort();
+    importController = null;
+    lastImport = null;
+    oddsCache = null;
+    fileInput.value = "";
+    Object.assign(state, defaultState(), { theme: state.theme });
     render();
+    root.querySelector<HTMLElement>("#choose-file")?.focus();
   }
 
-  async function loadFile(file: File): Promise<void> {
+  async function importRun(
+    label: string,
+    isSample: boolean,
+    read: (signal: AbortSignal) => Promise<Uint8Array>,
+    retry: () => void,
+  ): Promise<void> {
+    importController?.abort();
+    const controller = new AbortController();
+    importController = controller;
+    lastImport = retry;
+    setState({ loading: label, error: null });
     try {
-      const text = decodeText(new Uint8Array(await file.arrayBuffer()));
-      const run = parseRun(text);
+      const bytes = await read(controller.signal);
+      if (importController !== controller) return;
+      const run = parseRun(decodeText(bytes));
+      if (importController !== controller) return;
+      importController = null;
+      lastImport = null;
+      oddsCache = null;
       setState({
         run,
+        loading: null,
         error: null,
-        isSample: false,
-        consistencyWindow: Math.min(30, Math.max(5, run.attempts.length)),
-        mcRecentWindow: Math.min(30, Math.max(5, run.attempts.length)),
+        exportStatus: null,
+        isSample,
+        method: run.segments.some((s) => s.splitTimes.get("Personal Best")?.realTime != null)
+          ? "RealTime"
+          : run.segments.some((s) => s.splitTimes.get("Personal Best")?.gameTime != null)
+            ? "GameTime"
+            : "RealTime",
+        consistencyWindow: Math.min(30, Math.max(1, run.attempts.length)),
+        mcRecentWindow: Math.min(30, Math.max(1, run.attempts.length)),
       });
+      focusContent();
     } catch (cause) {
-      const message =
-        cause instanceof LssParseError
-          ? cause.message
-          : `Unexpected error: ${(cause as Error).message}`;
-      setState({ run: null, error: message, isSample: false });
+      if (importController !== controller) return;
+      importController = null;
+      const message = cause instanceof Error ? cause.message : String(cause);
+      setState({
+        loading: null,
+        error: cause instanceof LssParseError ? message : `Could not read the input: ${message}`,
+      });
+      root.querySelector<HTMLElement>("#import-error")?.focus();
     }
   }
 
-  async function loadSample(path: string): Promise<void> {
-    try {
-      const base = import.meta.env.BASE_URL;
-      const response = await fetch(`${base}${path}`);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const text = decodeText(new Uint8Array(await response.arrayBuffer()));
-      const run = parseRun(text);
-      setState({
-        run,
-        error: null,
-        isSample: true,
-        consistencyWindow: Math.min(30, Math.max(5, run.attempts.length)),
-        mcRecentWindow: Math.min(30, Math.max(5, run.attempts.length)),
-      });
-    } catch (cause) {
-      setState({ run: null, error: `Could not load the sample file: ${(cause as Error).message}` });
-    }
+  function loadFile(file: File): void {
+    void importRun(
+      `Reading ${file.name}…`,
+      false,
+      (signal) => readFileBytes(file, signal),
+      () => loadFile(file),
+    );
+  }
+
+  function loadSample(path: string): void {
+    void importRun(
+      "Loading synthetic sample…",
+      true,
+      (signal) => readSampleBytes(`${import.meta.env.BASE_URL}${path}`, signal),
+      () => loadSample(path),
+    );
   }
 
   function renderTopbar(): HTMLElement {
@@ -120,6 +201,7 @@ export function mountApp(root: HTMLElement): void {
         el(
           "button",
           {
+            id: "method-rta",
             type: "button",
             "aria-pressed": String(state.method === "RealTime"),
             onclick: () => setState({ method: "RealTime" }),
@@ -129,6 +211,7 @@ export function mountApp(root: HTMLElement): void {
         el(
           "button",
           {
+            id: "method-igt",
             type: "button",
             "aria-pressed": String(state.method === "GameTime"),
             onclick: () => setState({ method: "GameTime" }),
@@ -143,6 +226,7 @@ export function mountApp(root: HTMLElement): void {
       {
         type: "button",
         class: "btn",
+        id: "theme-toggle",
         title: "Toggle light/dark",
         onclick: () => {
           const next = state.theme === "dark" ? "light" : "dark";
@@ -193,11 +277,16 @@ export function mountApp(root: HTMLElement): void {
             {
               type: "button",
               class: "btn",
-              hidden: !state.run,
+              id: "load-file",
               onclick: () => fileInput.click(),
             },
             ["Load file"],
           ),
+          state.run || state.loading
+            ? el("button", { id: "reset", type: "button", class: "btn", onclick: reset }, [
+                "New file",
+              ])
+            : null,
           themeToggle,
         ]),
       ]),
@@ -209,12 +298,7 @@ export function mountApp(root: HTMLElement): void {
     const sob = sumOfBest(run, state.method);
     const reset = resetAnalysis(run);
     const playtime = playtimeSummary(run);
-    const odds = simulatePbOdds(run, pb, {
-      method: state.method,
-      recentWindow: state.mcRecentWindow,
-      simulations: state.mcSimulations,
-      lookaheadAttempts: state.mcLookahead,
-    });
+    const odds = oddsFor(run);
 
     // Preview: the PB run's own segments — what a runner already knows from the timer, plus
     // one thing it doesn't show: how each of those segments compares to its own gold. This is
@@ -225,7 +309,7 @@ export function mountApp(root: HTMLElement): void {
     // forward once a comparison split is missing, so a gap invalidates every duration after it too.
     const previewSegments = run.segments.slice(0, 6);
     let cumulative: number | null = 0;
-    const previewRows = previewSegments.map((segment, i) => {
+    const previewRows = previewSegments.map((segment) => {
       const split = segment.splitTimes.get("Personal Best");
       const cumulativeTime = split ? pick(split, state.method) : null;
       const duration =
@@ -234,7 +318,7 @@ export function mountApp(root: HTMLElement): void {
       const gold = pick(segment.bestSegmentTime, state.method);
       const isGold = duration !== null && gold !== null && Math.abs(duration - gold) < 1e-6;
       const vsGold = duration !== null && gold !== null ? duration - gold : null;
-      return el("div", { class: "split-row", style: `animation-delay:${i * 60}ms` }, [
+      return el("div", { class: "split-row" }, [
         el(
           "span",
           {
@@ -253,7 +337,7 @@ export function mountApp(root: HTMLElement): void {
     return el("section", { class: "hero" }, [
       el("div", {}, [
         el("p", { class: "hero-thesis" }, ["Your timer only shows the comparison"]),
-        el("h1", { class: "hero-title" }, [
+        el("h1", { class: "hero-title", tabindex: -1 }, [
           "Here's what your ",
           el("strong", {}, [run.categoryName]),
           " splits actually know.",
@@ -263,12 +347,14 @@ export function mountApp(root: HTMLElement): void {
         el("div", { class: "hero-stats" }, [
           el("div", { class: "hero-stat" }, [
             el("p", { class: "hero-stat-label" }, ["Sum of best"]),
-            el("p", { class: "hero-stat-value" }, [formatSeconds(sob.value)]),
+            el("p", { class: "hero-stat-value" }, [
+              sob.complete ? formatSeconds(sob.value) : "Incomplete",
+            ]),
           ]),
           el("div", { class: "hero-stat" }, [
             el("p", { class: "hero-stat-label" }, ["Time on the table"]),
             el("p", { class: "hero-stat-value" }, [
-              pb !== null ? formatSeconds(pb - sob.value) : "—",
+              pb !== null && sob.complete ? formatSeconds(pb - sob.value) : "—",
             ]),
           ]),
           el("div", { class: "hero-stat" }, [
@@ -286,7 +372,11 @@ export function mountApp(root: HTMLElement): void {
           ]),
           el("div", { class: "hero-stat" }, [
             el("p", { class: "hero-stat-label" }, ["Playtime"]),
-            el("p", { class: "hero-stat-value" }, [formatHours(playtime.totalPlaytimeSeconds)]),
+            el("p", { class: "hero-stat-value" }, [
+              playtime.attemptsMissingTimestamps === run.attempts.length
+                ? "—"
+                : `${formatHours(playtime.totalPlaytimeSeconds)}${playtime.attemptsMissingTimestamps ? " (partial)" : ""}`,
+            ]),
           ]),
         ]),
       ]),
@@ -343,56 +433,66 @@ export function mountApp(root: HTMLElement): void {
     max: number,
     onChange: (v: number) => void,
   ): HTMLElement {
-    return el("label", { class: "odds-field" }, [
-      label,
-      el("input", {
-        type: "number",
-        min: String(min),
-        max: String(max),
-        value: String(value),
-        style: "width:60px",
-        onchange: (e: Event) => onChange(Number((e.target as HTMLInputElement).value)),
-      }),
-    ]);
+    const errorId = `setting-${label.toLowerCase().replaceAll(" ", "-")}-error`;
+    const error = el("span", { id: errorId, class: "field-error", role: "alert" });
+    const input = el("input", {
+      id: "consistency-window",
+      "aria-label": label,
+      type: "number",
+      min: String(min),
+      max: String(max),
+      step: "1",
+      required: true,
+      value: String(value),
+      "aria-describedby": errorId,
+      onchange: () => {
+        const next = input.valueAsNumber;
+        if (!Number.isInteger(next) || next < min || next > max) {
+          input.setAttribute("aria-invalid", "true");
+          error.textContent = `Use a whole number from ${min} to ${max}. Results still use ${value}.`;
+          return;
+        }
+        onChange(next);
+      },
+    });
+    return el("label", { class: "odds-field" }, [label, input, error]);
   }
 
-  // The "near-gold" tolerance defaults to auto (see segmentTable.ts) rather than a flat number
-  // of seconds — this field is an override, not the primary control, so clearing it (empty
-  // input) goes back to auto instead of falling back to some other fixed number.
   function toleranceField(value: number | null, onChange: (v: number | null) => void): HTMLElement {
+    const error = el("span", { id: "tolerance-error", class: "field-error", role: "alert" });
+    const input = el("input", {
+      id: "tolerance",
+      "aria-label": "Near-gold tolerance",
+      type: "number",
+      min: "0",
+      max: "60",
+      step: "any",
+      placeholder: "auto",
+      value: value === null ? "" : String(value),
+      "aria-describedby": "tolerance-error",
+      onchange: () => {
+        const next =
+          input.value.trim() === "" && !input.validity.badInput ? null : input.valueAsNumber;
+        if (next !== null && (!Number.isFinite(next) || next < 0 || next > 60)) {
+          input.setAttribute("aria-invalid", "true");
+          error.textContent = "Use 0 to 60 seconds, or clear for auto. Results have not changed.";
+          return;
+        }
+        onChange(next);
+      },
+    });
     return el("label", { class: "odds-field" }, [
       "Near-gold tolerance",
-      el("input", {
-        type: "number",
-        min: "0",
-        max: "60",
-        step: "0.5",
-        placeholder: "auto",
-        value: value === null ? "" : String(value),
-        style: "width:70px",
-        onchange: (e: Event) => {
-          const raw = (e.target as HTMLInputElement).value.trim();
-          onChange(raw === "" ? null : Number(raw));
-        },
-      }),
-      el("span", { class: "val" }, [value === null ? "auto (8% of gold)" : `${value}s fixed`]),
+      input,
+      el("span", { class: "val" }, [value === null ? "auto (8%, at least 1s)" : `${value}s fixed`]),
+      error,
     ]);
   }
 
   function renderContent(): HTMLElement {
-    if (state.error) {
-      // role="alert": the message replaces the page, and a screen reader is told so.
-      return el("div", { class: "error-banner", role: "alert" }, [
-        // h1: with an error, this replaces the empty state's h1 as the page's top heading —
-        // there's no hero heading rendered in this state to be a level below.
-        el("h1", {}, ["Couldn't read that file"]),
-        el("p", {}, [state.error]),
-      ]);
-    }
-
     if (!state.run) {
       return el("div", { class: "empty" }, [
-        el("h1", {}, ["Your LiveSplit file knows more than your timer shows."]),
+        el("h1", { tabindex: -1 }, ["Your LiveSplit file knows more than your timer shows."]),
         el("p", { class: "lede" }, [
           "Find your realistic time save, your reset habits, and your odds of a PB — from the .lss file you already have. Everything runs in your browser; nothing is uploaded.",
         ]),
@@ -418,7 +518,12 @@ export function mountApp(root: HTMLElement): void {
             el("div", { class: "empty-actions" }, [
               el(
                 "button",
-                { type: "button", class: "btn btn-accent", onclick: () => fileInput.click() },
+                {
+                  id: "choose-file",
+                  type: "button",
+                  class: "btn btn-accent",
+                  onclick: () => fileInput.click(),
+                },
                 ["Choose a .lss file"],
               ),
               ...SAMPLE_FILES.map((s) =>
@@ -458,10 +563,10 @@ export function mountApp(root: HTMLElement): void {
         "Time save & consistency",
         "Possible time save is your PB's own segment duration minus that segment's gold (the best it's ever been split). Consistency is computed over the last N attempts.",
         [
-          numberField("Window", state.consistencyWindow, 3, Math.max(5, run.attempts.length), (v) =>
-            setState({ consistencyWindow: v }),
+          numberField("Window", state.consistencyWindow, 1, Math.max(1, run.attempts.length), (v) =>
+            setState({ consistencyWindow: v }, true),
           ),
-          toleranceField(state.toleranceSeconds, (v) => setState({ toleranceSeconds: v })),
+          toleranceField(state.toleranceSeconds, (v) => setState({ toleranceSeconds: v }, true)),
         ],
         renderSegmentTable(run, {
           method: state.method,
@@ -481,7 +586,7 @@ export function mountApp(root: HTMLElement): void {
       section(
         "Reset analysis",
         "Where do your runs die?",
-        "The survival curve is the share of attempts that reached each segment at all; the red bars are how many attempts specifically reset during that segment.",
+        "The survival curve is the share of attempts that reached each segment at all; the red bars show inferred resets at each segment, assuming its history has not been edited.",
         [],
         renderSurvivalChart(run),
       ),
@@ -489,7 +594,7 @@ export function mountApp(root: HTMLElement): void {
       section(
         "Per-segment shape",
         "Time distributions & gold history",
-        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap (dashed line is gold, blue tick is median), plus each segment's full gold history — every time a new record was set, across all ${run.attempts.length} attempts.`,
+        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap (dashed line is gold, blue tick is median), plus each segment's full gold history — recorded improvements, including imported history whose IDs do not establish dates.`,
         [],
         renderDistributions(run, { method: state.method, window: state.consistencyWindow }),
       ),
@@ -501,6 +606,7 @@ export function mountApp(root: HTMLElement): void {
           simulations: state.mcSimulations,
           lookaheadAttempts: state.mcLookahead,
           onChange: mcOnChange,
+          result: oddsFor(run),
         }),
       ]),
 
@@ -517,10 +623,12 @@ export function mountApp(root: HTMLElement): void {
             {
               type: "button",
               class: "btn btn-accent",
+              id: "export-markdown",
               onclick: () =>
                 downloadText(
                   `splitscope-${run.gameName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.md`,
                   buildMarkdownSummary(run, {
+                    isSample: state.isSample,
                     method: state.method,
                     recentWindow: state.mcRecentWindow,
                     simulations: state.mcSimulations,
@@ -535,16 +643,30 @@ export function mountApp(root: HTMLElement): void {
             {
               type: "button",
               class: "btn",
-              onclick: () =>
-                exportPngCard(run, {
+              id: "export-png",
+              onclick: () => {
+                void exportPngCard(run, {
+                  isSample: state.isSample,
                   method: state.method,
                   recentWindow: state.mcRecentWindow,
                   simulations: state.mcSimulations,
                   lookaheadAttempts: state.mcLookahead,
-                }),
+                })
+                  .then(() => {
+                    if (state.run === run) setState({ exportStatus: "PNG card downloaded." });
+                  })
+                  .catch((cause: unknown) => {
+                    if (state.run === run)
+                      setState({
+                        exportStatus:
+                          cause instanceof Error ? cause.message : "Could not export the PNG.",
+                      });
+                  });
+              },
             },
             ["Download PNG card"],
           ),
+          el("p", { role: "status", class: "export-status" }, [state.exportStatus]),
         ]),
       ]),
     ]);
@@ -562,17 +684,68 @@ export function mountApp(root: HTMLElement): void {
     accept: ".lss,text/xml,application/xml",
     onchange: (e: Event) => {
       const file = (e.target as HTMLInputElement).files?.[0];
-      if (file) void loadFile(file);
+      fileInput.value = "";
+      if (file) loadFile(file);
     },
   });
 
   function render(): void {
+    const focusedId = root.contains(document.activeElement)
+      ? document.activeElement?.id
+      : undefined;
+    const disclosures = [...root.querySelectorAll<HTMLDetailsElement>("details[open][id]")].map(
+      (node) => node.id,
+    );
+    const tableScroll = root.querySelector('[aria-label="Segment table"]')?.scrollLeft ?? 0;
     root.replaceChildren(
       el("div", { class: "shell" }, [
         el("a", { class: "skip-link", href: "#main-content" }, ["Skip to content"]),
         el("hr", { class: "rule" }),
         renderTopbar(),
-        el("main", { id: "main-content" }, [renderContent()]),
+        el("main", { id: "main-content" }, [
+          state.loading
+            ? el("div", { class: "load-banner" }, [
+                el("span", { role: "status" }, [state.loading]),
+                el("button", { type: "button", class: "btn", onclick: cancelImport }, [
+                  "Cancel loading",
+                ]),
+              ])
+            : null,
+          state.error
+            ? el(
+                "div",
+                { id: "import-error", class: "error-banner", role: "alert", tabindex: -1 },
+                [
+                  el("strong", {}, ["Could not load this file"]),
+                  el("p", {}, [state.error]),
+                  state.run
+                    ? el("p", {}, ["Your previous analysis is still available below."])
+                    : null,
+                  lastImport
+                    ? el(
+                        "button",
+                        { type: "button", class: "btn", onclick: () => lastImport?.() },
+                        ["Retry import"],
+                      )
+                    : null,
+                  el(
+                    "button",
+                    {
+                      type: "button",
+                      class: "btn",
+                      onclick: () => {
+                        lastImport = null;
+                        setState({ error: null });
+                        focusContent();
+                      },
+                    },
+                    ["Dismiss error"],
+                  ),
+                ],
+              )
+            : null,
+          renderContent(),
+        ]),
         fileInput,
         el("footer", {}, [
           el("div", { class: "footer-inner" }, [
@@ -588,6 +761,13 @@ export function mountApp(root: HTMLElement): void {
         ]),
       ]),
     );
+    for (const id of disclosures) {
+      const node = document.getElementById(id);
+      if (node instanceof HTMLDetailsElement) node.open = true;
+    }
+    const table = root.querySelector('[aria-label="Segment table"]');
+    if (table) table.scrollLeft = tableScroll;
+    if (focusedId) document.getElementById(focusedId)?.focus({ preventScroll: true });
   }
 
   render();

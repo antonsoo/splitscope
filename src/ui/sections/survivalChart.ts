@@ -124,6 +124,11 @@ export function renderSurvivalChart(run: Run): HTMLElement {
 
   return el("div", { class: "panel" }, [
     el("div", { class: "chart-wrap" }, [svg]),
+    analysis.unlocatedOutcomes
+      ? el("p", { class: "section-desc" }, [
+          `${analysis.unlocatedOutcomes} attempts reach the final segment without an overall time. Their completion/reset outcome is unknown; no reset location is assigned.`,
+        ])
+      : null,
     el("div", { class: "legend" }, [
       el("span", { class: "legend-item" }, [
         el("span", { class: "legend-swatch", style: "background:var(--blue)" }),
