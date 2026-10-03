@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.4] - 2026-10-03
+
+### Accessibility
+
+- A file that could not be read replaced the page with "Couldn't read that file" and the
+  reason, but a screen reader was not told. The message is an alert now.
+
 ## [0.2.3] - 2026-10-02
 
 ### Fixed

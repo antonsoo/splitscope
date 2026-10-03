@@ -381,7 +381,8 @@ export function mountApp(root: HTMLElement): void {
 
   function renderContent(): HTMLElement {
     if (state.error) {
-      return el("div", { class: "error-banner" }, [
+      // role="alert": the message replaces the page, and a screen reader is told so.
+      return el("div", { class: "error-banner", role: "alert" }, [
         // h1: with an error, this replaces the empty state's h1 as the page's top heading —
         // there's no hero heading rendered in this state to be a level below.
         el("h1", {}, ["Couldn't read that file"]),
