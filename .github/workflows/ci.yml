@@ -38,3 +38,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Install browser test engines
+        run: npx playwright install --with-deps chromium firefox
+
+      - name: Browser workflows
+        run: npx playwright test
