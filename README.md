@@ -67,8 +67,12 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
   simulation of your probability of beating your PB, on the next attempt or
   within the next *K*, with a confidence interval and its assumptions stated
   up front. This is the feature that doesn't exist anywhere else.
+- **Recoverable imports**: cancel a pending read, retry a sample, or replace a file.
+  A failed replacement keeps the current analysis. **New file** clears the run
+  from the workspace. Files and sample responses are limited to 25 MiB.
 - **Export** a Markdown summary (for Discord, a wiki, a PR) or a PNG share
-  card, both generated locally.
+  card, both generated locally. Sample exports are labelled synthetic; missing PBs
+  and incomplete golds stay unavailable, and PNG cards include simulation intervals.
 - Everything runs client-side. No accounts, no analytics, no upload — open
   the network tab and check.
 
@@ -164,9 +168,12 @@ statistic in the app, so it's called out explicitly in code and in
 - *Possible time save* per segment = (this segment's PB duration) − (this
   segment's gold), where PB duration is the difference between consecutive
   cumulative PB split times.
-- *Consistency* is computed over the last *N* attempts (configurable):
+- *Consistency* is computed over the last *N* recorded attempts (configurable),
+  using the same attempt IDs for every segment:
   median, interquartile range, sample standard deviation, and the percent of
-  attempts within a configurable tolerance of gold. The consistency
+  attempts within a configurable tolerance of gold. Older completions and imported
+  entries outside that window are excluded; **Timed n** shows usable samples.
+  A single observation has no sample standard deviation. The consistency
   heatmap's tiers use **coefficient of variation** (stdDev / median), not a
   fixed number of seconds, so a 12-second segment and a 4-minute segment are
   judged on the same scale.
@@ -179,14 +186,15 @@ statistic in the app, so it's called out explicitly in code and in
 
 ### Reset analysis
 
-For each attempt, splitscope finds the furthest segment with *any*
-segment-history entry (timed or skipped) and treats that as how far the
-attempt got. An attempt is a "finish" if its `AttemptHistory` entry has an
-overall RealTime recorded — that's the wall-clock completion signal
-LiveSplit itself uses; the format doesn't have an explicit "finished" flag.
-The survival curve is the share of attempts that reached each segment; the
-death histogram counts, per segment, how many non-finishing attempts had
-that segment as their furthest.
+A recorded overall RealTime **or** GameTime is completion evidence. Completed
+attempts reached every segment, even when individual histories have been deleted.
+Otherwise, the furthest segment-history entry (timed or skipped) locates the
+inferred reset at the next segment. An attempt with final-segment history but
+no overall time has an unknown outcome: it gets no invented reset location,
+and PB odds are withheld if it lies in the selected recent window.
+
+This inference assumes histories have not been selectively removed from reset
+attempts. A trimmed history cannot establish where those attempts actually ended.
 
 ### PB odds (Monte Carlo)
 
@@ -250,14 +258,23 @@ every segment's history, and the page runs it several times per render.
 - **PB odds is a model, not a prophecy.** It assumes segments are
   independent (a bad Segment 2 doesn't change the odds for Segment 3) and
   that your recent-form window is representative of every simulated future
-  attempt (no further improvement or fatigue). Both assumptions favor
-  optimism: real runs have more structure — momentum, tilt, warm-up — than
-  this model does. Treat the output as "roughly this often, under these
+  attempt (no further improvement or fatigue). Real runs have more
+  structure — momentum, tilt, warm-up — than this model does, so results
+  may be biased in either direction. Treat the output as "roughly this often, under these
   rules," not a guarantee.
 - **The finish/reset signal is inferred**, not an explicit field in the
-  format: an attempt counts as finished if it has an overall RealTime.
-  This matches how LiveSplit itself behaves, but it's a design decision
-  documented in `docs/format.md`, not something the spec states.
+  format: either overall RealTime or GameTime counts as completion evidence.
+  Reset locations assume unedited segment histories; see `docs/format.md`.
+- **Input validation** rejects missing/malformed IDs, duplicate attempts or
+  per-segment history records, invalid counts/versions, and durations outside
+  safe millisecond arithmetic. Repair ambiguous records in a copy of the file
+  before retrying. Valid negative/zero imported history IDs are retained.
+- **Imports are limited to 25 MiB**. Cancellation applies while reading or
+  downloading; XML parsing and analysis still run synchronously on the main
+  thread. A large valid history can briefly block interaction.
+- **Missing data stays unknown**: no PB means no PB probability, missing golds
+  prevent a total time-save claim, and missing timestamps are excluded from
+  playtime with coverage shown in the Markdown report.
 - **Consistency tiers (tight/mid/loose)** use fixed coefficient-of-variation
   cutoffs (3%, 8%) that aren't tuned per game or genre — a segment with a
   lot of legitimate route variance (multiple valid strategies) will read as
@@ -275,9 +292,12 @@ every segment's history, and the page runs it several times per render.
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). In short: `npm run ci` should pass,
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). `npm run ci` and `npm run test:browser` should pass,
 and changes to the parser should come with a fixture and an update to
-`docs/format.md`.
+`docs/format.md`. The browser suite runs the production build in Chromium and
+Firefox, covering imports, cancellation, keyboard/pointer controls, downloads,
+offline analysis, accessibility, and mobile layouts. It checks for page errors,
+CSP violations and unexpected external requests.
 
 ## License
 

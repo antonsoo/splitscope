@@ -70,12 +70,12 @@ splitscope reads: `GameName`, `CategoryName`, `Offset`, `AttemptCount`,
 
 Every duration is a serialized .NET `TimeSpan`:
 
-- Standard: `[-]H:MM:SS[.fffffff]` — hours are unpadded and unbounded (`"12:34:56"`
+- Standard: `[-]H:MM:SS[.fffffff]` — hours may be unpadded and exceed 23 (`"12:34:56"`
   or `"120:34:56"` are both valid), minutes/seconds are always 2 digits, and the
   optional fraction is up to 7 digits (100ns "ticks", .NET's native resolution).
   The brief's example, `00:01:23.4560000`, is this shape.
 - Extended (multi-day): `[-]D.HH:MM:SS[.fffffff]`, e.g. `1.23:34:56.7890000` for
-  25h34m56.789s. `parse_time_span` in the reference detects this by splitting on
+  47h34m56.789s. `parse_time_span` in the reference detects this by splitting on
   the *first* `.` and checking whether what follows contains a `:`; a negative
   day count negates the whole duration (`"-1.23:34:56.789"` is
   `-(1 day + 23:34:56.789)`, not "-1 day + 23:34:56.789"). splitscope's
@@ -148,21 +148,43 @@ splitscope applies the same rule (`segmentTimes` in `src/core/stats.ts`)
 before any per-segment statistic, strip plot, gold history, or Monte Carlo
 sample; it only counts for "furthest segment reached."
 
-An attempt that resets, by contrast, has **no `SegmentHistory` entry at all**
-for the segments it never reached, and no overall `<RealTime>` on its
-`<AttemptHistory><Attempt>` entry (`readTime`/`readNestedTime` parse that
-empty element to `null`). splitscope uses the presence of an attempt's
-overall `RealTime` as the finish/reset signal — a design decision, not
-something the format states explicitly — and the highest segment index with
-*any* `SegmentHistory` entry (timed or skipped) as where a non-finishing
-attempt died. This is documented in code at
-`furthestSegmentIndex`/`attemptFinished` in `src/core/stats.ts`.
+An overall `RealTime` **or** `GameTime` is treated as completion evidence.
+Such attempts reached all segments even if per-segment history was deleted.
+Without an overall time, the highest recorded segment determines the inferred
+reset at the next segment. If that highest record is the final segment, the
+outcome is ambiguous: the histogram assigns no reset location and PB odds are
+withheld when the selected window includes it. This is an analysis rule, not
+an explicit finish flag in the format. Selectively deleted reset histories
+can still make inferred reset locations unreliable.
+
+## Record validation and recent windows
+
+Attempt IDs and segment-history IDs must be complete signed 32-bit integers.
+Zero and negative IDs remain valid for imported history; they are not invented
+attempts. Repeated IDs within an attempt history or within one segment's history
+are rejected, as are missing IDs. Silently discarding or combining those records
+would alter counts or pair unrelated durations. Comparison names must be unique
+within each segment. AttemptCount is an unsigned 32-bit integer, versions have
+one to four unsigned 16-bit components, and durations must fit safe millisecond
+arithmetic (`abs(seconds) <= Number.MAX_SAFE_INTEGER / 1000`). Numeric XML
+character references are decoded once along with named entities.
+
+Consistency and Monte Carlo pools use IDs from the last N entries in the sorted
+attempt history. A segment with no measurements in that window has no recent
+samples; older completions and imported history are not substituted. Full gold
+history still includes imported records, whose IDs do not establish dates.
+
+The reference source was rechecked on 2026-10-03, including
+[`Run::update_segment_history` and imported histories](https://github.com/LiveSplit/livesplit-core/blob/master/src/run/mod.rs)
+and [timestamp parsing](https://github.com/LiveSplit/livesplit-core/blob/master/src/run/parser/livesplit.rs).
+The first segment's stored duration already includes the timer offset, as the
+reference starts the previous split at zero; the simulator does not add it twice.
 
 ## Performance
 
 `GameIcon`, per-segment `Icon`, and `AutoSplitterSettings` can be the bulk of
 a real `.lss` file's bytes (base64 images, serialized autosplitter state) and
-are never read by this app, so `parser.ts` strips them with a targeted regex
+are never read by this app, so `parser.ts` strips them with a linear string scan
 before the general XML parse (`stripOpaqueBlobs`). This is a real, measured
 win, not a guess — see the "Accuracy and limitations" section of the README
 for the number on this repository's own sample file.

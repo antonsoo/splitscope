@@ -8,12 +8,14 @@ welcome.
 ```sh
 npm install
 npm run dev       # local dev server
-npm run ci         # lint + typecheck + test + build, same as CI
+npm run ci         # lint + typecheck + test + build
+npx playwright install chromium firefox  # once per machine
+npm run test:browser # production build, Chromium and Firefox workflows
 ```
 
 ## Before opening a PR
 
-- `npm run ci` passes.
+- `npm run ci` and `npm run test:browser` pass.
 - New logic in `src/core/` has tests in `tests/` (see `docs/format.md` for
   the parser's own testing philosophy: check against a real reference, not
   vibes).
@@ -21,6 +23,13 @@ npm run ci         # lint + typecheck + test + build, same as CI
   the result at 375px and at desktop width, light and dark.
 - If you change the `.lss` parsing, update `docs/format.md` to match and cite
   your source.
+
+## Reproducing the screenshots
+
+Build, start a preview with `npm run preview -- --port 4331`, then run
+`node scripts/capture-workspace.mjs`. It captures desktop and phone layouts,
+the PB panel, import recovery, and the actual downloaded PNG card under
+`docs/assets/`. Review every image before committing it.
 
 ## Regenerating the sample data
 

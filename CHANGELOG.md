@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## Unreleased
+
+- Reject ambiguous or malformed history IDs, invalid counts/versions, duplicate
+  comparisons, and oversized durations. Decode numeric XML references correctly.
+- Use the same recent attempt window across segments, display usable sample
+  counts, and leave single-observation standard deviation unknown.
+- Count GameTime-only completions and completed attempts with deleted segment
+  histories correctly. Withhold PB odds for ambiguous final-segment outcomes.
+- Preserve unavailable PB odds, incomplete golds and playtime coverage in the
+  interface and exports. Label sample exports, escape Markdown labels, and include
+  intervals on PNG cards. Carry rounded seconds into minutes/hours correctly.
+- Bound imports to 25 MiB; cancel superseded reads, retain the current analysis
+  on failure, and provide retry/reset controls. Preserve keyboard focus, disclosures
+  and table scroll; commit slider drags on release and reject invalid settings.
+- Add production browser coverage in Chromium and Firefox, including mobile,
+  accessibility, offline analysis, local-only requests and CSP assertions.
+
 ## [0.2.4] - 2026-10-03
 
 ### Accessibility
