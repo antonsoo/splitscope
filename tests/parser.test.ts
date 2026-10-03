@@ -124,8 +124,8 @@ describe("parseRun — error handling", () => {
   });
 });
 
-describe("parseRun — malformed individual records don't abort the whole parse", () => {
-  it("skips an <Attempt> with no id attribute rather than throwing", () => {
+describe("parseRun — malformed individual records are rejected", () => {
+  it("rejects an <Attempt> with no identity rather than silently dropping it", () => {
     const xml = `<?xml version="1.0"?><Run version="1.8.1">
       <GameName>G</GameName><CategoryName>C</CategoryName>
       <Offset>00:00:00</Offset><AttemptCount>2</AttemptCount>
@@ -139,9 +139,7 @@ describe("parseRun — malformed individual records don't abort the whole parse"
       </AttemptHistory>
       <Segments><Segment><Name>A</Name></Segment></Segments>
     </Run>`;
-    const run = parseRun(xml);
-    expect(run.attempts).toHaveLength(1);
-    expect(run.attempts[0]?.id).toBe(1);
+    expect(() => parseRun(xml)).toThrow(/attempt id/);
   });
 });
 

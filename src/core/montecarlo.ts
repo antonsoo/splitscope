@@ -10,8 +10,8 @@
  * well-known, auditable techniques (bootstrap + hazard simulation) composed
  * segment by segment, not a black box.
  *
- * Two assumptions make this tractable, and both are optimistic in the same
- * direction (a real run has more structure than this model does):
+ * Two simplifying assumptions make this tractable. Real runs have more
+ * structure; departures from these assumptions can bias results in either direction:
  *
  * 1. **Independence between segments.** A slow Segment 2 doesn't make
  *    Segment 3 more or less likely to be slow, even though in practice a
@@ -26,7 +26,7 @@
  * normal segment times (via `normalCdf`).
  */
 import { mulberry32, type Rng, seedFromString } from "./rng.js";
-import { furthestSegmentIndex, normalCdf, segmentTimes } from "./stats.js";
+import { hasCompletionTime, normalCdf, reachedSegmentIndex, segmentTimes } from "./stats.js";
 import type { Run, TimingMethod } from "./types.js";
 
 export interface PbOddsOptions {
@@ -42,22 +42,24 @@ export interface PbOddsOptions {
 export interface PbOddsResult {
   readonly simulations: number;
   readonly pbTime: number | null;
-  readonly finishProbability: number;
+  readonly recentAttempts: number;
+  readonly finishProbability: number | null;
   readonly pbProbabilityGivenFinish: number | null;
   /** Unconditional probability a single future attempt both finishes and beats PB. */
-  readonly pbProbabilityPerAttempt: number;
+  readonly pbProbabilityPerAttempt: number | null;
   /** 95% Wilson score confidence interval on {@link pbProbabilityPerAttempt}. */
-  readonly pbProbabilityPerAttemptCi: readonly [number, number];
+  readonly pbProbabilityPerAttemptCi: readonly [number | null, number | null];
   readonly lookaheadAttempts: number;
   /** P(at least one PB in the next `lookaheadAttempts`), assuming independent attempts. */
-  readonly probabilityAtLeastOnePb: number;
+  readonly probabilityAtLeastOnePb: number | null;
   /** {@link pbProbabilityPerAttemptCi} carried through the same formula (it is monotonic in p). */
-  readonly probabilityAtLeastOnePbCi: readonly [number, number];
+  readonly probabilityAtLeastOnePbCi: readonly [number | null, number | null];
   /** Geometric-distribution expected attempts to first PB; `null` if the per-attempt probability is 0. */
   readonly expectedAttemptsUntilPb: number | null;
   /** `1 / p` at the CI's upper and lower ends; the upper bound is `null` (unbounded) when the CI reaches 0. */
   readonly expectedAttemptsUntilPbCi: readonly [number | null, number | null];
   readonly insufficientData: boolean;
+  readonly unavailableReason: string | null;
   readonly assumptions: readonly string[];
 }
 
@@ -95,12 +97,8 @@ interface SegmentModel {
 function buildSegmentModels(run: Run, method: TimingMethod, window: number): SegmentModel[] {
   const attemptsInWindow = run.attempts.slice(-window);
   const idsInWindow = new Set(attemptsInWindow.map((a) => a.id));
-  const furthestById = new Map(
-    attemptsInWindow.map((a) => [a.id, furthestSegmentIndex(run, a.id)]),
-  );
-  const finishedIds = new Set(
-    attemptsInWindow.filter((a) => a.time.realTime !== null).map((a) => a.id),
-  );
+  const furthestById = new Map(attemptsInWindow.map((a) => [a.id, reachedSegmentIndex(run, a)]));
+  const finishedIds = new Set(attemptsInWindow.filter(hasCompletionTime).map((a) => a.id));
 
   return run.segments.map((_segment, i) => {
     // The segment's own durations only: a skipped split and the combined time
@@ -137,8 +135,28 @@ export function simulatePbOdds(
   pbTime: number | null,
   options: PbOddsOptions,
 ): PbOddsResult {
+  for (const [name, value] of Object.entries({
+    recentWindow: options.recentWindow,
+    simulations: options.simulations,
+    lookaheadAttempts: options.lookaheadAttempts,
+  })) {
+    if (!Number.isSafeInteger(value) || value < 1)
+      throw new RangeError(`${name} must be a positive safe integer.`);
+  }
+  if (options.simulations > 1_000_000)
+    throw new RangeError("At most 1,000,000 simulations are supported.");
+  if (pbTime !== null && !Number.isFinite(pbTime))
+    throw new RangeError("PB time must be finite or null.");
   const models = buildSegmentModels(run, options.method, options.recentWindow);
-  const insufficientData = run.segments.length === 0 || models.some((m) => m.pool.length === 0);
+  const unknownOutcome = run.attempts
+    .slice(-options.recentWindow)
+    .some((a) => !hasCompletionTime(a) && reachedSegmentIndex(run, a) >= run.segments.length - 1);
+  const unavailableReason = unknownOutcome
+    ? "A recent attempt reaches the final segment but has no overall time. Its completion/reset outcome is unknown, so PB odds are unavailable."
+    : run.segments.length === 0 || models.some((m) => m.pool.length === 0)
+      ? "Not enough segment history in the selected window to simulate a full run. Try a larger recent-form window."
+      : null;
+  const insufficientData = unavailableReason !== null;
 
   const seed =
     options.seed ?? seedFromString(`${run.gameName}|${run.categoryName}|${run.attemptCount}`);
@@ -146,7 +164,7 @@ export function simulatePbOdds(
 
   let finished = 0;
   let beatPb = 0;
-  const S = Math.max(1, options.simulations);
+  const S = options.simulations;
 
   if (!insufficientData) {
     for (let i = 0; i < S; i++) {
@@ -158,17 +176,24 @@ export function simulatePbOdds(
     }
   }
 
-  const finishProbability = insufficientData ? 0 : finished / S;
-  const pbProbabilityPerAttempt = insufficientData ? 0 : beatPb / S;
-  const pbProbabilityGivenFinish = finished === 0 ? null : beatPb / finished;
+  const canEstimatePb = !insufficientData && pbTime !== null;
+  const finishProbability = insufficientData ? null : finished / S;
+  const pbProbabilityPerAttempt = canEstimatePb ? beatPb / S : null;
+  const pbProbabilityGivenFinish = !canEstimatePb || finished === 0 ? null : beatPb / finished;
   const K = options.lookaheadAttempts;
-  const atLeastOne = (p: number) => 1 - (1 - p) ** K;
+  const atLeastOne = (p: number | null) =>
+    p === null ? null : p === 1 ? 1 : -Math.expm1(K * Math.log1p(-p));
   const probabilityAtLeastOnePb = atLeastOne(pbProbabilityPerAttempt);
-  const expectedAttemptsUntilPb = pbProbabilityPerAttempt > 0 ? 1 / pbProbabilityPerAttempt : null;
-  const [ciLow, ciHigh] = wilsonCi(pbProbabilityPerAttempt, S);
+  const expectedAttemptsUntilPb =
+    pbProbabilityPerAttempt !== null && pbProbabilityPerAttempt > 0
+      ? 1 / pbProbabilityPerAttempt
+      : null;
+  const [ciLow, ciHigh] =
+    pbProbabilityPerAttempt === null ? [null, null] : wilsonCi(pbProbabilityPerAttempt, S);
 
   return {
-    simulations: S,
+    simulations: insufficientData ? 0 : S,
+    recentAttempts: Math.min(options.recentWindow, run.attempts.length),
     pbTime,
     finishProbability,
     pbProbabilityGivenFinish,
@@ -178,8 +203,12 @@ export function simulatePbOdds(
     probabilityAtLeastOnePb,
     probabilityAtLeastOnePbCi: [atLeastOne(ciLow), atLeastOne(ciHigh)],
     expectedAttemptsUntilPb,
-    expectedAttemptsUntilPbCi: [ciHigh > 0 ? 1 / ciHigh : null, ciLow > 0 ? 1 / ciLow : null],
+    expectedAttemptsUntilPbCi: [
+      ciHigh !== null && ciHigh > 0 ? 1 / ciHigh : null,
+      ciLow !== null && ciLow > 0 ? 1 / ciLow : null,
+    ],
     insufficientData,
+    unavailableReason,
     assumptions: ASSUMPTIONS,
   };
 }

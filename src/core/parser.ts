@@ -20,6 +20,8 @@ const REPEATED_TAGS = new Set(["Attempt", "Segment", "SplitTime", "Time", "Segme
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
+  // Numeric XML references (e.g. &#10; and &#x1F31F;) need entity decoding too.
+  htmlEntities: true,
   attributeNamePrefix: "@_",
   parseTagValue: false,
   parseAttributeValue: false,
@@ -35,8 +37,40 @@ const V_1_4_1 = versionOf("1.4.1.0");
 const V_1_5_0 = versionOf("1.5.0.0");
 
 function versionOf(text: string): Version {
-  const parts = text.split(".").map((p) => Number.parseInt(p, 10) || 0);
+  if (!/^\d+(?:\.\d+){0,3}$/.test(text)) {
+    throw new LssParseError(
+      "Invalid LiveSplit format version: expected one to four integer components.",
+    );
+  }
+  const parts = text.split(".").map((p) => readInteger(p, "format version", 0, 65535));
   return [parts[0] ?? 1, parts[1] ?? 0, parts[2] ?? 0, parts[3] ?? 0];
+}
+
+function readInteger(
+  text: string | undefined,
+  field: string,
+  min = -2147483648,
+  max = 2147483647,
+): number {
+  const value = Number(text);
+  if (
+    text === undefined ||
+    !/^-?\d+$/.test(text) ||
+    !Number.isSafeInteger(value) ||
+    value < min ||
+    value > max
+  ) {
+    throw new LssParseError(`Invalid ${field}: expected an integer from ${min} to ${max}.`);
+  }
+  return value;
+}
+
+function requireUnique(ids: Set<number>, id: number, field: string): void {
+  if (ids.has(id))
+    throw new LssParseError(
+      `Duplicate ${field} ${id}. Repair the conflicting records before analyzing this file.`,
+    );
+  ids.add(id);
 }
 
 function compareVersion(a: Version, b: Version): number {
@@ -125,6 +159,8 @@ function parseSegment(
     for (const splitTimeNode of childArray(childNode(node, "SplitTimes"), "SplitTime")) {
       const comparisonName = attr(splitTimeNode, "name");
       if (comparisonName === undefined) continue;
+      if (splitTimes.has(comparisonName))
+        throw new LssParseError(`Duplicate comparison in segment "${name}".`);
       splitTimes.set(comparisonName, readTime(version, splitTimeNode, ownText(splitTimeNode)));
     }
   } else {
@@ -139,11 +175,10 @@ function parseSegment(
   const bestSegmentTime = readTime(version, bestSegmentNode, childText(node, "BestSegmentTime"));
 
   const history: SegmentHistoryEntry[] = [];
+  const ids = new Set<number>();
   for (const timeNode of childArray(childNode(node, "SegmentHistory"), "Time")) {
-    const idText = attr(timeNode, "id");
-    if (idText === undefined) continue;
-    const attemptId = Number.parseInt(idText, 10);
-    if (Number.isNaN(attemptId)) continue;
+    const attemptId = readInteger(attr(timeNode, "id"), `history id in segment "${name}"`);
+    requireUnique(ids, attemptId, `history id in segment "${name}"`);
     history.push({
       attemptId,
       time: readTime(version, timeNode, ownText(timeNode)),
@@ -166,17 +201,16 @@ function parseBool(text: string | undefined): boolean {
 
 /**
  * `AttemptHistory` (>= 1.5.0): one entry per attempt, with timestamps and pause time.
- * An `<Attempt>` with no `id` attribute is skipped rather than aborting the whole parse —
- * consistent with `parseRunHistory` below, and with `parseSegment`'s handling of a
- * `SegmentHistory` `<Time>` with no `id`: one malformed record shouldn't cost a runner
- * their entire history over a single corrupted entry.
+ * Missing, malformed or repeated IDs are rejected: guessing their identity would
+ * merge unrelated histories or count the same attempt more than once.
  */
 function parseAttemptHistory(version: Version, root: XmlNode): Attempt[] {
+  const ids = new Set<number>();
   return childArray(root, "AttemptHistory")
     .flatMap((container) => childArray(container, "Attempt"))
     .map((node): Attempt => {
-      const idText = attr(node, "id");
-      const id = idText === undefined ? Number.NaN : Number.parseInt(idText, 10);
+      const id = readInteger(attr(node, "id"), "attempt id");
+      requireUnique(ids, id, "attempt id");
       return {
         id,
         started: attr(node, "started") ?? null,
@@ -186,17 +220,17 @@ function parseAttemptHistory(version: Version, root: XmlNode): Attempt[] {
         pauseTime: parseOptionalTimeSpan(childText(node, "PauseTime")),
         time: readTime(version, node, childText(node, "RealTime")),
       };
-    })
-    .filter((a): a is Attempt => !Number.isNaN(a.id));
+    });
 }
 
 /** `RunHistory` (< 1.5.0): just an id and an overall time, no timestamps. */
 function parseRunHistory(version: Version, root: XmlNode): Attempt[] {
+  const ids = new Set<number>();
   return childArray(root, "RunHistory")
     .flatMap((container) => childArray(container, "Time"))
     .map((node): Attempt => {
-      const idText = attr(node, "id");
-      const id = idText === undefined ? Number.NaN : Number.parseInt(idText, 10);
+      const id = readInteger(attr(node, "id"), "run history id");
+      requireUnique(ids, id, "run history id");
       return {
         id,
         started: null,
@@ -206,8 +240,7 @@ function parseRunHistory(version: Version, root: XmlNode): Attempt[] {
         pauseTime: null,
         time: readTime(version, node, ownText(node)),
       };
-    })
-    .filter((a) => !Number.isNaN(a.id));
+    });
 }
 
 /** Parses a LiveSplit `.lss` file's XML text into a {@link Run}. */
@@ -261,7 +294,7 @@ export function parseRun(xmlText: string): Run {
     categoryName: categoryName ?? "",
     formatVersion: version.join("."),
     offset: parseTimeSpan(offsetText ?? "00:00:00"),
-    attemptCount: Number.parseInt(attemptCountText ?? "0", 10) || 0,
+    attemptCount: readInteger(attemptCountText, "AttemptCount", 0, 4294967295),
     attempts: attempts.sort((a, b) => a.id - b.id),
     segments: withLabels(segmentNodes.map((node) => parseSegment(version, node))),
   };

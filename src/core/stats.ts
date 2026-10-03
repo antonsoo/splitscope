@@ -5,7 +5,7 @@
  * no hidden state, no I/O — so each one is independently testable against
  * hand-computed values (see `tests/stats.test.ts`).
  */
-import { PERSONAL_BEST, pick, type Run, type TimingMethod } from "./types.js";
+import { type Attempt, PERSONAL_BEST, pick, type Run, type TimingMethod } from "./types.js";
 
 /** Cumulative PB split time at segment `index` (0-based), or `null` if not recorded. */
 export function pbCumulative(run: Run, index: number, method: TimingMethod): number | null {
@@ -106,15 +106,17 @@ export function segmentTimes(
   return all[index] ?? [];
 }
 
-/** The segment's own durations over its last `window` history entries, oldest first (see `segmentTimes`). */
+/** Durations belonging to the run's last `window` recorded attempts; older and imported entries stay out. */
 export function recentSegmentSeconds(
   run: Run,
   index: number,
   method: TimingMethod,
   window: number,
 ): number[] {
+  if (!Number.isSafeInteger(window) || window < 1) return [];
+  const ids = new Set(run.attempts.slice(-window).map((a) => a.id));
   return segmentTimes(run, index, method)
-    .slice(-window)
+    .filter((t) => ids.has(t.attemptId))
     .map((t) => t.seconds)
     .filter((v): v is number => v !== null);
 }
@@ -176,7 +178,7 @@ export function segmentConsistency(
   const variance =
     values.length > 1
       ? values.reduce((sum, v) => sum + (v - mean) ** 2, 0) / (values.length - 1)
-      : 0;
+      : null;
 
   const withinGold =
     gold === null
@@ -189,7 +191,7 @@ export function segmentConsistency(
     q1: quantile(values, 0.25),
     q3: quantile(values, 0.75),
     iqr: quantile(values, 0.75) - quantile(values, 0.25),
-    stdDev: Math.sqrt(variance),
+    stdDev: variance === null ? null : Math.sqrt(variance),
     percentWithinGold: withinGold,
   };
 }
@@ -263,10 +265,22 @@ export function furthestSegmentIndex(run: Run, attemptId: number): number {
   return furthestSegmentIndices(run).get(attemptId) ?? -1;
 }
 
-/** Whether an attempt finished the run (has an overall RealTime — the wall-clock completion signal). */
+/** An overall time in either timing method is evidence of completion. */
+export function hasCompletionTime(attempt: Attempt): boolean {
+  return attempt.time.realTime !== null || attempt.time.gameTime !== null;
+}
+
+/** Completion proves every segment was reached even if individual histories were removed. */
+export function reachedSegmentIndex(run: Run, attempt: Attempt): number {
+  return hasCompletionTime(attempt)
+    ? run.segments.length - 1
+    : furthestSegmentIndex(run, attempt.id);
+}
+
+/** Whether an attempt has a recorded completion time. */
 export function attemptFinished(run: Run, attemptId: number): boolean {
   const attempt = run.attempts.find((a) => a.id === attemptId);
-  return attempt !== undefined && attempt.time.realTime !== null;
+  return attempt !== undefined && hasCompletionTime(attempt);
 }
 
 export interface SurvivalPoint {
@@ -279,6 +293,8 @@ export interface SurvivalPoint {
 }
 
 export interface ResetAnalysis {
+  /** Final-segment history without an overall time: no reset location can be inferred. */
+  readonly unlocatedOutcomes: number;
   readonly totalAttempts: number;
   readonly finishedAttempts: number;
   readonly points: readonly SurvivalPoint[];
@@ -289,8 +305,8 @@ export function resetAnalysis(run: Run): ResetAnalysis {
   const n = run.segments.length;
   const furthest = run.attempts.map((a) => ({
     id: a.id,
-    furthest: furthestSegmentIndex(run, a.id),
-    finished: a.time.realTime !== null,
+    furthest: reachedSegmentIndex(run, a),
+    finished: hasCompletionTime(a),
   }));
   const total = furthest.length;
 
@@ -307,6 +323,7 @@ export function resetAnalysis(run: Run): ResetAnalysis {
   }
 
   return {
+    unlocatedOutcomes: furthest.filter((a) => !a.finished && a.furthest >= n - 1).length,
     totalAttempts: total,
     finishedAttempts: furthest.filter((a) => a.finished).length,
     points,
@@ -328,14 +345,20 @@ function parseLiveSplitTimestamp(text: string): number | null {
   const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4}) (\d{1,2}):(\d{2}):(\d{2})$/.exec(text.trim());
   if (!m) return null;
   const [, month, day, year, hour, minute, second] = m;
-  return Date.UTC(
-    Number(year),
-    Number(month) - 1,
-    Number(day),
-    Number(hour),
-    Number(minute),
-    Number(second),
-  );
+  const date = new Date(0);
+  date.setUTCFullYear(Number(year), Number(month) - 1, Number(day));
+  date.setUTCHours(Number(hour), Number(minute), Number(second), 0);
+  if (
+    Number(year) < 1 ||
+    date.getUTCFullYear() !== Number(year) ||
+    date.getUTCMonth() !== Number(month) - 1 ||
+    date.getUTCDate() !== Number(day) ||
+    date.getUTCHours() !== Number(hour) ||
+    date.getUTCMinutes() !== Number(minute) ||
+    date.getUTCSeconds() !== Number(second)
+  )
+    return null;
+  return date.getTime();
 }
 
 export function playtimeSummary(run: Run): PlaytimeSummary {
@@ -344,7 +367,7 @@ export function playtimeSummary(run: Run): PlaytimeSummary {
   let finishedAttempts = 0;
 
   for (const attempt of run.attempts) {
-    if (attempt.time.realTime !== null) finishedAttempts++;
+    if (hasCompletionTime(attempt)) finishedAttempts++;
     const started = attempt.started === null ? null : parseLiveSplitTimestamp(attempt.started);
     const ended = attempt.ended === null ? null : parseLiveSplitTimestamp(attempt.ended);
     if (started === null || ended === null || ended < started) {

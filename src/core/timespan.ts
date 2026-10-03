@@ -13,6 +13,13 @@ import { LssParseError } from "./errors.js";
 const STANDARD_RE = /^(-)?(\d+):(\d{2}):(\d{2})(?:\.(\d+))?$/;
 const INTEGER_RE = /^-?\d+$/;
 
+function finiteDuration(value: number): number {
+  if (!Number.isFinite(value) || Math.abs(value) > Number.MAX_SAFE_INTEGER / 1000) {
+    throw new LssParseError("Time span is too large to analyze safely.");
+  }
+  return value;
+}
+
 function parseStandard(text: string): number {
   const m = STANDARD_RE.exec(text);
   if (!m) {
@@ -24,7 +31,7 @@ function parseStandard(text: string): number {
     Number(minutes) * 60 +
     Number(seconds) +
     (fraction ? Number(`0.${fraction}`) : 0);
-  return sign ? -total : total;
+  return finiteDuration(sign ? -total : total);
 }
 
 /** Parses a required (non-empty) time span. Throws `LssParseError` on malformed input. */
@@ -46,7 +53,7 @@ export function parseTimeSpan(text: string): number {
         );
       }
       const magnitude = Math.abs(days) * 86400 + time;
-      return days < 0 ? -magnitude : magnitude;
+      return finiteDuration(days < 0 ? -magnitude : magnitude);
     }
   }
   return parseStandard(text);
@@ -62,13 +69,19 @@ export function parseOptionalTimeSpan(text: string | null | undefined): number |
 
 /** Formats seconds back into `HH:MM:SS.fff` for display (not round-trippable to LiveSplit's own precision). */
 export function formatSeconds(seconds: number | null, fractionDigits = 2): string {
-  if (seconds === null) return "—";
+  if (seconds === null || !Number.isFinite(seconds)) return "—";
+  if (!Number.isInteger(fractionDigits) || fractionDigits < 0 || fractionDigits > 6)
+    throw new RangeError("fractionDigits must be an integer from 0 to 6.");
   const sign = seconds < 0 ? "-" : "";
-  const abs = Math.abs(seconds);
+  // Round before splitting into fields so 59.999s becomes 1:00.00, not 0:60.00.
+  const scale = 10 ** fractionDigits;
+  const ticks = Math.round(Math.abs(seconds) * scale);
+  const abs = Math.floor(ticks / scale);
   const hours = Math.floor(abs / 3600);
   const minutes = Math.floor((abs % 3600) / 60);
-  const secs = abs % 60;
-  const secsStr = secs.toFixed(fractionDigits).padStart(fractionDigits + 3, "0");
+  const secsStr =
+    String(abs % 60).padStart(2, "0") +
+    (fractionDigits > 0 ? `.${String(ticks % scale).padStart(fractionDigits, "0")}` : "");
   if (hours > 0) {
     return `${sign}${hours}:${String(minutes).padStart(2, "0")}:${secsStr}`;
   }

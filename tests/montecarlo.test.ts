@@ -137,7 +137,7 @@ describe("simulatePbOdds — independent normal segments (closed-form oracle)", 
     expect(result.pbProbabilityPerAttempt).toBeLessThan(1);
     // Bootstrap resampling from a finite (if large) empirical sample plus Monte Carlo
     // noise both contribute error; 0.02 is generous relative to sqrt(p(1-p)/30000) ~ 0.003.
-    expect(Math.abs(result.pbProbabilityPerAttempt - closedForm)).toBeLessThan(0.02);
+    expect(Math.abs(result.pbProbabilityPerAttempt! - closedForm)).toBeLessThan(0.02);
   });
 
   it("reports a 95% CI that contains the closed-form probability", () => {
@@ -151,8 +151,8 @@ describe("simulatePbOdds — independent normal segments (closed-form oracle)", 
       seed: 99,
     });
     const [lo, hi] = result.pbProbabilityPerAttemptCi;
-    expect(closedForm).toBeGreaterThanOrEqual(lo - 1e-9);
-    expect(closedForm).toBeLessThanOrEqual(hi + 1e-9);
+    expect(closedForm).toBeGreaterThanOrEqual(lo! - 1e-9);
+    expect(closedForm).toBeLessThanOrEqual(hi! + 1e-9);
   });
 });
 
@@ -254,12 +254,12 @@ describe("simulatePbOdds — derived intervals", () => {
       seed: 3,
     });
     const [lo, hi] = r.pbProbabilityPerAttemptCi;
-    expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo) ** 5, 12);
-    expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi) ** 5, 12);
-    expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb);
-    expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb);
-    expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi, 9);
-    expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo, 9);
+    expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo!) ** 5, 12);
+    expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi!) ** 5, 12);
+    expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+    expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+    expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi!, 9);
+    expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo!, 9);
   });
 
   it("has no finite upper bound on expected attempts when no simulated attempt beat PB", () => {

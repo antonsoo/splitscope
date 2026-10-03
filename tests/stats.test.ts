@@ -124,7 +124,7 @@ describe("segmentConsistency", () => {
     formatVersion: "1.8.1.0",
     offset: 0,
     attemptCount: 0,
-    attempts: [],
+    attempts: [1, 2, 3, 4, 5].map((id) => attempt(id, null)),
     segments: [segment("A", 10, 8, [8, 9, 10, 11, 12])],
   };
 
@@ -162,7 +162,13 @@ describe("segmentConsistency", () => {
       ...run,
       segments: [segment("A", 10, 8, [8, null, 10]), segment("B", 20, 9, [9, 19, 10])],
     };
-    const stats = segmentConsistency(skipped, 1, "RealTime", 3, 1);
+    const stats = segmentConsistency(
+      { ...skipped, attempts: run.attempts.slice(0, 3) },
+      1,
+      "RealTime",
+      3,
+      1,
+    );
     expect(stats.n).toBe(2);
     expect(stats.median).toBe(9.5);
   });
