@@ -31,8 +31,19 @@ import type { Run, TimingMethod } from "./types.js";
 
 export interface PbOddsOptions {
   readonly method: TimingMethod;
-  /** How many of the most recent attempts to treat as "current form" for both sampling and hazard. */
+  /**
+   * How many of the most recent attempts to treat as "current form" for both sampling and
+   * hazard. This is a minimum: see {@link PbOddsOptions.minSegmentSamples}.
+   */
   readonly recentWindow: number;
+  /**
+   * Widen the window, for sampling and hazard alike, until every segment has at least this
+   * many timed durations in it (default {@link DEFAULT_MIN_SEGMENT_SAMPLES}). Bootstrapping
+   * from one or two values is not a distribution, and a late segment that the last few
+   * attempts never reached would otherwise make the forecast unavailable. `0` keeps the window
+   * exactly as asked.
+   */
+  readonly minSegmentSamples?: number;
   readonly simulations: number;
   readonly seed?: number;
   /** Attempts to look ahead for "probability of at least one PB in the next K". */
@@ -63,9 +74,12 @@ export interface PbOddsResult {
   readonly assumptions: readonly string[];
 }
 
+/** Chosen on the development half of the real-history backtest in `studies/pb-odds-backtest`. */
+export const DEFAULT_MIN_SEGMENT_SAMPLES = 3;
+
 const ASSUMPTIONS = [
   "Segment times are drawn independently of each other (a slow segment doesn't change the odds of the next one being slow or fast).",
-  "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving.",
+  "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving. In a backtest on real histories the forecast ran low: it expected about a third of the PBs that followed.",
   "Reset hazard per segment is estimated from historical frequency and assumed constant going forward.",
   "Attempts are treated as independent trials when combining single-attempt odds into a multi-attempt probability.",
   "The 95% intervals cover simulation noise only: they narrow as you add simulations, not as you add attempts, so they don't measure how well the recent-form window represents you.",
@@ -87,6 +101,31 @@ function wilsonCi(p: number, n: number): [number, number] {
   const center = (p + z2 / (2 * n)) / denominator;
   const margin = (z * Math.sqrt((p * (1 - p)) / n + z2 / (4 * n * n))) / denominator;
   return [Math.max(0, center - margin), Math.min(1, center + margin)];
+}
+
+/**
+ * The recent window, widened until each segment has `minSamples` timed durations in it.
+ * Never narrower than `window`; every attempt if the history cannot supply that many.
+ */
+export function effectiveWindow(
+  run: Run,
+  method: TimingMethod,
+  window: number,
+  minSamples: number,
+): number {
+  const n = run.attempts.length;
+  if (minSamples <= 0 || n <= window) return window;
+  const ordinal = new Map(run.attempts.map((a, i) => [a.id, i]));
+  let needed = window;
+  for (let i = 0; i < run.segments.length; i++) {
+    const newestFirst = segmentTimes(run, i, method)
+      .filter((t) => t.seconds !== null && ordinal.has(t.attemptId))
+      .map((t) => ordinal.get(t.attemptId) as number)
+      .sort((a, b) => b - a);
+    const nth = newestFirst[minSamples - 1];
+    needed = Math.max(needed, nth === undefined ? n : n - nth);
+  }
+  return Math.min(needed, n);
 }
 
 interface SegmentModel {
@@ -147,9 +186,15 @@ export function simulatePbOdds(
     throw new RangeError("At most 1,000,000 simulations are supported.");
   if (pbTime !== null && !Number.isFinite(pbTime))
     throw new RangeError("PB time must be finite or null.");
-  const models = buildSegmentModels(run, options.method, options.recentWindow);
+  const window = effectiveWindow(
+    run,
+    options.method,
+    options.recentWindow,
+    options.minSegmentSamples ?? DEFAULT_MIN_SEGMENT_SAMPLES,
+  );
+  const models = buildSegmentModels(run, options.method, window);
   const unknownOutcome = run.attempts
-    .slice(-options.recentWindow)
+    .slice(-window)
     .some((a) => !hasCompletionTime(a) && reachedSegmentIndex(run, a) >= run.segments.length - 1);
   const unavailableReason = unknownOutcome
     ? "A recent attempt reaches the final segment but has no overall time. Its completion/reset outcome is unknown, so PB odds are unavailable."
@@ -193,7 +238,7 @@ export function simulatePbOdds(
 
   return {
     simulations: insufficientData ? 0 : S,
-    recentAttempts: Math.min(options.recentWindow, run.attempts.length),
+    recentAttempts: Math.min(window, run.attempts.length),
     pbTime,
     finishProbability,
     pbProbabilityGivenFinish,

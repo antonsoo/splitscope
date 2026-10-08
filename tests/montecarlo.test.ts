@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { normalSumBeatsThreshold, simulatePbOdds } from "../src/core/montecarlo.js";
+import {
+  effectiveWindow,
+  normalSumBeatsThreshold,
+  simulatePbOdds,
+} from "../src/core/montecarlo.js";
 import { mulberry32 } from "../src/core/rng.js";
 import type { Attempt, DualTime, Run, Segment } from "../src/core/types.js";
 
@@ -273,5 +277,53 @@ describe("simulatePbOdds — derived intervals", () => {
     expect(r.pbProbabilityPerAttempt).toBe(0);
     expect(r.expectedAttemptsUntilPbCi[1]).toBeNull();
     expect(r.expectedAttemptsUntilPbCi[0]).toBeGreaterThan(200);
+  });
+});
+
+describe("simulatePbOdds — a late segment the recent window never reached", () => {
+  // Real histories look like this: a runner finishes a handful of times, then spends dozens of
+  // attempts resetting in the first segment. Attempts 1-8 finish (10s + 20s); 9-60 reset in A.
+  const n = 60;
+  const attempts: Attempt[] = Array.from({ length: n }, (_, i) => ({
+    ...makeAttempt(i + 1, 30),
+    time: dt(i < 8 ? 30 : null),
+  }));
+  const run: Run = {
+    gameName: "G",
+    categoryName: "C",
+    formatVersion: "1.8.1.0",
+    offset: 0,
+    attemptCount: n,
+    attempts,
+    segments: [makeSegment("A", Array(n).fill(10)), makeSegment("B", Array(8).fill(20))],
+  };
+  const options = {
+    method: "RealTime",
+    recentWindow: 30,
+    simulations: 1_000,
+    lookaheadAttempts: 10,
+    seed: 1,
+  } as const;
+
+  it("widens the window until every segment has three timed durations", () => {
+    expect(effectiveWindow(run, "RealTime", 30, 3)).toBe(55);
+    const r = simulatePbOdds(run, 31, options);
+    expect(r.insufficientData).toBe(false);
+    expect(r.recentAttempts).toBe(55);
+  });
+
+  it("keeps the requested window when asked to, and then has nothing to resample", () => {
+    expect(effectiveWindow(run, "RealTime", 30, 0)).toBe(30);
+    const r = simulatePbOdds(run, 31, { ...options, minSegmentSamples: 0 });
+    expect(r.insufficientData).toBe(true);
+  });
+
+  it("never reaches past the first attempt", () => {
+    expect(effectiveWindow(run, "RealTime", 30, 9)).toBe(n);
+  });
+
+  it("leaves a window that already has the samples alone", () => {
+    expect(effectiveWindow(run, "RealTime", 55, 3)).toBe(55);
+    expect(effectiveWindow(run, "RealTime", 10, 1)).toBe(53);
   });
 });
