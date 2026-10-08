@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Controlled evidence cases, not a real speedrun. IDs are deliberately sparse. -->
+<Run version="1.8.0.0">
+  <GameName>Practice evidence fixture</GameName>
+  <CategoryName>Synthetic review cases</CategoryName>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>1234</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="2" />
+    <Attempt id="5"><RealTime>00:00:50</RealTime></Attempt>
+    <Attempt id="9"><GameTime>00:00:42</GameTime></Attempt>
+    <Attempt id="12" />
+    <Attempt id="20" />
+    <Attempt id="23"><RealTime>00:00:55</RealTime></Attempt>
+  </AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Gate</Name>
+      <SplitTimes><SplitTime name="Personal Best"><RealTime>00:00:10</RealTime></SplitTime></SplitTimes>
+      <BestSegmentTime><RealTime>00:00:08</RealTime></BestSegmentTime>
+      <SegmentHistory>
+        <Time id="-7"><RealTime>00:00:02</RealTime></Time>
+        <Time id="5"><RealTime>00:00:10</RealTime><GameTime>00:00:08</GameTime></Time>
+        <Time id="20"><RealTime>00:00:08</RealTime></Time>
+        <Time id="23"><RealTime>00:00:10</RealTime></Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Bridge</Name>
+      <SplitTimes><SplitTime name="Personal Best"><RealTime>00:00:25</RealTime></SplitTime></SplitTimes>
+      <BestSegmentTime><RealTime>00:00:12</RealTime></BestSegmentTime>
+      <SegmentHistory><Time id="5" /><Time id="20" /></SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Tower</Name>
+      <SplitTimes><SplitTime name="Personal Best"><RealTime>00:00:35</RealTime></SplitTime></SplitTimes>
+      <BestSegmentTime><RealTime>00:00:09</RealTime></BestSegmentTime>
+      <SegmentHistory>
+        <Time id="5"><RealTime>00:00:25</RealTime></Time>
+        <Time id="20"><RealTime>00:00:22</RealTime></Time>
+        <Time id="23"><RealTime>00:00:30</RealTime></Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Finish</Name>
+      <SplitTimes><SplitTime name="Personal Best"><RealTime>00:00:50</RealTime></SplitTime></SplitTimes>
+      <BestSegmentTime><RealTime>00:00:14</RealTime></BestSegmentTime>
+      <SegmentHistory>
+        <Time id="5"><RealTime>00:00:15</RealTime></Time>
+        <Time id="12"><RealTime>00:00:40</RealTime></Time>
+        <Time id="23"><RealTime>00:00:15</RealTime></Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+</Run>
