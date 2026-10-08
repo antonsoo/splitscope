@@ -1,0 +1,2284 @@
+{
+  "fetched": "2026-10-08",
+  "repos": [
+    {
+      "repo": "AmenAnthem/speedrun-livesplit-splits",
+      "licence": "MIT",
+      "commit": "21676ae91d9379b0c1380104c817cfc3d5b71776",
+      "archive_url": "https://codeload.github.com/AmenAnthem/speedrun-livesplit-splits/tar.gz/21676ae91d9379b0c1380104c817cfc3d5b71776",
+      "archive_sha256": "bf627f52a43c002145917d3de040975769231a604f17a5bf804cf6beb41cd163",
+      "files": [
+        {
+          "path": "Apocalypse - Any%.lss",
+          "bytes": 75783,
+          "sha256": "3522e8b36a40ff86d6413272e142b6684f7a4ac062d94ade1d95c9e1b12a5116"
+        },
+        {
+          "path": "Assault Retribution - Any%.lss",
+          "bytes": 55410,
+          "sha256": "8b28b6819024c87fb155ca1d8c406fdc72322bc33b2c0e6ad58bc189381b807c"
+        },
+        {
+          "path": "BRAHMA Force The Assault on Beltlogger 9 - Any%.lss",
+          "bytes": 91291,
+          "sha256": "52cbe5f97f4a785e6eb0af1e039181bba7189ebc6251428ca82db5784623fe7c"
+        },
+        {
+          "path": "Beat Planet Music - Planet Master.lss",
+          "bytes": 54727,
+          "sha256": "3bfe779c9c8d55f5dec57020e069eb08a8d73779495d53a061f7a54ca119c6dd"
+        },
+        {
+          "path": "Bio FREAKS - Arcade (PS1).lss",
+          "bytes": 115104,
+          "sha256": "27d7a1723a505e03be079c2b325ea0dd8a8d134943e6c9a95d1f5c752656ef14"
+        },
+        {
+          "path": "Bram Stoker's Dracula (GB) - Easy Mode (OOB).lss",
+          "bytes": 65011,
+          "sha256": "b27e92ddaf86bfe1e3b051ca5fa24692a3226e2d91bfdabc6be5fb970a8e91ad"
+        },
+        {
+          "path": "Bram Stoker's Dracula (GB) - Easy Mode.lss",
+          "bytes": 130718,
+          "sha256": "e1e5be5a4cb3c5eb6a3b744d062a62ed5cfac90df271cb2e34768696c24a1b25"
+        },
+        {
+          "path": "Bram Stoker's Dracula (GB) - Medium Mode.lss",
+          "bytes": 93606,
+          "sha256": "45afbb58588a435e2feb715f08bbe2bdec42f37a973a63f0aabbc231a418b37a"
+        },
+        {
+          "path": "Cardinal Syn - Tournament - No unlockable characters.lss",
+          "bytes": 71784,
+          "sha256": "46cc47b2f94105a3e81db36a374ff9de80d2feae6c34885cd72999af4fc1e5b3"
+        },
+        {
+          "path": "Cardinal Syn - Tournament - Unlockable characters.lss",
+          "bytes": 61801,
+          "sha256": "4b723607d027862525a0720fe95be8cdd25bda101d4c953c2bfeaa4bbad309cc"
+        },
+        {
+          "path": "Chaos Break - Mituki Bad Ending.lss",
+          "bytes": 60145,
+          "sha256": "ee9ab69005ae6586a5585e41c1ce881e7b1977cf1ee573df468fbecc0a4418c1"
+        },
+        {
+          "path": "Chocobo Racing - Story Mode.lss",
+          "bytes": 74637,
+          "sha256": "59915a0e5d719335c8bf2819d93072e4dabd1dac429ad52473639537eb1f7cbe"
+        },
+        {
+          "path": "Cosmowarrior Zero - Lady Emeraldas.lss",
+          "bytes": 68125,
+          "sha256": "2ee697ba81901eb2e45d1c14b1160e0c3f3283e6d973a99faae74a6745bce4cf"
+        },
+        {
+          "path": "Cosmowarrior Zero - Warrius Zero.lss",
+          "bytes": 140837,
+          "sha256": "079f725037a3a45ee74ed06a7c00df7712283d7674ba8639ac1155e4f4d96bd6"
+        },
+        {
+          "path": "Crime Crackers 2 - Route 1.lss",
+          "bytes": 68171,
+          "sha256": "62c766a6f38b107883e53f9278fadeec64bb0609e94304697647219e231aa6f3"
+        },
+        {
+          "path": "Crisis City - Time Attack - Ruth.lss",
+          "bytes": 65960,
+          "sha256": "d8cef2a2e0e33d7db6d304ee2f3476fa612d4e688385ab68bceedaf79cb7622e"
+        },
+        {
+          "path": "Dangan - Any%.lss",
+          "bytes": 76592,
+          "sha256": "c0280f73f7aeeb520d0f514a90384a3686b970aa6205ee50d9db8c58510fb84b"
+        },
+        {
+          "path": "Darkstalkers 3 - Arcade Mode (PS1) - Difficulty 4.lss",
+          "bytes": 33650,
+          "sha256": "1a589eee3cf3c8f03cd02b1823c3a5ba9867fbf9d13bb0ee7fa6f1b6f6021f7a"
+        },
+        {
+          "path": "Darkwing Duck (GB) - Any%.lss",
+          "bytes": 59296,
+          "sha256": "aae5048affa7ddbd735a02b153fe7bd32be00d0cf5b62735e701e8b0d2c3e7d2"
+        },
+        {
+          "path": "Dead Cells - Any% 1.2.lss",
+          "bytes": 203778,
+          "sha256": "efa847504ee7ca0704d74b2c211b86bc8b3bf9414207a6f57855f770a72f99e4"
+        },
+        {
+          "path": "Dead Cells - Any% 1.3.lss",
+          "bytes": 295501,
+          "sha256": "3ba6fd7dbaf23ca6c0bf2389baad28af485e43f1dc16d401f0890b5b5cafca46"
+        },
+        {
+          "path": "Dead Cells - Any% 1.4.lss",
+          "bytes": 330471,
+          "sha256": "9759114f6df68550a0995ebda09fc1cf3859f9b5500e6dd4b121882ed82f4976"
+        },
+        {
+          "path": "Deep Freeze - Any%.lss",
+          "bytes": 47089,
+          "sha256": "79fe4f9f29fcd62df1436ad856f18b02142069705bc8340525d49d483869f7e8"
+        },
+        {
+          "path": "Destrega - 1P Battle.lss",
+          "bytes": 65273,
+          "sha256": "e0b4397191d906930e3f0b3637b20e170ac2bc77eec0f4b37cfc82a2ceddfccb"
+        },
+        {
+          "path": "Destrega - Story - Easy.lss",
+          "bytes": 81076,
+          "sha256": "ccdb9b93128a7ec87ca02f4c1e8233cfbc91cc0e64ba3d64f00c8eae40cc1f55"
+        },
+        {
+          "path": "Destrega - Story - Normal.lss",
+          "bytes": 84972,
+          "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54"
+        },
+        {
+          "path": "Destrega - Time Attack.lss",
+          "bytes": 67001,
+          "sha256": "bda99eb1af63f68b7f08f3336d097e5c0e8653b7080cdb8fdc289d2194814441"
+        },
+        {
+          "path": "Dino Crisis 2 - Any% Easy.lss",
+          "bytes": 66651,
+          "sha256": "9bcc583c3e249a94b9389c7c4cd4b8fa8ac0cd15b5635182b029f2704a8cc3b8"
+        },
+        {
+          "path": "DuckTales (GB) - Any% Easy.lss",
+          "bytes": 71642,
+          "sha256": "d7135710d020143a51acbd1d9dc6fd8e21ec70a5d42278040c11c4f6c10bd288"
+        },
+        {
+          "path": "EOS Edge of Skyhigh - Any%.lss",
+          "bytes": 66000,
+          "sha256": "88bc508f87472ad6b38a57f976a0e8f1f972f79850597efbd8358a8814eda458"
+        },
+        {
+          "path": "Evil Zone - Story Mode - Easy (Ihadurca).lss",
+          "bytes": 72045,
+          "sha256": "c5104603390043ac6735b0e6f81be1ea3f376123291739aaa914d0464570397e"
+        },
+        {
+          "path": "Excalibur 2555 A.D. - Any%.lss",
+          "bytes": 59487,
+          "sha256": "e6e1197ad55c03d5c75edba0bcb6b220140765734d9e6424987c28b5a3142345"
+        },
+        {
+          "path": "Exector - Any% Easy.lss",
+          "bytes": 59539,
+          "sha256": "256bd6f81449054372be4bb787f93a7b00c8580570531afda31d832dac57fb01"
+        },
+        {
+          "path": "Extra Bright - Any%.lss",
+          "bytes": 65060,
+          "sha256": "895b01d3c51b4dfdb7b337b0acff1d7689d298a657f6c36124a6ab67551c9591"
+        },
+        {
+          "path": "Extreme Power - Any%.lss",
+          "bytes": 79023,
+          "sha256": "dc922eb46476fbd58e4759ddc89578897f9065dec951c7fb9e9bdb2cbdeb5ed2"
+        },
+        {
+          "path": "G-Darius - Beginner - Zone \u03bb.lss",
+          "bytes": 70942,
+          "sha256": "d0572654f8f10dd17b1f505d76e2a45eb1cc94963d36fd0bb79bf101e410e049"
+        },
+        {
+          "path": "GUNNM Martian Memory - Any%.lss",
+          "bytes": 91477,
+          "sha256": "aa3f29f738e56d2a1057ef87274231c41f5c79c9fc00ab04a890bd6a28a41b5d"
+        },
+        {
+          "path": "Gamera 2000 - Any% Easy.lss",
+          "bytes": 47324,
+          "sha256": "7fdc897c6230e62970e3ba866b931c9f0462b4df5e9ed6e33c11f5fdf31127e0"
+        },
+        {
+          "path": "Gekido Urban Fighters - Any% (Tetsuo).lss",
+          "bytes": 78037,
+          "sha256": "f011d87cd4c5129c06c152477a90959a6d8b67cdaee4b4ba78eb491072af988b"
+        },
+        {
+          "path": "Gradius III - Easy.lss",
+          "bytes": 76259,
+          "sha256": "864a6a4bc48a50773914a5804b6c0986f7060969de08c687c349001867b9011c"
+        },
+        {
+          "path": "Gun-Nac - Any% Novice.lss",
+          "bytes": 78993,
+          "sha256": "f70263c963af7c0ca98fc10044a25ee948af98c386afc53405552700b6fdfb3d"
+        },
+        {
+          "path": "Gunbird - Any%.lss",
+          "bytes": 76847,
+          "sha256": "38028baa0e5576742d1936e6b7f978f7c83a1494e65f68211ffc3083887efa6a"
+        },
+        {
+          "path": "Gungage - Steyr - Easy.lss",
+          "bytes": 64117,
+          "sha256": "9d9ccdba94d1a408ba2fcba04364efb039c7f4ac3822d949bc7625d7a4475bb8"
+        },
+        {
+          "path": "Hades - Any Heat.lss",
+          "bytes": 71695,
+          "sha256": "3d231d823567ec95f6bae47c6f859155c17151caacc33fa838d0ad91b5253a3b"
+        },
+        {
+          "path": "Hellnight - Kamiya Ending.lss",
+          "bytes": 54625,
+          "sha256": "400f64f6ec58a9a6a75409e32eb528f0c797e25fbbf4942ae465e9c7c366b837"
+        },
+        {
+          "path": "Hokuto no Ken Seiki Matsukyu Seishi Densetsu - New Game+.lss",
+          "bytes": 65357,
+          "sha256": "ca5b8d64c23a9e82c7466f5feb9ae3718e138af7b9f92af82ee4f01bde264d00"
+        },
+        {
+          "path": "Hoshi de Hakken!! Tamagotchi - Adult%.lss",
+          "bytes": 64038,
+          "sha256": "5a1d4308d09bed0fb5cfe3064ad944f3c16d1d7f754246f9b4531435aff2c842"
+        },
+        {
+          "path": "Hoshi de Hakken!! Tamagotchi - Death%.lss",
+          "bytes": 59422,
+          "sha256": "4cdfbd588de89c7581bbe3018f9a35acd2993c1f26941a53fd2d02912f1988fa"
+        },
+        {
+          "path": "IS Internal Section - Any%.lss",
+          "bytes": 55811,
+          "sha256": "d7d0a8cd740672b2cf46e1bab2b48a854a016d44ddbc1e378cf05ef551b1de71"
+        },
+        {
+          "path": "Infected - Any%.lss",
+          "bytes": 46921,
+          "sha256": "af88930c9a2d1dff367c10030afbdaea1ee8732245e4046c348d1db6bbe01301"
+        },
+        {
+          "path": "Iron & Blood Warriors of Ravenloft - Head to Head.lss",
+          "bytes": 61437,
+          "sha256": "e00dd5ca1cd648d392f3fddbd4f91a2e4d8faaea0ecefd151aa52f8158430289"
+        },
+        {
+          "path": "Kirby's Dream Land - Beat the Game.lss",
+          "bytes": 125498,
+          "sha256": "dd612cdc6ffe9b34cac75c7cd364f46368f3e2d921e0681974cf42608d0a1898"
+        },
+        {
+          "path": "Krazy Ivan - Any%.lss",
+          "bytes": 34657,
+          "sha256": "2fb35d96cd6323b159c29a1a689e5fa838c1effcb6e3f20208e67f02e4cf3f83"
+        },
+        {
+          "path": "Kwirk - Going up.lss",
+          "bytes": 72596,
+          "sha256": "c47a96bd129af3160f1efbf1532fbbffcec97b2c4212a65da22d57f3b0ef658c"
+        },
+        {
+          "path": "Kwirk - Heading out 99 RMS.lss",
+          "bytes": 77187,
+          "sha256": "d050e074a24b99f79624e1e282728e11bd00fbd7b046bbd4e08fccb398ab969d"
+        },
+        {
+          "path": "Lone Soldier - Any%.lss",
+          "bytes": 63687,
+          "sha256": "727ccf0c3d1d99f725abab6d6a7cb20f23dc3411229c3d2c498bf855ff3490a7"
+        },
+        {
+          "path": "Love & Destroy - Kiki.lss",
+          "bytes": 71402,
+          "sha256": "7853281a70249f5c12fbb204136407078e17a4240cf21dfb9c5bf19f18f38228"
+        },
+        {
+          "path": "MDK - Any% (PS1).lss",
+          "bytes": 65666,
+          "sha256": "edaf95a16f14ca3c4ba4248ae21f0a7fdda425872bb85a15417b1a818470c517"
+        },
+        {
+          "path": "Mad Stalker Full Metal Force - Story Mode - Easy.lss",
+          "bytes": 77417,
+          "sha256": "cfb9d753c46ae740871985ad8e7b69f12d23b1dd15816ec45965e4e2430eea42"
+        },
+        {
+          "path": "Megatudo 2096 - Story Game - Easy (Samurai).lss",
+          "bytes": 69190,
+          "sha256": "1145f92d11312fffbe369473f4187e51705c63a4349c96c29d94d94de12934ad"
+        },
+        {
+          "path": "Meta-Ph-List - Any%.lss",
+          "bytes": 69007,
+          "sha256": "0a3aa6a10d65c57f43b9913cebe6d0829163c11f10177d01817c5057ce6abbcb"
+        },
+        {
+          "path": "Mighty Morphin Power Rangers (SNES) - Any%.lss",
+          "bytes": 45249,
+          "sha256": "cf71d3f058fdf59c98f7d32f84c6ad6837e2743e71fd2862ed281d9e9beeab58"
+        },
+        {
+          "path": "Mighty Morphin Power Rangers The Fighting Edition - Easy.lss",
+          "bytes": 73736,
+          "sha256": "8d0e3521ff1949574fdac033ff33b28af9db972116a7a828c77c4da86c17361b"
+        },
+        {
+          "path": "Missland 2 - Any%.lss",
+          "bytes": 98994,
+          "sha256": "32e4212595f2e5e2ebcfc5602da206e0635b25ab4fc834371dc1fd0d7afacc03"
+        },
+        {
+          "path": "Mobile Police Patlabor - Any% No Restrictions.lss",
+          "bytes": 68886,
+          "sha256": "69b0e914a35455ba20b8e6792e635f448d7785c9e087f201395f5adfe44fe758"
+        },
+        {
+          "path": "Monsters' Den The Book of Dread - The Den of Corruption - Any%.lss",
+          "bytes": 72860,
+          "sha256": "01cd7be1d0f063ff6bdfdb366857238655e1891a46460f06fffd69fd85dc7e87"
+        },
+        {
+          "path": "Night Striker - Route P.lss",
+          "bytes": 65681,
+          "sha256": "7c641d048d647e11009faf8c0e43582d61da949c050bb269375e979833f3c9aa"
+        },
+        {
+          "path": "Night Striker - Route U.lss",
+          "bytes": 64692,
+          "sha256": "4cf8b784f49f8e3d0aa8936d861c600fea0ed1326583c39969c3466942817805"
+        },
+        {
+          "path": "Novastorm - Any% Easy.lss",
+          "bytes": 32822,
+          "sha256": "a310ec2ba37522d881b9405af56c180f9512e2e4ecd5d4c7fb82f0b4e96473d5"
+        },
+        {
+          "path": "Omega Boost - Any%.lss",
+          "bytes": 36228,
+          "sha256": "c2c8b99a25b2e18ae72e6a629b4dc120663dfaa7a0b1d7dda5d508094e755f14"
+        },
+        {
+          "path": "Panzer Bandit - Story Mode - Easy (Ain).lss",
+          "bytes": 64038,
+          "sha256": "056db2eccf3f368e74409274d5715b4535dedc03237566e7c2883ce36ee478fa"
+        },
+        {
+          "path": "Panzer Bandit - Story Mode - Easy (Kasumi).lss",
+          "bytes": 76168,
+          "sha256": "ff075813d6d878ff7142e5ef17038b2ee533ac60c01f8add03c845ed02c57458"
+        },
+        {
+          "path": "Planet Dob - Good Ending.lss",
+          "bytes": 59069,
+          "sha256": "74e2a565e20f2862e1715da160bedd347720468a5ef98a02895188884be4cca6"
+        },
+        {
+          "path": "Power Rangers Battle for the Grid - Arcade Any%.lss",
+          "bytes": 137755,
+          "sha256": "b38b10896c908b85bca057d6d95167b2a7b04ab381e0c5cd28ceeb15f9913a17"
+        },
+        {
+          "path": "Power Rangers Battle for the Grid - Story Mode.lss",
+          "bytes": 120980,
+          "sha256": "3fa17abc442070d0d3ae1aa2a96357fe35c84df6f6e65266dfda4c733a6c7bb8"
+        },
+        {
+          "path": "Project Gaiaray - Attack - Untitled.lss",
+          "bytes": 63238,
+          "sha256": "aa7f10f39e0a917fbd651d5648c320c295e99f12ccd8e53433b29fdf555d3fd9"
+        },
+        {
+          "path": "Project Horned Owl - Any% Normal.lss",
+          "bytes": 55449,
+          "sha256": "ca9480e4c8c84c058e7e5e439689034b58f9073b5a298a59c02c941d71a42a9c"
+        },
+        {
+          "path": "Psychic Force - Arcade Mode - Easy (Gates).lss",
+          "bytes": 89715,
+          "sha256": "9ec3326aaaa4d156e0528903cc0f5bb95947b6fe21e7760da5acc032cab35676"
+        },
+        {
+          "path": "Psychic Force - Arcade Mode - Normal (Gates).lss",
+          "bytes": 72303,
+          "sha256": "60ff9e695894bc780d61bc3f3e00658618a35e78c6319ef63fa96bd24603249c"
+        },
+        {
+          "path": "Psychic Force - Story Mode (Gates).lss",
+          "bytes": 92337,
+          "sha256": "17d40abe41bcd5835e9d9d8bfcff08368692e7f9a97bdcdc008b8a799a742857"
+        },
+        {
+          "path": "Psychic Force 2 - Arcade Mode - Any% (Regina).lss",
+          "bytes": 73515,
+          "sha256": "2238df5c7ba0d97849fc42be2fdc8d03f35171158b062931dedf9af97a17d9fe"
+        },
+        {
+          "path": "Psychic Force 2 - Arcade Mode - Easiest (Regina).lss",
+          "bytes": 246568,
+          "sha256": "156a18549136a063b3e848038c278f873c32b3b078ab0169828fec1854fd31e6"
+        },
+        {
+          "path": "Psychic Force 2 - Arcade Mode - Easy (Regina).lss",
+          "bytes": 246565,
+          "sha256": "8bd82b8efe822ce9f7fb0f6086ba8fe72838f96532fbc1f483a999c7be57365c"
+        },
+        {
+          "path": "Psychic Force 2 - Story Mode - Any% (Regina).lss",
+          "bytes": 69143,
+          "sha256": "d4aea315ebf085da135d09dda324ff1a1c47345b51ee8dead3aac998dd545bea"
+        },
+        {
+          "path": "R-Type Delta - R9.lss",
+          "bytes": 365084,
+          "sha256": "0122c2966d50ceba727cc210d36ffc8cd66158cf8ae5db5b4203c5152a1b1bc4"
+        },
+        {
+          "path": "Rakugaki Showtime - Normal Mode (Mamu).lss",
+          "bytes": 127565,
+          "sha256": "191fa4a246184965b3269671ae752434890aa6c660877b824dfc32a6465e1d09"
+        },
+        {
+          "path": "Ray Tracers - Normal.lss",
+          "bytes": 69793,
+          "sha256": "2d8b750e014d1e166a23419242012107969ca21f97c0a185cad907efc07417f4"
+        },
+        {
+          "path": "Re-Loaded - Any% 1 Player.lss",
+          "bytes": 139525,
+          "sha256": "974777569a55921027bb90144fe174fc301968eef38594190da11a287c7205a7"
+        },
+        {
+          "path": "Re-Loaded - Any% 2 Players.lss",
+          "bytes": 83260,
+          "sha256": "b25419b1734f86b4067484f5c95531c83c6e3f0fffe58bcc0bb4a89a32a3ba46"
+        },
+        {
+          "path": "Realms of Arkania Shadows over Riva - 100%.lss",
+          "bytes": 104834,
+          "sha256": "7ce873ab3f5d3d2c9b14eb4ae4a5366a201bbea777f0248dca2dc109fe9e442b"
+        },
+        {
+          "path": "Realms of Arkania Shadows over Riva - Any%.lss",
+          "bytes": 127153,
+          "sha256": "938096b0b2bd85aa5d3af64d4f53fcf84fb89d1a10e1496f3bc661238d6387f3"
+        },
+        {
+          "path": "Ridegear Guybrave II - New Game+.lss",
+          "bytes": 69888,
+          "sha256": "9d99b2b05c113e7e70bf62166b7e3e04db361ff15f35a31a864d374ad7ae701b"
+        },
+        {
+          "path": "Ridge Racer (PSX) - Normal Cup.lss",
+          "bytes": 2042334,
+          "sha256": "cdbd6a935982562195b0ba0393f5bdbba4e828e84ede949d3f9c8d35a8b31f45"
+        },
+        {
+          "path": "Segare Ijiri - Any%.lss",
+          "bytes": 46683,
+          "sha256": "c299e4b4ced4e8169ae8b50973ba5b4aa4489c3da2416d5d4daaaeb652277b10"
+        },
+        {
+          "path": "Shooter Starfighter Sanvein - Any%.lss",
+          "bytes": 57116,
+          "sha256": "680d1785a8d6bd95c5b84054a9af4ba8e1415ca73c9e09b91619ca48ef891088"
+        },
+        {
+          "path": "Soukyu Gurentai - Any% 1 Player.lss",
+          "bytes": 334702,
+          "sha256": "7fe15e094633d123d826fdc1ceb650fd0cac667c5eeacb4db87f00c6d764256b"
+        },
+        {
+          "path": "Speed Power Gunbike - Any%.lss",
+          "bytes": 80240,
+          "sha256": "5eb0206d794d0dff8a045a8ff3a0863e622b037e49632fead9191305e752afef"
+        },
+        {
+          "path": "Spider The Video Game - Any%.lss",
+          "bytes": 95073,
+          "sha256": "46612687472de09634b316579a4742fc88dea8dcd531c9cd809a399515d532f7"
+        },
+        {
+          "path": "Strider 2 - All Stages (Hien).lss",
+          "bytes": 57026,
+          "sha256": "2d497e7281cf6f2c878d689f92edf82c1b12e2d7bde7378410ae57701a37c50b"
+        },
+        {
+          "path": "Strider 2 - Any% (Hiryu).lss",
+          "bytes": 87489,
+          "sha256": "a145e679606927f07b1b562dfcd5589fa0e03b108cef3b79af6f5443e31cf477"
+        },
+        {
+          "path": "Super Mario Land 2 6 Golden Coins - Any% Glitchless.lss",
+          "bytes": 106824,
+          "sha256": "ed8ff25a5b27995475bbfd2a6e95d6ea6dd6d3ff347d705fb4520d447bdcea79"
+        },
+        {
+          "path": "Super Robot Shooting - Any%.lss",
+          "bytes": 65192,
+          "sha256": "718bde0eb42d682e41b9b3455ba125e0fac2cc0953b15d5a10e08225834551d8"
+        },
+        {
+          "path": "Tamagotchi (GB) - Death%.lss",
+          "bytes": 68367,
+          "sha256": "04777d90b3e8de9bf79756a3d144b687bc713532c4479171463c169eab530449"
+        },
+        {
+          "path": "Tamagotchi (GB) - Mametchi%.lss",
+          "bytes": 409433,
+          "sha256": "d73632500d5bb6a20fb1ae03e9d1de76e9e5984ebdcb1ffaad8239967639fa4f"
+        },
+        {
+          "path": "The Pagemaster (GB) - Any%.lss",
+          "bytes": 102878,
+          "sha256": "14b3b8766263dc11d16be94c58403c552b43f1d0f50ac1858fbf704fe9a266af"
+        },
+        {
+          "path": "Time Bokan Series Bokan Desuyo - Normal Mode.lss",
+          "bytes": 58462,
+          "sha256": "e024706b752be0e2dcb25af322bc7e06b9c99ff43fc8a7d1967e8e404e4b3a39"
+        },
+        {
+          "path": "Tiny Toon Adventures Babs' Big Break - Any%.lss",
+          "bytes": 393411,
+          "sha256": "6ec8e68aff45158b37bf261b8a22d32b83758e659dcd43ee43ce3c536a6412ad"
+        },
+        {
+          "path": "Titus the Fox (GB) - Easy.lss",
+          "bytes": 89641,
+          "sha256": "b6b59fde096b0ce60053252bc4b70153e014f9aad22c89b9b8f8b83b6dd82cc9"
+        },
+        {
+          "path": "Titus the Fox (GB) - Hard.lss",
+          "bytes": 76514,
+          "sha256": "c5966c36fe43252674867b29d254b455434c3e1a84f3eff62a04574afb59b492"
+        },
+        {
+          "path": "Trap Gunner - Easy (John Bishous).lss",
+          "bytes": 71849,
+          "sha256": "829de78a02595099d745a1564f9fd0280fa3998c3c201b54df0641d874403d20"
+        },
+        {
+          "path": "Vagrant Story - New Game+.lss",
+          "bytes": 147907,
+          "sha256": "2fa1b003b905e8a9825aba9d658cac8326d745de8177b34079ea2c1c75017338"
+        },
+        {
+          "path": "Vib-Ribbon - All Songs.lss",
+          "bytes": 17127,
+          "sha256": "3f3fafb75baad49bd1f859ef744d0946fa7dd1b274defaefb33ec8d34947618b"
+        },
+        {
+          "path": "Wario Land II - Any% Glitchless.lss",
+          "bytes": 88080,
+          "sha256": "5ccdb6150555f47bf7ff0e190140829cafdb5e806ba5c5daf5c058cc80c554f1"
+        },
+        {
+          "path": "Wario Land Super Mario Land 3 - Any%.lss",
+          "bytes": 86421,
+          "sha256": "670e2d3c327b5fc9d996d73e5cbdb97de5bb1277997d095ee628d70e012580cc"
+        },
+        {
+          "path": "Wario Land Super Mario Land 3 - Glitchless.lss",
+          "bytes": 76803,
+          "sha256": "a418333625fc0e5c1c80bdb9de8d63a58398d26807bee85044abe5de88a29881"
+        },
+        {
+          "path": "Wolf Fang Kuuga 2001 - Any% AAA.lss",
+          "bytes": 66783,
+          "sha256": "7e0e4ba97d9c4cd367cd77ddd62c55e0352bf2f118a59b2be2bfdc1d3dd0360c"
+        },
+        {
+          "path": "Wolf Fang Kuuga 2001 - Any% ABB.lss",
+          "bytes": 66780,
+          "sha256": "19db9173f6218362ec39896a0327469211304592b9436c207649dde0120c0c88"
+        },
+        {
+          "path": "Wolf Fang Kuuga 2001 - Any% BCC.lss",
+          "bytes": 66901,
+          "sha256": "2760584aaf8fcbda278d7c1f9a6abb39d4ed5e7c3f7f05942e148c51dba7be06"
+        },
+        {
+          "path": "Wolf Fang Kuuga 2001 - Any% BDD.lss",
+          "bytes": 67511,
+          "sha256": "c0753e3fde1472a942d85e08251caafe94f84d1a5b2d22910c019dfae712713c"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - 1 Player (Console) - Easy 1.lss",
+          "bytes": 138457,
+          "sha256": "81835c3c596fda5ea3e8f166315a3c825f6b2796e87c37950c7eb98ac09828d2"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - 1 Player (Console) - Normal 1.lss",
+          "bytes": 73929,
+          "sha256": "d317b94c36f654a4ee88971e07da9d922cfe69c687c329af6bb195069bf2e659"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - 1 Player (Emulator) - Easy 1.lss",
+          "bytes": 95883,
+          "sha256": "03e66c47722e000bff37cd0483a6f196ca9775bf0a32c999fd548e2907b66582"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - 1 Player (Emulator) - Normal 1.lss",
+          "bytes": 71223,
+          "sha256": "c0b21abafd412ed81b26f7127bc440b05e1cfddbb165feaa3132c1a06006364d"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - Time Attack (Console).lss",
+          "bytes": 75529,
+          "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb"
+        },
+        {
+          "path": "Zero Divide 2 - The Secret Wish - Time Attack (Emulator).lss",
+          "bytes": 71693,
+          "sha256": "07f112ad5ff54b1cf2b1136f1d4bf3ae9b965b7da50c63b1e82db708c419916f"
+        }
+      ]
+    },
+    {
+      "repo": "bubzia/speedrun_splits",
+      "licence": null,
+      "commit": "ac09387008cb38c077ab9f43db6c4175a5651da6",
+      "archive_url": "https://codeload.github.com/bubzia/speedrun_splits/tar.gz/ac09387008cb38c077ab9f43db6c4175a5651da6",
+      "archive_sha256": "429b02adf09ca50a586de42a996900dfa821a0bc8a0f358e39032cc971ddece7",
+      "files": [
+        {
+          "path": "15+Star+Blindfolded.lss",
+          "bytes": 40868,
+          "sha256": "62aff240afbca226f35fab92d03d1705b90bb13dd7366fb99a7bb7d7f0303130"
+        },
+        {
+          "path": "16 blind.lss",
+          "bytes": 13784,
+          "sha256": "9514943ee7c07297b578d2fac4c04b8a11e60f0ee637ebd7b1ab38caca0dafb7"
+        },
+        {
+          "path": "50 star blindfolded.lss",
+          "bytes": 10426,
+          "sha256": "c888fae877f9c90c5ee6188741e614c0deef98d788d1aa3050ca12568dd7829e"
+        },
+        {
+          "path": "67ta.lss",
+          "bytes": 105812,
+          "sha256": "8aff5e0b816d34892488fc52af75da2fb59374463d64e5b65c3210f84f0c116a"
+        },
+        {
+          "path": "6ajf.lss",
+          "bytes": 23571,
+          "sha256": "8d5ab32703605329efd921d573efb5e645460524edc83b2dfa7e3e9a1f6ca8b3"
+        },
+        {
+          "path": "70 rando.lss",
+          "bytes": 3877,
+          "sha256": "23de1d63d9731bab577c5d6001abfad76b8c49cc6184c13fd8db82e34e3ce164"
+        },
+        {
+          "path": "725k.lss",
+          "bytes": 18941,
+          "sha256": "ab7139afb27b3cbfae6e15504022a2248c49c57798f34c279fa39570a6c00c0b"
+        },
+        {
+          "path": "72oi.lss",
+          "bytes": 46773,
+          "sha256": "fe437c4e8e2c82794936c074ee2fb933d65cbf65a29690140cbae7accaf2ab99"
+        },
+        {
+          "path": "78r5.lss",
+          "bytes": 14677,
+          "sha256": "ce5c36232a9c168953f77b417487d018a9c37b3e6c9cf3da9017f10a58c41f5c"
+        },
+        {
+          "path": "7si6.lss",
+          "bytes": 14108,
+          "sha256": "1771613b391e012a72f6f945e2e3915da506860e6ba57a486b0408a1681fe0a2"
+        },
+        {
+          "path": "7sia.lss",
+          "bytes": 28199,
+          "sha256": "58338847594e291d2d2eb1b6d20c54f66eae4cd9ff6852a2243b3b2ac67c54b3"
+        },
+        {
+          "path": "7sic (1).lss",
+          "bytes": 12797,
+          "sha256": "fc424f2a2bd3ce4ad8458785c6aa46cfc42141bab3ac3ff68eb977ee2b2b4b0b"
+        },
+        {
+          "path": "7sic.lss",
+          "bytes": 20947,
+          "sha256": "37b45929dd9f75af795e7299313eb114d6bbd44b89c50af520122dfe47dd84aa"
+        },
+        {
+          "path": "7sih.lss",
+          "bytes": 5017,
+          "sha256": "24bd79be2ec941073cbe6e286319de0e57fa648f99a4409a82cd0340981982cc"
+        },
+        {
+          "path": "Bounce Tales 64 - 0 Star Blindfolded.lss",
+          "bytes": 1805,
+          "sha256": "f23caa0afb965c6c406fdb68dce734e16c84cbcdc7cae69fbbc99964dcf28958"
+        },
+        {
+          "path": "Breath of The Wild Category Extensions - Blindfolded Ganon Only.lss",
+          "bytes": 4885,
+          "sha256": "6942e1d1267ab6dc45ef2322980fe7ac917f2ebf0baa8448d05151a6ed74d5c4"
+        },
+        {
+          "path": "Breath of The Wild Category Extensions - Blindfolded Ganon.lss",
+          "bytes": 35649,
+          "sha256": "3f452578abba740fd18cc1e55de862d9c31494394102ba7f79a5e18ad989daa5"
+        },
+        {
+          "path": "Breath of The Wild Category Extensions - Blindfolded Naked.lss",
+          "bytes": 50370,
+          "sha256": "a92a15c195cadd55c41a45fb91156fc555cada73ddf3b40f96a47cbd862838e9"
+        },
+        {
+          "path": "Bubzia_Super Mario 64_70 Star.lss",
+          "bytes": 16723,
+          "sha256": "b1f418225aa24838c832987456f49fb9d8f4ad8235821265bc9fd382c8668409"
+        },
+        {
+          "path": "Dark Edition 16 Start.lss",
+          "bytes": 22976,
+          "sha256": "663ebd3dca505a19b56d5780e85237577615346254846c8c4dc6f3668118d2ce"
+        },
+        {
+          "path": "Dark Souls Remastered - Any% Blindfolded.lss",
+          "bytes": 17858,
+          "sha256": "e68f0809a23bf87deab3dad53964fe3ffab86b1713fed19d6f40d3820a1bd36d"
+        },
+        {
+          "path": "Deltarune - Any% Blindfolded.lss",
+          "bytes": 16441,
+          "sha256": "fecfda187b33260d0a44a10768253e8dcbd36f030c4b2d4c738f5d8f5f8beaad"
+        },
+        {
+          "path": "Kingdom Hearts 1 - Destiny Island.lss",
+          "bytes": 3328,
+          "sha256": "f6d2cc2c3e26078c21bbb22cec2b4a4e6a474b4ab3f338a5fb61a76e4b92a4bc"
+        },
+        {
+          "path": "Mario Kart 64.lss",
+          "bytes": 5621,
+          "sha256": "f9cf972c9bfef2355d2729a70c39d7eaac2e1cea036df18da6742d41f260057c"
+        },
+        {
+          "path": "Nier Automata A Blindfolded.lss",
+          "bytes": 18049,
+          "sha256": "1c2c982441489c33ade06728d540a077bacfbc3756e3c8fd6fa9b503547aa0c3"
+        },
+        {
+          "path": "Only Up SM64 - To the Top%.lss",
+          "bytes": 8386,
+          "sha256": "04c660afb4439659b36077e81058d9b1f02af3dd32791c2c68803f4170bd6d7f"
+        },
+        {
+          "path": "Rhythm Tengoku - Any% Blindfolded.lss",
+          "bytes": 3581,
+          "sha256": "c9ee24eddae0839f7e020c142db7377192bee71e435609ac2ce1e50ad748c262"
+        },
+        {
+          "path": "SM64 - Dark Edition - 70 Star.lss",
+          "bytes": 16067,
+          "sha256": "84c60cc3f0828660a7c299907a6bf8ff1fdaa0d51c87788d854f012b621afbb5"
+        },
+        {
+          "path": "SM64 70 Star Sl Reds.lss",
+          "bytes": 14855,
+          "sha256": "a41b2582287c41a8ee57f228dc11af4ab3b8dbfe4103b60cc1bf0bbcca88df46"
+        },
+        {
+          "path": "SM64 Sapphire - 0 Star Blindfolded.lss",
+          "bytes": 866,
+          "sha256": "52dfe6b48094df43f50feaa0da6a6a72ed25ff55dd01982849115eb375a1b767"
+        },
+        {
+          "path": "Scrooge 64 - 0 Star.lss",
+          "bytes": 10680,
+          "sha256": "bdb738db83f883d692cf2ca62a4e97d617d882b285c87e1864a3cb606b06f72a"
+        },
+        {
+          "path": "Smash 64 - Break The Targets Blindfolded.lss",
+          "bytes": 8554,
+          "sha256": "fe11cb9ee197c5de885d778f78307c390fa9ccb4d6eb5142c0be23faaaa8239c"
+        },
+        {
+          "path": "Smash 64 Classic Mode.lss",
+          "bytes": 7893,
+          "sha256": "7a81782fb2aacde308c8bc7e8b97a34d01e6df4150fddd13d25768d0f87ebbeb"
+        },
+        {
+          "path": "Super Mario 64 -  Beat DW 2p1c.lss",
+          "bytes": 2341,
+          "sha256": "8e93580d08c3c1133575c82b17046161e15a37ab7c422d7180cc575ec1505305"
+        },
+        {
+          "path": "Super Mario 64 - 0 Star NEW Blindfolded.lss",
+          "bytes": 46451,
+          "sha256": "b7328f14657486fdcea28402e0cf67b17d318d3b99c10d788d571bcfed2db287"
+        },
+        {
+          "path": "Super Mario 64 - 01 Star VISUAL.lss",
+          "bytes": 47448,
+          "sha256": "d6f46330881fb3ff41089cdb5caaf32a548a7c48417357ffb59e2734fc5a87f5"
+        },
+        {
+          "path": "Super Mario 64 - 1 Star Blindfolded (Crackslide-Era).lss",
+          "bytes": 111545,
+          "sha256": "7079cccd5ff07b248491ef4a65ea8c3d0793e0120a6433276212343ff222d970"
+        },
+        {
+          "path": "Super Mario 64 - 1 Star Blindfolded 2025.lss",
+          "bytes": 53131,
+          "sha256": "19a550307ef2d887ca83cdcb7152fe11a1fab6cb5a4c78968fb92db618c4d737"
+        },
+        {
+          "path": "Super Mario 64 - 1 Star Blindfolded.lss",
+          "bytes": 5450,
+          "sha256": "117b7c288caa0ea369140cd0019252619a6e7ee4304d916a23cf35094c61b954"
+        },
+        {
+          "path": "Super Mario 64 - 1 Star Visual.lss",
+          "bytes": 10103,
+          "sha256": "cc464bc9294423a6a03c694f0380da0022ca2840ba042c410dc7f311d63cdfa1"
+        },
+        {
+          "path": "Super Mario 64 - 1 Star.lss",
+          "bytes": 4480,
+          "sha256": "87fb99dc4444eb4a10730b4447fe7c17238498e3843c5d62a127ffd69b3243a8"
+        },
+        {
+          "path": "Super Mario 64 - 100 Star Blindfolded.lss",
+          "bytes": 37607,
+          "sha256": "7fdccca776bb5876c83a9d0705f1818067f03183db21c54e110ba39b070a9487"
+        },
+        {
+          "path": "Super Mario 64 - 100 Star.lss",
+          "bytes": 40606,
+          "sha256": "0b9ee3ddaf4ad514c8d1cb266b7fe1d58955d461c7b3abbd285d418fe31f4e66"
+        },
+        {
+          "path": "Super Mario 64 - 120 Star Blindfolded (2026).lss",
+          "bytes": 45290,
+          "sha256": "7c14e82a88f71fdfae61b69ed66e26734cdab41038f4f30d65e857dad7075645"
+        },
+        {
+          "path": "Super Mario 64 - 120 Star Blindfolded STAGE.lss",
+          "bytes": 6760,
+          "sha256": "0dfe27d646fc7ccab907346bb80266cd275f10aec25f390bbc3941d398d4113d"
+        },
+        {
+          "path": "Super Mario 64 - 120 Star Blindfolded.lss",
+          "bytes": 7459,
+          "sha256": "1134775d6965cb6e73db21261d8958134865b0c7c5110a17110537126b33740f"
+        },
+        {
+          "path": "Super Mario 64 - 120 Star REAL.lss",
+          "bytes": 70818,
+          "sha256": "3af7349a96b33169576c40e43ba3975a829583ea44994e39097db434be0ea3e0"
+        },
+        {
+          "path": "Super Mario 64 - 120 Star STAGE SPLITS.lss",
+          "bytes": 18551,
+          "sha256": "111f906cb448372e592252fb540e8aa5308d9af2c1732ab3bfa110d6291c59d4"
+        },
+        {
+          "path": "Super Mario 64 - 15 Star Blindfolded.lss",
+          "bytes": 34616,
+          "sha256": "cc840967253d6fcea3c95ec5e539eef6a80c752c392e05f814f2d1b30154e64e"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded (LBLJ Logless) 2025.lss",
+          "bytes": 163999,
+          "sha256": "0e68cc011362678524db9e146956a805292c90149ac16623196793e1e61e6d5b"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded 2022.lss",
+          "bytes": 13598,
+          "sha256": "71631c436c9737f80a30def99b48ae71948b2318058abc793a58198a711984ba"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded 2024.lss",
+          "bytes": 20825,
+          "sha256": "aa8d2f2d5232f94d7d6cc730eb73a4d9ebe69003fbb4960c96ad76823de507f1"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded 2025 REAL.lss",
+          "bytes": 163461,
+          "sha256": "1891e045ebd551ae79e566fd74e637aa19d9e187a77ac0a3e7fcc9335ccaa108"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded 2025.lss",
+          "bytes": 4382,
+          "sha256": "0c7b8f3d24856bbf3dcafb19a1b413bdf184e08e74cc2e628d36eace17984eaf"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded Basement RTA.lss",
+          "bytes": 33029,
+          "sha256": "7dbfb11061fd5ac332f6c2a616af04f1a8715d6fb63f56cdb303161c7220bbf1"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded Damageless.lss",
+          "bytes": 17289,
+          "sha256": "15a118cbe4b05f9d46ae676fa65dc8005117c99f617441b2f2461368aacb6fc8"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded LBLJ Logless.lss",
+          "bytes": 163975,
+          "sha256": "0365f05469d4843df97d2a589108af8c92591a274ce666bbd89f68626a5a6465"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded LBLJ.lss",
+          "bytes": 35129,
+          "sha256": "d6ab4ce0b01e390fc6e737b10019ed8abbb4f0ef1bb4392ef9ad9a1aed6b8c9b"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded NO LBLJ SafetySave.lss",
+          "bytes": 18745,
+          "sha256": "a1dfb315721df45daa11b9a67b67ab875d5bdd16e9615b2c7b5dfdcf9ac94bc7"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded NO LBLJ.lss",
+          "bytes": 67772,
+          "sha256": "368d22cba00b2a5a3024bae023c8456b4a01a550cf8d1ff9759e9e78607e5170"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded PSS Route.lss",
+          "bytes": 14553,
+          "sha256": "87f787f2d7fe77ddb4cb93f8884d9ee353cecd9a5f94b478a9ed206c5a306db0"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded Showcase.lss",
+          "bytes": 46099,
+          "sha256": "0371c93108816a5ea53a50ec9730453f10de0f753e35529a72ce4c9db8d73c75"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Blindfolded.lss",
+          "bytes": 63304,
+          "sha256": "6f92c407438781938161f8998458a9e32f19503e1ea2bf62268156f50479cc44"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Human TAS.lss",
+          "bytes": 10064,
+          "sha256": "826a3730749493745f73b507affbd7a2bd720c5cea3e4fbcc78dec11e2a432e6"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star LBLJ VISUAL.lss",
+          "bytes": 4195,
+          "sha256": "568c584909b03d93a174a21bf46a7dd395156b88a7b4d49f006357230afbc661"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star Mario Cam RTA.lss",
+          "bytes": 9257,
+          "sha256": "d54bd93df628987e3b67eefb1010b718c4384d6c5ef3e80d68218f934a015840"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star No LBLJ Blindfolded (PSS Route) August 25.lss",
+          "bytes": 207332,
+          "sha256": "e9142446a521e7347c72b29e7ae77c5089cada29dfc03d40f4b6847e27a43769"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star No LBLJ Blindfolded 2025.lss",
+          "bytes": 105446,
+          "sha256": "4d0dc849d1578acebdb28f168b06894d48d33b5363ce771b55ef39164fc6db5a"
+        },
+        {
+          "path": "Super Mario 64 - 16 Star No LBLJ.lss",
+          "bytes": 35584,
+          "sha256": "20a2726fe9e14a6036ba4270830121bbd5adf1267e0e967a02dd293bcb6fb8ad"
+        },
+        {
+          "path": "Super Mario 64 - 160 Star Blindfolded.lss",
+          "bytes": 12409,
+          "sha256": "bdc863bf04ce22ecffb4d24c571e990cbf2cc6806b9b4fbcb04955b0ff30720e"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star Blindfolded Tiny instead of Secrets.lss",
+          "bytes": 59368,
+          "sha256": "717c86b45eafa1a5d1da330d6676a56610bbfbd609ab488662feff02157c17d9"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star Blindfolded WR no tiny bullies.lss",
+          "bytes": 36480,
+          "sha256": "4ddbd12e50dd5af8556d1c18f5c56ac33e5c002958820883a93dfad813d116d5"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star Blindfolded WR.lss",
+          "bytes": 24978,
+          "sha256": "bcb2935dfa7abd13d9a4c5e38b2d745e6741ea53aed7cf8c44fc4a2b68c5670e"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star Blindfolded safety save.lss",
+          "bytes": 42519,
+          "sha256": "8c465e750a1405b013bd8b0e671db281aa5ec92449b886ac68bded7588170657"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star Blindfolded.lss",
+          "bytes": 9172,
+          "sha256": "ca3e7c287552c6b5f0323c683261f200f0c49c58108d853115bd3a5fe916d217"
+        },
+        {
+          "path": "Super Mario 64 - 31 Star x 5 Times in a row.lss",
+          "bytes": 5010,
+          "sha256": "3b1ed0cfb7917a8b4e219d8323ce9d648523ea4708640d2654a3dd68a18b3b61"
+        },
+        {
+          "path": "Super Mario 64 - 350 Star Blindfolded.lss",
+          "bytes": 3595,
+          "sha256": "922e93e1d1466a3c75250298c0a2e4cdb260cd67658fef5c952c7434aea81895"
+        },
+        {
+          "path": "Super Mario 64 - 40x BombClip Blindfolded.lss",
+          "bytes": 18368,
+          "sha256": "6ca4de8fa8d2f341a848fe628daba3a046d8b689cb59305ec090e3af2b359bc4"
+        },
+        {
+          "path": "Super Mario 64 - 50 Star Blindfolded (Marathon Route).lss",
+          "bytes": 86113,
+          "sha256": "0ec569e46bd3de726b541527251f34e39aaa580831dfda7b69cb9757201325c1"
+        },
+        {
+          "path": "Super Mario 64 - 50 Star Blindfolded 2024.lss",
+          "bytes": 8863,
+          "sha256": "d9c8849ca1cd9191ea810bfa27530ae841eb68caef3bb9dd19d5c8767e1011f8"
+        },
+        {
+          "path": "Super Mario 64 - 50 Star Blindfolded Single Star.lss",
+          "bytes": 37992,
+          "sha256": "a64b64f7ae630e1a8ec7d14a24b8ccb71e8b55d16e5d5d4ea2bd336bfbfb7a6b"
+        },
+        {
+          "path": "Super Mario 64 - 50 Star Blindfolded.lss",
+          "bytes": 13201,
+          "sha256": "977065234947ae7a2b2e82bcdbafde18a06a4b2c7b4e1cca096d6ae1b156dd0d"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star 50xA.lss",
+          "bytes": 40533,
+          "sha256": "c03b7795cb181e661d744366f3cb8d8d4e7b183fdfd46a56cb63312e610b89e6"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded (CCM Late).lss",
+          "bytes": 156592,
+          "sha256": "78b36cb77cf5a10e28f7b56f45fa9c1624dc8f83af44bab594746996d6203bb6"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded (WF Late).lss",
+          "bytes": 100025,
+          "sha256": "cb20ff9951682ce384a98e66d9fdcd258891b8789d015e273f81c6b190b530af"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded 2025 2.lss",
+          "bytes": 38053,
+          "sha256": "a02edb4871d6700dbffd67241a3d46efea36e70e15ff76d113c00eebc23c16ea"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded 2025.lss",
+          "bytes": 48517,
+          "sha256": "2dbdee74ad4f03574961e7f57374d1da2f75b5e08adc3acd3abb2c7980c14c46"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded BBH Reds instead of RR Cruiser.lss",
+          "bytes": 140030,
+          "sha256": "a70738d068e3c8fa6a5b0d4fb93d3590ee1a39394abd752349ecb4582cc77ebb"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded CCM Route (1).lss",
+          "bytes": 100664,
+          "sha256": "4ad5ed186197aeaa3f1f06dc303f843b1519d85379715c19f0a96896e143c896"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded Kopie.lss",
+          "bytes": 26319,
+          "sha256": "b4f579c8373231c65f44cc53cbb047b2c774f16ba1b2f9e9c0d5c612ef3a3220"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded fixed.lss",
+          "bytes": 39300,
+          "sha256": "820ee4327750d054e0c33ac15ce22c33730f05d53f4c145f123c09f73942fb72"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded no dw reds.lss",
+          "bytes": 144259,
+          "sha256": "598e328fc6c87e0f156088b5e8ab20730848d2e8e48bfed4d28821a164cc6a15"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded savety.lss",
+          "bytes": 30493,
+          "sha256": "acdf20466b94f202f0cb40d4674770613c70c177fb0d6236ccbb210a0a0e2eab"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Blindfolded.lss",
+          "bytes": 24321,
+          "sha256": "6fd1144964998e69b0c02e2600ad1218baef92a3bd1eb689d3815fee16bde94c"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star Mario Cam.lss",
+          "bytes": 7601,
+          "sha256": "3aa18f7b28754ecf57b20ca285809d58097c5db328536c902a1e77d0bcb02340"
+        },
+        {
+          "path": "Super Mario 64 - 70 Star.lss",
+          "bytes": 30493,
+          "sha256": "acdf20466b94f202f0cb40d4674770613c70c177fb0d6236ccbb210a0a0e2eab"
+        },
+        {
+          "path": "Super Mario 64 - 70 Upstairs Blindfolded.lss",
+          "bytes": 20156,
+          "sha256": "27b157843217d2bab4745ca78d31153ab61bfc0f6076b4c025b013c2502ed62c"
+        },
+        {
+          "path": "Super Mario 64 - 9 Star Blindfolded (1).lss",
+          "bytes": 26510,
+          "sha256": "56ccd6faa570a3f5642251597e1df81882e5364673929eaf9bf7abec50de64c4"
+        },
+        {
+          "path": "Super Mario 64 - 9 Star Blindfolded.lss",
+          "bytes": 3514,
+          "sha256": "3329853609b9ac2c9e82a9fa846adae3a5cf31133b3317162217b221dcbe2861"
+        },
+        {
+          "path": "Super Mario 64 - All 100c Blindfolded.lss",
+          "bytes": 4647,
+          "sha256": "e1d9f1b86672387d8ec8c1bd16d995ab38387e26a7d68e92fd1075b3b584d26a"
+        },
+        {
+          "path": "Super Mario 64 - All Achievements.lss",
+          "bytes": 14094,
+          "sha256": "5a73a60169569ce3019ee74b35a8f4eb088caecfbae1d7ac5fb7964aaed3cf52"
+        },
+        {
+          "path": "Super Mario 64 - All Cannons Blindfolded.lss",
+          "bytes": 3985,
+          "sha256": "96207806de6a43354a8b9d567856cba8f3a92a5c1f7f0a6dcdda5922f4f348da"
+        },
+        {
+          "path": "Super Mario 64 - All Signs Blindfolded.lss",
+          "bytes": 57206,
+          "sha256": "98b0ae5de3d27144aba2e430f180e5d8538673579e64c7d754610826dc9cfce4"
+        },
+        {
+          "path": "Super Mario 64 - BBH Stage RTA (70 Star).lss",
+          "bytes": 6733,
+          "sha256": "90808c21bc800f3b6e1a4a7cedffe5fc6093b73273fec768262c0d8a80f382e4"
+        },
+        {
+          "path": "Super Mario 64 - BBH Stage RTA Blindfolded.lss",
+          "bytes": 21913,
+          "sha256": "ca0b34e66ea9be3752d47ad8ac2d7472f88cf066dc8d37465f2e487009b6900d"
+        },
+        {
+          "path": "Super Mario 64 - BOB Stage RTA (70 Route).lss",
+          "bytes": 5542,
+          "sha256": "a6f2cb6bd812683c8757e946ce2ccf28550ea0c53c0d5ee744058f1370783a71"
+        },
+        {
+          "path": "Super Mario 64 - BOB Stage RTA Blindfolded.lss",
+          "bytes": 10630,
+          "sha256": "fdc510eaa1bba8f5e94ceee8b2830b5f3963595ffd950a4e05e5e46c56437f0d"
+        },
+        {
+          "path": "Super Mario 64 - Blindfolded 167 Star.lss",
+          "bytes": 3794,
+          "sha256": "b3558fce4cccb52d939fe51d38288c6ce4190fdc60392de2db592693c8a8226b"
+        },
+        {
+          "path": "Super Mario 64 - C Button Challenge.lss",
+          "bytes": 9418,
+          "sha256": "871ef62474d360aaeb73b022b553d47f61f61e7426d26c8c6763bd93b4d42ce6"
+        },
+        {
+          "path": "Super Mario 64 - CCM Stage RTA (70 Route).lss",
+          "bytes": 2964,
+          "sha256": "e9fd4e4aa750c27bd0794f8d64aa44a98bce8875fa3eebe54032ac374239e049"
+        },
+        {
+          "path": "Super Mario 64 - CCM Stage RTA Blindfolded.lss",
+          "bytes": 14563,
+          "sha256": "63c904a0cf92c6d35472775eb73577316641ebb41e38249374c5eef07a75d04f"
+        },
+        {
+          "path": "Super Mario 64 - DDD Stage RTA (70 Star).lss",
+          "bytes": 2054,
+          "sha256": "db0b138f2994bd9cb5bd8b890d6f5f8bf15ecb32d9e66d181cb261f8a6d7bcac"
+        },
+        {
+          "path": "Super Mario 64 - DDD Stage RTA Blindfolded.lss",
+          "bytes": 26974,
+          "sha256": "6f3de74f481b7ecd6b04e2e705ed7438767a7eb3eebc84d45267a633a39df20b"
+        },
+        {
+          "path": "Super Mario 64 - Dark Edition - 1 Star.lss",
+          "bytes": 2032,
+          "sha256": "0043b06d0d71680e7092ec40eb100f651cd60ac9bc570cd4d04348874136438a"
+        },
+        {
+          "path": "Super Mario 64 - Dark Edition - 120 Star.lss",
+          "bytes": 13626,
+          "sha256": "22ae825dbacb4099251fe83007e387b5e70277576a04a17796f3dc1068712023"
+        },
+        {
+          "path": "Super Mario 64 - Dark Edition - 16 Star LBLJ.lss",
+          "bytes": 20512,
+          "sha256": "8938fc70ede7ef3a0c7c85f7c85da3373e9e1ffae96dc19c3031d89f30c73531"
+        },
+        {
+          "path": "Super Mario 64 - H Stage RTA Blindfolded.lss",
+          "bytes": 8009,
+          "sha256": "2ddca4dbd5a9226078dc786320bbeda2943dd3e7bc7b4199960682495ea8b9f3"
+        },
+        {
+          "path": "Super Mario 64 - HMC Stage RTA (70 Route).lss",
+          "bytes": 8968,
+          "sha256": "8d41e5a785d9a41874dad6423e4b6c9b9be0b9890b6c293d2d6a82e53e440aee"
+        },
+        {
+          "path": "Super Mario 64 - HMC Stage RTA Blindfolded.lss",
+          "bytes": 17016,
+          "sha256": "5dbf40d9856d2079760d414689cfa241b0ca19116f947401a1e7de0d588e5755"
+        },
+        {
+          "path": "Super Mario 64 - JRB Stage RTA Blindfolded.lss",
+          "bytes": 11664,
+          "sha256": "c9c1317fdb750770b03b868a71182a73056424c0cae86512f102b7712622d4ff"
+        },
+        {
+          "path": "Super Mario 64 - LLL Stage RTA (70 Route).lss",
+          "bytes": 2161,
+          "sha256": "bc7441b4e984d1050ce47b008e1f033cca5369d949878157b248adaf0fb66036"
+        },
+        {
+          "path": "Super Mario 64 - LLL Stage RTA Blindfolded 2025.lss",
+          "bytes": 13966,
+          "sha256": "e8179951ef629236ca68596cf6dda541c295accc723d676202786d59eac15d1f"
+        },
+        {
+          "path": "Super Mario 64 - LLL Stage RTA Blindfolded.lss",
+          "bytes": 11693,
+          "sha256": "1d67162bb24b040c1149fec195349bf413d6b6b50de26b5bb5be9317f99750ca"
+        },
+        {
+          "path": "Super Mario 64 - Lobby RTA.lss",
+          "bytes": 16426,
+          "sha256": "26ba373d05ac294fbc134b559d3b098aee52cd1d809f9f14877fe521b088e3f8"
+        },
+        {
+          "path": "Super Mario 64 - LockCam RTA.lss",
+          "bytes": 20499,
+          "sha256": "e9657f4d3f84f2224eb3fc132e42e9c7c093cb64f6ce0826acc65acae53a0cc3"
+        },
+        {
+          "path": "Super Mario 64 - Majora's Mask.lss",
+          "bytes": 1966,
+          "sha256": "e66136aea17a0854f51697b0d43ff236ab993fdc43a37a46a7729de91c06b48f"
+        },
+        {
+          "path": "Super Mario 64 - RR Stage RTA (70 Star).lss",
+          "bytes": 4133,
+          "sha256": "d460bd430ad567319be204ce8eab72bf43d3bc84f777b931a071feaf5bd75bc2"
+        },
+        {
+          "path": "Super Mario 64 - RR Stage RTA Blindfolded.lss",
+          "bytes": 11466,
+          "sha256": "0475952dea4f571c063130c7f93911db8d9c7ab793593589945ae9b9bd86637e"
+        },
+        {
+          "path": "Super Mario 64 - SL Stage RTA (70 Route).lss",
+          "bytes": 8702,
+          "sha256": "647d834eff79aec5e1a5f683e6070f364e73d887e4b55e5bad1c9b197d9c1c7a"
+        },
+        {
+          "path": "Super Mario 64 - SL Stage RTA Blindfolded.lss",
+          "bytes": 14696,
+          "sha256": "d1cd51817ecd73d5653ebf26dfaf0bb9d8780f678284830339edb862a7440168"
+        },
+        {
+          "path": "Super Mario 64 - SSL Stage RTA (70 Route).lss",
+          "bytes": 3660,
+          "sha256": "ce67a185864412e050324946bcd895f03caecab373db88b4d540df276498caf5"
+        },
+        {
+          "path": "Super Mario 64 - SSL Stage RTA Blindfolded.lss",
+          "bytes": 11686,
+          "sha256": "e2657ed9d0adde81d1dd43b5dc88690509f810d3c5379771545009ace0366e2d"
+        },
+        {
+          "path": "Super Mario 64 - THI Stage RTA (70 Star).lss",
+          "bytes": 2026,
+          "sha256": "111317ee2e6776c4f528768a1aaee4263058c8300fe1dc2f9c5480786c09e8d6"
+        },
+        {
+          "path": "Super Mario 64 - THI Stage RTA Blindfolded.lss",
+          "bytes": 15213,
+          "sha256": "9ac31abd9c32b8666e43998d92386cee9ccce157ed23386ca86b2e533549b674"
+        },
+        {
+          "path": "Super Mario 64 - TTC Stage RTA (70 Star).lss",
+          "bytes": 3652,
+          "sha256": "7ff5b4a71af232e127853b7ddcdf65c5b6fc8c4e15f232599a5719f7bebf54e1"
+        },
+        {
+          "path": "Super Mario 64 - TTC Stage RTA Blindfolded.lss",
+          "bytes": 14479,
+          "sha256": "9e5cbaada428c1a22cd46add63d0ef2e0cbab648228808d820853fed19b57687"
+        },
+        {
+          "path": "Super Mario 64 - TTM Stage RTA (70 Star).lss",
+          "bytes": 1920,
+          "sha256": "a6d85303c8033a8e04a77278e7973187e1d69e0ebb622edb3cef9ee5403e1f69"
+        },
+        {
+          "path": "Super Mario 64 - TTM Stage RTA Blindfolded.lss",
+          "bytes": 9614,
+          "sha256": "e3c4281a0fadc131859bbfd4ec5d9c3f6c61038ad05ed09bfad5b8363f0c7d06"
+        },
+        {
+          "path": "Super Mario 64 - Tippy RTA Blindfolded.lss",
+          "bytes": 8644,
+          "sha256": "c6f31092c41f709276e0cbde7234cc50b78fde4d8907f32fe5a0a7e740792689"
+        },
+        {
+          "path": "Super Mario 64 - Upstairs RTA Blindfolded.lss",
+          "bytes": 11580,
+          "sha256": "013211c9a387a5771637e5783c6defa03fb29b30f71052beb120cfa4fc247b5c"
+        },
+        {
+          "path": "Super Mario 64 - WDW Stage RTA (70 Star).lss",
+          "bytes": 3909,
+          "sha256": "054c3e5b809d5a84832ef4b9429e4ea10b8b911b653594823a7cdbcb9045c32b"
+        },
+        {
+          "path": "Super Mario 64 - WDW Stage RTA Blindfolded.lss",
+          "bytes": 20174,
+          "sha256": "73e781a5fe37e3aa85da4fadc6fd6d7dcc8c6fbae87b2d4d71cfe2f850e670c5"
+        },
+        {
+          "path": "Super Mario 64 - WF Stage RTA (70 Route).lss",
+          "bytes": 4659,
+          "sha256": "5adb25e67ed0bb7c2457deaaf6a9d72109a25e734dd7c3416c6e613e0e993a48"
+        },
+        {
+          "path": "Super Mario 64 - WF Stage RTA Blindfolded.lss",
+          "bytes": 20730,
+          "sha256": "410261e2fdb61b9cda01af6b286555b494a6979f0385594d1a767d85733b4524"
+        },
+        {
+          "path": "Super Mario 64 120 star.lss",
+          "bytes": 11350,
+          "sha256": "043ac6fa531ccd15140d78bfb4b01ece7dd3276c8330ade05089fa7d9f393476"
+        },
+        {
+          "path": "Super Mario 64 Randomizer - 70 Star non stop.lss",
+          "bytes": 4183,
+          "sha256": "aa84853d876bb9f798e20ae022d0de4a8a162346ef2817450f89f0364879a6e8"
+        },
+        {
+          "path": "Super Mario 64 Randomizer - 70 Star.lss",
+          "bytes": 2480,
+          "sha256": "1824ebccbb17c48507d6c2093b36548ab39be3f7f73fb7fd2c00ebd8801fd49b"
+        },
+        {
+          "path": "Super Smash Bros. Brawl - Classic.lss",
+          "bytes": 8890,
+          "sha256": "7fd668633673b8c6345670075a14ace3256ebb5f2651e7808972080cd4554b3e"
+        },
+        {
+          "path": "Super Smash Bros. Melee - Adventure Blindfolded No Reset.lss",
+          "bytes": 90859,
+          "sha256": "64022693dde6c1df9e9d7003b9ce16f1f905e9e321c8d2818ac477888e517c15"
+        },
+        {
+          "path": "Super+Mario+64+TTM+Stage+RTA+Blindfolded.lss",
+          "bytes": 8064,
+          "sha256": "5f9e0bfb7e92766a1c123475c73491eb49527df2aebaaf18da8010493c4e1318"
+        },
+        {
+          "path": "Super+Mario+64-BOB+Stage+RTA+Blindfolded.lss",
+          "bytes": 6067,
+          "sha256": "8c371c0f8ddd341d66ef14b0813b11329acf93b729cb391374bf0f00e5c558b0"
+        },
+        {
+          "path": "The Legend of Zelda Breath of the Wild - Any% Blindfolded NoBLSS.lss",
+          "bytes": 44987,
+          "sha256": "57345e29c14ba3c6dded9bc1fbf1b020f0f553961f6aeb5f7197b659497b3352"
+        },
+        {
+          "path": "The Legend of Zelda Breath of the Wild - Any% Blindfolded.lss",
+          "bytes": 25774,
+          "sha256": "e1df535198cdde7788a0ba51dd3528f9df7d862d24364f92e6732cff6effd5c4"
+        },
+        {
+          "path": "The Legend of Zelda Breath of the Wild - Great Plateau Blindfolded.lss",
+          "bytes": 14880,
+          "sha256": "e11aaa298dbdf7c1240accebc966a6f7e4b4fa5444d498543fabd5763d0c758c"
+        },
+        {
+          "path": "The Legend of Zelda Majora's Mask - Any% Blindfolded (Intro).lss",
+          "bytes": 13159,
+          "sha256": "1d12ccba42630f822d3525cab58ea51f0738c2a9c3eb36b5ae41ac48d2e2ae4e"
+        },
+        {
+          "path": "The Legend of Zelda Majora's Mask - Any% Blindfolded.lss",
+          "bytes": 13159,
+          "sha256": "1d12ccba42630f822d3525cab58ea51f0738c2a9c3eb36b5ae41ac48d2e2ae4e"
+        },
+        {
+          "path": "The Legend of Zelda Majora's Mask - Any% No First Cycle Blindfolded.lss",
+          "bytes": 6650,
+          "sha256": "ede1ce21035b485c963bea7f1a4d6d50867eda53ecad9a6e215b8036faab6659"
+        },
+        {
+          "path": "The Legend of Zelda Majora's Mask - Any% No Intro Blindfolded.lss",
+          "bytes": 3794,
+          "sha256": "af3a0ebcebb9864b62754b8febde46319db21976951a71b7c582da9f31a8db4c"
+        },
+        {
+          "path": "The Legend of Zelda Ocarina of Time - Any% Blindfolded.lss",
+          "bytes": 26988,
+          "sha256": "35e889206bd675cc5953b5ec2c6bd7f9efb3d5d4b61561eb549db9ba2a9a8af3"
+        },
+        {
+          "path": "The Legend of Zelda Ocarina of Time - Dank% Blindfolded.lss",
+          "bytes": 21139,
+          "sha256": "d5952de790357c33285bbcbfab100b012fd031941383f94283adf2e109132584"
+        },
+        {
+          "path": "The Legend of Zelda Ocarina of Time - Deku Tree Blindfolded.lss",
+          "bytes": 2452,
+          "sha256": "ef8cbd11ede0afb7185fffc5d68703a7989bc34bc24a080210d6f75e1f4ef113"
+        },
+        {
+          "path": "classic.lss",
+          "bytes": 4939,
+          "sha256": "a00671cea1e5e0eed61dc99e17e284cf601acb6f8809efce9f68f2fb318a0cf5"
+        },
+        {
+          "path": "cpt falcon.lss",
+          "bytes": 7438,
+          "sha256": "1da8922be46809bcb4131d46c33dcd4756db96348765e84851d76bea3fb63477"
+        },
+        {
+          "path": "dark souls remastered.lss",
+          "bytes": 5834,
+          "sha256": "18ac40afcba9efbf2a2d6c2750597d6e75f743aa9d1d32c2defb3280b42848d1"
+        },
+        {
+          "path": "niersplits.lss",
+          "bytes": 2988,
+          "sha256": "c50d209ccfdc76f26e810c6792efdd30bdf68c84c176a622e91f9b4a9dc4d561"
+        },
+        {
+          "path": "simplyEvent.lss",
+          "bytes": 1496,
+          "sha256": "23ebe74c218cb63c17ed8c8c1a39e0a542ccc0b2effa01bb924b95afb88f4221"
+        },
+        {
+          "path": "test splits.lss",
+          "bytes": 4052,
+          "sha256": "1be685ec9b4ee507822333d1527cfc19cc1b8c81290c1959f9f6c2cd0d2e9472"
+        }
+      ]
+    },
+    {
+      "repo": "narfman0/livesplit-data",
+      "licence": null,
+      "commit": "d09064ff0c2a62c44128b8e519bfa82ae7569a93",
+      "archive_url": "https://codeload.github.com/narfman0/livesplit-data/tar.gz/d09064ff0c2a62c44128b8e519bfa82ae7569a93",
+      "archive_sha256": "b383c61fb6ea6088274b0cd72130810e15613c59acbff74ce14f492f85f79260",
+      "files": [
+        {
+          "path": "splits/Celeste - Any%.lss",
+          "bytes": 220826,
+          "sha256": "91b6b9511ee707f5062d3b9119026884b12d24c1f1304b86f5be71c6420baf99"
+        },
+        {
+          "path": "splits/Diablo II Lord of Destruction - Any% Hell.lss",
+          "bytes": 3671,
+          "sha256": "0a83f898831c65a4ba297895717d4723494bcd977102c1a1cfcdf7e707f566c5"
+        },
+        {
+          "path": "splits/Diablo II Lord of Destruction - Any% Normal.lss",
+          "bytes": 26441,
+          "sha256": "a03fb70c68840fdee2447eee2c2368ebc3cf4ef6b417392d9501a51372fcd486"
+        },
+        {
+          "path": "splits/Diablo II Lord of Destruction - Daily Goals.lss",
+          "bytes": 2465,
+          "sha256": "458e2265bdeb870ce4cc2061dd9530c0c69deb198187d2b289b2c9311c2cfb49"
+        },
+        {
+          "path": "splits/Econo - Any%.lss",
+          "bytes": 34439,
+          "sha256": "e3f238f3ac0980d71915816fd0d541f883deeeed11252114f85054a1205d99c4"
+        },
+        {
+          "path": "splits/GOTH BROS  - Any%.lss",
+          "bytes": 38905,
+          "sha256": "afd92f1b9f6ae884991a9893daf441e98464ef394f60756c67ed2b1f58c98131"
+        },
+        {
+          "path": "splits/Gadiens Spring Cleaning - Any%.lss",
+          "bytes": 8780,
+          "sha256": "086657b82f9ea4c0c9c87d79c50ade2ec51344b3898f08cabcf211f29d275485"
+        },
+        {
+          "path": "splits/Git Up, Git Out, Git Gud - 100%.lss",
+          "bytes": 4699,
+          "sha256": "c2e7bcd06c41ddc861aeab0f5115e0275d3b2f833e57c4345cf9c460261f1ec2"
+        },
+        {
+          "path": "splits/Git Up, Git Out, Git Gud - Any%.lss",
+          "bytes": 14646,
+          "sha256": "822ff1ccb03dad3fafeb9072b806537f9b81c68c4132810790eeea80e19bdfd1"
+        },
+        {
+          "path": "splits/Haxor's Grocery Run - Any%.lss",
+          "bytes": 19032,
+          "sha256": "fa7150296f9d6e7b80549be61444c4f744ce1aae8db5ceaa3b3bca59d77a3a43"
+        },
+        {
+          "path": "splits/Jabem's Well Done New York Strip - Any%.lss",
+          "bytes": 17033,
+          "sha256": "8723d0ba78228095b431b594b327a5163b788c88b69b000dc16b650c86ff4dc8"
+        },
+        {
+          "path": "splits/Kamikaze Bros. 3 - Any %.lss",
+          "bytes": 246873,
+          "sha256": "2e3ec9c1c4fbba8e907545b4b1360f1ba632d5bdba1805d661389c0d68dac3e4"
+        },
+        {
+          "path": "splits/Mini Kaizo Bros. 3 - 100%.lss",
+          "bytes": 4105,
+          "sha256": "8762b1d4ca5ae85fbf88f1c6a8f35462dbdd61f3ba8ec3974762b3fa13f4ed67"
+        },
+        {
+          "path": "splits/Mini Kaizo Bros. 3 - Any%.lss",
+          "bytes": 77900,
+          "sha256": "907aa16b29a4d64d28d89518f9e9558617124dc0581b55eae4e5c7025b69ce89"
+        },
+        {
+          "path": "splits/SMB3PHD - Any%.lss",
+          "bytes": 3825,
+          "sha256": "e73f64eba0a5b04614eb7ccd7e714b664640f94d236dfc7d7e0ba8eeca0e5a0d"
+        },
+        {
+          "path": "splits/Smb3 The Arobam Adventures - 100%.lss",
+          "bytes": 13408,
+          "sha256": "1022d2f31c065d7c110dc00355a7eb3ad7594c0039651861cff4f4316bcdb9f7"
+        },
+        {
+          "path": "splits/Smb3 The Arobam Adventures - Any% NG+.lss",
+          "bytes": 4159,
+          "sha256": "7b9fc8922d4eab3a015b1bbbcd238f922aa07a3815e4a7677f33c04543002f18"
+        },
+        {
+          "path": "splits/Smb3 The Arobam Adventures - Any%.lss",
+          "bytes": 48973,
+          "sha256": "5b74908e6e6c4e30cc7db1e5064afe190cc48a238e700d552554b730253f248b"
+        },
+        {
+          "path": "splits/Smb3 The Arobam Adventures - No Challenge World.lss",
+          "bytes": 12961,
+          "sha256": "0983c88919930ef9a7a17bb5bc09829c8c9d18e5de60a83b741e9aa5c79beeab"
+        },
+        {
+          "path": "splits/Super Barb Bros. 3 - Any%.lss",
+          "bytes": 27657,
+          "sha256": "c9a87c9beff0076a17d1f1314c3fb7167c1de7c34dd572a64b347247af0e0ef7"
+        },
+        {
+          "path": "splits/Super Calm Bros 3 - 100%.lss",
+          "bytes": 81005,
+          "sha256": "8ba05d5be1d21b7f88c97260138283db58602682a7b5674ae4e6bf9456de9824"
+        },
+        {
+          "path": "splits/Super Calm Bros 3 - Any%.lss",
+          "bytes": 191405,
+          "sha256": "60f89afbc839d92c1e0869f8cbd1eabcd6a53c8a2e7da3b31923e1f06850112f"
+        },
+        {
+          "path": "splits/Super Fraud Bros. - Any%.lss",
+          "bytes": 8066,
+          "sha256": "f64f0759378173fedc789b070b038370fceb2e73f721c1f06c7c2f1fb947aec4"
+        },
+        {
+          "path": "splits/Super Fraud Bros. 2 - Any%.lss",
+          "bytes": 4350,
+          "sha256": "445bac22c4b8d112a8b17ed51a537dc0eab429d11891479b5ae2e29d1fe97b23"
+        },
+        {
+          "path": "splits/Super Mandil Bros. 3 - 100%.lss",
+          "bytes": 26821,
+          "sha256": "4266477c371425758684be2fcb63b8befd3f0361aba0ab1033fc5b81ce669378"
+        },
+        {
+          "path": "splits/Super Mario Bros. 2 - Any%.lss",
+          "bytes": 52786,
+          "sha256": "7431b8df331db1ad6851368f2ad4712a945ed7173ad6f4900e4b339680dbb8b8"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - 100%.lss",
+          "bytes": 47742,
+          "sha256": "02afe06ccfbf06275d071dbe22f08c0d420464f0fdb67ec5e9cf9c1f90e9ba3a"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - AllForts.lss",
+          "bytes": 78080,
+          "sha256": "2575c6934799f27acfa55e273b5b235c3a1143d0a1f10c800d07eba9fdf70766"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Any% (No Wrong Warp).lss",
+          "bytes": 174995,
+          "sha256": "8ecee9f52b89e5578a914aa3a3ccc36ca6e265096713a51950d81791632f480f"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Any% Warpless.lss",
+          "bytes": 2863522,
+          "sha256": "539f09871f47b9aeb827669cb5300330ec29b9de3190407778d59bd7628206f0"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Any%.lss",
+          "bytes": 353355,
+          "sha256": "755d1dfeda82aaf187c31efa4f5da5c0ac982ccaa39975f082f4e358a0b5d8a3"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Pts Season3.lss",
+          "bytes": 19732,
+          "sha256": "0ecc2a5025664b3219b5430eb4e8dce798e979341cb1df99e78a27cacd528de6"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Rando.lss",
+          "bytes": 25923,
+          "sha256": "a42167d3ed884d8ad83daff31e02349835ae46ddd92734c5178e397582756a37"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - Secret Exits.lss",
+          "bytes": 7656,
+          "sha256": "a9ac2b4fe9be6aa7a495c641baf47363503d78b4de732380b33cbe1fb7b46a50"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - World 3.lss",
+          "bytes": 22707,
+          "sha256": "8e64bc1a2b8003ce18dd3721cb494fbd2eed1cb44c740535b20f1d3ebda3caf8"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - World 4.lss",
+          "bytes": 40091,
+          "sha256": "a4548edcef24c9b5da6e1aed832b35ce96ca419adc4b5ae3acc1219c9348d700"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - World 5.lss",
+          "bytes": 9815,
+          "sha256": "6ad63a27eb614d96f97085a7f9f390b7bcb658a5cb31531200eb499f8dabeffa"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 - World 6.lss",
+          "bytes": 6659,
+          "sha256": "5f9fafa16da476b537ff00aa5b5defd1bf23dc90c4936d3ad0804e34fc575bde"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+          "bytes": 49769,
+          "sha256": "d12d6f2a299aa0087e1cd23ab59d088105d3088ef4d41259bd96acdf1ab41cb1"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 Race Edition - Any% Warpless .lss",
+          "bytes": 12894,
+          "sha256": "7988e73916164cc606e40cdbc15d3d7e08b9fce1425065c1d016a3b0878f227f"
+        },
+        {
+          "path": "splits/Super Mario Bros. 3 Romhack Trilogy - Any%.lss",
+          "bytes": 11333,
+          "sha256": "5162be078af47f8363d9a7ef3c80ac1a265f32eca7f6cb4b29e8c35053f506aa"
+        },
+        {
+          "path": "splits/Super Mario World - 11 exit.lss",
+          "bytes": 12746,
+          "sha256": "0bd5bc6e15af345071f34b5040a78ce49efc64b32b5761f54d32d0ec05b60321"
+        },
+        {
+          "path": "splits/Super Orb Bros. - Any%.lss",
+          "bytes": 39510,
+          "sha256": "70bd7c0119f3ddd32f0b09addbeb25c42a167234ef8ce5cf62b66f370a4481d3"
+        },
+        {
+          "path": "splits/Super Poo Bros 3 - Any%.lss",
+          "bytes": 18290,
+          "sha256": "dfcfa3dcde2590f99678d5491ab4943cbe244ca942043668321ef10b2aa618d4"
+        },
+        {
+          "path": "splits/Super Riff Bros. 3 - 100%.lss",
+          "bytes": 34034,
+          "sha256": "40bd5c5420ca1162ad0c40ec248fb324c4b15ab599fcdcd68a7a0eec6406cf8c"
+        },
+        {
+          "path": "splits/Super Riff Bros. 3 - Any%.lss",
+          "bytes": 35951,
+          "sha256": "c782769c636601ed0c64d6a9dba2109d879d5d186776ff3035e1f4e42171cdf9"
+        },
+        {
+          "path": "splits/Super Sheffy Bros. 3 - 100%.lss",
+          "bytes": 14762,
+          "sha256": "daa8fb091c4d90dcf436a25ed9b91520bb926af00a2f0bc626c42140d27d6082"
+        },
+        {
+          "path": "splits/Super Sheffy Bros. 3 - Any%.lss",
+          "bytes": 17922,
+          "sha256": "41a2b338e46785a02384c3ae3ea60fbe5b01de0467231e4cbee633ad8abb0540"
+        },
+        {
+          "path": "splits/Super Slasher Bros. 3 - Any%.lss",
+          "bytes": 30044,
+          "sha256": "f00906b6a7b981e862b69c32de7670c2e68adcace9c697fdf1fef74dcd0e1a07"
+        },
+        {
+          "path": "splits/Super Waw-is Bros. 3 - Any%.lss",
+          "bytes": 15493,
+          "sha256": "6cb5d49672292892906e19dd68c11183b23c2ae6d58afaf9051a800a0c202f70"
+        },
+        {
+          "path": "splits/Tea - English Breakfast%.lss",
+          "bytes": 37200,
+          "sha256": "9167daf40b6e4982f96d06a11b935fe213de3b7f91fcde824e87c22253300186"
+        },
+        {
+          "path": "splits/Uncharted Territory Kaizo - Any%.lss",
+          "bytes": 6931,
+          "sha256": "e13558c7e9605a0de69c2afc50261afca25667b1dfcd8e9b2fc2daabead42238"
+        }
+      ]
+    },
+    {
+      "repo": "periwinkle9/LiveSplit-Files",
+      "licence": null,
+      "commit": "445d623bf6fc92f85c708b93312d5c2c493cc860",
+      "archive_url": "https://codeload.github.com/periwinkle9/LiveSplit-Files/tar.gz/445d623bf6fc92f85c708b93312d5c2c493cc860",
+      "archive_sha256": "b6b18586a288b89ef3e2ea5d3084a6567101b121c6e5ec715d997a213cd29534",
+      "files": [
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Bad + Normal Ending, Hard.lss",
+          "bytes": 31798,
+          "sha256": "d85c4f91e258e8a2524d0ec7b8d79c78f9bfc65f8948b192f21ea65589eec87f"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Bad Ending, Easy.lss",
+          "bytes": 18029,
+          "sha256": "0997e4a285b8214eddf56d005653986c4645f9a80d6e139e7be0869bb50b3dbd"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Bad Ending, Normal.lss",
+          "bytes": 11577,
+          "sha256": "7fbb82ab4ac9dc261dac1613fc26ba2818dcbddb9de542ea3a5cef54492a4256"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Best Ending, Easy.lss",
+          "bytes": 21120,
+          "sha256": "65ec0f5f404270c0193852eb1240db6dda63a67b87dd2a4731e8e7b42a8269b1"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Best Ending, Hard.lss",
+          "bytes": 49916,
+          "sha256": "8c6e23c576faafa3dcf11aefe916a52df3e99e2dc53578565eab011188d37687"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Best Ending, Normal.lss",
+          "bytes": 110412,
+          "sha256": "2807637be173434528339241de02b73f3f3aff0317cca0d25432d0f091b447f7"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Get Panties (Easy).lss",
+          "bytes": 32329,
+          "sha256": "4297c2396335b7878c4d7b627563a3f84dc47581fbf56480001f34dfee2daba0"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Get Panties (Hard).lss",
+          "bytes": 35861,
+          "sha256": "c09495383109fe36e57c41a44aaf03bf55deeee8a8494fd8babd6e4dadf1c98a"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Get Panties (Normal).lss",
+          "bytes": 69556,
+          "sha256": "fae7d7c44e38e3f14b606bf326c4ec188f0a67f0d16c8da59bd997492bc6745c"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Normal Ending, Easy.lss",
+          "bytes": 16707,
+          "sha256": "140009a762bda903ecf3ce1ebcf87a4c3be2c30eeb219fd7164595d3467b78c5"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (PC) - Normal Ending, Normal.lss",
+          "bytes": 13775,
+          "sha256": "3215be0ea1b17dade86dbeb2c52553345a52753d78d3c25e4f2fa93a72d49686"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Bad Ending, Easy.lss",
+          "bytes": 5872,
+          "sha256": "f265ea0204369f01bfb22eddad4a4a0cf23cf15c4fd650a189cc756e08f5eb08"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Bad Ending, Normal.lss",
+          "bytes": 5460,
+          "sha256": "e7e0607080686e01b95524f41724d4b68da49a358ecbf000d20fc35d5ee12a24"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Best Ending, Easy.lss",
+          "bytes": 13166,
+          "sha256": "f1cfc8b3f3bc6e9f2fb5e088c406736aba77a3cc095c394dbd3d6ea1c559b7a1"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Best Ending, Normal.lss",
+          "bytes": 28726,
+          "sha256": "946e5db90d2f06a85f828a7877ecbfce720473e8f5b0e1b3bb6027fbde81bafa"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Normal Ending, Easy.lss",
+          "bytes": 4628,
+          "sha256": "4bab59e416aec99eb1d8aadcb47ddc6979dafc27b90e182531e57e5f84a10127"
+        },
+        {
+          "path": "splits/Cave Story+/Cave Story+ (Switch) - Normal Ending, Normal.lss",
+          "bytes": 11160,
+          "sha256": "a0417411a1fd69f1cc968cd70bb6c0f1c9b898351d26ea726f3ec7e24d7f5baa"
+        },
+        {
+          "path": "splits/Cave Story/Cave Story - Bad Ending.lss",
+          "bytes": 81604,
+          "sha256": "da7aa8ae06760052ed408b9cc7a74e3ea92b23033a3cbd6e424c298896fb9a3f"
+        },
+        {
+          "path": "splits/Cave Story/Cave Story - Best Ending.lss",
+          "bytes": 1190277,
+          "sha256": "eae7ee636058d5c251e9ed55287084e932310996a9de8fb30e28a8b1ac86b50c"
+        },
+        {
+          "path": "splits/Cave Story/Cave Story - Get Panties.lss",
+          "bytes": 178443,
+          "sha256": "2486bd4fe1d59fffcab90191cae76cdc419aef8bf613a5e3070a8cd5d62d7f99"
+        },
+        {
+          "path": "splits/Cave Story/Cave Story - Normal Ending.lss",
+          "bytes": 55793,
+          "sha256": "6f24a21512771d92718124f962bd33e19c38318098c61cf7e4d8d7c76a6c9246"
+        },
+        {
+          "path": "splits/Misc/Cave Story - Best Ending (Turbo).lss",
+          "bytes": 365860,
+          "sha256": "406ca92ba5e6bedf390b75ebf1613d163a602884611d3dda5cb2f8af5d37b346"
+        },
+        {
+          "path": "splits/Misc/Cave Story - CroakClip%.lss",
+          "bytes": 7214,
+          "sha256": "8567e0add9beee61923b9d7678a235146ebfa821d02bb44aa77648f077a3ca4d"
+        },
+        {
+          "path": "splits/Misc/Cave Story - Hell IL.lss",
+          "bytes": 740568,
+          "sha256": "b4fd9e9966a43172a3ddb27ef728bd536688a1939a19374f36536016e0fa9b89"
+        },
+        {
+          "path": "splits/Misc/Cave Story+ - Hell IL.lss",
+          "bytes": 74723,
+          "sha256": "cbb9dbb0dfbe43e1bd280149c6edb54bff6d892fedd409df512a3ee5a9963663"
+        },
+        {
+          "path": "splits/Misc/Mario Kart 8 Deluxe - 48 Tracks (150cc, Items).lss",
+          "bytes": 52634,
+          "sha256": "ee2249310ea0f51a8b37d1b98567efdfaa86569ecbe7fe0155d664f5604cf72d"
+        },
+        {
+          "path": "splits/Misc/Mario Kart 8 Deluxe - 96 Tracks (150cc, Items).lss",
+          "bytes": 62383,
+          "sha256": "1b41c268ca2d87ee62bb787b1f1ee03f7275c7449e8b723aae55013e6eca3834"
+        },
+        {
+          "path": "splits/Misc/Super Mario Bros. - Any%.lss",
+          "bytes": 405297,
+          "sha256": "7ea25e0573ef5a1cb14b02c7e94ed99c708d72f2a056ffd512fe6ad974c42c45"
+        }
+      ]
+    },
+    {
+      "repo": "zhrakula/nes",
+      "licence": "Unlicense",
+      "commit": "79c3f33daff8fd4f1b6456cbdd0bed313fa6581e",
+      "archive_url": "https://codeload.github.com/zhrakula/nes/tar.gz/79c3f33daff8fd4f1b6456cbdd0bed313fa6581e",
+      "archive_sha256": "6c4afe6e58e9dca160af43784419858dfc42290b7c49aaee2ad1d2e01f60779b",
+      "files": [
+        {
+          "path": "Battle City/Battle City - Any% (1 Player, Stage (1-35)).lss",
+          "bytes": 213637,
+          "sha256": "51f791bc198641558d48e928ff09b1a2d01d73d4b8b0b7d1c8cbb37a19e1de8e"
+        },
+        {
+          "path": "Chip n Dale Rescue Rangers 2/Chip 'n Dale Rescue Rangers 2 - Any% One Player.lss",
+          "bytes": 351826,
+          "sha256": "b9aa8d7e6d8bd65438f72712a4dab6e40f3a847d61abc4df32f78da07b7f93cc"
+        },
+        {
+          "path": "Contra Force/Contra Force - Any%.lss",
+          "bytes": 32859,
+          "sha256": "556ccf803cfa2357eddd308b28069d78c1d65cd3fdcfb6784c41c3a272f48d9b"
+        },
+        {
+          "path": "Contra/Contra - Any%.lss",
+          "bytes": 83777,
+          "sha256": "b12ad308db15094f3a0eea9f865273a8ae9103cd6fc918b4ab6286d361e63834"
+        },
+        {
+          "path": "Darkwing Duck/Darkwing Duck (NES) - Any%.lss",
+          "bytes": 200873,
+          "sha256": "cdad114d253b0037d9420b6770901633ba4fdde61448e617e64c2bca783ab2a7"
+        },
+        {
+          "path": "Darkwing Duck/Darkwing Duck (NES) - Low%.lss",
+          "bytes": 84047,
+          "sha256": "f1d0000555a43c0b011cea2457ccca0d1fe196b708dac8e9cb4fec9ccf4d736e"
+        },
+        {
+          "path": "Darkwing Duck/Darkwing Duck (NES) - Pacifist.lss",
+          "bytes": 93439,
+          "sha256": "d01e7fec6045fd3b7ff40efe9d82103fcfa742425a6e998cb8bd4f8afa82b5ad"
+        },
+        {
+          "path": "Doki Doki Crazy Land/Doki! Doki! Yuenchi Crazy Land Daisakusen - Any%.lss",
+          "bytes": 34206,
+          "sha256": "3e301785f5cf969c7b091ef96b8ea594f61057dd515d47718bea27a6da39be93"
+        },
+        {
+          "path": "Dr. Mario/Dr. Mario (NES) - 0-20 (Glitchless).lss",
+          "bytes": 125629,
+          "sha256": "e9fc4f0d42315cfcfe51a8dd72273637514ec7afefe1166ad5dc0ab75cf874ce"
+        },
+        {
+          "path": "DuckTales2/DuckTales 2 (NES) - Any% (Easy).lss",
+          "bytes": 76825,
+          "sha256": "a7647a227507065cbca1dfa38d5ee88a6e967dbeb66e9928f2ea065e020a921c"
+        },
+        {
+          "path": "Little Mermaid/Little Mermaid.lss",
+          "bytes": 106562,
+          "sha256": "bd03f540aa2fdbf5f026624aadcb40ed6095763559bdd6367f7a5d89d2cf8915"
+        },
+        {
+          "path": "Little Nemo - The Dream Master/Little Nemo The Dream Master - English.lss",
+          "bytes": 32882,
+          "sha256": "d38a7b506eab9692f763a45373d3eda4a8cf20ade8887ead978b5ec9f216bb09"
+        },
+        {
+          "path": "Lunar Pool/Lunar Pool - Beat 1-10 Stages.lss",
+          "bytes": 105997,
+          "sha256": "4631dc8400f7def0d4ede104b81edeb88e55043215be67d571d25a589552b7e0"
+        },
+        {
+          "path": "Lunar Pool/Lunar Pool - Beat 60 Stages (without GameOver).lss",
+          "bytes": 115268,
+          "sha256": "d82ef180ce62b3b3c70a6e3be1f554bdb1626776e0198bfaf0e25a76c3f32298"
+        },
+        {
+          "path": "Nuts & Milk/Nuts & Milk - 50 stages completed game A.lss",
+          "bytes": 300018,
+          "sha256": "8a0cd2a59211f9f5afc0e10331d60c201c72d6974a3be3c6727faba253d3f69b"
+        },
+        {
+          "path": "Nuts & Milk/Nuts & Milk - 50 stages completed game B.lss",
+          "bytes": 152958,
+          "sha256": "5f3fe5d02cc910522caf1c5423d0e4b9663be58b1fc16df99a0b4423b91af376"
+        },
+        {
+          "path": "Tank 1990/Tank C 1990 - 1 loop (1-12) 1p.lss",
+          "bytes": 7631,
+          "sha256": "735fab850fada584463782d8fafcaa6eadb4484024b387a316375afa66490d9e"
+        },
+        {
+          "path": "Tank 1990/Tank H 1990 - 1 loop (1-12) 1p.lss",
+          "bytes": 8958,
+          "sha256": "4ae0ee9275393ce0fbb417b84ece08028e4bfc1fc54bba545265a2277ed59f4e"
+        },
+        {
+          "path": "Tengen Tetris (NES)/Tengen Tetris (NES) - 100 Lines.lss",
+          "bytes": 2632666,
+          "sha256": "6be62df0901704f7a973a38bab871b8a740435810890863c68b05e0b7881d51f"
+        },
+        {
+          "path": "Tengen Tetris (NES)/Tengen Tetris (NES) - All levels (0-17).lss",
+          "bytes": 26693,
+          "sha256": "9f6eb196b45e28075b888193b2f412d6e0b9e53cf368393f32ba5d2cb9564395"
+        },
+        {
+          "path": "The Goonies/The Goonies - 100%.lss",
+          "bytes": 21259,
+          "sha256": "13b2e6230b410e9f0f5226399e84233515a8d8e35c57cd6c269a4565b4f7a09a"
+        },
+        {
+          "path": "The Goonies/The Goonies - Any%.lss",
+          "bytes": 336103,
+          "sha256": "dc12f2acb9da42dd69e742ac31de47ea0ce39652eded8104a96a0bb2831db2c4"
+        },
+        {
+          "path": "Tom & Jerry/Tom & Jerry (NES) - Any%.lss",
+          "bytes": 296811,
+          "sha256": "e3dd09f93c88094cb0aab6b3b59065026e324be6129cc13d41c39b74818a0cd2"
+        }
+      ]
+    },
+    {
+      "repo": "SirCabby/splitSync",
+      "licence": null,
+      "commit": "431fe7546dc80f64043c453f0a34693754294f41",
+      "archive_url": "https://codeload.github.com/SirCabby/splitSync/tar.gz/431fe7546dc80f64043c453f0a34693754294f41",
+      "archive_sha256": "fc779e3eeca3d978af9c15d7076de43f9b5f8d538bb8ca6067e16633d982395f",
+      "files": [
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 01 - Landing Site to Early Supers.lss",
+          "bytes": 32933,
+          "sha256": "5641379ab707a7809ffa3b4e252aac529889d42950d9f752c4bb3353a37dab05"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 02 - Dachora Room To Business Center.lss",
+          "bytes": 160754,
+          "sha256": "2bb0ff2c5801d8b19817d3cf53cc295a7ca7dc08d2fef2549d0fd3e62cf26400"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 03 - Business Center to Business Center.lss",
+          "bytes": 40320,
+          "sha256": "7530eff1ad5f50ec46ba11d20a03a9b076cea071dfa76b85d0bad3c34691be2a"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 04 - Alpha Spark to WS Left Supers.lss",
+          "bytes": 4082,
+          "sha256": "368a8c0034f1e73e840cc6774a0ec4e9edf9653085fe81195e81cffb43908e27"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 05 - WS Shaft to Breaking the Tube.lss",
+          "bytes": 2729,
+          "sha256": "577a927e9343865a6832b76edb9587fd3636e63d32a28dd950925f3670aa1385"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 06 - Breaking the Tube to Cac Alley.lss",
+          "bytes": 7746,
+          "sha256": "e2c23be8c9f540610170d1b8a66191ed37378ed1498be76ae37382be45651e19"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 07 - East Cac Alley to LN.lss",
+          "bytes": 6308,
+          "sha256": "1783965e011d49a9a524735d87b9c6380af4d969402ef096e00d3b29bc1cc4c6"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 08 - LN to Single Chamber.lss",
+          "bytes": 4117,
+          "sha256": "ee8c1657e6ff13eca53c7f5053e12c7aaf870f98ea83ceb3f7589c3d19870449"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 09 - Single Chamber to G4.lss",
+          "bytes": 2295,
+          "sha256": "9f5b1141260fd4ba429ff6f33e51c2149f907b639cc530afe3838e5e8df72153"
+        },
+        {
+          "path": "Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 10 - Metroid 1.lss",
+          "bytes": 9082,
+          "sha256": "7849a73fdcced40a61df1fc1bdf52ae0df9a3611362993ee18ed5871b65d4253"
+        },
+        {
+          "path": "Test Data/Backup/Super Metroid - Any% KPDR.lss",
+          "bytes": 1116427,
+          "sha256": "edbdb77aa5945166f24e7e47f26000dcea0e9db79a40e11282befa5597d67720"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 01 - Landing Site to Early Supers.lss",
+          "bytes": 32933,
+          "sha256": "5641379ab707a7809ffa3b4e252aac529889d42950d9f752c4bb3353a37dab05"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 02 - Dachora Room To Business Center.lss",
+          "bytes": 160754,
+          "sha256": "2bb0ff2c5801d8b19817d3cf53cc295a7ca7dc08d2fef2549d0fd3e62cf26400"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 03 - Business Center to Business Center.lss",
+          "bytes": 40320,
+          "sha256": "7530eff1ad5f50ec46ba11d20a03a9b076cea071dfa76b85d0bad3c34691be2a"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 04 - Alpha Spark to WS Left Supers.lss",
+          "bytes": 4082,
+          "sha256": "368a8c0034f1e73e840cc6774a0ec4e9edf9653085fe81195e81cffb43908e27"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 05 - WS Shaft to Breaking the Tube.lss",
+          "bytes": 2729,
+          "sha256": "577a927e9343865a6832b76edb9587fd3636e63d32a28dd950925f3670aa1385"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 06 - Breaking the Tube to Cac Alley.lss",
+          "bytes": 7746,
+          "sha256": "e2c23be8c9f540610170d1b8a66191ed37378ed1498be76ae37382be45651e19"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 07 - East Cac Alley to LN.lss",
+          "bytes": 6308,
+          "sha256": "1783965e011d49a9a524735d87b9c6380af4d969402ef096e00d3b29bc1cc4c6"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 08 - LN to Single Chamber.lss",
+          "bytes": 4117,
+          "sha256": "ee8c1657e6ff13eca53c7f5053e12c7aaf870f98ea83ceb3f7589c3d19870449"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 09 - Single Chamber to G4.lss",
+          "bytes": 2295,
+          "sha256": "9f5b1141260fd4ba429ff6f33e51c2149f907b639cc530afe3838e5e8df72153"
+        },
+        {
+          "path": "Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 10 - Metroid 1.lss",
+          "bytes": 9082,
+          "sha256": "7849a73fdcced40a61df1fc1bdf52ae0df9a3611362993ee18ed5871b65d4253"
+        },
+        {
+          "path": "Test Data/Super Metroid - Any% KPDR.lss",
+          "bytes": 1116427,
+          "sha256": "edbdb77aa5945166f24e7e47f26000dcea0e9db79a40e11282befa5597d67720"
+        },
+        {
+          "path": "Test Data/Super Metroid blank.lss",
+          "bytes": 577,
+          "sha256": "fed149b1aebf644b80c72538d4cc34e6582b899b64cf6a9683acc7d18a74ffc2"
+        }
+      ]
+    },
+    {
+      "repo": "LiveSplit/livesplit-core",
+      "licence": "Apache-2.0",
+      "commit": "7ce9729042cf9acc429ac796ae7470a614c57d97",
+      "archive_url": "https://codeload.github.com/LiveSplit/livesplit-core/tar.gz/7ce9729042cf9acc429ac796ae7470a614c57d97",
+      "archive_sha256": "69b67325f68cbbc5256b95838127ed3105ec54727964ed99fd2af500701db1c1",
+      "files": [
+        {
+          "path": "tests/run_files/Celeste - Any% (1.2.1.5).lss",
+          "bytes": 905625,
+          "sha256": "59d1e39cf39da75a3fb692fe98d59d5229582d8e7e4eb3d24cfc985de86eb0af"
+        },
+        {
+          "path": "tests/run_files/celeste_native_segment_groups.lss",
+          "bytes": 944830,
+          "sha256": "095a9af1321f40abdbfb2aa65e3dfe8ca06195659a505eca3afb880b6597e242"
+        },
+        {
+          "path": "tests/run_files/clean_sum_of_best.lss",
+          "bytes": 33194,
+          "sha256": "159d4ed64b72edebf2b2132e488fff990c4827187a8d054847f4066814c9fec8"
+        },
+        {
+          "path": "tests/run_files/livesplit1.0.lss",
+          "bytes": 46957,
+          "sha256": "e4566bfc11a87a93ce812afdb633a14706cbb43619d8314d0eed5f9e81bafcf3"
+        },
+        {
+          "path": "tests/run_files/livesplit1.4.lss",
+          "bytes": 68953,
+          "sha256": "ced71cd2a54f13914508038555a6bebea5743214d64ba5002ef62def1b0507e3"
+        },
+        {
+          "path": "tests/run_files/livesplit1.5.lss",
+          "bytes": 5418,
+          "sha256": "7ed51a54bdc389c92118a1fe12cb1e140ca1ec76ca14e4594151a6ad6e1c6198"
+        },
+        {
+          "path": "tests/run_files/livesplit1.6.lss",
+          "bytes": 64781,
+          "sha256": "0cbfc02a7f2cbb756af220abf4f005d72677bce62530fa57f3ed051045e6c98b"
+        },
+        {
+          "path": "tests/run_files/livesplit1.6_gametime.lss",
+          "bytes": 634675,
+          "sha256": "f959b97e5af71cd2c88b8c6521061fc6944598b02c039e78cd3d18d43046d6c8"
+        },
+        {
+          "path": "tests/run_files/livesplit_attempt_ended_bug.lss",
+          "bytes": 943,
+          "sha256": "c6dbbbaf0eafc08e1260bd2530a6b342165b79a4ca2f7214f459c02735834956"
+        },
+        {
+          "path": "tests/run_files/livesplit_fuzz_crash.lss",
+          "bytes": 3689,
+          "sha256": "af26aa09bceaff3d28315e0f917c5cc0aff776095aaa18b8f04c3a2ad44bd66e"
+        },
+        {
+          "path": "tests/run_files/livesplit_fuzz_crash_utf8.lss",
+          "bytes": 302,
+          "sha256": "72013aef851622652dae8f8ba0624ed1540d771284b0cb10f6607de6809ad9d3"
+        }
+      ]
+    },
+    {
+      "repo": "jaspersiebring/saltysplits",
+      "licence": "AGPL-3.0",
+      "commit": "4c543e65308ae8f8539386d1c7a64d58ec4740cb",
+      "archive_url": "https://codeload.github.com/jaspersiebring/saltysplits/tar.gz/4c543e65308ae8f8539386d1c7a64d58ec4740cb",
+      "archive_sha256": "f3de06aa037b431d3f44bcbe979962c350caa0c5a0729e372d665f5d67cdef0b",
+      "files": [
+        {
+          "path": "tests/run_files/Grand Theft Auto Vice City - Any% (No SSU).lss",
+          "bytes": 245211,
+          "sha256": "116d52663ef16be70eeea9e268e3d1d82ed4160bb5bb1c2966395ed86f8f4c94"
+        },
+        {
+          "path": "tests/run_files/gcb.lss",
+          "bytes": 99832,
+          "sha256": "42647d95d93f61a388eb47adcc661bce39424cda056f154860a789264e020264"
+        },
+        {
+          "path": "tests/run_files/livesplit1.5.lss",
+          "bytes": 5197,
+          "sha256": "6712e44ec7aaf47d5fbe5fb3bc46390a5669e0d8bfe4590104039f59415c829b"
+        }
+      ]
+    },
+    {
+      "repo": "slaurent22/lss-tools",
+      "licence": "GPL-3.0",
+      "commit": "e8432ad350e793bb41e5fbe595e0042c3ec0af3b",
+      "archive_url": "https://codeload.github.com/slaurent22/lss-tools/tar.gz/e8432ad350e793bb41e5fbe595e0042c3ec0af3b",
+      "archive_sha256": "ce88da8ceff9658f98190475af9c9618436872d62c2e388f48cc07c7551d8942",
+      "files": [
+        {
+          "path": "example-splits/4ms.lss",
+          "bytes": 493539,
+          "sha256": "e754727491b5bdb2d43c23944fd3d74e49aaa1cf92f3c4cd15fb2db320a538d9"
+        },
+        {
+          "path": "example-splits/allskills.lss",
+          "bytes": 725122,
+          "sha256": "3c5e93e54867d29540ee9fa6b86f3bde3245b4e98b0046f7b08f700e2410d1ef"
+        }
+      ]
+    },
+    {
+      "repo": "bluu0105/Livesplit-Best-Segment-Between-Multiple-Splits",
+      "licence": null,
+      "commit": "b9654157ca85598afa4bfeec856f73655bb378b6",
+      "archive_url": "https://codeload.github.com/bluu0105/Livesplit-Best-Segment-Between-Multiple-Splits/tar.gz/b9654157ca85598afa4bfeec856f73655bb378b6",
+      "archive_sha256": "9a85ba73290315f76e9d4857846a9c78aee606c21ba568758b7a1789ad2d7f03",
+      "files": [
+        {
+          "path": "TP_test.lss",
+          "bytes": 788743,
+          "sha256": "0802a6fae5a0caf06afc0d5b24857217d445a5919cd71585600be6dd58305146"
+        }
+      ]
+    },
+    {
+      "repo": "gonX/livesplit2urn",
+      "licence": "MIT",
+      "commit": "730a750f6e97d8d3ea56fccf8b99c8156dd701e3",
+      "archive_url": "https://codeload.github.com/gonX/livesplit2urn/tar.gz/730a750f6e97d8d3ea56fccf8b99c8156dd701e3",
+      "archive_sha256": "cc041ef4fda5c899096c1f495c29740efd1d07799d21c428501372c3aa3c1179",
+      "files": [
+        {
+          "path": "example.lss",
+          "bytes": 211948,
+          "sha256": "41f18f53438fbe7635c46d9f87fe28e96b5e660135ccfb57fd303518c446a149"
+        }
+      ]
+    }
+  ]
+}

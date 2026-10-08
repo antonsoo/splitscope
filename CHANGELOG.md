@@ -4,6 +4,14 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- PB odds widen the recent-form window until every segment has at least three timed
+  durations in it (`minSegmentSamples`, default 3; 0 keeps the window exactly as asked).
+  Backtested on 51 real histories, this lets 61% of stopping points be forecast instead of 39%
+  and lowers the 50-attempt Brier score on the points that were forecast before from 0.237
+  to 0.223, which nine runners cannot tell from no change. The panel and exports show the window actually used.
+- Add `studies/pb-odds-backtest`: a walk-forward backtest of the PB odds on real `.lss`
+  histories. The forecast ran low (about a third of the PBs that followed were expected); the
+  stated assumptions now say so.
 - Reject ambiguous or malformed history IDs, invalid counts/versions, duplicate
   comparisons, and oversized durations. Decode numeric XML references correctly.
 - Use the same recent attempt window across segments, display usable sample

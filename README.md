@@ -16,6 +16,24 @@ your realistic odds of a PB are tonight. That data all exists — LiveSplit
 just doesn't show it to you. splitscope reads the same file and answers
 those questions, entirely in your browser.
 
+## PB odds, checked against what happened next
+
+The PB odds forecast runs low. Walked forward through 51 real attempt
+histories (62,197 attempts, from public repositories), it expected 484 attempts
+in the following 50 to beat the PB held at the time; 1,457 did, about three
+times as many (95% interval 2.3 to 4.0, resampling runners). It still
+ranks well: its Brier score beats "never", the PB frequency of the last 100
+attempts and the long-run PB frequency at both 10 and 50 attempts ahead,
+except against the long-run frequency on the three held-out runners at 50;
+at 50 only the difference from "never" is clear of zero when runners are
+resampled.
+Widening the recent window until every segment has three samples (source
+checkout, unreleased) lifts the share of stopping points that get a forecast from
+39% to 61% and lowers the 50-attempt Brier score on the points both versions
+forecast, from 0.237 to 0.223, a difference within the noise of nine runners. The 0.2.4 release has neither.
+The data is nine runners, so every interval is wide.
+Details, reliability diagram and what did not work: [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md).
+
 ## Contents
 
 - [Quickstart](#quickstart)
@@ -260,8 +278,11 @@ every segment's history, and the page runs it several times per render.
   that your recent-form window is representative of every simulated future
   attempt (no further improvement or fatigue). Real runs have more
   structure — momentum, tilt, warm-up — than this model does, so results
-  may be biased in either direction. Treat the output as "roughly this often, under these
-  rules," not a guarantee.
+  may be biased in either direction. Against what happened next in real
+  histories it was biased low (about a third of the PBs that followed were
+  expected), most for runners still improving; see
+  [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md). Treat the output as a
+  floor for a runner who is still getting faster, not a guarantee.
 - **The finish/reset signal is inferred**, not an explicit field in the
   format: either overall RealTime or GameTime counts as completion evidence.
   Reset locations assume unedited segment histories; see `docs/format.md`.

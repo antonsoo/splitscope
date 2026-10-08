@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 510" width="880" height="510" font-family="system-ui, sans-serif" font-size="12">
+<title>Reliability diagram: splitscope PB odds against what happened next</title>
+<rect width="880" height="510" fill="#ffffff"/>
+<text x="50" y="30" font-size="15" font-weight="600" fill="#111">Next 10 attempts: P(at least one PB)</text>
+<line x1="50.0" y1="410.0" x2="390.0" y2="410.0" stroke="#e5e5e5"/>
+<line x1="50.0" y1="410.0" x2="50.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="414.0" text-anchor="end" fill="#444">0%</text>
+<text x="50.0" y="426.0" text-anchor="middle" fill="#444">0%</text>
+<line x1="50.0" y1="353.3" x2="390.0" y2="353.3" stroke="#e5e5e5"/>
+<line x1="106.7" y1="410.0" x2="106.7" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="357.3" text-anchor="end" fill="#444">10%</text>
+<text x="106.7" y="426.0" text-anchor="middle" fill="#444">10%</text>
+<line x1="50.0" y1="296.7" x2="390.0" y2="296.7" stroke="#e5e5e5"/>
+<line x1="163.3" y1="410.0" x2="163.3" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="300.7" text-anchor="end" fill="#444">20%</text>
+<text x="163.3" y="426.0" text-anchor="middle" fill="#444">20%</text>
+<line x1="50.0" y1="240.0" x2="390.0" y2="240.0" stroke="#e5e5e5"/>
+<line x1="220.0" y1="410.0" x2="220.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="244.0" text-anchor="end" fill="#444">30%</text>
+<text x="220.0" y="426.0" text-anchor="middle" fill="#444">30%</text>
+<line x1="50.0" y1="183.3" x2="390.0" y2="183.3" stroke="#e5e5e5"/>
+<line x1="276.7" y1="410.0" x2="276.7" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="187.3" text-anchor="end" fill="#444">40%</text>
+<text x="276.7" y="426.0" text-anchor="middle" fill="#444">40%</text>
+<line x1="50.0" y1="126.7" x2="390.0" y2="126.7" stroke="#e5e5e5"/>
+<line x1="333.3" y1="410.0" x2="333.3" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="130.7" text-anchor="end" fill="#444">50%</text>
+<text x="333.3" y="426.0" text-anchor="middle" fill="#444">50%</text>
+<line x1="50.0" y1="70.0" x2="390.0" y2="70.0" stroke="#e5e5e5"/>
+<line x1="390.0" y1="410.0" x2="390.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="44.0" y="74.0" text-anchor="end" fill="#444">60%</text>
+<text x="390.0" y="426.0" text-anchor="middle" fill="#444">60%</text>
+<line x1="50.0" y1="410.0" x2="390.0" y2="70.0" stroke="#888" stroke-dasharray="4 4"/>
+<text x="386.0" y="84.0" text-anchor="end" fill="#666">perfectly calibrated</text>
+<text x="220.0" y="446.0" text-anchor="middle" fill="#222">forecast</text>
+<text x="12" y="240.0" text-anchor="middle" fill="#222" transform="rotate(-90 12 240.0)">observed frequency</text>
+<polyline fill="none" stroke="#c2570c" stroke-width="1.5" stroke-dasharray="3 3" points="50.6,380.0 58.9,350.1 69.3,351.2 91.5,343.9 129.7,271.2 189.6,221.1 308.2,70.0"/>
+<circle cx="50.6" cy="380.0" r="9.9" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="58.9" cy="350.1" r="5.3" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="69.3" cy="351.2" r="6.1" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="91.5" cy="343.9" r="6.2" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="129.7" cy="271.2" r="6.4" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="189.6" cy="221.1" r="5.1" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="308.2" cy="70.0" r="2.9" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<polyline fill="none" stroke="#1d5fa8" stroke-width="1.5"  points="51.3,393.7 58.8,365.2 69.1,341.4 90.5,319.4 130.0,271.7 193.9,177.1"/>
+<line x1="51.3" y1="399.0" x2="51.3" y2="381.5" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="51.3" cy="393.7" r="11.7" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="58.8" y1="382.8" x2="58.8" y2="330.8" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="58.8" cy="365.2" r="6.9" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="69.1" y1="369.3" x2="69.1" y2="329.6" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="69.1" cy="341.4" r="7.8" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="90.5" y1="341.3" x2="90.5" y2="277.4" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="90.5" cy="319.4" r="7.3" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="130.0" y1="336.4" x2="130.0" y2="192.5" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="130.0" cy="271.7" r="6.5" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="193.9" y1="268.3" x2="193.9" y2="105.2" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="193.9" cy="177.1" r="4.6" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<text x="470" y="30" font-size="15" font-weight="600" fill="#111">Next 50 attempts: P(at least one PB)</text>
+<line x1="470.0" y1="410.0" x2="810.0" y2="410.0" stroke="#e5e5e5"/>
+<line x1="470.0" y1="410.0" x2="470.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="414.0" text-anchor="end" fill="#444">0%</text>
+<text x="470.0" y="426.0" text-anchor="middle" fill="#444">0%</text>
+<line x1="470.0" y1="342.0" x2="810.0" y2="342.0" stroke="#e5e5e5"/>
+<line x1="538.0" y1="410.0" x2="538.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="346.0" text-anchor="end" fill="#444">20%</text>
+<text x="538.0" y="426.0" text-anchor="middle" fill="#444">20%</text>
+<line x1="470.0" y1="274.0" x2="810.0" y2="274.0" stroke="#e5e5e5"/>
+<line x1="606.0" y1="410.0" x2="606.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="278.0" text-anchor="end" fill="#444">40%</text>
+<text x="606.0" y="426.0" text-anchor="middle" fill="#444">40%</text>
+<line x1="470.0" y1="206.0" x2="810.0" y2="206.0" stroke="#e5e5e5"/>
+<line x1="674.0" y1="410.0" x2="674.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="210.0" text-anchor="end" fill="#444">60%</text>
+<text x="674.0" y="426.0" text-anchor="middle" fill="#444">60%</text>
+<line x1="470.0" y1="138.0" x2="810.0" y2="138.0" stroke="#e5e5e5"/>
+<line x1="742.0" y1="410.0" x2="742.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="142.0" text-anchor="end" fill="#444">80%</text>
+<text x="742.0" y="426.0" text-anchor="middle" fill="#444">80%</text>
+<line x1="470.0" y1="70.0" x2="810.0" y2="70.0" stroke="#e5e5e5"/>
+<line x1="810.0" y1="410.0" x2="810.0" y2="70.0" stroke="#e5e5e5"/>
+<text x="464.0" y="74.0" text-anchor="end" fill="#444">100%</text>
+<text x="810.0" y="426.0" text-anchor="middle" fill="#444">100%</text>
+<line x1="470.0" y1="410.0" x2="810.0" y2="70.0" stroke="#888" stroke-dasharray="4 4"/>
+<text x="806.0" y="84.0" text-anchor="end" fill="#666">perfectly calibrated</text>
+<text x="640.0" y="446.0" text-anchor="middle" fill="#222">forecast</text>
+<text x="432" y="240.0" text-anchor="middle" fill="#222" transform="rotate(-90 432 240.0)">observed frequency</text>
+<polyline fill="none" stroke="#c2570c" stroke-width="1.5" stroke-dasharray="3 3" points="470.3,345.1 476.7,293.1 483.7,266.8 495.9,307.7 519.6,276.1 570.0,261.6 651.6,205.4 732.1,139.6"/>
+<circle cx="470.3" cy="345.1" r="9.0" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="476.7" cy="293.1" r="3.9" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="483.7" cy="266.8" r="4.7" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="495.9" cy="307.7" r="5.2" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="519.6" cy="276.1" r="5.7" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="570.0" cy="261.6" r="6.2" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="651.6" cy="205.4" r="6.3" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<circle cx="732.1" cy="139.6" r="4.8" fill="#fff" stroke="#c2570c" fill-opacity="1"/>
+<polyline fill="none" stroke="#1d5fa8" stroke-width="1.5"  points="470.7,375.9 476.7,356.9 483.3,321.5 495.4,304.9 520.2,275.2 567.1,235.5 650.2,198.6 737.5,124.6"/>
+<line x1="470.7" y1="385.6" x2="470.7" y2="349.8" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="470.7" cy="375.9" r="9.9" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="476.7" y1="381.9" x2="476.7" y2="280.0" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="476.7" cy="356.9" r="4.9" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="483.3" y1="350.1" x2="483.3" y2="266.2" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="483.3" cy="321.5" r="6.6" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="495.4" y1="334.7" x2="495.4" y2="265.0" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="495.4" cy="304.9" r="6.6" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="520.2" y1="309.1" x2="520.2" y2="248.7" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="520.2" cy="275.2" r="7.1" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="567.1" y1="278.0" x2="567.1" y2="204.5" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="567.1" cy="235.5" r="7.4" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="650.2" y1="261.6" x2="650.2" y2="121.5" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="650.2" cy="198.6" r="6.3" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<line x1="737.5" y1="201.6" x2="737.5" y2="74.2" stroke="#1d5fa8" stroke-opacity="0.45" stroke-width="2"/>
+<circle cx="737.5" cy="124.6" r="4.4" fill="#1d5fa8" stroke="#1d5fa8" fill-opacity="0.85"/>
+<circle cx="50" cy="456" r="5" fill="#fff" stroke="#c2570c"/>
+<text x="60" y="460" fill="#222">0.2.4 release</text>
+<circle cx="380" cy="456" r="5" fill="#1d5fa8" stroke="#1d5fa8"/>
+<text x="390" y="460" fill="#222">checkout with the change</text>
+<text x="50" y="484" fill="#555">Bars: 95% interval from resampling runners, not forecasts. Marker size grows with the forecasts in the bin.</text>
+<text x="50" y="500" fill="#555">Bins: 0-1, 1-2, 2-5, 5-10, 10-20, 20-40, 40-70, 70-100%. Nearly all points lie above the diagonal: the forecast runs low.</text>
+</svg>
