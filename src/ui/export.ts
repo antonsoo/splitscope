@@ -224,8 +224,8 @@ export async function exportPngCard(run: Run, params: ExportParams): Promise<voi
   downloadBlob(`splitscope-${run.gameName.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.png`, blob);
 }
 
-export function downloadText(filename: string, text: string): void {
-  const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+export function downloadText(filename: string, text: string, mime = "text/markdown"): void {
+  const blob = new Blob([text], { type: `${mime};charset=utf-8` });
   downloadBlob(filename, blob);
 }
 

@@ -2,6 +2,7 @@ import { decodeText } from "../core/decode.js";
 import { LssParseError } from "../core/errors.js";
 import { type PbOddsResult, simulatePbOdds } from "../core/montecarlo.js";
 import { parseRun } from "../core/parser.js";
+import type { ReviewSource } from "../core/review.js";
 import {
   pbTotal as computePbTotal,
   playtimeSummary,
@@ -17,11 +18,13 @@ import { readFileBytes, readSampleBytes } from "./input.js";
 import { renderDeltaChart } from "./sections/deltaChart.js";
 import { renderDistributions } from "./sections/distributions.js";
 import { renderPbOdds } from "./sections/pbOdds.js";
+import { createPracticeReview } from "./sections/practiceReview.js";
 import { renderSegmentTable } from "./sections/segmentTable.js";
 import { renderSurvivalChart } from "./sections/survivalChart.js";
 
 interface AppState {
   run: Run | null;
+  source: ReviewSource | null;
   error: string | null;
   loading: string | null;
   exportStatus: string | null;
@@ -38,10 +41,16 @@ interface AppState {
 }
 
 const SAMPLE_FILES = [
-  { label: "Load sample (450 attempts)", path: "crystal-caverns-any.lss" },
+  { label: "Load sample (450 attempts)", path: "crystal-caverns-any.lss", synthetic: true },
   {
     label: "Load sample (fresh splits, 10 attempts)",
     path: "crystal-caverns-fresh-start.lss",
+    synthetic: true,
+  },
+  {
+    label: "Open recorded practice (124 attempts)",
+    path: "recorded/zero-divide-2.lss",
+    synthetic: false,
   },
 ];
 
@@ -55,6 +64,7 @@ function defaultState(): AppState {
   })();
   return {
     run: null,
+    source: null,
     error: null,
     loading: null,
     exportStatus: null,
@@ -90,6 +100,7 @@ export function mountApp(root: HTMLElement): void {
   let importController: AbortController | null = null;
   let lastImport: (() => void) | null = null;
   let oddsCache: { run: Run; key: string; result: PbOddsResult } | null = null;
+  let practiceCache: { run: Run; workspace: ReturnType<typeof createPracticeReview> } | null = null;
 
   function oddsFor(run: Run): PbOddsResult {
     const key = [state.method, state.mcRecentWindow, state.mcSimulations, state.mcLookahead].join(
@@ -123,6 +134,7 @@ export function mountApp(root: HTMLElement): void {
     importController = null;
     lastImport = null;
     oddsCache = null;
+    practiceCache = null;
     fileInput.value = "";
     Object.assign(state, defaultState(), { theme: state.theme });
     render();
@@ -131,6 +143,7 @@ export function mountApp(root: HTMLElement): void {
 
   async function importRun(
     label: string,
+    sourceName: string,
     isSample: boolean,
     read: (signal: AbortSignal) => Promise<Uint8Array>,
     retry: () => void,
@@ -143,13 +156,24 @@ export function mountApp(root: HTMLElement): void {
     try {
       const bytes = await read(controller.signal);
       if (importController !== controller) return;
+      const digest = await crypto.subtle.digest("SHA-256", bytes as Uint8Array<ArrayBuffer>);
+      if (importController !== controller) return;
       const run = parseRun(decodeText(bytes));
       if (importController !== controller) return;
       importController = null;
       lastImport = null;
       oddsCache = null;
+      practiceCache = null;
       setState({
         run,
+        source: {
+          name: sourceName,
+          sha256: [...new Uint8Array(digest)]
+            .map((value) => value.toString(16).padStart(2, "0"))
+            .join(""),
+          bytes: bytes.length,
+          synthetic: isSample,
+        },
         loading: null,
         error: null,
         exportStatus: null,
@@ -178,18 +202,20 @@ export function mountApp(root: HTMLElement): void {
   function loadFile(file: File): void {
     void importRun(
       `Reading ${file.name}…`,
+      file.name,
       false,
       (signal) => readFileBytes(file, signal),
       () => loadFile(file),
     );
   }
 
-  function loadSample(path: string): void {
+  function loadSample(path: string, synthetic = true): void {
     void importRun(
-      "Loading synthetic sample…",
-      true,
+      synthetic ? "Loading synthetic sample…" : "Loading recorded practice…",
+      path,
+      synthetic,
       (signal) => readSampleBytes(`${import.meta.env.BASE_URL}${path}`, signal),
-      () => loadSample(path),
+      () => loadSample(path, synthetic),
     );
   }
 
@@ -529,12 +555,27 @@ export function mountApp(root: HTMLElement): void {
               ...SAMPLE_FILES.map((s) =>
                 el(
                   "button",
-                  { type: "button", class: "btn", onclick: () => void loadSample(s.path) },
+                  {
+                    type: "button",
+                    class: "btn",
+                    onclick: () => void loadSample(s.path, s.synthetic),
+                  },
                   [s.label],
                 ),
               ),
             ]),
             el("p", {}, ["or drop a file here · splits.lss lives in your LiveSplit folder"]),
+            el("p", { class: "recorded-credit" }, [
+              "Recorded example: Zero Divide 2, shared by ",
+              el(
+                "a",
+                {
+                  href: "https://github.com/AmenAnthem/speedrun-livesplit-splits/tree/21676ae91d9379b0c1380104c817cfc3d5b71776",
+                },
+                ["AmenAnthem"],
+              ),
+              " under the MIT license. The Crystal Caverns samples are synthetic.",
+            ]),
           ],
         ),
         el("p", { class: "privacy-note" }, [
@@ -545,6 +586,10 @@ export function mountApp(root: HTMLElement): void {
     }
 
     const run = state.run;
+    if (state.source && practiceCache?.run !== run) {
+      practiceCache = { run, workspace: createPracticeReview(run, state.method, state.source) };
+    }
+    practiceCache?.workspace.setMethod(state.method);
     const mcOnChange = (
       patch: Partial<{ recentWindow: number; simulations: number; lookaheadAttempts: number }>,
     ) => {
@@ -557,6 +602,8 @@ export function mountApp(root: HTMLElement): void {
 
     return el("div", {}, [
       renderHero(run),
+
+      practiceCache?.workspace.element,
 
       section(
         "Segment breakdown",
