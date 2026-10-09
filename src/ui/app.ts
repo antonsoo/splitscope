@@ -1,20 +1,17 @@
+import { bestRoute } from "../core/best-route.js";
 import { decodeText } from "../core/decode.js";
 import { LssParseError } from "../core/errors.js";
 import { type PbOddsResult, simulatePbOdds } from "../core/montecarlo.js";
 import { parseRun } from "../core/parser.js";
 import type { ReviewSource } from "../core/review.js";
-import {
-  pbTotal as computePbTotal,
-  playtimeSummary,
-  resetAnalysis,
-  sumOfBest,
-} from "../core/stats.js";
+import { pbTotal as computePbTotal, playtimeSummary, resetAnalysis } from "../core/stats.js";
 import type { Run, TimingMethod } from "../core/types.js";
 import { pick } from "../core/types.js";
 import { el } from "./dom.js";
 import { buildMarkdownSummary, downloadText, exportPngCard } from "./export.js";
 import { formatCount, formatHours, formatPercent, formatSeconds } from "./format.js";
 import { readFileBytes, readSampleBytes } from "./input.js";
+import { createBestRoute } from "./sections/bestRoute.js";
 import { renderDeltaChart } from "./sections/deltaChart.js";
 import { renderDistributions } from "./sections/distributions.js";
 import { renderPbOdds } from "./sections/pbOdds.js";
@@ -46,6 +43,11 @@ const SAMPLE_FILES = [
     label: "Load sample (fresh splits, 10 attempts)",
     path: "crystal-caverns-fresh-start.lss",
     synthetic: true,
+  },
+  {
+    label: "Open combined-split example (Destrega)",
+    path: "recorded/destrega.lss",
+    synthetic: false,
   },
   {
     label: "Open recorded practice (124 attempts)",
@@ -100,6 +102,7 @@ export function mountApp(root: HTMLElement): void {
   let importController: AbortController | null = null;
   let lastImport: (() => void) | null = null;
   let oddsCache: { run: Run; key: string; result: PbOddsResult } | null = null;
+  let bestCache: { run: Run; workspace: ReturnType<typeof createBestRoute> } | null = null;
   let practiceCache: { run: Run; workspace: ReturnType<typeof createPracticeReview> } | null = null;
 
   function oddsFor(run: Run): PbOddsResult {
@@ -135,6 +138,7 @@ export function mountApp(root: HTMLElement): void {
     lastImport = null;
     oddsCache = null;
     practiceCache = null;
+    bestCache = null;
     fileInput.value = "";
     Object.assign(state, defaultState(), { theme: state.theme });
     render();
@@ -164,6 +168,7 @@ export function mountApp(root: HTMLElement): void {
       lastImport = null;
       oddsCache = null;
       practiceCache = null;
+      bestCache = null;
       setState({
         run,
         source: {
@@ -321,7 +326,7 @@ export function mountApp(root: HTMLElement): void {
 
   function renderHero(run: Run): HTMLElement {
     const pb = computePbTotal(run, state.method);
-    const sob = sumOfBest(run, state.method);
+    const sob = bestRoute(run, state.method);
     const reset = resetAnalysis(run);
     const playtime = playtimeSummary(run);
     const odds = oddsFor(run);
@@ -372,15 +377,15 @@ export function mountApp(root: HTMLElement): void {
         el("p", { class: "hero-clock mono" }, [formatSeconds(pb)]),
         el("div", { class: "hero-stats" }, [
           el("div", { class: "hero-stat" }, [
-            el("p", { class: "hero-stat-label" }, ["Sum of best"]),
+            el("a", { class: "hero-stat-label", href: "#best-route" }, ["Sum of best"]),
             el("p", { class: "hero-stat-value" }, [
-              sob.complete ? formatSeconds(sob.value) : "Incomplete",
+              sob.totalSeconds !== null ? formatSeconds(sob.totalSeconds) : "Unavailable",
             ]),
           ]),
           el("div", { class: "hero-stat" }, [
             el("p", { class: "hero-stat-label" }, ["Time on the table"]),
             el("p", { class: "hero-stat-value" }, [
-              pb !== null && sob.complete ? formatSeconds(pb - sob.value) : "—",
+              pb !== null && sob.totalSeconds !== null ? formatSeconds(pb - sob.totalSeconds) : "—",
             ]),
           ]),
           el("div", { class: "hero-stat" }, [
@@ -566,7 +571,7 @@ export function mountApp(root: HTMLElement): void {
             ]),
             el("p", {}, ["or drop a file here · splits.lss lives in your LiveSplit folder"]),
             el("p", { class: "recorded-credit" }, [
-              "Recorded example: Zero Divide 2, shared by ",
+              "Recorded examples: Destrega and Zero Divide 2, shared by ",
               el(
                 "a",
                 {
@@ -590,6 +595,10 @@ export function mountApp(root: HTMLElement): void {
       practiceCache = { run, workspace: createPracticeReview(run, state.method, state.source) };
     }
     practiceCache?.workspace.setMethod(state.method);
+    if (state.source && bestCache?.run !== run) {
+      bestCache = { run, workspace: createBestRoute(run, state.method, state.source) };
+    }
+    bestCache?.workspace.setMethod(state.method);
     const mcOnChange = (
       patch: Partial<{ recentWindow: number; simulations: number; lookaheadAttempts: number }>,
     ) => {
@@ -602,6 +611,8 @@ export function mountApp(root: HTMLElement): void {
 
     return el("div", {}, [
       renderHero(run),
+
+      bestCache?.workspace.element,
 
       practiceCache?.workspace.element,
 

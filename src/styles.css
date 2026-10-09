@@ -1262,3 +1262,164 @@ footer {
   font-size: 12px;
   color: var(--text-muted);
 }
+
+/* Best-route evidence: span boundaries remain together, just as on a timer. */
+.best-comparison {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+.best-comparison p {
+  margin: 0;
+}
+.best-comparison span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.best-comparison strong {
+  font: 500 1.35rem var(--font-mono);
+}
+.best-explanation {
+  flex: 1 1 17rem;
+  max-width: 55ch;
+  color: var(--text-muted);
+}
+.best-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.best-list,
+.best-detail {
+  min-width: 0;
+}
+.best-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.best-table :where(th, td) {
+  padding: 0.7rem 0.65rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.best-table thead th {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.best-table td:nth-child(2),
+.best-table td:last-child {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+.best-table td:nth-child(3) {
+  min-width: 7rem;
+  font: inherit;
+}
+.best-table .best-span {
+  min-width: 10rem;
+}
+.best-inspect {
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.best-selected {
+  background: var(--blue-dim);
+}
+.best-selected .best-inspect {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.best-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+  font-size: 0.8rem;
+}
+.best-pagination .btn {
+  padding: 0.4rem 0.7rem;
+}
+.best-detail {
+  background: var(--surface);
+  border-left: 3px solid var(--blue);
+  padding: 1rem 1.2rem;
+  overflow-wrap: anywhere;
+}
+.best-detail h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+.best-detail p {
+  font-size: 0.85rem;
+  max-width: 65ch;
+}
+.best-source-label {
+  color: var(--blue);
+}
+.best-source-path {
+  display: block;
+  font-size: 0.72rem;
+  white-space: normal;
+}
+.best-record-note {
+  color: var(--text-muted);
+}
+.best-records :where(th) {
+  font-weight: 500;
+}
+#best-assumptions {
+  margin-top: 1rem;
+  max-width: 80ch;
+  font-size: 0.9rem;
+}
+#best-assumptions summary {
+  cursor: pointer;
+  color: var(--blue);
+}
+#best-assumptions li {
+  margin: 0.6rem 0;
+}
+@media (max-width: 900px) {
+  .best-columns {
+    grid-template-columns: 1fr;
+  }
+  .best-comparison {
+    gap: 1rem;
+  }
+}
+
+.best-pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+#best-route,
+#best-detail-title {
+  scroll-margin-top: 100px;
+}
+@media (max-width: 900px) {
+  .best-detail {
+    grid-row: 1;
+  }
+  .best-list {
+    grid-row: 2;
+  }
+  #best-route,
+  #best-detail-title {
+    scroll-margin-top: 175px;
+  }
+}

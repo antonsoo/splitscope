@@ -238,7 +238,7 @@ test("missing PBs and golds remain unavailable on screen and in Markdown", async
       .replaceAll('name="Personal Best"', 'name="Other"')
       .replace("<RealTime>00:00:55.0000000</RealTime>", "<RealTime/>"),
   );
-  await expect(page.locator(".hero-stats")).toContainText("Incomplete");
+  await expect(page.locator(".hero-stats")).toContainText("Unavailable");
   await expect(page.locator("#pb-odds")).toContainText("No PB recorded");
   const download = page.waitForEvent("download");
   await page.getByRole("button", { name: "Download Markdown summary" }).click();

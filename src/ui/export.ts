@@ -3,6 +3,7 @@
  * and a PNG "share card" (for a stream overlay screenshot or a social
  * post). Both run entirely client-side — nothing is uploaded anywhere.
  */
+import { bestRoute } from "../core/best-route.js";
 import type { PbOddsResult } from "../core/montecarlo.js";
 import { simulatePbOdds } from "../core/montecarlo.js";
 import {
@@ -10,7 +11,6 @@ import {
   playtimeSummary,
   possibleTimeSave,
   resetAnalysis,
-  sumOfBest,
 } from "../core/stats.js";
 import { formatSeconds } from "../core/timespan.js";
 import type { Run, TimingMethod } from "../core/types.js";
@@ -36,7 +36,7 @@ export function markdownText(text: string): string {
 
 export function buildMarkdownSummary(run: Run, params: ExportParams): string {
   const pb = computePbTotal(run, params.method);
-  const sob = sumOfBest(run, params.method);
+  const sob = bestRoute(run, params.method);
   const saves = possibleTimeSave(run, params.method)
     .map((save, i) => ({ name: run.segments[i]?.label ?? `Segment ${i + 1}`, save }))
     .filter((s): s is { name: string; save: number } => s.save !== null && s.save > 0)
@@ -62,8 +62,9 @@ export function buildMarkdownSummary(run: Run, params: ExportParams): string {
     "## Headline",
     "",
     `- **PB:** ${formatSeconds(pb)}`,
-    `- **Sum of best:** ${formatSeconds(sob.value)}${sob.complete ? "" : " (incomplete — missing a gold on at least one segment)"}`,
-    `- **Total possible time save:** ${pb !== null && sob.complete ? formatSeconds(pb - sob.value) : "— (requires a PB and every segment gold)"}`,
+    `- **Sum of best:** ${sob.totalSeconds === null ? "Unavailable (no complete path through the saved times)" : formatSeconds(sob.totalSeconds)}`,
+    `- **Individual golds added:** ${sob.goldSumSeconds === null ? "Incomplete" : formatSeconds(sob.goldSumSeconds)}`,
+    `- **Total possible time save:** ${pb !== null && sob.totalSeconds !== null ? formatSeconds(pb - sob.totalSeconds) : "— (requires a PB and a complete recorded path)"}`,
     playtime.attemptsMissingTimestamps
       ? `- **Playtime coverage:** ${formatCount(playtime.totalAttempts - playtime.attemptsMissingTimestamps)} / ${formatCount(playtime.totalAttempts)} attempts have valid timestamps; the playtime above is a subtotal.`
       : null,
@@ -75,7 +76,18 @@ export function buildMarkdownSummary(run: Run, params: ExportParams): string {
     reset.unlocatedOutcomes
       ? `**Unknown outcomes:** ${reset.unlocatedOutcomes} attempts reach the final segment without an overall time; no reset location is assigned.`
       : null,
-    "## Biggest time-save opportunities",
+    "## Sum of best evidence",
+    "",
+    "A hypothetical combination of saved golds, PB spans and combined skipped-split times; not one attempt or a pace forecast. Combined savings cannot be assigned to an individual segment.",
+    "",
+    "| Segments | Time | Source |",
+    "| --- | ---: | --- |",
+    ...sob.legs.map(
+      (leg) =>
+        `| ${leg.from + 1}–${leg.to} | ${formatSeconds(leg.seconds)} | ${leg.source.kind === "gold" ? "Stored gold" : leg.source.kind === "personal-best" ? "PB split difference" : `History #${leg.source.attemptId}`} |`,
+    ),
+    "",
+    "## Biggest individual time-save opportunities",
     "",
     "| Segment | Possible save |",
     "| --- | ---: |",
@@ -114,7 +126,7 @@ export async function exportPngCard(run: Run, params: ExportParams): Promise<voi
     );
 
   const pb = computePbTotal(run, params.method);
-  const sob = sumOfBest(run, params.method);
+  const sob = bestRoute(run, params.method);
   const odds = simulatePbOdds(run, pb, {
     method: params.method,
     recentWindow: params.recentWindow,
@@ -151,7 +163,7 @@ export async function exportPngCard(run: Run, params: ExportParams): Promise<voi
   ctx.fillText(formatSeconds(pb), 60, 280);
 
   const stats: [string, string][] = [
-    ["SUM OF BEST", sob.complete ? formatSeconds(sob.value) : "Incomplete"],
+    ["SUM OF BEST", sob.totalSeconds !== null ? formatSeconds(sob.totalSeconds) : "Unavailable"],
     ["ATTEMPTS", formatCount(run.attempts.length)],
     [
       "P(PB NEXT ATTEMPT)",

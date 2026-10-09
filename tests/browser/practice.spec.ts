@@ -58,7 +58,7 @@ test("a recorded example opens its exact reset members, raw records and full exp
   await page.getByRole("button", { name: "Inspect attempt 120", exact: true }).click();
   await expect(page.locator("#practice-attempt-title")).toBeFocused();
   await expect(page.locator(".review-detail")).toContainText('Time id="120" · segment 5');
-  await expect(page.locator(".review-source-file")).toContainText(
+  await expect(page.locator("#practice-review .review-source-file")).toContainText(
     createHash("sha256").update(real).digest("hex"),
   );
   const download = page.waitForEvent("download");

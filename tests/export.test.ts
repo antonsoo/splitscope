@@ -21,12 +21,30 @@ describe("share evidence", () => {
     expect(report).not.toContain("95% CI");
     expect(report).not.toContain("0.00%");
   });
-  it("labels incomplete sums and withholds total time save", () => {
+  it("recovers a missing gold from PB evidence in the exported calculation", () => {
     const report = buildMarkdownSummary(
       parseRun(xml.replace("<RealTime>00:00:55.0000000</RealTime>", "<RealTime/>")),
       params,
     );
-    expect(report).toContain("incomplete — missing a gold");
+    expect(report).toContain("Individual golds added:** Incomplete");
+    expect(report).not.toContain("Sum of best:** Unavailable");
+    expect(report).toContain("PB split difference");
+  });
+  it("withholds a total when the saved evidence cannot cover the run", () => {
+    const run = parseRun(xml);
+    const report = buildMarkdownSummary(
+      {
+        ...run,
+        segments: run.segments.map((segment) => ({
+          ...segment,
+          bestSegmentTime: { realTime: null, gameTime: null },
+          history: [],
+          splitTimes: new Map(),
+        })),
+      },
+      params,
+    );
+    expect(report).toContain("Sum of best:** Unavailable");
     expect(report).toContain("Total possible time save:** — (requires");
   });
   it("labels synthetic exports, actual window coverage and missing timestamps", () => {
