@@ -1,0 +1,973 @@
+{
+  "upstreamCommit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+  "counts": {
+    "publicFiles": 436,
+    "excludedFiles": 3,
+    "controlledFiles": 1001,
+    "comparisons": 2868,
+    "boundaries": 28308,
+    "sourceLegs": 14240
+  },
+  "disagreements": 0,
+  "changedPublicResults": 53,
+  "exclusions": [
+    {
+      "id": "SirCabby/splitSync/Test Data/Super Metroid blank.lss",
+      "splitscope": "LssParseError: This file is missing required LiveSplit elements: Segments. It may be corrupted or not a splits file.",
+      "upstream": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash.lss",
+      "splitscope": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Expected closing tag 'Segment' (opened in line 18, col 5) instead of closing tag 'Name'.:19:45)",
+      "upstream": "The underlying XML format couldn't be parsed."
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash_utf8.lss",
+      "splitscope": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Invalid '[    \"Run\",    \"Segments\",    \"Segment\"]' found.:1:1)",
+      "upstream": "The underlying XML format couldn't be parsed."
+    }
+  ],
+  "changes": [
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Destrega - Story - Normal.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1609.8059999999998,
+      "sumOfBestSeconds": 1511.017,
+      "combinedHistoryLegs": [
+        {
+          "from": 14,
+          "to": 16,
+          "seconds": 83.691,
+          "source": {
+            "kind": "history",
+            "attemptId": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Realms of Arkania Shadows over Riva - 100%.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 6904.698,
+      "combinedHistoryLegs": [
+        {
+          "from": 12,
+          "to": 14,
+          "seconds": 1047.563,
+          "source": {
+            "kind": "history",
+            "attemptId": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Super Mario Land 2 6 Golden Coins - Any% Glitchless.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1717.955,
+      "sumOfBestSeconds": 1662.73,
+      "combinedHistoryLegs": [
+        {
+          "from": 18,
+          "to": 20,
+          "seconds": 62.613,
+          "source": {
+            "kind": "history",
+            "attemptId": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/16 blind.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1837.2319999999997,
+      "sumOfBestSeconds": 1746.552,
+      "combinedHistoryLegs": [
+        {
+          "from": 16,
+          "to": 18,
+          "seconds": 146.31,
+          "source": {
+            "kind": "history",
+            "attemptId": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/50 star blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 3473.6368654000003,
+      "sumOfBestSeconds": 3458.4517223,
+      "combinedHistoryLegs": [
+        {
+          "from": 0,
+          "to": 2,
+          "seconds": 529.3538487,
+          "source": {
+            "kind": "history",
+            "attemptId": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/725k.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2342.366,
+      "sumOfBestSeconds": 2190.221,
+      "combinedHistoryLegs": [
+        {
+          "from": 0,
+          "to": 2,
+          "seconds": 469.586,
+          "source": {
+            "kind": "history",
+            "attemptId": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/72oi.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1534.0679999999998,
+      "sumOfBestSeconds": 1500.001,
+      "combinedHistoryLegs": [
+        {
+          "from": 13,
+          "to": 16,
+          "seconds": 160.554,
+          "source": {
+            "kind": "history",
+            "attemptId": 59
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Breath of The Wild Category Extensions - Blindfolded Ganon.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 4645.3459649999995,
+      "sumOfBestSeconds": 4217.294838,
+      "combinedHistoryLegs": [
+        {
+          "from": 10,
+          "to": 12,
+          "seconds": 818.803,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Dark Edition 16 Start.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1164.0312737000002,
+      "sumOfBestSeconds": 1161.0065931,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Nier Automata A Blindfolded.lss",
+      "method": "GameTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 10014.0,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/SM64 - Dark Edition - 70 Star.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 4042.7670000000003,
+      "sumOfBestSeconds": 3928.198,
+      "combinedHistoryLegs": [
+        {
+          "from": 0,
+          "to": 2,
+          "seconds": 174.024,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 0 Star NEW Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 634.5150568,
+      "sumOfBestSeconds": 605.6764637,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 100 Star Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 15022.658676600005,
+      "sumOfBestSeconds": 14961.27271,
+      "combinedHistoryLegs": [
+        {
+          "from": 19,
+          "to": 21,
+          "seconds": 151.1135899,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        },
+        {
+          "from": 21,
+          "to": 24,
+          "seconds": 190.3774435,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 100 Star.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 17622.4928035,
+      "combinedHistoryLegs": [
+        {
+          "from": 7,
+          "to": 10,
+          "seconds": 135.8788387,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "seconds": 1214.4969171,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 15,
+          "to": 18,
+          "seconds": 1213.4780663,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 35,
+          "to": 37,
+          "seconds": 510.7194056,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 50,
+          "to": 52,
+          "seconds": 165.311436,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 62,
+          "to": 64,
+          "seconds": 132.9304851,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 64,
+          "to": 66,
+          "seconds": 429.9295142,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 79,
+          "to": 81,
+          "seconds": 608.1599662,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star REAL.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 7046.109441800003,
+      "sumOfBestSeconds": 6965.4677642,
+      "combinedHistoryLegs": [
+        {
+          "from": 74,
+          "to": 79,
+          "seconds": 247.7658631,
+          "source": {
+            "kind": "history",
+            "attemptId": 13
+          }
+        },
+        {
+          "from": 87,
+          "to": 93,
+          "seconds": 356.3036015,
+          "source": {
+            "kind": "history",
+            "attemptId": 13
+          }
+        },
+        {
+          "from": 93,
+          "to": 99,
+          "seconds": 463.1987763,
+          "source": {
+            "kind": "history",
+            "attemptId": 13
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 15 Star Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 2155.2988121,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2022.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 1819.293,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2025 REAL.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 1107.2322959,
+      "combinedHistoryLegs": [
+        {
+          "from": 6,
+          "to": 8,
+          "seconds": 54.3348007,
+          "source": {
+            "kind": "history",
+            "attemptId": 505
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded Basement RTA.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 1201.7999711,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded LBLJ.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1666.0280897000002,
+      "sumOfBestSeconds": 1201.1198935,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded WR no tiny bullies.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1909.230885,
+      "sumOfBestSeconds": 1758.8684831,
+      "combinedHistoryLegs": [
+        {
+          "from": 8,
+          "to": 10,
+          "seconds": 52.6965291,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 13,
+          "to": 16,
+          "seconds": 78.1832097,
+          "source": {
+            "kind": "history",
+            "attemptId": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 50 Star Blindfolded (Marathon Route).lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2684.3571089000006,
+      "sumOfBestSeconds": 2683.3829751,
+      "combinedHistoryLegs": [
+        {
+          "from": 20,
+          "to": 25,
+          "seconds": 180.6397749,
+          "source": {
+            "kind": "history",
+            "attemptId": 36
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star 50xA.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 7177.438500999999,
+      "sumOfBestSeconds": 6538.8604718,
+      "combinedHistoryLegs": [
+        {
+          "from": 4,
+          "to": 9,
+          "seconds": 262.6663028,
+          "source": {
+            "kind": "history",
+            "attemptId": 16
+          }
+        },
+        {
+          "from": 27,
+          "to": 29,
+          "seconds": 88.2096707,
+          "source": {
+            "kind": "history",
+            "attemptId": 10
+          }
+        },
+        {
+          "from": 39,
+          "to": 41,
+          "seconds": 91.7917529,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        },
+        {
+          "from": 50,
+          "to": 52,
+          "seconds": 231.3349594,
+          "source": {
+            "kind": "history",
+            "attemptId": 17
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded (WF Late).lss",
+      "method": "RealTime",
+      "goldSumSeconds": 3837.1337777000017,
+      "sumOfBestSeconds": 3833.629329,
+      "combinedHistoryLegs": [
+        {
+          "from": 41,
+          "to": 43,
+          "seconds": 96.904,
+          "source": {
+            "kind": "history",
+            "attemptId": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded 2025 2.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 4343.2425766,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded 2025.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 4436.4273067,
+      "sumOfBestSeconds": 4345.3097313,
+      "combinedHistoryLegs": [
+        {
+          "from": 30,
+          "to": 32,
+          "seconds": 66.1632786,
+          "source": {
+            "kind": "history",
+            "attemptId": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded CCM Route (1).lss",
+      "method": "RealTime",
+      "goldSumSeconds": 3839.193353300002,
+      "sumOfBestSeconds": 3835.6889046,
+      "combinedHistoryLegs": [
+        {
+          "from": 41,
+          "to": 43,
+          "seconds": 96.904,
+          "source": {
+            "kind": "history",
+            "attemptId": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded Kopie.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 6293.629,
+      "sumOfBestSeconds": 6267.807,
+      "combinedHistoryLegs": [
+        {
+          "from": 4,
+          "to": 6,
+          "seconds": 320.769,
+          "source": {
+            "kind": "history",
+            "attemptId": -2
+          }
+        },
+        {
+          "from": 12,
+          "to": 14,
+          "seconds": 721.814,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded no dw reds.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 3813.0691597,
+      "combinedHistoryLegs": [
+        {
+          "from": 52,
+          "to": 54,
+          "seconds": 96.0967556,
+          "source": {
+            "kind": "history",
+            "attemptId": 106
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 6610.39,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - All Signs Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1342.0967034000003,
+      "sumOfBestSeconds": 1290.942488,
+      "combinedHistoryLegs": [
+        {
+          "from": 76,
+          "to": 80,
+          "seconds": 21.9626849,
+          "source": {
+            "kind": "history",
+            "attemptId": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Dark Edition - 120 Star.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 14225.294827999998,
+      "sumOfBestSeconds": 13593.576869,
+      "combinedHistoryLegs": [
+        {
+          "from": 1,
+          "to": 3,
+          "seconds": 22.0666265,
+          "source": {
+            "kind": "history",
+            "attemptId": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Dark Edition - 16 Star LBLJ.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 1187.9058196,
+      "combinedHistoryLegs": [
+        {
+          "from": 9,
+          "to": 12,
+          "seconds": 35.761,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Lobby RTA.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 8937.9707808,
+      "combinedHistoryLegs": [
+        {
+          "from": 31,
+          "to": 33,
+          "seconds": 168.8449081,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - SL Stage RTA Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 767.1845533000001,
+      "sumOfBestSeconds": 583.3312207,
+      "combinedHistoryLegs": [
+        {
+          "from": 0,
+          "to": 4,
+          "seconds": 221.921,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - THI Stage RTA Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1008.88195,
+      "sumOfBestSeconds": 961.8505386,
+      "combinedHistoryLegs": [
+        {
+          "from": 4,
+          "to": 6,
+          "seconds": 74.754685,
+          "source": {
+            "kind": "history",
+            "attemptId": 69
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Upstairs RTA Blindfolded.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 6970.4136473,
+      "combinedHistoryLegs": [
+        {
+          "from": 17,
+          "to": 19,
+          "seconds": 232.0628624,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        },
+        {
+          "from": 22,
+          "to": 24,
+          "seconds": 313.1932734,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Breath of the Wild - Any% Blindfolded NoBLSS.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 3873.624666,
+      "sumOfBestSeconds": 3654.1416604,
+      "combinedHistoryLegs": [
+        {
+          "from": 10,
+          "to": 12,
+          "seconds": 818.803,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Econo - Any%.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1128.7828479999998,
+      "sumOfBestSeconds": 1125.5055991,
+      "combinedHistoryLegs": [
+        {
+          "from": 2,
+          "to": 4,
+          "seconds": 68.2169767,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Any% Warpless.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2890.4891614,
+      "sumOfBestSeconds": 1977.3681809,
+      "combinedHistoryLegs": [
+        {
+          "from": 0,
+          "to": 5,
+          "seconds": 760.546,
+          "source": {
+            "kind": "history",
+            "attemptId": 5
+          }
+        },
+        {
+          "from": 8,
+          "to": 16,
+          "seconds": 363.545,
+          "source": {
+            "kind": "history",
+            "attemptId": 1303
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Any% Warpless.lss",
+      "method": "GameTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 2917.419,
+      "combinedHistoryLegs": [
+        {
+          "from": 5,
+          "to": 8,
+          "seconds": 385.972,
+          "source": {
+            "kind": "history",
+            "attemptId": 1538
+          }
+        },
+        {
+          "from": 8,
+          "to": 16,
+          "seconds": 363.428,
+          "source": {
+            "kind": "history",
+            "attemptId": 1303
+          }
+        },
+        {
+          "from": 16,
+          "to": 19,
+          "seconds": 541.256,
+          "source": {
+            "kind": "history",
+            "attemptId": 1364
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - World 3.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 219.723064,
+      "sumOfBestSeconds": 197.0570026,
+      "combinedHistoryLegs": [
+        {
+          "from": 1,
+          "to": 7,
+          "seconds": 104.8656976,
+          "source": {
+            "kind": "history",
+            "attemptId": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 Romhack Trilogy - Any%.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 5054.308,
+      "sumOfBestSeconds": 5042.083,
+      "combinedHistoryLegs": [
+        {
+          "from": 7,
+          "to": 9,
+          "seconds": 518.982,
+          "source": {
+            "kind": "history",
+            "attemptId": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Tea - English Breakfast%.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 301.469055,
+      "sumOfBestSeconds": 224.552669,
+      "combinedHistoryLegs": [
+        {
+          "from": 3,
+          "to": 6,
+          "seconds": 80.258,
+          "source": {
+            "kind": "history",
+            "attemptId": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Bad + Normal Ending, Hard.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2752.621,
+      "sumOfBestSeconds": 2729.041,
+      "combinedHistoryLegs": [
+        {
+          "from": 14,
+          "to": 16,
+          "seconds": 132.721,
+          "source": {
+            "kind": "history",
+            "attemptId": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Normal Ending, Easy.lss",
+      "method": "RealTime",
+      "goldSumSeconds": null,
+      "sumOfBestSeconds": 1898.721,
+      "combinedHistoryLegs": [
+        {
+          "from": 2,
+          "to": 4,
+          "seconds": 480.329,
+          "source": {
+            "kind": "history",
+            "attemptId": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Cave Story - CroakClip%.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 579.489452,
+      "sumOfBestSeconds": 574.66,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/Celeste - Any% (1.2.1.5).lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2275.3959999999997,
+      "sumOfBestSeconds": 2275.395999,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/Celeste - Any% (1.2.1.5).lss",
+      "method": "GameTime",
+      "goldSumSeconds": 2091.2039990000007,
+      "sumOfBestSeconds": 2091.203998,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "method": "GameTime",
+      "goldSumSeconds": 7505.489385400001,
+      "sumOfBestSeconds": 7389.1970273,
+      "combinedHistoryLegs": [
+        {
+          "from": 6,
+          "to": 8,
+          "seconds": 1235.8275742,
+          "source": {
+            "kind": "history",
+            "attemptId": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6_gametime.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 1965.5219999999997,
+      "sumOfBestSeconds": 1964.482,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6_gametime.lss",
+      "method": "GameTime",
+      "goldSumSeconds": 2201.0809999999997,
+      "sumOfBestSeconds": 2199.968,
+      "combinedHistoryLegs": []
+    },
+    {
+      "id": "gonX/livesplit2urn/example.lss",
+      "method": "RealTime",
+      "goldSumSeconds": 2720.862,
+      "sumOfBestSeconds": 2578.709,
+      "combinedHistoryLegs": [
+        {
+          "from": 5,
+          "to": 7,
+          "seconds": 98.098,
+          "source": {
+            "kind": "history",
+            "attemptId": 122
+          }
+        },
+        {
+          "from": 11,
+          "to": 13,
+          "seconds": 139.372,
+          "source": {
+            "kind": "history",
+            "attemptId": 72
+          }
+        }
+      ]
+    }
+  ]
+}
