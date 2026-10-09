@@ -1,0 +1,36 @@
+{
+  "manifestSha256": "dcc137b85e35d12d14728ee88031b1bdfac183046f19bdbdce338c30183ee943",
+  "inputFilesHashVerified": 436,
+  "acceptedFiles": 433,
+  "excludedFiles": [
+    {
+      "file": "SirCabby/splitSync/Test Data/Super Metroid blank.lss",
+      "error": "LssParseError: This file is missing required LiveSplit elements: Segments. It may be corrupted or not a splits file."
+    },
+    {
+      "file": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash.lss",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Expected closing tag 'Segment' (opened in line 18, col 5) instead of closing tag 'Name'.:19:45)"
+    },
+    {
+      "file": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash_utf8.lss",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Invalid '[    \"Run\",    \"Segments\",    \"Segment\"]' found.:1:1)"
+    }
+  ],
+  "recordedAttempts": 85512,
+  "groupsChecked": 3464,
+  "attemptInspectionsChecked": 26352,
+  "segmentRecordsChecked": 398606,
+  "recordKinds": {
+    "timed": 47353,
+    "combined": 451,
+    "untimed": 36704,
+    "missing": 314098
+  },
+  "disagreements": 0,
+  "seconds": 5.767,
+  "sourceSha256": {
+    "src/core/review.ts": "9f0409ce3312eb64e6a849997f99aae2bbee829bf1330babdc67561480b37157",
+    "src/core/stats.ts": "663a26198810b9b3189d5b74e78937d48489c23e2cdc648ad07f22613b8197e4",
+    "src/core/parser.ts": "e470945fe96253ed2028d4ba81b20df6ab752ca68545bdc3d4104604cb013a55"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "source": {
+    "name": "recorded/zero-divide-2.lss",
+    "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+    "bytes": 75529,
+    "synthetic": false
+  },
+  "results": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "importMs": 729,
+      "axeScans": 2,
+      "axeViolations": 0,
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "offlineReview": true,
+      "downloadMatchesNative": true,
+      "downloadSha256": "c93d96dfb4b4b69a8e2f44eeaeac5a193c037a340703c31c33b7fb42805cd994",
+      "screenshots": [
+        "docs/assets/practice-chromium-1440.png",
+        "docs/assets/practice-evidence-chromium-1440.png"
+      ]
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "importMs": 156,
+      "axeScans": 2,
+      "axeViolations": 0,
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "offlineReview": true,
+      "downloadMatchesNative": true,
+      "downloadSha256": "c93d96dfb4b4b69a8e2f44eeaeac5a193c037a340703c31c33b7fb42805cd994",
+      "screenshots": [
+        "docs/assets/practice-chromium-375.png",
+        "docs/assets/practice-evidence-chromium-375.png"
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "importMs": 360,
+      "axeScans": 2,
+      "axeViolations": 0,
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "offlineReview": true,
+      "downloadMatchesNative": true,
+      "downloadSha256": "c93d96dfb4b4b69a8e2f44eeaeac5a193c037a340703c31c33b7fb42805cd994",
+      "screenshots": [
+        "docs/assets/practice-firefox-1440.png",
+        "docs/assets/practice-evidence-firefox-1440.png"
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "importMs": 142,
+      "axeScans": 2,
+      "axeViolations": 0,
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "offlineReview": true,
+      "downloadMatchesNative": true,
+      "downloadSha256": "c93d96dfb4b4b69a8e2f44eeaeac5a193c037a340703c31c33b7fb42805cd994",
+      "screenshots": [
+        "docs/assets/practice-firefox-375.png",
+        "docs/assets/practice-evidence-firefox-375.png"
+      ]
+    }
+  ]
+}

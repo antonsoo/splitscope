@@ -5,16 +5,20 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/live%20demo-antonsoo.github.io%2Fsplitscope-6fb7ff)](https://antonsoo.github.io/splitscope/)
 
-![splitscope: a dark speedrun-overlay-styled dashboard showing a personal best of 11:48.87 across 14 segments, a personal-best split list, a segment time-save table, and summary stats for a 450-attempt run, with a "synthetic sample" badge next to the category name](docs/assets/hero.png)
+LiveSplit's `.lss` file can retain thousands of attempts and their segment
+times. splitscope opens that history locally: compare recent practice, inspect
+which attempts contributed to a reset count, find time-save opportunities, and
+estimate PB odds with the model's assumptions visible. Missing or edited
+history limits what the file can establish.
 
-LiveSplit's `.lss` file records **every segment time of every attempt you've
-ever made**. The timer on your screen shows you one number: the delta
-against your current comparison. It never tells you which segment is
-actually costing you the most time, whether your "inconsistent" segment is
-inconsistent or you're imagining it, where your runs actually die, or what
-your realistic odds of a PB are tonight. That data all exists — LiveSplit
-just doesn't show it to you. splitscope reads the same file and answers
-those questions, entirely in your browser.
+**New in this source checkout:** the recorded-practice example compares two
+groups in a public Zero Divide 2 history. Resets inferred at the first fight
+drop from 29 of 30 attempts to 15 of 30; open either count to inspect its exact
+members and original split records. The example is a licensed, unchanged file,
+not simulated gameplay. [Walkthrough and verification](docs/practice-review.md).
+These additions are local and unreleased.
+
+![Comparing two groups of actual recorded attempts, with reset counts linked to individual attempts](docs/assets/practice-chromium-1440.png)
 
 ## PB odds, checked against what happened next
 
@@ -62,6 +66,10 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
 
 ## Features
 
+- **Recorded practice review (source checkout)**: compare consecutive groups
+  ending at any recorded attempt, open reset counts and inspect original split
+  records. Skipped, combined and absent times stay distinct. Download both
+  complete groups with source hashes and raw records. Works offline after load.
 - **Parses LiveSplit `.lss` files** — game/category, offset, full attempt
   history, per-segment PB/gold/history, both RealTime and GameTime — verified
   against LiveSplit's own reference parser, with graceful fallback back to
@@ -84,7 +92,7 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
 - **PB odds** — the one number LiveSplit can't show you: a Monte Carlo
   simulation of your probability of beating your PB, on the next attempt or
   within the next *K*, with a confidence interval and its assumptions stated
-  up front. This is the feature that doesn't exist anywhere else.
+  up front, with a backtest against public attempt histories.
 - **Recoverable imports**: cancel a pending read, retry a sample, or replace a file.
   A failed replacement keeps the current analysis. **New file** clears the run
   from the workspace. Files and sample responses are limited to 25 MiB.
@@ -103,9 +111,11 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
    **Load sample** to try synthetic data first.
 3. Toggle **RTA / IGT** to switch between RealTime and GameTime, if your
    splits have both.
-4. Scroll to **PB odds** and adjust the recent-form window, look-ahead, and
+4. In the source checkout, use **Recorded practice** to compare recent and
+   previous groups. Open a reset count, then an attempt ID, to inspect the evidence.
+5. Scroll to **PB odds** and adjust the recent-form window, look-ahead, and
    simulation count live.
-5. **Export → Download Markdown summary** or **Download PNG card** to share.
+6. **Export → Download Markdown summary** or **Download PNG card** to share.
 
 ### Example output
 
@@ -282,7 +292,7 @@ every segment's history, and the page runs it several times per render.
   histories it was biased low (about a third of the PBs that followed were
   expected), most for runners still improving; see
   [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md). Treat the output as a
-  floor for a runner who is still getting faster, not a guarantee.
+  model estimate; the observed downward bias is not a guaranteed lower bound.
 - **The finish/reset signal is inferred**, not an explicit field in the
   format: either overall RealTime or GameTime counts as completion evidence.
   Reset locations assume unedited segment histories; see `docs/format.md`.
@@ -307,9 +317,11 @@ every segment's history, and the page runs it several times per render.
   [`CONTRIBUTING.md`](CONTRIBUTING.md)).
 - **Icons and autosplitter settings are ignored entirely** — splitscope is
   an analyzer, not a splits editor, and never writes a `.lss` file back out.
-- Sample data in `examples/` is **synthetic**, generated by
+- The Crystal Caverns sample data in `examples/` is **synthetic**, generated by
   `scripts/generate-sample.ts` for a fictional game ("Crystal Caverns");
-  it is not a real speedrun and every number in it is simulated.
+  it is not a real speedrun and every number in it is simulated. The separate
+  `examples/recorded/zero-divide-2.lss` is an unchanged public history from
+  AmenAnthem, redistributed with its MIT license and pinned source metadata.
 
 ## Contributing
 

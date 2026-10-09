@@ -1,0 +1,42 @@
+{
+  "node": "v24.21.0",
+  "platform": "linux 6.18.40.1-microsoft-standard-WSL2",
+  "logicalCpus": 14,
+  "memoryGiB": 47,
+  "iterations": 12,
+  "results": [
+    {
+      "file": "examples/recorded/zero-divide-2.lss",
+      "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "bytes": 75529,
+      "attempts": 124,
+      "segments": 12,
+      "medianParseMs": 3.1264759999999967,
+      "medianColdReviewMs": 0.03332950000000778,
+      "medianWholeHistoryReviewMs": 0.0209054999999978,
+      "medianInspectLastAttemptMs": 0.012243500000010954
+    },
+    {
+      "file": "studies/pb-odds-backtest/cache/zhrakula_nes/Tengen Tetris (NES)/Tengen Tetris (NES) - 100 Lines.lss",
+      "sha256": "6be62df0901704f7a973a38bab871b8a740435810890863c68b05e0b7881d51f",
+      "bytes": 2632666,
+      "attempts": 20266,
+      "segments": 4,
+      "medianParseMs": 176.74768399999994,
+      "medianColdReviewMs": 1.4761509999998452,
+      "medianWholeHistoryReviewMs": 0.2875330000000531,
+      "medianInspectLastAttemptMs": 0.13212650000014037
+    },
+    {
+      "file": "studies/pb-odds-backtest/cache/narfman0_livesplit-data/splits/Super Mario Bros. 3 - Any% Warpless.lss",
+      "sha256": "539f09871f47b9aeb827669cb5300330ec29b9de3190407778d59bd7628206f0",
+      "bytes": 2863522,
+      "attempts": 11262,
+      "segments": 19,
+      "medianParseMs": 227.98851600000012,
+      "medianColdReviewMs": 1.481115999999929,
+      "medianWholeHistoryReviewMs": 0.1774439999999231,
+      "medianInspectLastAttemptMs": 0.13913999999977023
+    }
+  ]
+}

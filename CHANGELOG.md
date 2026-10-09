@@ -4,6 +4,16 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Compare recent and preceding practice groups at any recorded attempt. Inspect
+  reset membership, individual split records and current-PB deltas, and export
+  both full groups with original evidence and the input SHA-256. Keep completed,
+  inferred-reset and unknown outcomes distinct, including other-method totals.
+- Add an unchanged, attributed Zero Divide 2 history as an interactive recorded
+  example. Independently check practice arithmetic and split interpretation on
+  433 parsed public files, including 398,606 inspected segment records.
+- Paginate the practice tables, preserve keyboard focus and selections, and show
+  readable split records on phones. Keep the sticky header opaque so scrolled
+  text does not overlap its controls in Firefox.
 - PB odds widen the recent-form window until every segment has at least three timed
   durations in it (`minSegmentSamples`, default 3; 0 keeps the window exactly as asked).
   Backtested on 51 real histories, this lets 61% of stopping points be forecast instead of 39%
