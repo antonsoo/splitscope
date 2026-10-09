@@ -123,9 +123,11 @@ So a segment's *own* PB duration isn't stored directly — it's the difference
 between consecutive cumulative PB split times
 (`pbSegmentDuration(i) = pbCumulative(i) − pbCumulative(i − 1)`), which is
 exactly how splitscope computes "possible time save"
-(`src/core/stats.ts`, `pbSegmentDuration`). "Sum of best" is the sum of every
-segment's *own* gold (`BestSegmentTime`) — a hypothetical run that never
-happened, not a real attempt.
+(`src/core/stats.ts`, `pbSegmentDuration`). "Individual golds added" sums every
+segment's own `BestSegmentTime`. The source checkout's **sum of best** also
+considers complete PB spans and combined skipped-split history, matching
+LiveSplit's normal calculation. It is a hypothetical combination, not a real
+attempt. [Source inspection and exact rules](sum-of-best.md).
 
 ## What counts as a "reset"
 

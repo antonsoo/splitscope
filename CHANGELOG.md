@@ -4,6 +4,16 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Calculate sum of best from complete stored gold, PB and combined-history
+  spans, matching LiveSplit's normal calculation. Keep the gold-only sum visible;
+  return unavailable for missing paths, not a partial total.
+- Inspect each contributing source record and download full calculation inputs
+  with the source hash. Keep combined times indivisible and update Markdown/PNG
+  totals. Include an unchanged, licensed Destrega history demonstrating the gap.
+- Check 2,868 calculations and all intermediate boundaries against compiled,
+  pinned LiveSplit, plus 14,240 source spans against original XML. Retain public
+  changes, generated controls, offline downloads and browser captures.
+
 - Compare recent and preceding practice groups at any recorded attempt. Inspect
   reset membership, individual split records and current-PB deltas, and export
   both full groups with original evidence and the input SHA-256. Keep completed,

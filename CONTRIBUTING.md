@@ -31,6 +31,12 @@ Build, start a preview with `npm run preview -- --port 4331`, then run
 the PB panel, import recovery, and the actual downloaded PNG card under
 `docs/assets/`. Review every image before committing it.
 
+The sum-of-best inspection has a separate capture command:
+`node scripts/capture-best-route.mjs`, after building and starting preview on
+port 4337. It retains unedited offline downloads in the study's results folder.
+See [the compiled-oracle replay](studies/sum-of-best/README.md) for checking changes
+to the calculation against LiveSplit and the original XML.
+
 ## Regenerating the sample data
 
 `examples/*.lss` are generated, not hand-written:

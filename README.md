@@ -11,6 +11,17 @@ which attempts contributed to a reset count, find time-save opportunities, and
 estimate PB odds with the model's assumptions visible. Missing or edited
 history limits what the file can establish.
 
+**A sum of best needs its source records.** In the source checkout, an unchanged
+public Destrega file now gives **25:11.017**, where adding its individual golds
+previously gave **26:49.806**. A saved skipped-split span accounts for the
+98.789-second difference. Open the combined-split example to inspect the exact
+entries and download the complete calculation. These are hypothetical saved-time
+combinations, not a claim about achievable pace. The
+[compiled LiveSplit comparison](studies/sum-of-best/README.md) checks 2,868
+calculations and every selected source span. This change is **unreleased**.
+
+![The two original records behind Destrega's faster combined span](docs/assets/sum-of-best/chromium-1440-dark.png)
+
 **New in this source checkout:** the recorded-practice example compares two
 groups in a public Zero Divide 2 history. Resets inferred at the first fight
 drop from 29 of 30 attempts to 15 of 30; open either count to inspect its exact
@@ -65,6 +76,11 @@ npm run dev
 Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
 
 ## Features
+
+- **Inspectable sum of best (source checkout)**: golds, PB spans and combined
+  skipped-split history contribute complete, nonoverlapping spans. Open the
+  original records, compare with the gold-only sum and export all calculation
+  inputs. Missing paths remain unavailable. [Rules and limits](docs/sum-of-best.md).
 
 - **Recorded practice review (source checkout)**: compare consecutive groups
   ending at any recorded attempt, open reset counts and inspect original split
@@ -192,6 +208,12 @@ statistic in the app, so it's called out explicitly in code and in
 `docs/format.md`.
 
 ### Time-save and consistency
+
+The source checkout calculates sum of best as a shortest path through recorded
+split boundaries, matching LiveSplit's normal calculation. A combined history
+or PB span can be faster than individual golds or cover missing ones; it stays
+indivisible. The UI and downloads retain its source records. Individual golds
+are still shown separately. [Algorithm and source contract](docs/sum-of-best.md).
 
 - *Possible time save* per segment = (this segment's PB duration) − (this
   segment's gold), where PB duration is the difference between consecutive
