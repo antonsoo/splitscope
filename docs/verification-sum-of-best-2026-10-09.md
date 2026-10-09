@@ -1,4 +1,4 @@
-# Local verification: recorded sum-of-best evidence
+# Verification: recorded sum-of-best evidence
 
 The source checkout now computes the same normal sum-of-best totals as pinned
 LiveSplit for the checked inputs, and lets a runner inspect the contributing
@@ -6,8 +6,16 @@ records. The retained Destrega file changes from 26:49.806 (individual golds)
 to 25:11.017 (including a combined span). The JSON download contains enough
 source data to replay the entire calculation, not only its selected route.
 
-The work is local and unreleased. No repository was pushed and no hosted build
-was changed. The source tree was clean before work began at `fc4193a`.
+The source tree was clean before work began at `fc4193a`. After the local checks,
+source commit `751d1bf` was pushed to `main` and its verified static build to
+`gh-pages` (`247359d`). No package registry release was made.
+
+The [hosted verification](verification-sum-of-best-hosted.json) records real
+Chromium and Firefox visits to [the published app](https://antonsoo.github.io/splitscope/).
+Both loaded Destrega at 375px, displayed 25:11.017, and downloaded the complete
+calculation offline, matching the retained JSON exactly. Neither had page
+overflow or runtime errors. The served JS and CSS SHA-256 hashes matched the
+fresh production build below.
 
 ## Verification performed
 
@@ -67,7 +75,7 @@ scenarios subsequently passed together in the fresh install.
 - [Desktop screenshot](assets/sum-of-best/chromium-1440-dark.png)
 - [Phone screenshot](assets/sum-of-best/firefox-375-light.png)
 
-Suggested repository description (unchanged publishing scope):
+Suggested repository description:
 **Inspect LiveSplit histories, practice cohorts and the source records behind a sum of best.**
 
 Suggested topics: `livesplit`, `speedrunning`, `data-visualization`, `typescript`,

@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-09T21:51:15.553Z",
+  "sourceCommit": "751d1bf051caa50b61926c015823768514d52218",
+  "pagesCommit": "247359d",
+  "url": "https://antonsoo.github.io/splitscope/",
+  "checks": [
+    {
+      "browser": "chromium",
+      "width": 375,
+      "httpStatus": 200,
+      "total": "25:11.017",
+      "offlineCalculationMatchesRetained": true,
+      "pageOverflow": false,
+      "runtimeErrors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "httpStatus": 200,
+      "total": "25:11.017",
+      "offlineCalculationMatchesRetained": true,
+      "pageOverflow": false,
+      "runtimeErrors": []
+    }
+  ],
+  "assets": [
+    {
+      "path": "/splitscope/assets/index-CdnlXKWw.js",
+      "sha256": "887b1ffd2253fd9017eaaa4c4db903e960cc9351c3ce3c2491f847feeb6f4a5a",
+      "matchesCleanBuild": true
+    },
+    {
+      "path": "/splitscope/assets/index-CHOsmlSE.css",
+      "sha256": "4ddbf41b8168b5fdac470db4924cdc8585ffed76afa787397db55041c3b22670",
+      "matchesCleanBuild": true
+    }
+  ]
+}
