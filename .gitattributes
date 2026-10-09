@@ -1,0 +1,3 @@
+# Preserve the bytes identified by source hashes and retained browser downloads.
+examples/recorded/*.lss -text
+studies/sum-of-best/results/browser/* -text
