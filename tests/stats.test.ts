@@ -80,7 +80,7 @@ describe("PB, gold, and time-save math", () => {
     expect(possibleTimeSave(run, "RealTime")).toEqual([2, 2, 3]);
   });
 
-  it("flags sum-of-best as incomplete when a gold is missing", () => {
+  it("uses a PB duration when a gold is missing", () => {
     const withMissingGold: Run = {
       ...run,
       segments: [
@@ -88,7 +88,7 @@ describe("PB, gold, and time-save math", () => {
         { ...(run.segments[1] as Segment), bestSegmentTime: dt(null) },
       ],
     };
-    expect(sumOfBest(withMissingGold, "RealTime")).toEqual({ value: 8, complete: false });
+    expect(sumOfBest(withMissingGold, "RealTime")).toEqual({ value: 23, complete: true });
   });
 
   it("propagates a missing middle PB split forward, rather than diffing across the gap", () => {
@@ -112,7 +112,7 @@ describe("PB, gold, and time-save math", () => {
   it("returns null/empty for a run with no segments at all", () => {
     const noSegments: Run = { ...run, segments: [] };
     expect(pbTotal(noSegments, "RealTime")).toBeNull();
-    expect(sumOfBest(noSegments, "RealTime")).toEqual({ value: 0, complete: true });
+    expect(sumOfBest(noSegments, "RealTime")).toEqual({ value: null, complete: false });
     expect(possibleTimeSave(noSegments, "RealTime")).toEqual([]);
   });
 });

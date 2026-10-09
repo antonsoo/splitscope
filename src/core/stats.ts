@@ -5,6 +5,7 @@
  * no hidden state, no I/O — so each one is independently testable against
  * hand-computed values (see `tests/stats.test.ts`).
  */
+import { bestRoute } from "./best-route.js";
 import { type Attempt, PERSONAL_BEST, pick, type Run, type TimingMethod } from "./types.js";
 
 /** Cumulative PB split time at segment `index` (0-based), or `null` if not recorded. */
@@ -30,19 +31,13 @@ export function pbTotal(run: Run, method: TimingMethod): number | null {
   return run.segments.length === 0 ? null : pbCumulative(run, run.segments.length - 1, method);
 }
 
-/** Sum of best: the total if every segment's gold were run back to back. `complete` is false if any segment lacks a gold. */
-export function sumOfBest(run: Run, method: TimingMethod): { value: number; complete: boolean } {
-  let total = 0;
-  let complete = true;
-  for (const segment of run.segments) {
-    const gold = pick(segment.bestSegmentTime, method);
-    if (gold === null) {
-      complete = false;
-    } else {
-      total += gold;
-    }
-  }
-  return { value: total, complete };
+/** Fastest complete combination of stored golds, PB spans and skipped-split history. */
+export function sumOfBest(
+  run: Run,
+  method: TimingMethod,
+): { value: number | null; complete: boolean } {
+  const value = bestRoute(run, method).totalSeconds;
+  return { value, complete: value !== null };
 }
 
 /** Possible time save per segment: PB's own segment duration minus that segment's gold. `null` if either is unknown. */
