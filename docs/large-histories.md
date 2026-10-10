@@ -131,6 +131,16 @@ The [delta capture](assets/large-histories/delta-desktop.png) and
 display summaries. This evidence describes a local production build of the
 source revision; it does not identify a hosted deployment or registry release.
 
+A subsequent [forecast wording correction](../studies/pb-odds-backtest/README.md#what-the-counts-mean)
+updated the app's assumptions without changing its calculations. Its
+[separate verification](evidence/large-histories/claim-verification.json) records
+the new build: lint/types and 18 relevant core/export checks passed; the actual
+[browser observation](evidence/large-histories/claim-ui.json) confirms the new
+wording and byte-identical worker and 140,000-record calculation download.
+The [assumptions capture](assets/large-histories/claim-assumptions.png) shows the
+corrected event definition. The full 165-core/70-browser run above belongs to
+the earlier runtime revision identified in its manifest.
+
 ## Limits
 
 The timeout bounds worker parsing, not total page memory or every operation

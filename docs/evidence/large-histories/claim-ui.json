@@ -1,0 +1,8 @@
+{
+  "assumptions": "How this is modeled, and what it assumes\nEach simulated segment time is bootstrap-resampled (drawn with replacement) from that segment's own recent history — not fit to a parametric distribution.\nEach segment also rolls its own empirical reset hazard: how often, historically, an attempt that reached this segment died during it.\nSegment times are drawn independently of each other (a slow segment doesn't change the odds of the next one being slow or fast).\nThe recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving. In the recorded backtest, mean 50-attempt PB probability was 14.3%; a PB occurred in 30.9% of evaluated windows. Windows overlap; this is not a per-runner calibration guarantee.\nReset hazard per segment is estimated from historical frequency and assumed constant going forward.\nAttempts are treated as independent trials when combining single-attempt odds into a multi-attempt probability.\nThe 95% intervals cover simulation noise only: they narrow as you add simulations, not as you add attempts, so they don't measure how well the recent-form window represents you.",
+  "workerSha256": "13537db65b7f7970161ee8ecc3dd8c180acfc5ed6bcb25736716bd42814c58d6",
+  "calculationSha256": "f47f5bbf7051e40b3c384c43ba54a2cdad91042f80f0f40fe3fc016566ceb938",
+  "calculationBytes": 19631208,
+  "axeViolations": [],
+  "pageErrors": []
+}

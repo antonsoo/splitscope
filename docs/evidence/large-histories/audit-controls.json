@@ -1,0 +1,22 @@
+[
+  {
+    "control": "missing shard",
+    "refused": true,
+    "error": "FileNotFoundError"
+  },
+  {
+    "control": "duplicate stopping point",
+    "refused": true,
+    "error": "ValueError"
+  },
+  {
+    "control": "inconsistent binary outcome",
+    "refused": true,
+    "error": "ValueError"
+  },
+  {
+    "control": "changed recorded score",
+    "refused": true,
+    "error": "ValueError"
+  }
+]
