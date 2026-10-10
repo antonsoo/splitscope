@@ -16,6 +16,9 @@ speedrun or evidence about player behavior.
 
 - Reading still enforces 25 MiB. Hashing and XML parsing run in a dedicated
   local worker. Cancel, New file and a replacement import terminate it.
+  Its code is included in the initial app bundle, so it needs no later network
+  fetch when importing offline. The built CSP permits this local blob worker;
+  external connections remain disallowed.
   A worker that cannot start or return its result gives a recoverable error;
   parsing is stopped after 15 seconds, with retry available.
 - An import remains owned until the new workspace renders successfully.

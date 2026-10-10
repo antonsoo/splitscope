@@ -1,5 +1,6 @@
 import { LssParseError } from "../core/errors.js";
 import type { Run } from "../core/types.js";
+import ParserWorker from "./parse.worker?worker&inline";
 
 export interface ParsedInput {
   readonly run: Run;
@@ -13,7 +14,9 @@ export function parseInput(
 ): Promise<ParsedInput> {
   return new Promise((resolve, reject) => {
     signal.throwIfAborted();
-    const worker = new Worker(new URL("./parse.worker.ts", import.meta.url), { type: "module" });
+    // The worker travels with the initial app bundle, so importing a local file
+    // after going offline does not need a later script fetch.
+    const worker = new ParserWorker();
     const finish = (error: unknown, result?: ParsedInput): void => {
       clearTimeout(timer);
       signal.removeEventListener("abort", abort);

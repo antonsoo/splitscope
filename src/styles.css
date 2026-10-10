@@ -1423,6 +1423,12 @@ footer {
     scroll-margin-top: 175px;
   }
 }
+.distribution-axis-label {
+  fill: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+
 .chart-summary {
   margin: 0;
   padding: 0 16px 12px;

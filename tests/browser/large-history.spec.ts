@@ -1,9 +1,35 @@
 import { readFileSync } from "node:fs";
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 import { longHistory } from "../fixtures/long-history.js";
 
 const normal = readFileSync(new URL("../fixtures/modern-full.lss", import.meta.url), "utf8");
 const large = Buffer.from(longHistory());
+
+async function workerFault(page: Page, startup: boolean): Promise<void> {
+  await page.evaluate((failStartup) => {
+    const Original = window.Worker;
+    Object.assign(window, {
+      restoreParserWorker: () => {
+        window.Worker = Original;
+      },
+    });
+    window.Worker = class extends Original {
+      constructor(url: string | URL, options?: WorkerOptions) {
+        if (failStartup) throw new Error("Controlled worker startup failure");
+        super(url, options);
+      }
+      override postMessage(): void {
+        // The real worker starts but never receives input, so cannot answer it.
+      }
+    };
+  }, startup);
+}
+
+async function restoreWorker(page: Page): Promise<void> {
+  await page.evaluate(() =>
+    (window as unknown as { restoreParserWorker: () => void }).restoreParserWorker(),
+  );
+}
 
 test.beforeEach(async ({ page }) => {
   await page.goto("./");
@@ -89,32 +115,26 @@ test("a render failure reports an error and restores the previous workspace", as
 });
 
 test("worker startup failures remain recoverable", async ({ page }) => {
-  await page.route("**/parse.worker-*.js", (route) => route.abort());
+  await workerFault(page, true);
   await page
     .locator("#file-input")
     .setInputFiles({ name: "normal.lss", mimeType: "text/xml", buffer: Buffer.from(normal) });
-  await expect(page.getByRole("alert")).toContainText("parser stopped unexpectedly");
-  await page.unroute("**/parse.worker-*.js");
+  await expect(page.getByRole("alert")).toContainText("Controlled worker startup failure");
+  await restoreWorker(page);
   await page.getByRole("button", { name: "Retry import", exact: true }).click();
   await expect(page.locator(".hero-clock")).toHaveText("4:00.00");
 });
 
 test("a parser that never responds times out and can be retried", async ({ page }) => {
   await page.clock.install();
-  await page.route("**/parse.worker-*.js", (route) =>
-    route.fulfill({
-      contentType: "text/javascript",
-      body: "/* controlled nonresponding worker */",
-      headers: { "cache-control": "no-store" },
-    }),
-  );
+  await workerFault(page, false);
   await page
     .locator("#file-input")
     .setInputFiles({ name: "normal.lss", mimeType: "text/xml", buffer: Buffer.from(normal) });
   await expect(page.getByRole("status").filter({ hasText: "Parsing normal.lss" })).toBeVisible();
   await page.clock.fastForward(15_001);
   await expect(page.getByRole("alert")).toContainText("longer than 15 seconds");
-  await page.unroute("**/parse.worker-*.js");
+  await restoreWorker(page);
   await page.getByRole("button", { name: "Retry import", exact: true }).click();
   await expect(page.locator(".hero-clock")).toHaveText("4:00.00");
 });

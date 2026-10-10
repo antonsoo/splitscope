@@ -96,12 +96,24 @@ function stripPlot(
     svgEl("line", {
       x1: PAD_X,
       x2: WIDTH - PAD_X,
-      y1: STRIP_Y,
-      y2: STRIP_Y,
+      y1: binned ? 66 : STRIP_Y,
+      y2: binned ? 66 : STRIP_Y,
       class: "chart-gridline",
     }),
     ...dots,
   ];
+  if (binned) {
+    children.push(
+      svgEl("text", { x: x(lo), y: 82, class: "distribution-axis-label" }, [formatSeconds(lo)]),
+      lo !== hi
+        ? svgEl(
+            "text",
+            { x: x(hi), y: 82, class: "distribution-axis-label", "text-anchor": "end" },
+            [formatSeconds(hi)],
+          )
+        : null,
+    );
+  }
 
   if (gold !== null) {
     children.push(
@@ -143,7 +155,7 @@ function stripPlot(
     ? el("div", {}, [
         svg,
         el("p", { class: "dist-cell-sub" }, [
-          `${formatCount(values.length)} timings in ${DISTRIBUTION_BINS} bins; bar height is count. Statistics use every timing.`,
+          `${formatCount(values.length)} timings in ${DISTRIBUTION_BINS} bins; tallest bin: ${formatCount(largestBin)}. Bar height is count. Statistics use every timing.`,
         ]),
       ])
     : svg;

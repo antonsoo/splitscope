@@ -9,10 +9,10 @@ async function hashSource(script: string): Promise<string> {
 /**
  * Gives the built page a Content-Security-Policy.
  *
- * The page says nothing you give it leaves your browser. This makes the browser hold it to
- * that: scripts, styles, fonts and workers load from the page's own origin only, and
- * `connect-src 'self'` means no script on the page, not even one injected through a bug in
- * how it renders your file, can send anything to another host. Inline scripts in index.html
+ * Scripts, styles and fonts load from the page's own origin (or bundled font data);
+ * workers may also use a local blob containing the bundled parser. `connect-src 'self'`
+ * restricts fetches and other script connections to that origin. It is an extra constraint,
+ * not a proof against every possible way of leaking data. Inline scripts in index.html
  * are allowed by their hash; inline event handlers and `eval` are not allowed at all.
  *
  * `'unsafe-inline'` is for styles only: the page sets `style` attributes on what it renders.
@@ -42,7 +42,7 @@ export function contentSecurityPolicy(additions: Record<string, string[]> = {}):
           // data: because the bundler inlines font files of a few kilobytes into the stylesheet.
           "font-src": ["'self'", "data:"],
           "connect-src": ["'self'"],
-          "worker-src": ["'self'"],
+          "worker-src": ["'self'", "blob:"],
           "manifest-src": ["'self'"],
           "base-uri": ["'none'"],
           "form-action": ["'none'"],
