@@ -122,13 +122,11 @@ test("a parser that never responds times out and can be retried", async ({ page 
 test("every-attempt records retain endpoints and a bounded, labelled gold plot", async ({
   page,
 }) => {
-  await page
-    .locator("#file-input")
-    .setInputFiles({
-      name: "records.lss",
-      mimeType: "text/xml",
-      buffer: Buffer.from(longHistory(140_000, true)),
-    });
+  await page.locator("#file-input").setInputFiles({
+    name: "records.lss",
+    mimeType: "text/xml",
+    buffer: Buffer.from(longHistory(140_000, true)),
+  });
   await expect(page.locator(".hero-clock")).toHaveText("0:01.00", { timeout: 20_000 });
   await expect(page.locator(".dist-grid")).toContainText("gold history: 140000 records");
   await expect(page.locator(".dist-grid")).toContainText("for 140,000 records");
