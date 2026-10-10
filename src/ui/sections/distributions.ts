@@ -8,9 +8,10 @@ import { mulberry32 } from "../../core/rng.js";
 import { goldHistory, recentSegmentSeconds, segmentConsistency } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
 import { pick } from "../../core/types.js";
+import { displayPoints, extent, histogram } from "../charts/large-series.js";
 import { niceDomain, scaleLinear } from "../charts/scale.js";
 import { el, svgEl } from "../dom.js";
-import { formatSeconds } from "../format.js";
+import { formatCount, formatSeconds } from "../format.js";
 
 const WIDTH = 280;
 const HEIGHT = 86;
@@ -19,13 +20,19 @@ const STRIP_Y = 46;
 
 const SPARK_HEIGHT = 40;
 const SPARK_PAD = 8;
+const MAX_STRIP_POINTS = 1024;
+const DISTRIBUTION_BINS = 64;
 
 export interface DistributionsOptions {
   readonly method: TimingMethod;
   readonly window: number;
 }
 
-function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGSVGElement {
+function stripPlot(
+  run: Run,
+  index: number,
+  options: DistributionsOptions,
+): SVGSVGElement | HTMLElement {
   const segment = run.segments[index];
   if (!segment) return svgEl("svg", { viewBox: `0 0 ${WIDTH} ${HEIGHT}` });
 
@@ -43,22 +50,47 @@ function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGS
     ]);
   }
 
-  const lo = Math.min(gold ?? Number.POSITIVE_INFINITY, ...values);
-  const hi = Math.max(...values);
+  const [minimum, hi] = extent(values);
+  const lo = Math.min(gold ?? Number.POSITIVE_INFINITY, minimum);
   const [dMin, dMax] = niceDomain(lo, hi, 0.14);
   const x = scaleLinear([dMin, dMax], [PAD_X, WIDTH - PAD_X]);
 
   // Deterministic per-point jitter so re-renders (e.g. re-running Monte Carlo) don't shuffle dots.
   const rng = mulberry32(index * 7919 + 13);
-  const dots = values.map((v) =>
-    svgEl("circle", {
-      cx: x(v),
-      cy: STRIP_Y + (rng() - 0.5) * 26,
-      r: 3,
-      fill: gold !== null && v <= gold + 1e-9 ? "var(--gold)" : "var(--text-faint)",
-      opacity: "0.85",
-    }),
-  );
+  const binned = values.length > MAX_STRIP_POINTS;
+  const counts = binned ? histogram(values, dMin, dMax, DISTRIBUTION_BINS) : [];
+  const largestBin = counts.reduce((max, count) => Math.max(max, count), 1);
+  const dots = binned
+    ? counts.map((count, bin) => {
+        const left = dMin + ((dMax - dMin) * bin) / DISTRIBUTION_BINS;
+        const right = dMin + ((dMax - dMin) * (bin + 1)) / DISTRIBUTION_BINS;
+        const height = (count / largestBin) * 46;
+        return svgEl(
+          "rect",
+          {
+            x: x(left),
+            y: 66 - height,
+            width: Math.max(0.5, x(right) - x(left) - 0.4),
+            height,
+            fill: "var(--text-faint)",
+            "data-count": count,
+          },
+          [
+            svgEl("title", {}, [
+              `${formatCount(count)} timings from ${formatSeconds(left, 4)} to ${formatSeconds(right, 4)}${bin === DISTRIBUTION_BINS - 1 ? " (inclusive)" : " (upper bound excluded)"}`,
+            ]),
+          ],
+        );
+      })
+    : values.map((v) =>
+        svgEl("circle", {
+          cx: x(v),
+          cy: STRIP_Y + (rng() - 0.5) * 26,
+          r: 3,
+          fill: gold !== null && v <= gold + 1e-9 ? "var(--gold)" : "var(--text-faint)",
+          opacity: "0.85",
+        }),
+      );
 
   const children: (SVGElement | null)[] = [
     svgEl("line", {
@@ -97,16 +129,24 @@ function stripPlot(run: Run, index: number, options: DistributionsOptions): SVGS
     );
   }
 
-  return svgEl(
+  const svg = svgEl(
     "svg",
     {
       viewBox: `0 0 ${WIDTH} ${HEIGHT}`,
       class: "chart-svg",
       role: "img",
-      "aria-label": `${segment.label} time distribution`,
+      "aria-label": `${segment.label} time distribution${binned ? `: all ${formatCount(values.length)} timings in ${DISTRIBUTION_BINS} equal-width bins` : ""}`,
     },
     children.filter((c): c is SVGElement => c !== null),
   );
+  return binned
+    ? el("div", {}, [
+        svg,
+        el("p", { class: "dist-cell-sub" }, [
+          `${formatCount(values.length)} timings in ${DISTRIBUTION_BINS} bins; bar height is count. Statistics use every timing.`,
+        ]),
+      ])
+    : svg;
 }
 
 /** Step-down sparkline of every new segment record, across the run's entire history. */
@@ -119,14 +159,21 @@ function goldSparkline(run: Run, index: number, method: TimingMethod): HTMLEleme
   }
 
   const values = points.map((p) => p.seconds);
-  const [dMin, dMax] = niceDomain(Math.min(...values), Math.max(...values), 0.2);
+  const [lo, hi] = extent(values);
+  const [dMin, dMax] = niceDomain(lo, hi, 0.2);
   const x = scaleLinear([0, Math.max(1, points.length - 1)], [SPARK_PAD, WIDTH - SPARK_PAD]);
   const y = scaleLinear([dMin, dMax], [SPARK_PAD, SPARK_HEIGHT - SPARK_PAD]);
 
   // A step-after path: hold each record's time flat until the attempt that beat it.
+  const marks = displayPoints(
+    points.map((p, ordinal) => ({ ...p, ordinal })),
+    (p) => p.ordinal,
+    (p) => p.seconds,
+    WIDTH - 2 * SPARK_PAD,
+  );
   let path = `M${x(0)},${y(values[0] as number)}`;
-  for (let i = 1; i < points.length; i++) {
-    path += ` H${x(i)} V${y(values[i] as number)}`;
+  for (const mark of marks.slice(1)) {
+    path += ` H${x(mark.ordinal)} V${y(mark.seconds)}`;
   }
   path += ` H${WIDTH - SPARK_PAD}`;
 
@@ -140,8 +187,8 @@ function goldSparkline(run: Run, index: number, method: TimingMethod): HTMLEleme
     },
     [
       svgEl("path", { d: path, fill: "none", stroke: "var(--gold)", "stroke-width": "1.5" }),
-      ...points.map((p, i) =>
-        svgEl("circle", { cx: x(i), cy: y(p.seconds), r: 2, fill: "var(--gold)" }),
+      ...marks.map((p) =>
+        svgEl("circle", { cx: x(p.ordinal), cy: y(p.seconds), r: 2, fill: "var(--gold)" }),
       ),
     ],
   );
@@ -153,6 +200,11 @@ function goldSparkline(run: Run, index: number, method: TimingMethod): HTMLEleme
       `gold history: ${points.length} record${points.length === 1 ? "" : "s"}${points.length > 1 ? ` · ${first} → ${latest}` : ""}`,
     ]),
     svg,
+    marks.length < points.length
+      ? el("p", { class: "dist-cell-sub" }, [
+          `Display: ${formatCount(marks.length)} marks for ${formatCount(points.length)} records; first, last and range retained per column. Horizontal position is record order, not elapsed attempts.`,
+        ])
+      : null,
   ]);
 }
 

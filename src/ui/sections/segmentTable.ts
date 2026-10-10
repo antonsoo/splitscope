@@ -53,7 +53,7 @@ function consistencyTier(
 
 export function renderSegmentTable(run: Run, options: SegmentTableOptions): HTMLElement {
   const saves = possibleTimeSave(run, options.method);
-  const maxSave = Math.max(1, ...saves.filter((s): s is number => s !== null && s > 0));
+  const maxSave = saves.reduce<number>((max, save) => Math.max(max, save ?? 0), 1);
 
   const rows = run.segments.map((segment, i) => {
     const pbDuration = pbSegmentDuration(run, i, options.method);

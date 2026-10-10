@@ -1,8 +1,6 @@
 import { bestRoute } from "../core/best-route.js";
-import { decodeText } from "../core/decode.js";
 import { LssParseError } from "../core/errors.js";
 import { type PbOddsResult, simulatePbOdds } from "../core/montecarlo.js";
-import { parseRun } from "../core/parser.js";
 import type { ReviewSource } from "../core/review.js";
 import { pbTotal as computePbTotal, playtimeSummary, resetAnalysis } from "../core/stats.js";
 import type { Run, TimingMethod } from "../core/types.js";
@@ -11,6 +9,7 @@ import { el } from "./dom.js";
 import { buildMarkdownSummary, downloadText, exportPngCard } from "./export.js";
 import { formatCount, formatHours, formatPercent, formatSeconds } from "./format.js";
 import { readFileBytes, readSampleBytes } from "./input.js";
+import { parseInput } from "./parse-input.js";
 import { createBestRoute } from "./sections/bestRoute.js";
 import { renderDeltaChart } from "./sections/deltaChart.js";
 import { renderDistributions } from "./sections/distributions.js";
@@ -160,23 +159,21 @@ export function mountApp(root: HTMLElement): void {
     try {
       const bytes = await read(controller.signal);
       if (importController !== controller) return;
-      const digest = await crypto.subtle.digest("SHA-256", bytes as Uint8Array<ArrayBuffer>);
+      const byteLength = bytes.length;
+      setState({ loading: `Parsing ${sourceName}…` });
+      const { run, sha256 } = await parseInput(bytes as Uint8Array<ArrayBuffer>, controller.signal);
       if (importController !== controller) return;
-      const run = parseRun(decodeText(bytes));
-      if (importController !== controller) return;
-      importController = null;
-      lastImport = null;
+      const previous = { ...state };
+      const previousCaches = { oddsCache, practiceCache, bestCache };
       oddsCache = null;
       practiceCache = null;
       bestCache = null;
-      setState({
+      Object.assign(state, {
         run,
         source: {
           name: sourceName,
-          sha256: [...new Uint8Array(digest)]
-            .map((value) => value.toString(16).padStart(2, "0"))
-            .join(""),
-          bytes: bytes.length,
+          sha256,
+          bytes: byteLength,
           synthetic: isSample,
         },
         loading: null,
@@ -191,6 +188,17 @@ export function mountApp(root: HTMLElement): void {
         consistencyWindow: Math.min(30, Math.max(1, run.attempts.length)),
         mcRecentWindow: Math.min(30, Math.max(1, run.attempts.length)),
       });
+      try {
+        render();
+      } catch (cause) {
+        // Rendering can fail too. Keep ownership until the whole workspace is
+        // ready so an accepted file cannot silently strand the loading screen.
+        Object.assign(state, previous);
+        ({ oddsCache, practiceCache, bestCache } = previousCaches);
+        throw cause;
+      }
+      importController = null;
+      lastImport = null;
       focusContent();
     } catch (cause) {
       if (importController !== controller) return;
@@ -636,7 +644,7 @@ export function mountApp(root: HTMLElement): void {
       section(
         "Progression",
         "Delta vs. PB, over attempts",
-        "Every finished attempt's total time, relative to your current PB. Gold dots are attempts that beat everything before them — your PB's own history.",
+        "Finished attempt times relative to your current PB. Gold dots mark new best-so-far times. Large histories retain each display column's first, last, fastest and slowest points; statistics use every attempt.",
         [],
         renderDeltaChart(run, state.method),
       ),
@@ -652,7 +660,7 @@ export function mountApp(root: HTMLElement): void {
       section(
         "Per-segment shape",
         "Time distributions & gold history",
-        `Every recorded time for each segment in the last ${state.consistencyWindow} attempts, jittered vertically to reduce overlap (dashed line is gold, blue tick is median), plus each segment's full gold history — recorded improvements, including imported history whose IDs do not establish dates.`,
+        `Recorded times for each segment in the last ${state.consistencyWindow} attempts: individual dots, or count histograms above 1,024 timings (dashed line is gold, blue tick is median). Gold-history plots follow record order; large displays are summarized. Imported IDs do not establish dates.`,
         [],
         renderDistributions(run, { method: state.method, window: state.consistencyWindow }),
       ),

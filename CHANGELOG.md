@@ -4,6 +4,13 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Keep large-history imports recoverable: parse and hash in a cancellable
+  worker, report parser failures/timeouts, and restore the previous workspace
+  when preparing its replacement fails. Fix an accepted 140,000-attempt
+  file silently stranded on "Reading" by chart argument overflow.
+- Bound chart marks for long histories: retain first/last/extrema per display
+  column and use count histograms above 1,024 segment timings. Label summarized
+  displays; retain all observations for statistics and evidence exports.
 - Calculate sum of best from complete stored gold, PB and combined-history
   spans, matching LiveSplit's normal calculation. Keep the gold-only sum visible;
   return unavailable for missing paths, not a partial total.

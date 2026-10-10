@@ -34,7 +34,7 @@ export function renderSurvivalChart(run: Run): HTMLElement {
   const n = analysis.points.length;
   const x = scaleLinear([0, Math.max(1, n - 1)], [PAD_L, WIDTH - PAD_R]);
   const y = scaleLinear([0, 1], [CURVE_BOTTOM, PAD_T]);
-  const maxDeaths = Math.max(1, ...analysis.points.map((p) => p.deaths));
+  const maxDeaths = analysis.points.reduce((max, point) => Math.max(max, point.deaths), 1);
   const barMaxHeight = BAR_ZONE - 18;
 
   const linePath = analysis.points

@@ -9,9 +9,10 @@
  */
 import { pbTotal as computePbTotal, improvementTrend } from "../../core/stats.js";
 import type { Run, TimingMethod } from "../../core/types.js";
+import { displayPoints, extent } from "../charts/large-series.js";
 import { niceDomain, scaleLinear } from "../charts/scale.js";
 import { el, svgEl } from "../dom.js";
-import { formatDelta, formatSeconds } from "../format.js";
+import { formatCount, formatDelta, formatSeconds } from "../format.js";
 
 const WIDTH = 900;
 const HEIGHT = 260;
@@ -34,18 +35,28 @@ export function renderDeltaChart(run: Run, method: TimingMethod): HTMLElement {
 
   const points = trend.points.map((p) => ({ ...p, delta: p.totalSeconds - pb }));
   const deltas = points.map((p) => p.delta);
-  const [yMin, yMax] = niceDomain(Math.min(0, ...deltas), Math.max(0, ...deltas));
-  const xs = points.map((p) => p.attemptIndex);
-  const x = scaleLinear([Math.min(...xs), Math.max(...xs)], [PAD_L, WIDTH - PAD_R]);
+  const [lo, hi] = extent(deltas);
+  const [yMin, yMax] = niceDomain(Math.min(0, lo), Math.max(0, hi));
+  const x = scaleLinear(
+    [points[0]?.attemptIndex ?? 0, points[points.length - 1]?.attemptIndex ?? 0],
+    [PAD_L, WIDTH - PAD_R],
+  );
   const y = scaleLinear([yMin, yMax], [PAD_T, HEIGHT - PAD_B]);
   const zeroY = y(0);
 
   let runningBest = Number.POSITIVE_INFINITY;
-  const withRecord = points.map((p) => {
+  const records = points.map((p) => {
     const isRecord = p.delta < runningBest - 1e-9;
     if (isRecord) runningBest = p.delta;
     return { ...p, isRecord };
   });
+  const withRecord = displayPoints(
+    records,
+    (p) => p.attemptIndex,
+    (p) => p.delta,
+    WIDTH - PAD_L - PAD_R,
+  );
+  const reduced = withRecord.length < records.length;
 
   const linePath = withRecord
     .map((p, i) => `${i === 0 ? "M" : "L"}${x(p.attemptIndex)},${y(p.delta)}`)
@@ -80,7 +91,7 @@ export function renderDeltaChart(run: Run, method: TimingMethod): HTMLElement {
       viewBox: `0 0 ${WIDTH} ${HEIGHT}`,
       class: "chart-svg",
       role: "img",
-      "aria-label": "Cumulative delta versus personal best, over attempts",
+      "aria-label": `Cumulative delta versus personal best, over attempts${reduced ? "; display summarized by horizontal column" : ""}`,
     },
     [
       svgEl("defs", {}, [
@@ -128,6 +139,11 @@ export function renderDeltaChart(run: Run, method: TimingMethod): HTMLElement {
 
   return el("div", { class: "panel" }, [
     el("div", { class: "chart-wrap" }, [svg]),
+    reduced
+      ? el("p", { class: "chart-summary" }, [
+          `Display: ${formatCount(withRecord.length)} of ${formatCount(records.length)} finished attempts, retaining first, last, fastest and slowest per horizontal column. Statistics use all attempts.`,
+        ])
+      : null,
     el("div", { class: "legend" }, [
       el("span", { class: "legend-item" }, [
         el("span", { class: "legend-swatch", style: "background:var(--green)" }),
