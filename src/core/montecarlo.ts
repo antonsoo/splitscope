@@ -79,7 +79,7 @@ export const DEFAULT_MIN_SEGMENT_SAMPLES = 3;
 
 const ASSUMPTIONS = [
   "Segment times are drawn independently of each other (a slow segment doesn't change the odds of the next one being slow or fast).",
-  "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving. In a backtest on real histories the forecast ran low: it expected about a third of the PBs that followed.",
+  "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving. In the recorded backtest, mean 50-attempt PB probability was 14.3%; a PB occurred in 30.9% of evaluated windows. Windows overlap; this is not a per-runner calibration guarantee.",
   "Reset hazard per segment is estimated from historical frequency and assumed constant going forward.",
   "Attempts are treated as independent trials when combining single-attempt odds into a multi-attempt probability.",
   "The 95% intervals cover simulation noise only: they narrow as you add simulations, not as you add attempts, so they don't measure how well the recent-form window represents you.",

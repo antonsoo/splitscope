@@ -37,8 +37,8 @@ All notable changes to this project are documented in this file.
   and lowers the 50-attempt Brier score on the points that were forecast before from 0.237
   to 0.223, which nine runners cannot tell from no change. The panel and exports show the window actually used.
 - Add `studies/pb-odds-backtest`: a walk-forward backtest of the PB odds on real `.lss`
-  histories. The forecast ran low (about a third of the PBs that followed were expected); the
-  stated assumptions now say so.
+  histories. The mean 50-attempt forecast was 14.3%, versus a PB in 30.9% of
+  evaluated windows; the stated assumptions report that result and its limits.
 - Reject ambiguous or malformed history IDs, invalid counts/versions, duplicate
   comparisons, and oversized durations. Decode numeric XML references correctly.
 - Use the same recent attempt window across segments, display usable sample

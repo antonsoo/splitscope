@@ -33,10 +33,11 @@ These additions remain unreleased.
 
 ## PB odds, checked against what happened next
 
-The PB odds forecast runs low. Walked forward through 51 real attempt
-histories (62,197 attempts, from public repositories), it expected 484 attempts
-in the following 50 to beat the PB held at the time; 1,457 did, about three
-times as many (95% interval 2.3 to 4.0, resampling runners). It still
+The recorded backtest found low PB forecasts. Across 51 real attempt histories
+(62,197 attempts, from public repositories), the mean predicted chance of at
+least one PB in the next 50 attempts was **14.3%**; a PB occurred in **30.9%**
+of the 2,513 evaluated windows (777 windows). These windows overlap, so they
+are not independent observations or a count of distinct PB records. It still
 ranks well: its Brier score beats "never", the PB frequency of the last 100
 attempts and the long-run PB frequency at both 10 and 50 attempts ahead,
 except against the long-run frequency on the three held-out runners at 50;
@@ -46,7 +47,8 @@ Widening the recent window until every segment has three samples (source
 checkout, unreleased) lifts the share of stopping points that get a forecast from
 39% to 61% and lowers the 50-attempt Brier score on the points both versions
 forecast, from 0.237 to 0.223, a difference within the noise of nine runners. The 0.2.4 release has neither.
-The data is nine runners, so every interval is wide.
+Only nine repositories supplied forecasts; each is treated as one runner,
+an approximation. Every interval is wide.
 Details, reliability diagram and what did not work: [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md).
 
 ## Contents
@@ -324,8 +326,8 @@ every segment's history, and the page runs it several times per render.
   attempt (no further improvement or fatigue). Real runs have more
   structure — momentum, tilt, warm-up — than this model does, so results
   may be biased in either direction. Against what happened next in real
-  histories it was biased low (about a third of the PBs that followed were
-  expected), most for runners still improving; see
+  histories the mean 50-attempt forecast was 14.3%, versus a PB in 30.9% of
+  evaluated, overlapping windows; see
   [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md). Treat the output as a
   model estimate; the observed downward bias is not a guaranteed lower bound.
 - **The finish/reset signal is inferred**, not an explicit field in the

@@ -1,0 +1,70 @@
+{
+  "scope": "Recomputed from retained historical rows; no Monte Carlo rerun or new calibration evidence.",
+  "resultSha256": "f6f1a67329578a2b50aaf29dad222998e9f758030a06df41299501d8b66d08c2",
+  "versions": [
+    {
+      "version": "released_0.2.4",
+      "n": 1601,
+      "meanForecast": 0.1800174949099858,
+      "observedWindows": 572,
+      "observedRate": 0.35727670206121176,
+      "expectedBelowFrozenPB": 419.55,
+      "observedBelowFrozenPB": 1204,
+      "brier": 0.23701942241169308,
+      "rowFiles": [
+        {
+          "path": "cache/rows-released.0.json",
+          "bytes": 392614,
+          "sha256": "92252eb11425d84b3e816da23bc71b9a8d51ea052a4a616ffcafd348e0f50635"
+        },
+        {
+          "path": "cache/rows-released.1.json",
+          "bytes": 411442,
+          "sha256": "f23d387f64133a9137e5a29c52534e77a133d3e2800706a3fa5f36dc069a80eb"
+        },
+        {
+          "path": "cache/rows-released.2.json",
+          "bytes": 433784,
+          "sha256": "35310dcf08ac4f0858add12ae28bc87dc43cba650a82bd894e6c15d6e35abfaa"
+        },
+        {
+          "path": "cache/rows-released.3.json",
+          "bytes": 218463,
+          "sha256": "733f7b2ab8ea392a42322b5a1e273d190f247b0e8245cec42010eb86b0cafb13"
+        }
+      ]
+    },
+    {
+      "version": "checkout_with_change",
+      "n": 2513,
+      "meanForecast": 0.14317421419434537,
+      "observedWindows": 777,
+      "observedRate": 0.30919220055710306,
+      "expectedBelowFrozenPB": 483.93,
+      "observedBelowFrozenPB": 1457,
+      "brier": 0.2067654266490565,
+      "rowFiles": [
+        {
+          "path": "cache/rows-fix.0.json",
+          "bytes": 568674,
+          "sha256": "5c9bc63d928b96fe42002be9e719d9830de0e4b18b4a478f7b380bd38fcd234c"
+        },
+        {
+          "path": "cache/rows-fix.1.json",
+          "bytes": 563510,
+          "sha256": "dbb91b10602773f82925a7a73116c4fbb7704649b2370624656fefb7efc60626"
+        },
+        {
+          "path": "cache/rows-fix.2.json",
+          "bytes": 712304,
+          "sha256": "c04d4b4ff883970d7180cb7e2beb72b6cb3fbd33638e735649aec7bd12fcfc80"
+        },
+        {
+          "path": "cache/rows-fix.3.json",
+          "bytes": 312339,
+          "sha256": "bae1a5b2ad71ca9424efb24f9831c67525f413bc89a77e0c75125e71605ed643"
+        }
+      ]
+    }
+  ]
+}

@@ -9,10 +9,11 @@ next. This study does that at 4,698 points in 51 real histories.
 
 **What came out**
 
-- **The forecast runs low, by about three.** Over the next 50 attempts it
-  expected 484 of them to beat the PB held at the time. 1,457 did: 3.0 times as
-  many (2.3 to 4.0, resampling runners). The released 0.2.4 is the same: 420
-  expected, 1,204 observed.
+- **The mean forecast is below the observed frequency.** The predicted chance
+  of at least one PB in the next 50 attempts averaged **14.3%**; a PB occurred
+  in **30.9%** of the 2,513 evaluated windows (777 windows). The recorded
+  0.2.4 run averaged 18.0%, with a PB in 35.7% of its 1,601 windows. The versions
+  can forecast different subsets; these are not a paired comparison.
 - **It still ranks better than the frequencies a runner could keep in their
   head.** At 10 attempts ahead its Brier score is 0.083, against 0.102 for the
   PB frequency of the last 100 attempts, 0.107 for the long-run PB frequency
@@ -88,11 +89,13 @@ times, and the PB and best segments as of t, recomputed from those attempts
 and not read from the file's current values. It then calls the same function
 the app calls and records the chance of a PB in the next 1, 10 and 50
 attempts. The outcome is whether one of the next N attempts finished under the
-PB held at t. A point near the end of a history, with fewer than N attempts
-left and no PB among them, has no known outcome and is left out.
+PB held at t. Only stopping points with all N later attempts are scored for
+that horizon. Shorter final windows are left out even if they already contain
+a faster finish.
 
 Scores: the Brier score and its reliability and resolution parts; the
-reliability curve; and the count of PBs expected against the count observed.
+reliability curve; and the count of finishes below each stopping point's frozen
+PB threshold, summed across the following windows.
 Baselines: the share of the last 100 attempts that were PBs, turned into a
 chance for N attempts; the same from the whole history; and zero.
 
@@ -109,6 +112,34 @@ Differences from each baseline, with 95% intervals over runners. At 10: -0.019
 (-0.040 to -0.005), -0.024 (-0.046 to -0.004), -0.013 (-0.019 to -0.007). At
 50: -0.035 (-0.065 to +0.001), -0.046 (-0.106 to +0.030), -0.102 (-0.137 to
 -0.073).
+
+### What the counts mean
+
+The binary event scored above is **at least one future finish below the PB at
+the stopping point**. The separate count fields in `results.json` ask a
+different question:
+
+| Retained field (50-attempt horizon) | Quantity |
+|---|---|
+| `mean_forecast` | Mean of `1 - (1 - pOne)^50`, the model's chance of at least one PB |
+| `base_rate` | Share of complete windows with at least one finish below the starting PB |
+| `expected_pbs_per_attempt_next50` | Sum of `50 * pOne` across windows: expected finishes below each window's frozen starting PB |
+| `observed_pbs_per_attempt_next50` | Sum of all such finishes, counting the same attempt again when windows overlap |
+
+The last two fields are 483.93 expected and 1,457 observed for the source
+model, a ratio of 3.0 (95% runner-bootstrap interval 2.3 to 4.0). They are not
+distinct PB records or counts of successful windows. If a starting PB is
+100 seconds and subsequent finishes are 90 then 95 seconds, both finishes
+count below the frozen threshold, but only the first sets a new record.
+Overlapping windows add further repeated counts. The binary comparison is
+instead 14.3% predicted versus 777 / 2,513 = 30.9% observed.
+
+On 2026-10-10, [`audit-counts.py`](audit-counts.py) independently recomputed
+both quantities and the Brier scores from the retained historical rows,
+checked binary outcomes against positive threshold counts, and matched the
+recorded results. [Row hashes and exact values](count-audit-2026-10-10.json)
+identify the inputs. This was a wording/interpretation correction; no Monte
+Carlo rerun, new calibration result or model change is implied.
 
 The three held-out runners, 50 ahead: 0.210 for splitscope, 0.229, 0.204 and
 0.284 for the baselines. The long-run frequency is level with it there.
@@ -160,7 +191,7 @@ Each was run on the same points (`montecarlo-variants.ts`, `run_all.sh`);
 Brier at 50 ahead against the unchanged model's on those points, development
 then held-out runners.
 
-| Variant | Development | Held out | PBs expected, of about 1,200 to 1,450 seen |
+| Variant | Development | Held out | Expected finishes below frozen PBs; about 1,200 to 1,450 observed across overlapping windows |
 |---|---|---|---:|
 | Every attempt as the window | 0.300 against 0.231 | 0.275 against 0.247 | 184 |
 | Segments from finished runs only | 0.249 against 0.233 | 0.221 against 0.247 | 359 |
@@ -205,7 +236,8 @@ python3 studies/pb-odds-backtest/fetch.py            # the pinned repositories, 
 git worktree add /tmp/splitscope-0.2.4 55d75bd       # the commit that set version 0.2.4
 git worktree add /tmp/splitscope-before ea2f296      # the commit before this study's change
 studies/pb-odds-backtest/run_all.sh /tmp/splitscope-0.2.4/src /tmp/splitscope-before/src
-python3 studies/pb-odds-backtest/score.py            # results.json and reliability.svg
+(cd studies/pb-odds-backtest && python3 score.py)    # results.json and reliability.svg
+python3 studies/pb-odds-backtest/audit-counts.py     # verify the two count definitions
 ```
 
 `run_all.sh` runs the release, the checkout and every variant above, four
