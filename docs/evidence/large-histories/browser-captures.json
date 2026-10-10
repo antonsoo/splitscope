@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "name": "delta-desktop",
+      "title": "Delta vs. PB, over attempts",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "axeViolations": []
+    },
+    {
+      "name": "histogram-desktop",
+      "title": "Time distributions & gold history",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "axeViolations": []
+    },
+    {
+      "name": "histogram-mobile",
+      "title": "Time distributions & gold history",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "axeViolations": []
+    },
+    {
+      "name": "records-desktop",
+      "width": 1440,
+      "theme": "dark",
+      "goldCircles": 558
+    }
+  ],
+  "bounds": {
+    "bins": 64,
+    "total": 140000
+  },
+  "table": "SEGMENT\tPB\tGOLD\tTIME SAVE\tTIMED N\tMEDIAN\t± IQR/2\tCONSISTENCY\tNEAR-GOLD % (WITHIN 8% OF GOLD)\n01Finish\t0:01.00\t0:01.00\t—\t140000\t0:14.50\t±0:02.5\tσ 0:02.9\t0.0%",
+  "downloads": [
+    {
+      "kind": "markdown",
+      "bytes": 1303,
+      "sha256": "f0fd05d7725e95c01696cd637fb8baa174339ce356e9f88dd00fb0a2c966ec1a"
+    },
+    {
+      "kind": "calculation",
+      "bytes": 19631208,
+      "sha256": "f47f5bbf7051e40b3c384c43ba54a2cdad91042f80f0f40fe3fc016566ceb938"
+    }
+  ],
+  "errors": [],
+  "offOrigin": [],
+  "csp": []
+}

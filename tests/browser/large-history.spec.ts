@@ -126,14 +126,16 @@ test("worker startup failures remain recoverable", async ({ page }) => {
 });
 
 test("a parser that never responds times out and can be retried", async ({ page }) => {
-  await page.clock.install();
   await workerFault(page, false);
   await page
     .locator("#file-input")
     .setInputFiles({ name: "normal.lss", mimeType: "text/xml", buffer: Buffer.from(normal) });
   await expect(page.getByRole("status").filter({ hasText: "Parsing normal.lss" })).toBeVisible();
-  await page.clock.fastForward(15_001);
-  await expect(page.getByRole("alert")).toContainText("longer than 15 seconds");
+  // Exercise the real deadline: the injected page clock was unreliable with
+  // native blob workers in Firefox. Worker startup and the deadline share real time.
+  await expect(page.getByRole("alert")).toContainText("longer than 15 seconds", {
+    timeout: 25_000,
+  });
   await restoreWorker(page);
   await page.getByRole("button", { name: "Retry import", exact: true }).click();
   await expect(page.locator(".hero-clock")).toHaveText("4:00.00");

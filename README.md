@@ -27,7 +27,7 @@ groups in a public Zero Divide 2 history. Resets inferred at the first fight
 drop from 29 of 30 attempts to 15 of 30; open either count to inspect its exact
 members and original split records. The example is a licensed, unchanged file,
 not simulated gameplay. [Walkthrough and verification](docs/practice-review.md).
-These additions are local and unreleased.
+These additions remain unreleased.
 
 ![Comparing two groups of actual recorded attempts, with reset counts linked to individual attempts](docs/assets/practice-chromium-1440.png)
 
@@ -98,13 +98,13 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
   (median, IQR, standard deviation, and % of recent attempts within a
   tolerance of gold), heatmapped in one table.
 - **Delta-vs-PB progression** across every finished attempt, in LiveSplit's
-  own gold/green/red delta language, with your PB's improvement history
-  marked out.
+  own gold/green/red delta language. Dense displays retain first, last and
+  extreme values per display column; captions identify omitted intermediate marks.
 - **Reset analysis**: a survival curve (what share of attempts reach each
   segment) and a "where do runs die" histogram.
-- **Per-segment time distributions** as strip plots, so "inconsistent" is a
-  picture, not a guess, plus each segment's full **gold history** — a
-  step-chart of every time a new record was set, across the whole run.
+- **Per-segment time distributions** as individual dots or count histograms
+  above 1,024 timings, plus each segment's **gold history** across the full run.
+  Dense gold plots summarize their display and retain the full record history.
 - **PB odds** — the one number LiveSplit can't show you: a Monte Carlo
   simulation of your probability of beating your PB, on the next attempt or
   within the next *K*, with a confidence interval and its assumptions stated
@@ -335,9 +335,10 @@ every segment's history, and the page runs it several times per render.
   per-segment history records, invalid counts/versions, and durations outside
   safe millisecond arithmetic. Repair ambiguous records in a copy of the file
   before retrying. Valid negative/zero imported history IDs are retained.
-- **Imports are limited to 25 MiB**. Cancellation applies while reading or
-  downloading; XML parsing and analysis still run synchronously on the main
-  thread. A large valid history can briefly block interaction.
+- **Imports are limited to 25 MiB**. Reading, hashing and XML parsing are
+  cancellable; worker parsing stops after 15 seconds. Statistics, rendering and
+  Monte Carlo still use the main thread and can briefly block interaction.
+  The worker timeout is not a total memory or analysis-time limit.
 - **Missing data stays unknown**: no PB means no PB probability, missing golds
   prevent a total time-save claim, and missing timestamps are excluded from
   playtime with coverage shown in the Markdown report.

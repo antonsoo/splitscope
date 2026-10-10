@@ -1,0 +1,20 @@
+{
+  "records": 140000,
+  "mismatches": 0,
+  "timingCounts": {
+    "10": 14000,
+    "11": 14000,
+    "12": 14000,
+    "13": 14000,
+    "14": 14000,
+    "15": 14000,
+    "16": 14000,
+    "17": 14000,
+    "18": 14000,
+    "19": 14000
+  },
+  "sourceSha256": "ac109baaebc4032f0865edd1819c3c686eb7065ff47c9bfc7c86bce988a7f01f",
+  "expectedMedianSeconds": 14.5,
+  "expectedGoldSeconds": 1,
+  "sourceSyntheticFlagMeaning": "false identifies an imported file rather than a built-in synthetic sample; the control itself is synthetic."
+}

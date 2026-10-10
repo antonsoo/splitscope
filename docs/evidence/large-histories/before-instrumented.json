@@ -1,0 +1,13 @@
+{
+  "body": "Skip to content\nsplit\nscope\nspeedrun split analyzer\nLoad file\nNew file\nLight\nReading valid-long-history.lss…\nCancel loading\nYour LiveSplit file knows more than your timer shows.\n\nFind your realistic time save, your reset habits, and your odds of a PB — from the .lss file you already have. Everything runs in your browser; nothing is uploaded.\n\nChoose a .lss file\nLoad sample (450 attempts)\nLoad sample (fresh splits, 10 attempts)\nOpen combined-split example (Destrega)\nOpen recorded practice (124 attempts)\n\nor drop a file here · splits.lss lives in your LiveSplit folder\n\nRecorded examples: Destrega and Zero Divide 2, shared by AmenAnthem under the MIT license. The Crystal Caverns samples are synthetic.\n\nParsed entirely client-side. Nothing is uploaded, logged, or stored anywhere but your browser.\n\nsplitscope · source · MIT licensed\nParses LiveSplit .lss files entirely in your browser. No accounts, no analytics, no uploads.",
+  "hero": false,
+  "loading": true,
+  "capturedImportFailure": {
+    "message": "RangeError: Maximum call stack size exceeded",
+    "stack": "RangeError: Maximum call stack size exceeded\n    at Ui (http://127.0.0.1:48694/splitscope/assets/index-f8ndje27.js:7:9902)\n    at P (http://127.0.0.1:48694/splitscope/assets/index-f8ndje27.js:7:47050)\n    at L (http://127.0.0.1:48694/splitscope/assets/index-f8ndje27.js:7:49973)\n    at n (http://127.0.0.1:48694/splitscope/assets/index-f8ndje27.js:7:37187)\n    at h (http://127.0.0.1:48694/splitscope/assets/index-f8ndje27.js:7:38103)"
+  },
+  "maxGap": 1922.3999999910593,
+  "errors": [],
+  "caughtExceptions": [],
+  "elapsedMs": 8036
+}

@@ -1,0 +1,155 @@
+{
+  "sourceRevision": "e1580530fc49d6df4e7dded03b3f94b67489ebcb",
+  "baseline": "f017c100d6df4e60f87c0a48f09f5a5b8fa3623d",
+  "machine": "14-vCPU WSL2 Linux, 48 GB RAM",
+  "node": "v26.7.0",
+  "npm": "12.0.1",
+  "inputs": [
+    {
+      "name": "valid-long-history.lss",
+      "bytes": 16578257,
+      "sha256": "ac109baaebc4032f0865edd1819c3c686eb7065ff47c9bfc7c86bce988a7f01f",
+      "attempts": 140000,
+      "synthetic": true
+    },
+    {
+      "name": "record-history.lss",
+      "bytes": 16578257,
+      "sha256": "4f827f7c1ead25331df1b887194f8b12672fcf83d3ced4a6e2c36ed4d47e9ec4",
+      "attempts": 140000,
+      "synthetic": true
+    }
+  ],
+  "buildFiles": [
+    {
+      "path": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+      "bytes": 34704,
+      "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5"
+    },
+    {
+      "path": "assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+      "bytes": 19588,
+      "sha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24"
+    },
+    {
+      "path": "assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+      "bytes": 9320,
+      "sha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a"
+    },
+    {
+      "path": "assets/index-DA_d0CwC.css",
+      "bytes": 65953,
+      "sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36"
+    },
+    {
+      "path": "assets/index-V1ileGB0.js",
+      "bytes": 141810,
+      "sha256": "691d3b0139412700b35dd650139b413c7d77d2a5ef4e593034f141bbada552c0"
+    },
+    {
+      "path": "assets/index-V1ileGB0.js.map",
+      "bytes": 265488,
+      "sha256": "68714c9551718bacda547418585a03c5b13c6749d0b509fbfadcef60665df0ab"
+    },
+    {
+      "path": "assets/martian-mono-cyrillic-B84CD5C_.woff2",
+      "bytes": 10560,
+      "sha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529"
+    },
+    {
+      "path": "assets/martian-mono-latin-5W32yIyr.woff2",
+      "bytes": 23556,
+      "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291"
+    },
+    {
+      "path": "assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+      "bytes": 15908,
+      "sha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5"
+    },
+    {
+      "path": "assets/parse.worker-DuQ9bvF_.js.map",
+      "bytes": 342545,
+      "sha256": "c3b2fc8a288355a4cf29a64a01e48cc9edec1f5a23677a21bcfe103cfd2d6447"
+    },
+    {
+      "path": "crystal-caverns-any.lss",
+      "bytes": 748304,
+      "sha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5"
+    },
+    {
+      "path": "crystal-caverns-fresh-start.lss",
+      "bytes": 13892,
+      "sha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2231,
+      "sha256": "5985bb5b131de15ad072f612e1fc599a5c0929f03a2a9557d280d258a56b9338"
+    },
+    {
+      "path": "recorded/LICENSE.txt",
+      "bytes": 1067,
+      "sha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7"
+    },
+    {
+      "path": "recorded/destrega-source.json",
+      "bytes": 458,
+      "sha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a"
+    },
+    {
+      "path": "recorded/destrega.lss",
+      "bytes": 84972,
+      "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54"
+    },
+    {
+      "path": "recorded/source.json",
+      "bytes": 488,
+      "sha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf"
+    },
+    {
+      "path": "recorded/zero-divide-2.lss",
+      "bytes": 75529,
+      "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb"
+    }
+  ],
+  "freshBuildIdentical": true,
+  "screenshots": [
+    {
+      "path": "docs/assets/large-histories/delta-desktop.png",
+      "bytes": 76918,
+      "sha256": "a91b67f786bbbe2a0f0e3122c65ef367c46690b2ae0675ef8f8e557061cba93b"
+    },
+    {
+      "path": "docs/assets/large-histories/histogram-desktop.png",
+      "bytes": 40694,
+      "sha256": "5ddafd3921ff3b23483f52ef92c8dccdd58f35866bd61928e8630a0ddb2d01dd"
+    },
+    {
+      "path": "docs/assets/large-histories/histogram-mobile.png",
+      "bytes": 29773,
+      "sha256": "409be1dbe1ff9a246b4fbdb280222594737846dcae0cf6efc4d14664ce309d03"
+    },
+    {
+      "path": "docs/assets/large-histories/records-desktop.png",
+      "bytes": 67234,
+      "sha256": "41900bc2c84a2e50d16f01839ad5315aa97323680037da1d1ead67bebb8f6090"
+    }
+  ],
+  "limits": [
+    "Controlled files are synthetic, not evidence about player behavior.",
+    "Event-loop gaps in the before probes are single diagnostic observations, not a performance benchmark.",
+    "Worker parsing is cancellable and bounded in time; total page memory, statistics, DOM work and Monte Carlo are not bounded by this timeout.",
+    "No source change to core calculations; the corpus comparison is a parsing/transport regression comparison, not an independent forecast validation."
+  ],
+  "checks": {
+    "install": "npm ci in an exported source tree",
+    "ci": "npm run ci",
+    "core": 165,
+    "browser": 70,
+    "browserCommand": "npx playwright test",
+    "browsers": ["Chromium", "Firefox"],
+    "lintErrors": 0,
+    "existingLintWarnings": 34,
+    "note": "The 70-workflow run uses the real 15-second timeout after the injected-clock check was unreliable in Firefox. An earlier combined invocation was interrupted and was not counted as a passing suite."
+  }
+}
