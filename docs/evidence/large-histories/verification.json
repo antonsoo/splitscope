@@ -150,6 +150,8 @@
     "browsers": ["Chromium", "Firefox"],
     "lintErrors": 0,
     "existingLintWarnings": 34,
-    "note": "The 70-workflow run uses the real 15-second timeout after the injected-clock check was unreliable in Firefox. An earlier combined invocation was interrupted and was not counted as a passing suite."
+    "note": "The 70-workflow run uses the real 15-second timeout after the injected-clock check was unreliable in Firefox. An earlier combined invocation was interrupted and was not counted as a passing suite.",
+    "browserTestRevision": "cc18ca481d5f0d4497c551193dba367eb84cec62",
+    "revisionNote": "sourceRevision identifies the unchanged production runtime; browserTestRevision identifies the final real-deadline checks run against that build."
   }
 }
