@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-11T01:21:49.078Z",
+  "inputBytes": 16578257,
+  "inputSha256": "ac109baaebc4032f0865edd1819c3c686eb7065ff47c9bfc7c86bce988a7f01f",
+  "loaded": false,
+  "errors": [],
+  "body": "Skip to content\nsplit\nscope\nspeedrun split analyzer\nLoad file\nNew file\nLight\nReading long.lss…\nCancel loading\nYour LiveSplit file knows more than your timer shows.\n\nFind your realistic time save, your reset habits, and your odds of a PB — from the .lss file you already have. Everything runs in your browser; nothing is uploaded.\n\nChoose a .lss file\nLoad sample (450 attempts)\nLoad sample (fresh splits, 10 attempts)\nOpen combined-split example (Destrega)\nOpen recorded practice (124 attempts)\n\nor drop a file here · splits.lss lives in your LiveSplit folder\n\nRecorded examples: Destrega and Zero Divide 2, shared by AmenAnthem under the MIT license. The Crystal Caverns samples are synthetic.\n\nParsed entirely client-side. Nothing is uploaded, logged, or stored anywhere but your browser.\n\nsplitscope · source · MIT licensed\nParses LiveSplit .lss files entirely in your browser. No accounts, no analytics, no uploads.",
+  "assets": ["https://antonsoo.github.io/splitscope/assets/index-CdnlXKWw.js"]
+}

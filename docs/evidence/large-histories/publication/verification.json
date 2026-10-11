@@ -1,0 +1,512 @@
+{
+  "sourceRevision": "0062a149613ec07264ee6abd81064511a2372f29",
+  "pagesRevision": "fb235031f72932456d5a229d5bd03b8f6d4a1828",
+  "buildCommand": "npm run build",
+  "buildDirectory": "dist",
+  "runtime": {
+    "node": "26.7.0",
+    "npm": "12.0.1"
+  },
+  "cleanArchive": {
+    "install": "npm ci",
+    "ci": "npm run ci",
+    "coreTestsPassed": 165,
+    "lintErrors": 0,
+    "preexistingLintWarnings": 34,
+    "browserFirstRun": {
+      "passed": 69,
+      "failed": 1,
+      "failure": "Chromium combined intake/eight layout-theme accessibility scans exceeded 45000ms during axe evaluation."
+    },
+    "isolatedRetry": {
+      "passed": 1,
+      "sameTimeoutMs": 45000,
+      "durationSeconds": 33.9,
+      "changeToTestOrProduction": false
+    }
+  },
+  "hosted": {
+    "url": "https://antonsoo.github.io/splitscope/",
+    "matchingFiles": 18,
+    "stats": {
+      "startTime": "2026-10-11T01:29:15.048Z",
+      "duration": 58878.801,
+      "expected": 36,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "workflows": [
+      {
+        "file": "best-route.spec.ts",
+        "title": "public skipped-split evidence changes the total and exports the original records offline",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1645,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source controls keep keyboard focus, then recalculate for game time",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1595,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "an absent gold can use PB evidence; a missing path stays unavailable",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 773,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "a failed replacement preserves evidence; New file clears it",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 737,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source evidence is accessible without page overflow at 375px",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1698,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source evidence is accessible without page overflow at 1440px",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1637,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "public skipped-split evidence changes the total and exports the original records offline",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 2371,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source controls keep keyboard focus, then recalculate for game time",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1919,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "an absent gold can use PB evidence; a missing path stays unavailable",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 993,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "a failed replacement preserves evidence; New file clears it",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1116,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source evidence is accessible without page overflow at 375px",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 2317,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "best-route.spec.ts",
+        "title": "source evidence is accessible without page overflow at 1440px",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 2249,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "accepted long histories load and use all timings without unbounded chart nodes",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 5582,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "cancelling actual worker parsing preserves the previous run and allows a replacement",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 3140,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "a render failure reports an error and restores the previous workspace",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 855,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "worker startup failures remain recoverable",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 768,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "a parser that never responds times out and can be retried",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 16102,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "every-attempt records retain endpoints and a bounded, labelled gold plot",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 5106,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "accepted long histories load and use all timings without unbounded chart nodes",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 5826,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "cancelling actual worker parsing preserves the previous run and allows a replacement",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 2153,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "a render failure reports an error and restores the previous workspace",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1123,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "worker startup failures remain recoverable",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1021,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "a parser that never responds times out and can be retried",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 16586,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "large-history.spec.ts",
+        "title": "every-attempt records retain endpoints and a bounded, labelled gold plot",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 4879,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "a recorded example opens its exact reset members, raw records and full export",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 877,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "sparse IDs, missing histories, combined times and the other timing method remain distinct",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1008,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "invalid ranges preserve applied evidence and historical ranges have no overlapping IDs",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1039,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "attempt pagination stays bounded and keyboard focus survives the last page",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 746,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "keyboard review and filtered exports remain available offline across theme and chart changes",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1231,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "real review and selected records are accessible in both themes at desktop and phone widths",
+        "engine": "chromium",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 4489,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "a recorded example opens its exact reset members, raw records and full export",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1290,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "sparse IDs, missing histories, combined times and the other timing method remain distinct",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1365,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "invalid ranges preserve applied evidence and historical ranges have no overlapping IDs",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1441,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "attempt pagination stays bounded and keyboard focus survives the last page",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 1370,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "keyboard review and filtered exports remain available offline across theme and chart changes",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 3106,
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": "practice.spec.ts",
+        "title": "real review and selected records are accessible in both themes at desktop and phone widths",
+        "engine": "firefox",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "durationMs": 6647,
+            "errors": []
+          }
+        ]
+      }
+    ],
+    "adaptation": "Source best-route, practice and large-history browser workflows; base URL and expected origin changed to public Pages; fixture imports preserved; 60-second hosted test budget."
+  },
+  "scope": "Existing large-history recovery and evaluated-event wording published. No new statistical calibration, physical experiment or registry release."
+}

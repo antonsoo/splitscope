@@ -1,5 +1,9 @@
 # Large histories must finish loading or explain why they cannot
 
+The repair and corrected forecast wording are now in the public demo. See
+the [2026-10-11 deployment verification](publication-2026-10-11.md) for fresh
+hosted imports, complete exports, recovery checks and served-file hashes.
+
 At `f017c10`, an accepted 140,000-attempt file stayed on **Reading** indefinitely.
 No analysis or error appeared. The file was below the 25 MiB input limit.
 Its 16,578,257 bytes contain matching attempt totals and segment durations.

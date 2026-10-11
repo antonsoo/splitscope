@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-11T01:31:28.428Z",
+  "url": "https://antonsoo.github.io/splitscope/",
+  "input": {
+    "bytes": 16578257,
+    "sha256": "ac109baaebc4032f0865edd1819c3c686eb7065ff47c9bfc7c86bce988a7f01f",
+    "synthetic": true
+  },
+  "observations": [
+    {
+      "browser": "chromium",
+      "offlineImportAndExport": true,
+      "binCount": 140000,
+      "circles": 3154,
+      "exportedAttempts": 140000,
+      "exportedSegmentRecords": 140000,
+      "allRecordMismatches": 0,
+      "exportBytes": 86469137,
+      "exportSha256": "e6a9921d0c3e9f73468f370267aeb180a1e699a29b240c0fe5f0c71d954973e9",
+      "forecastLimitVisible": true,
+      "errors": [],
+      "offOrigin": []
+    },
+    {
+      "browser": "firefox",
+      "offlineImportAndExport": true,
+      "binCount": 140000,
+      "circles": 3154,
+      "exportedAttempts": 140000,
+      "exportedSegmentRecords": 140000,
+      "allRecordMismatches": 0,
+      "exportBytes": 86469137,
+      "exportSha256": "e6a9921d0c3e9f73468f370267aeb180a1e699a29b240c0fe5f0c71d954973e9",
+      "forecastLimitVisible": true,
+      "errors": [],
+      "offOrigin": []
+    }
+  ]
+}

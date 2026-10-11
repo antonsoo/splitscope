@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-10-11T01:28:21.451808+00:00",
+  "files": [
+    {
+      "path": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+      "bytes": 34704,
+      "expected_sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+      "served_sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+      "matches": true
+    },
+    {
+      "path": "assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+      "bytes": 19588,
+      "expected_sha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24",
+      "served_sha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24",
+      "matches": true
+    },
+    {
+      "path": "assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+      "bytes": 9320,
+      "expected_sha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a",
+      "served_sha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a",
+      "matches": true
+    },
+    {
+      "path": "assets/index-DA_d0CwC.css",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-DA_d0CwC.css",
+      "bytes": 65953,
+      "expected_sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+      "served_sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+      "matches": true
+    },
+    {
+      "path": "assets/index-Igny-MLL.js",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-Igny-MLL.js",
+      "bytes": 141882,
+      "expected_sha256": "8e8c688daa27b7b66e5135e269d0266dda664db8ff1202779a67b3258b92e847",
+      "served_sha256": "8e8c688daa27b7b66e5135e269d0266dda664db8ff1202779a67b3258b92e847",
+      "matches": true
+    },
+    {
+      "path": "assets/index-Igny-MLL.js.map",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-Igny-MLL.js.map",
+      "bytes": 265560,
+      "expected_sha256": "72ff2266cf1125f1b7e377dade7fd3aee037d8ae5db4d09e14233c1a81c8c3fb",
+      "served_sha256": "72ff2266cf1125f1b7e377dade7fd3aee037d8ae5db4d09e14233c1a81c8c3fb",
+      "matches": true
+    },
+    {
+      "path": "assets/martian-mono-cyrillic-B84CD5C_.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-cyrillic-B84CD5C_.woff2",
+      "bytes": 10560,
+      "expected_sha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529",
+      "served_sha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529",
+      "matches": true
+    },
+    {
+      "path": "assets/martian-mono-latin-5W32yIyr.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-latin-5W32yIyr.woff2",
+      "bytes": 23556,
+      "expected_sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+      "served_sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+      "matches": true
+    },
+    {
+      "path": "assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+      "bytes": 15908,
+      "expected_sha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5",
+      "served_sha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5",
+      "matches": true
+    },
+    {
+      "path": "assets/parse.worker-DuQ9bvF_.js.map",
+      "url": "https://antonsoo.github.io/splitscope/assets/parse.worker-DuQ9bvF_.js.map",
+      "bytes": 342545,
+      "expected_sha256": "c3b2fc8a288355a4cf29a64a01e48cc9edec1f5a23677a21bcfe103cfd2d6447",
+      "served_sha256": "c3b2fc8a288355a4cf29a64a01e48cc9edec1f5a23677a21bcfe103cfd2d6447",
+      "matches": true
+    },
+    {
+      "path": "crystal-caverns-any.lss",
+      "url": "https://antonsoo.github.io/splitscope/crystal-caverns-any.lss",
+      "bytes": 748304,
+      "expected_sha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5",
+      "served_sha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5",
+      "matches": true
+    },
+    {
+      "path": "crystal-caverns-fresh-start.lss",
+      "url": "https://antonsoo.github.io/splitscope/crystal-caverns-fresh-start.lss",
+      "bytes": 13892,
+      "expected_sha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2",
+      "served_sha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://antonsoo.github.io/splitscope/index.html",
+      "bytes": 2231,
+      "expected_sha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+      "served_sha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+      "matches": true
+    },
+    {
+      "path": "recorded/LICENSE.txt",
+      "url": "https://antonsoo.github.io/splitscope/recorded/LICENSE.txt",
+      "bytes": 1067,
+      "expected_sha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7",
+      "served_sha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7",
+      "matches": true
+    },
+    {
+      "path": "recorded/destrega-source.json",
+      "url": "https://antonsoo.github.io/splitscope/recorded/destrega-source.json",
+      "bytes": 458,
+      "expected_sha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a",
+      "served_sha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a",
+      "matches": true
+    },
+    {
+      "path": "recorded/destrega.lss",
+      "url": "https://antonsoo.github.io/splitscope/recorded/destrega.lss",
+      "bytes": 84972,
+      "expected_sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "served_sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "matches": true
+    },
+    {
+      "path": "recorded/source.json",
+      "url": "https://antonsoo.github.io/splitscope/recorded/source.json",
+      "bytes": 488,
+      "expected_sha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf",
+      "served_sha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf",
+      "matches": true
+    },
+    {
+      "path": "recorded/zero-divide-2.lss",
+      "url": "https://antonsoo.github.io/splitscope/recorded/zero-divide-2.lss",
+      "bytes": 75529,
+      "expected_sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "served_sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "matches": true
+    }
+  ]
+}
