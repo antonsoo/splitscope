@@ -44,12 +44,7 @@ for (const [name, engine] of [
     });
     await page.goto(url);
     await page.evaluate(() => document.fonts.ready);
-    await page.evaluate(
-      (value) => {
-        document.documentElement.dataset.theme = value;
-      },
-      width === 375 ? "light" : "dark",
-    );
+    if (width === 375) await page.locator("#theme-toggle").click();
     await page.context().setOffline(true);
     async function upload(xml, fileName) {
       await page

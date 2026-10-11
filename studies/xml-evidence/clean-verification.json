@@ -1,0 +1,188 @@
+{
+  "recorded_at": "2026-10-11T20:31:58.864938+00:00",
+  "application_source_commit": "1df57d819c796cc61c4107c23873c9db03fed4c6",
+  "environment": {
+    "kernel": "6.18.54.1-microsoft-standard-WSL2",
+    "node": "26.7.0",
+    "npm": "12.0.1",
+    "chromium": "153.0.8010.12",
+    "firefox": "155.0"
+  },
+  "clean_archive": {
+    "dependency_install": "npm ci",
+    "checks": "npm run ci",
+    "unit_test_files": 16,
+    "unit_tests_passed": 191,
+    "unit_duration_seconds": 36.58,
+    "lint": "passed with 34 pre-existing warnings and one deprecation notice",
+    "typecheck": "passed",
+    "build": "passed; dist/",
+    "browser_command": "npx playwright test",
+    "browser_tests_passed": 74,
+    "browser_duration_reported": "1.9m",
+    "controls_replayed": 45,
+    "control_output_byte_identical": true
+  },
+  "browser_capture": {
+    "before_workflows": 4,
+    "after_workflows": 4,
+    "viewports": [
+      1440,
+      375
+    ],
+    "offline_import_and_export": true,
+    "previous_calculation_export_preserved_exactly": true,
+    "csp_errors": 0,
+    "page_errors": 0,
+    "horizontal_overflow": false,
+    "axe_violations_in_error_and_evidence_regions": 0,
+    "application_from_clean_archive": true,
+    "capture_script_sha256": "48ed9b4c046b12e4d6d0b07e35bd19343a6e0aa475f92bd0498b113d0561bfc6",
+    "harness_change_after_archive": "Use the actual theme button instead of assigning the document theme directly; application source and build unchanged.",
+    "before_observations_sha256": "6ea17458bd28adafbb4d890a460349944872680d09d980e6a055b438a299e88d",
+    "after_observations_sha256": "1413cb50f5024a7a4702c380e3a14657930e9af92bfe2b60eee7b8c8778fb481"
+  },
+  "locks": {
+    "package-lock.json": "a1ee24de8aea6aa4f2ea60bf9030d0b168ece4217e0b61c6ee311c8b77ed6eb3",
+    "oracle.Cargo.lock": "488de2cd0e51608c7e9bb48f3b7da7aff642e5df5e5e66bbc7cac7ab28528abd"
+  },
+  "oracle": {
+    "source_commit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+    "driver_sha256": "bb1de42b07616c4018146cb00c29ba75b86a3080c9b1430a85bff65393c961f8",
+    "toolchain": "1.97.1"
+  },
+  "assets": {
+    "clean_and_source_build_equal": true,
+    "served_bytes_equal": true,
+    "files": [
+      {
+        "path": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+        "bytes": 34704,
+        "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5"
+      },
+      {
+        "path": "assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+        "bytes": 19588,
+        "sha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24"
+      },
+      {
+        "path": "assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+        "bytes": 9320,
+        "sha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a"
+      },
+      {
+        "path": "assets/index-DA_d0CwC.css",
+        "bytes": 65953,
+        "sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36"
+      },
+      {
+        "path": "assets/index-m7YU0aN0.js",
+        "bytes": 142412,
+        "sha256": "03f6464254ad6d6af69a8d3529a73ef7e8ecbc12a8d77bd74f79cd9697cb7fac"
+      },
+      {
+        "path": "assets/index-m7YU0aN0.js.map",
+        "bytes": 265560,
+        "sha256": "56962b2954777c9db80aeb3ede6069ab781e644cecd2926496328c9bfdaad5af"
+      },
+      {
+        "path": "assets/martian-mono-cyrillic-B84CD5C_.woff2",
+        "bytes": 10560,
+        "sha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529"
+      },
+      {
+        "path": "assets/martian-mono-latin-5W32yIyr.woff2",
+        "bytes": 23556,
+        "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291"
+      },
+      {
+        "path": "assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+        "bytes": 15908,
+        "sha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5"
+      },
+      {
+        "path": "assets/parse.worker-DmT487O9.js.map",
+        "bytes": 343558,
+        "sha256": "0acbb6b21d9cb586dad71827c1016b4ae41d671550be96b6bcfe090380ac02d4"
+      },
+      {
+        "path": "crystal-caverns-any.lss",
+        "bytes": 748304,
+        "sha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5"
+      },
+      {
+        "path": "crystal-caverns-fresh-start.lss",
+        "bytes": 13892,
+        "sha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2"
+      },
+      {
+        "path": "index.html",
+        "bytes": 2231,
+        "sha256": "f179243fc546a1fc9d5b1e68554fafae1b84fadc2aacbe21979eccf9ddf1a227"
+      },
+      {
+        "path": "recorded/LICENSE.txt",
+        "bytes": 1067,
+        "sha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7"
+      },
+      {
+        "path": "recorded/destrega-source.json",
+        "bytes": 458,
+        "sha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a"
+      },
+      {
+        "path": "recorded/destrega.lss",
+        "bytes": 84972,
+        "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54"
+      },
+      {
+        "path": "recorded/source.json",
+        "bytes": 488,
+        "sha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf"
+      },
+      {
+        "path": "recorded/zero-divide-2.lss",
+        "bytes": 75529,
+        "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb"
+      }
+    ]
+  },
+  "screenshots": [
+    {
+      "path": "docs/assets/xml-evidence/after-chromium-1440.png",
+      "sha256": "34c543a8031c7a80dab73ca5452d2d2002c1d9f4880511c92b4b64af2ce0bf3e",
+      "width": 1140,
+      "height": 773,
+      "visually_inspected": true
+    },
+    {
+      "path": "docs/assets/xml-evidence/after-chromium-375.png",
+      "sha256": "033b09f74c40818fdef6043a2dfd23748acbbe6ee0041336f128e6fbb6e71dfe",
+      "width": 335,
+      "height": 1244,
+      "visually_inspected": true
+    },
+    {
+      "path": "docs/assets/xml-evidence/after-firefox-1440.png",
+      "sha256": "be5c90cd34badbbb2d3b6cbdde8e6b5031194dcb7522e0c1b0eb9af83c21fddc",
+      "width": 1440,
+      "height": 1000,
+      "visually_inspected": true
+    },
+    {
+      "path": "docs/assets/xml-evidence/after-firefox-375.png",
+      "sha256": "e0335d847bf4ebff4b9650f736a6cc915cd89dae7fa8549f889be477d58313f5",
+      "width": 375,
+      "height": 1000,
+      "visually_inspected": true
+    },
+    {
+      "path": "docs/assets/xml-evidence/before-chromium-1440.png",
+      "sha256": "4a13d817e48ab8a0a81624b87009454b3dfac0e286ac2dc397d74960629d76f7",
+      "width": 1140,
+      "height": 262,
+      "visually_inspected": true
+    }
+  ],
+  "publication": "local verification; no registry release or manual deployment"
+}

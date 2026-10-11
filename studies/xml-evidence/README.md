@@ -104,3 +104,25 @@ The automated browser suite also covers repeated RealTime, BestSegmentTime, and
 AttemptHistory. All 1,500 existing malformed-input fuzz mutations remain in the
 suite. Unchanged valid inputs must parse; the old arbitrary minimum number of
 accepted malformed mutations was removed because it opposed stricter validation.
+
+## Clean build and browser verification
+
+[`clean-verification.json`](clean-verification.json) records the fresh archive of
+application commit `1df57d819c796cc61c4107c23873c9db03fed4c6`, a new `npm ci`,
+lint/typecheck/build, 191 passing unit tests, and 74 passing Chromium/Firefox
+browser checks. Lint retains 34 existing warnings and one configuration
+deprecation notice. All 45 control outputs are byte-identical after the clean
+install. The working-checkout build, clean build, and HTTP responses match for
+all 18 files in `dist/`.
+
+The final capture uses that clean build and the actual theme button. Four
+offline workflows per version cover Chromium 153.0.8010.12 and Firefox 155.0 at
+1440 and 375 pixels; the after capture also checks accessibility of the error
+and calculation regions. No page/CSP errors, off-origin requests, or horizontal
+overflow occurred. The before/after observation JSON is in
+[`docs/assets/xml-evidence`](../../docs/assets/xml-evidence). All five saved
+screenshots were inspected; the mobile error and source records remain readable.
+
+![Retained source records after an attributed import](../../docs/assets/xml-evidence/after-chromium-1440.png)
+
+![Malformed replacement rejected while the previous analysis remains visible](../../docs/assets/xml-evidence/after-firefox-375.png)
