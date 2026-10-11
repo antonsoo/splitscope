@@ -126,3 +126,11 @@ screenshots were inspected; the mobile error and source records remain readable.
 ![Retained source records after an attributed import](../../docs/assets/xml-evidence/after-chromium-1440.png)
 
 ![Malformed replacement rejected while the previous analysis remains visible](../../docs/assets/xml-evidence/after-firefox-375.png)
+
+## Public source
+
+The fix and verification artifacts are pushed to `main`.
+[`public-source.json`](public-source.json) records byte-for-byte checks of 13
+public files pinned to the evidence commit. The `gh-pages` branch was unchanged
+at that check. This receipt covers source availability, not a package release
+or a new hosted-demo deployment.

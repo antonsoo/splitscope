@@ -1,0 +1,103 @@
+{
+  "checked_at": "2026-10-11T20:32:30.408521+00:00",
+  "repository": "https://github.com/antonsoo/splitscope",
+  "source_commit": "a41458c19550db8070ec5eef4a2cb4e12a9eadcc",
+  "remote_main_matched": true,
+  "worktree_clean_at_check": true,
+  "files": [
+    {
+      "path": "src/core/parser.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/src/core/parser.ts",
+      "bytes": 10910,
+      "sha256": "2e531a2b7e2f7398855fb6701fb92b8b894ef6a1bdf38bc50b3142239a60cbed",
+      "byte_identical": true
+    },
+    {
+      "path": "src/core/xml-helpers.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/src/core/xml-helpers.ts",
+      "bytes": 3702,
+      "sha256": "bf7554c1bcca39776d068e2271a27df5ac4c4ed5bd88df533d13409401409ab9",
+      "byte_identical": true
+    },
+    {
+      "path": "tests/xml-evidence.test.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/tests/xml-evidence.test.ts",
+      "bytes": 3626,
+      "sha256": "e92f1a100128a3ec5319ae77e960c7effcfd25440ca3fed963addbf470614782",
+      "byte_identical": true
+    },
+    {
+      "path": "tests/fuzz.test.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/tests/fuzz.test.ts",
+      "bytes": 7100,
+      "sha256": "9b008ae7f6057312876c65c4136a4fab2a15bc8aed3702814eaac606d33dc40d",
+      "byte_identical": true
+    },
+    {
+      "path": "tests/browser/xml-evidence.spec.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/tests/browser/xml-evidence.spec.ts",
+      "bytes": 2256,
+      "sha256": "5167e36bd34d9ac7ce685d46728a4d2bf602aca9003b88430e64f5d2af93d7f6",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/README.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/README.md",
+      "bytes": 7357,
+      "sha256": "84e06572cd022a9c64dbce5390961c04f4e08b16124d0307595ecf3529aadf0f",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/verification.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/verification.json",
+      "bytes": 182496,
+      "sha256": "8faaab02aa1047bff140508e3b63cf42e2805ae968af075f03b621e228fde49b",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/clean-verification.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/clean-verification.json",
+      "bytes": 6659,
+      "sha256": "5a2d9a4c48ee722bb8c29ab4086b6524f5651ff61a132a92b38fadc3a15e7f55",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/inputs.py",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/inputs.py",
+      "bytes": 4926,
+      "sha256": "cd28c05901c1384bef77c6d3f4dedfa4f5a967dd664c3250db2cb74e2dde28c1",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/after.jsonl",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/after.jsonl",
+      "bytes": 24226,
+      "sha256": "65a281bfc476729f010a700e86488996fb33fff0cde9b24d4148c450b18314c8",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/before.jsonl",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/before.jsonl",
+      "bytes": 48327,
+      "sha256": "88ac160baf21c034bd61e8f702780dfa1bd1bea0717b56a3dedd4d46a6e21d56",
+      "byte_identical": true
+    },
+    {
+      "path": "studies/xml-evidence/oracle.rs",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/studies/xml-evidence/oracle.rs",
+      "bytes": 2195,
+      "sha256": "bb1de42b07616c4018146cb00c29ba75b86a3080c9b1430a85bff65393c961f8",
+      "byte_identical": true
+    },
+    {
+      "path": "docs/assets/xml-evidence/after.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/splitscope/a41458c19550db8070ec5eef4a2cb4e12a9eadcc/docs/assets/xml-evidence/after.json",
+      "bytes": 3167,
+      "sha256": "1413cb50f5024a7a4702c380e3a14657930e9af92bfe2b60eee7b8c8778fb481",
+      "byte_identical": true
+    }
+  ],
+  "gh_pages_before": "fb235031f72932456d5a229d5bd03b8f6d4a1828",
+  "gh_pages_observed": "fb235031f72932456d5a229d5bd03b8f6d4a1828",
+  "scope": "Public source and verification artifacts only. No registry release or manual deployment."
+}
