@@ -1,0 +1,3519 @@
+{
+  "reference_commit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+  "baseline_commit": "3fda8d483fdb07d138fbaf0d38c96bd56fbe7248",
+  "baseline_core_sha256": {
+    "src/core/best-route.ts": "c3ab4a4fba78ab9b60f3c6f1399621759b4303c70a2dc0aab2d854547d7c66ee",
+    "src/core/decode.ts": "a65eaa932e2acfa7c560b26a31b927c61afff3762f8e62898d6874f491f1c078",
+    "src/core/errors.ts": "441bc037c26631ab72d076b012b6352a357bad8731edc9f4156f888d07a6090e",
+    "src/core/montecarlo.ts": "a1b0b4bf1ce3410728dc4770db05772e0ac2724c2ee0c22b896fb867c1f964f6",
+    "src/core/names.ts": "ac29fdc5b26eb252deb73dbeaa11edfc25fa9047964a6c2af3ef10328b666432",
+    "src/core/parser.ts": "e470945fe96253ed2028d4ba81b20df6ab752ca68545bdc3d4104604cb013a55",
+    "src/core/review.ts": "9f0409ce3312eb64e6a849997f99aae2bbee829bf1330babdc67561480b37157",
+    "src/core/rng.ts": "498e3d9a3b5861f8169d475ed391db4cb3c6de6848a10743d50aef611639f08e",
+    "src/core/stats.ts": "3fbae37f8e699bd63e7e99eb955c1e02fe66e2b166f4edd4e9cb7733a3e3fd8a",
+    "src/core/timespan.ts": "d47cb41ce9f9dd40af4c5ae497adaae5d4e0cfe918d2389cc653166702c1f9cb",
+    "src/core/types.ts": "1c09d41ee70e78770b86c220d5dd4ded548de19c6fd6f1d5b8786d743faeab8d",
+    "src/core/xml-helpers.ts": "a7bdb1cee750377000e90fbe87b91ebe035b9ce8deb9c46f22638bbc3a1c5719"
+  },
+  "controls": 45,
+  "accepted_matching_reference": 14,
+  "valid_controls_wrong_before": 10,
+  "rejected_controls": 31,
+  "invalid_controls_accepted_before": 25,
+  "public_files": 436,
+  "public_parsed": 433,
+  "public_output_changes": 0,
+  "attributed_public_output_changes": 0,
+  "attributed_public_elements": 153680,
+  "reference_public_parsed": 434,
+  "reference_attributed_public_output_changes": 0,
+  "manifest_sha256": "dcc137b85e35d12d14728ee88031b1bdfac183046f19bdbdce338c30183ee943",
+  "corpus_results_sha256": "f6c5a9447dab14959f12db7a84ac62f201fb3de0e175c6f036a61cdff4a6a520",
+  "files": [
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Apocalypse - Any%.lss",
+      "sha256": "3522e8b36a40ff86d6413272e142b6684f7a4ac062d94ade1d95c9e1b12a5116",
+      "attributed_elements": 195,
+      "status": "parsed",
+      "runHash": "6b87083037e73c9715249413c441d8f04c4d05149cddc4cf546f1cbc813bc778",
+      "routeHash": "24db1a01b34842a63fe79c8897c86ff2bae820b47302b87e021d8a517a8cf17b"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Assault Retribution - Any%.lss",
+      "sha256": "8b28b6819024c87fb155ca1d8c406fdc72322bc33b2c0e6ad58bc189381b807c",
+      "attributed_elements": 129,
+      "status": "parsed",
+      "runHash": "9f1f0d7e41096120baacf7d535ec2ef4c4eedeb070ff05a347ddfffda73d1e02",
+      "routeHash": "8288e7efc001c9a64a2b16611da7a3ceadb0e5e8923dc241f5c18590f587b9df"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/BRAHMA Force The Assault on Beltlogger 9 - Any%.lss",
+      "sha256": "52cbe5f97f4a785e6eb0af1e039181bba7189ebc6251428ca82db5784623fe7c",
+      "attributed_elements": 447,
+      "status": "parsed",
+      "runHash": "4d6fb0a32afd93f7c5d9b6a1ede8278eb441732e7274b557afce0307fd6448d1",
+      "routeHash": "fc7438197693158f20be3edec6e895a26dcbd13f15be55b178457ec7d570b853"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Beat Planet Music - Planet Master.lss",
+      "sha256": "3bfe779c9c8d55f5dec57020e069eb08a8d73779495d53a061f7a54ca119c6dd",
+      "attributed_elements": 41,
+      "status": "parsed",
+      "runHash": "458257dde76cc598e893bf0bf46685eb8f1933dd1d3cd833259f433102f37e06",
+      "routeHash": "f4c19e92f75154e6dcf89651e0081d3e25befba647bcc5cd95e7a72806e733bf"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Bio FREAKS - Arcade (PS1).lss",
+      "sha256": "27d7a1723a505e03be079c2b325ea0dd8a8d134943e6c9a95d1f5c752656ef14",
+      "attributed_elements": 507,
+      "status": "parsed",
+      "runHash": "c2703557c24c6ba60b83e479efb5d278dcbd05ce4b824ddb70c9544b4d45f85b",
+      "routeHash": "fa93190bfec6d0ec55fa4916c7eeced41434a0fca6ca3474e96557092363fcc6"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Bram Stoker's Dracula (GB) - Easy Mode (OOB).lss",
+      "sha256": "b27e92ddaf86bfe1e3b051ca5fa24692a3226e2d91bfdabc6be5fb970a8e91ad",
+      "attributed_elements": 54,
+      "status": "parsed",
+      "runHash": "6f7d0807d63456bf9942f2aad86a6bf55e862fab28bc12789f05ab7e6b934564",
+      "routeHash": "9dbd25d6ad6a587dc1c1427dc10091e38e036585cd460ba522165faee112900d"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Bram Stoker's Dracula (GB) - Easy Mode.lss",
+      "sha256": "e1e5be5a4cb3c5eb6a3b744d062a62ed5cfac90df271cb2e34768696c24a1b25",
+      "attributed_elements": 250,
+      "status": "parsed",
+      "runHash": "811ae7c3d3fe531f7bf78a41245071e236b643206c3b70ff6944b88c58e11f55",
+      "routeHash": "bef19b706e6c9d157c986931daac8885fddde7a5525a2decc9912895686927cd"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Bram Stoker's Dracula (GB) - Medium Mode.lss",
+      "sha256": "45afbb58588a435e2feb715f08bbe2bdec42f37a973a63f0aabbc231a418b37a",
+      "attributed_elements": 302,
+      "status": "parsed",
+      "runHash": "e38cf3677ca51c0222e04836709dfdc578440bef153094bae18a9865c3d0a229",
+      "routeHash": "23f0399e085b75b076bcfccfb046c1a1d5f3cbfa46b9db20f241c81af7b6bfbd"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Cardinal Syn - Tournament - No unlockable characters.lss",
+      "sha256": "46cc47b2f94105a3e81db36a374ff9de80d2feae6c34885cd72999af4fc1e5b3",
+      "attributed_elements": 138,
+      "status": "parsed",
+      "runHash": "76e598dc5b28a81eba7576394d59d5ddc539c5611fd1a10c26219f0738a660b0",
+      "routeHash": "0e178fbc8dde4d2a7923d6a21337e018b8d19b0c32b3fc08f252f05fbba1deda"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Cardinal Syn - Tournament - Unlockable characters.lss",
+      "sha256": "4b723607d027862525a0720fe95be8cdd25bda101d4c953c2bfeaa4bbad309cc",
+      "attributed_elements": 78,
+      "status": "parsed",
+      "runHash": "87d368dcd1d2bada1b0c90206ac67ed2a4a26e9ceefa27c50939108b130d0272",
+      "routeHash": "b4e506a2df64492d014b1512e602e5806a870575a696bd703d2b2cc989cea1d7"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Chaos Break - Mituki Bad Ending.lss",
+      "sha256": "ee9ab69005ae6586a5585e41c1ce881e7b1977cf1ee573df468fbecc0a4418c1",
+      "attributed_elements": 113,
+      "status": "parsed",
+      "runHash": "68df8cc7064ce09161122d944ad35ebb1b9018a5870b2bd0bd73e4af02eae61c",
+      "routeHash": "138b42c36bdc91aec359ef72908405c448efe6448c5b936c3ca125ef6271a1a0"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Chocobo Racing - Story Mode.lss",
+      "sha256": "59915a0e5d719335c8bf2819d93072e4dabd1dac429ad52473639537eb1f7cbe",
+      "attributed_elements": 254,
+      "status": "parsed",
+      "runHash": "63990e9c5a78c81923a87b03a576106cf89f0b74644dbd673404a709968a8d55",
+      "routeHash": "410f4993aee771279e50b886a0f42ebd68da2e2c2fa642e3bb129607aace7c90"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Cosmowarrior Zero - Lady Emeraldas.lss",
+      "sha256": "2ee697ba81901eb2e45d1c14b1160e0c3f3283e6d973a99faae74a6745bce4cf",
+      "attributed_elements": 34,
+      "status": "parsed",
+      "runHash": "d4b49e45892307777acd894a029de8ee646817d9c2459a5d4b2ffab344659d2a",
+      "routeHash": "36f6102545d08741ef83b3927d839f16f0863829c0fe15628dd77b8f43aedfa3"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Cosmowarrior Zero - Warrius Zero.lss",
+      "sha256": "079f725037a3a45ee74ed06a7c00df7712283d7674ba8639ac1155e4f4d96bd6",
+      "attributed_elements": 66,
+      "status": "parsed",
+      "runHash": "a721f1d0431262429db080e7ba06beded0c5de8515c2d0ecbb701d48ac630bd3",
+      "routeHash": "2f0489b6bbdc3efac97fe2439fdd3710aa99275fd31464d1b731f8e5fad2c2cb"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Crime Crackers 2 - Route 1.lss",
+      "sha256": "62c766a6f38b107883e53f9278fadeec64bb0609e94304697647219e231aa6f3",
+      "attributed_elements": 59,
+      "status": "parsed",
+      "runHash": "6e086a65f39f09a6c6f44b99ca2ed4503b30f228191b64a378de44d24c8731e7",
+      "routeHash": "18225211d9ad2723d099f7bb415da832973c3f192573d0f7f3fa5cc2d6545bfb"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Crisis City - Time Attack - Ruth.lss",
+      "sha256": "d8cef2a2e0e33d7db6d304ee2f3476fa612d4e688385ab68bceedaf79cb7622e",
+      "attributed_elements": 102,
+      "status": "parsed",
+      "runHash": "7d9a7e47b58f52a770fed7cde215b2181cc67696f08793adc8d40bb3762d0023",
+      "routeHash": "4e64c39dc2af65baf15347c474ce461246581d8f7478d5dc105e8f0b7fe7b76d"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Dangan - Any%.lss",
+      "sha256": "c0280f73f7aeeb520d0f514a90384a3686b970aa6205ee50d9db8c58510fb84b",
+      "attributed_elements": 177,
+      "status": "parsed",
+      "runHash": "7702a251b68ab2e02af9d672031090c04e4118c348784fd4e50dbf00187fecf6",
+      "routeHash": "24ab23918b5f4cb84c5963f57eff8073cfeb26c66345deddc8b42c4cd33cece6"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Darkstalkers 3 - Arcade Mode (PS1) - Difficulty 4.lss",
+      "sha256": "1a589eee3cf3c8f03cd02b1823c3a5ba9867fbf9d13bb0ee7fa6f1b6f6021f7a",
+      "attributed_elements": 6,
+      "status": "parsed",
+      "runHash": "2ade960d8fa8a2c5e602df74f290825c4c390c4a6a70546adbc137799da1537f",
+      "routeHash": "783e3da72eb9c8a1292f40324069fe852490c432b34666516e8e1e77cce0929b"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Darkwing Duck (GB) - Any%.lss",
+      "sha256": "aae5048affa7ddbd735a02b153fe7bd32be00d0cf5b62735e701e8b0d2c3e7d2",
+      "attributed_elements": 17,
+      "status": "parsed",
+      "runHash": "1486cfbb6ce08bd6e99ce5097da41584bf8b51d4a050d84506d11a7764e56be3",
+      "routeHash": "c13aa7e51b8c2085c5891d22c1260bc3a62ac29e9f68d98dce640da2f10eb189"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Dead Cells - Any% 1.2.lss",
+      "sha256": "efa847504ee7ca0704d74b2c211b86bc8b3bf9414207a6f57855f770a72f99e4",
+      "attributed_elements": 510,
+      "status": "parsed",
+      "runHash": "ed1519c807d5cdfaddd0940ebc320bdc8fd11c81694bb8369b633361a08cae7e",
+      "routeHash": "dccc04f3f226bfe375507fd1737436530f7b8b6f2c1c0999b146f6aeffc38404"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Dead Cells - Any% 1.3.lss",
+      "sha256": "3ba6fd7dbaf23ca6c0bf2389baad28af485e43f1dc16d401f0890b5b5cafca46",
+      "attributed_elements": 645,
+      "status": "parsed",
+      "runHash": "fbe48ace2b65297fa942d6e28a30bfaeb24a00c52fba0718f6cf73c31df49a68",
+      "routeHash": "817552373aff5857525119bfe165cdf82ff85a551323362e497f65737a55dc60"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Dead Cells - Any% 1.4.lss",
+      "sha256": "9759114f6df68550a0995ebda09fc1cf3859f9b5500e6dd4b121882ed82f4976",
+      "attributed_elements": 235,
+      "status": "parsed",
+      "runHash": "50c11397e95bf47ecd84bb867d6aaa2774464bfe589d8936af4b95768591f943",
+      "routeHash": "442f89753cc09986e1b110d385d7b58467d590a26f64ed3d90f282506af4218a"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Deep Freeze - Any%.lss",
+      "sha256": "79fe4f9f29fcd62df1436ad856f18b02142069705bc8340525d49d483869f7e8",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "5e7e89b09225a692b06367a24d8703728e015f5e60e86354a5274a39936797e9",
+      "routeHash": "813f70e6b7fb99abf57aab824f01eaeb10631f52e8d9be820bf0c22441ae9d18"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Destrega - 1P Battle.lss",
+      "sha256": "e0b4397191d906930e3f0b3637b20e170ac2bc77eec0f4b37cfc82a2ceddfccb",
+      "attributed_elements": 76,
+      "status": "parsed",
+      "runHash": "699a0bc48562523cf50bc5f02a8450315638ff19bd7bf090393f6bd6a15c6ae5",
+      "routeHash": "8758ce17dd6e466c31dde6f16d6794bbfd4bc8aa75cc783bb6ce1ad46882b2cc"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Destrega - Story - Easy.lss",
+      "sha256": "ccdb9b93128a7ec87ca02f4c1e8233cfbc91cc0e64ba3d64f00c8eae40cc1f55",
+      "attributed_elements": 246,
+      "status": "parsed",
+      "runHash": "86ed6f9f96d8c1cd13addc8aa1695fbe732b84ca6e7ad610458e8178753560a3",
+      "routeHash": "5e98930a08ac0fc4a1e9cdcce554d560624efefa2f1d400348d31f5859f764eb"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Destrega - Story - Normal.lss",
+      "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "attributed_elements": 213,
+      "status": "parsed",
+      "runHash": "3d8b94eb5d7decb12980e3a34b6bf8422c91f3318ec1b480796801d1e7440f81",
+      "routeHash": "71459cd7731b1d17b16f9cd95663bb674c07b9f2ee95efaf4f3f1dfb43286453"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Destrega - Time Attack.lss",
+      "sha256": "bda99eb1af63f68b7f08f3336d097e5c0e8653b7080cdb8fdc289d2194814441",
+      "attributed_elements": 123,
+      "status": "parsed",
+      "runHash": "006d21063d4df826a92abb50a22582254f6fe0fdaea459cc43cfb26608e56b8a",
+      "routeHash": "d81b7bb972fb615a37284b561158e8e48f1484c1271a2a32924d0906ff391607"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Dino Crisis 2 - Any% Easy.lss",
+      "sha256": "9bcc583c3e249a94b9389c7c4cd4b8fa8ac0cd15b5635182b029f2704a8cc3b8",
+      "attributed_elements": 103,
+      "status": "parsed",
+      "runHash": "6b791e9d45eb50b297ae0cbec17cf652526b441d822cec938e302df44e42ffb6",
+      "routeHash": "8c8057f830bfa1533915ce03d836390335f48d5374e7a134bef7d730e24cfd18"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/DuckTales (GB) - Any% Easy.lss",
+      "sha256": "d7135710d020143a51acbd1d9dc6fd8e21ec70a5d42278040c11c4f6c10bd288",
+      "attributed_elements": 180,
+      "status": "parsed",
+      "runHash": "28304078d978055309db17f5b74b087c3dccd6abc3cef115fa9fe286f8bf228d",
+      "routeHash": "4b8a67ba91a7241fc50a36e18a50d65748a89e9febb24c61d41c94bc0b005aa0"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/EOS Edge of Skyhigh - Any%.lss",
+      "sha256": "88bc508f87472ad6b38a57f976a0e8f1f972f79850597efbd8358a8814eda458",
+      "attributed_elements": 86,
+      "status": "parsed",
+      "runHash": "0658fb650c9de42ab6a4e074adfee2737d8556f3de8c926860abd26cf5d4b891",
+      "routeHash": "05b62e507bbe339c0e4a3dbe5229af9e6fca8e239bcdcfad6a0f2956f19300ef"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Evil Zone - Story Mode - Easy (Ihadurca).lss",
+      "sha256": "c5104603390043ac6735b0e6f81be1ea3f376123291739aaa914d0464570397e",
+      "attributed_elements": 118,
+      "status": "parsed",
+      "runHash": "c1a78e79e0baa63955de857420040a5292a67a2d1dd13f8460ebe87796db68ef",
+      "routeHash": "0c1eab6184ffff577324733deff2d8fd3ac7ad3c0cc652a86661d22deece336c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Excalibur 2555 A.D. - Any%.lss",
+      "sha256": "e6e1197ad55c03d5c75edba0bcb6b220140765734d9e6424987c28b5a3142345",
+      "attributed_elements": 143,
+      "status": "parsed",
+      "runHash": "27989418abdb4a6dbb892951927a54d7cf2e32c91762170c8e904aa5a7098b85",
+      "routeHash": "17d5f8a30384f998367028cb1b8d56a44c26e27fffbff436c7b84fdb4f89deaa"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Exector - Any% Easy.lss",
+      "sha256": "256bd6f81449054372be4bb787f93a7b00c8580570531afda31d832dac57fb01",
+      "attributed_elements": 55,
+      "status": "parsed",
+      "runHash": "3143791c2a5f95f379f996fdc30d9f4d3c1ccefd621f6d3abb436998f9509004",
+      "routeHash": "f9383ca29d5f35835655df806860f0f64f3a78802b4d12fc2b170d8c65dbf96b"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Extra Bright - Any%.lss",
+      "sha256": "895b01d3c51b4dfdb7b337b0acff1d7689d298a657f6c36124a6ab67551c9591",
+      "attributed_elements": 109,
+      "status": "parsed",
+      "runHash": "6f9fbb1f87ccece469c2a8f144c4c9fcd6fdb24124fe888ca3f7e04ce717810c",
+      "routeHash": "6229773fcf60773f37db43ce659a93fd5bd24a091fb0f5b135163360a52d415e"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Extreme Power - Any%.lss",
+      "sha256": "dc922eb46476fbd58e4759ddc89578897f9065dec951c7fb9e9bdb2cbdeb5ed2",
+      "attributed_elements": 130,
+      "status": "parsed",
+      "runHash": "17228ba3fe302638d215f187adae40276b967e54d0662dc32a42d4394d150bb5",
+      "routeHash": "4bd4f17b261e95f87253395d62a048877e1f83976830e8076204b6e9e1b9ccd8"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/G-Darius - Beginner - Zone \u03bb.lss",
+      "sha256": "d0572654f8f10dd17b1f505d76e2a45eb1cc94963d36fd0bb79bf101e410e049",
+      "attributed_elements": 38,
+      "status": "parsed",
+      "runHash": "56a9198c0585dba01a5f27834d58866526a7e89610bbdb72a26318e908635d17",
+      "routeHash": "c9418c39aae2bf342a2a7cc34385f5b7531210e8f3307ef20a96b32d0058bdf6"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/GUNNM Martian Memory - Any%.lss",
+      "sha256": "aa3f29f738e56d2a1057ef87274231c41f5c79c9fc00ab04a890bd6a28a41b5d",
+      "attributed_elements": 271,
+      "status": "parsed",
+      "runHash": "4c0819918aad6d3566f422b432a2a1ec48fae186316af469eb405e93cb807a09",
+      "routeHash": "339902979511bc5448dd362ae8095cc45161fc756228f6bd71b7c352ee02434e"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gamera 2000 - Any% Easy.lss",
+      "sha256": "7fdc897c6230e62970e3ba866b931c9f0462b4df5e9ed6e33c11f5fdf31127e0",
+      "attributed_elements": 41,
+      "status": "parsed",
+      "runHash": "1970a6ee0de67712da3b45f52b7678068c00b5ea6a55111374f63d5646ce6caa",
+      "routeHash": "dec2d8cc0b5f6dc469d9a5cabe4aaffc468d7b47c8d9d79e73b54cb1d4d4257e"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gekido Urban Fighters - Any% (Tetsuo).lss",
+      "sha256": "f011d87cd4c5129c06c152477a90959a6d8b67cdaee4b4ba78eb491072af988b",
+      "attributed_elements": 45,
+      "status": "parsed",
+      "runHash": "7504024180959b94c16af34402941617f3e673cf424f368e3da2d945f0d2e95d",
+      "routeHash": "6d6f1eb0bf1e8c66f0eeee1b8c79e133c506d1f8a6c04ae28b8826bfca3b63c4"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gradius III - Easy.lss",
+      "sha256": "864a6a4bc48a50773914a5804b6c0986f7060969de08c687c349001867b9011c",
+      "attributed_elements": 70,
+      "status": "parsed",
+      "runHash": "7989e1b3b501f56a3ef95c53743dc66ae5970d3d7b0755fca142fba426dc55ef",
+      "routeHash": "8abdd9bab09d79dcf532a8e4f3c9fbe8667dae07a50123d53e9e7b6c101e8a32"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gun-Nac - Any% Novice.lss",
+      "sha256": "f70263c963af7c0ca98fc10044a25ee948af98c386afc53405552700b6fdfb3d",
+      "attributed_elements": 12,
+      "status": "parsed",
+      "runHash": "a2317cb8af1ddd0ed14cf39ab06c34b011729ca2e39a011d99a48f92b7ab18d8",
+      "routeHash": "25eee02ef09ffa50be0502d4460cc70ec86b13b228f1cc5c3c9292f45dca3977"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gunbird - Any%.lss",
+      "sha256": "38028baa0e5576742d1936e6b7f978f7c83a1494e65f68211ffc3083887efa6a",
+      "attributed_elements": 115,
+      "status": "parsed",
+      "runHash": "6cdc26135db068bdf1b0c04767ef7be7d216ebbf83f5905b011d363f1c363c53",
+      "routeHash": "1b57c0ae0381bd490ebad206d47e257d1a265166e98bcd6909364e72d6a0eee2"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Gungage - Steyr - Easy.lss",
+      "sha256": "9d9ccdba94d1a408ba2fcba04364efb039c7f4ac3822d949bc7625d7a4475bb8",
+      "attributed_elements": 93,
+      "status": "parsed",
+      "runHash": "d533e89fc489e02571987535762ebff4736f9753428b2a574d084fae2843c1f1",
+      "routeHash": "6b2b93cf5b68dd90643c0b460b0ef5bca9e4ea4555a0183584eed9e2d5ed4598"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Hades - Any Heat.lss",
+      "sha256": "3d231d823567ec95f6bae47c6f859155c17151caacc33fa838d0ad91b5253a3b",
+      "attributed_elements": 276,
+      "status": "parsed",
+      "runHash": "c4bc5726112bfcfc2435ccb1a8f6f88c92eb2f14261e6332929e17f4d871b83c",
+      "routeHash": "e0d8d95105e3247f0e2d8dda28b66c5a8134a0b1a666e9898bf4dd216843c975"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Hellnight - Kamiya Ending.lss",
+      "sha256": "400f64f6ec58a9a6a75409e32eb528f0c797e25fbbf4942ae465e9c7c366b837",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "f6fe36d3361d44d3654b1b9586805c43b78a6b2b961deeae6f705ea6cd3c65c0",
+      "routeHash": "a8308cf448de8d8ca5a037ab7dff959a344fd6b668c8109d0b713ebb41142daf"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Hokuto no Ken Seiki Matsukyu Seishi Densetsu - New Game+.lss",
+      "sha256": "ca5b8d64c23a9e82c7466f5feb9ae3718e138af7b9f92af82ee4f01bde264d00",
+      "attributed_elements": 46,
+      "status": "parsed",
+      "runHash": "a22658f0571d8485a7ec179229df3a984cc4fc300ba6e8feedb20a49e4ef25ed",
+      "routeHash": "0dca978156711dd7a101c3ee68610b72f98b76f8d25601df5786fc4ca1f58b33"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Hoshi de Hakken!! Tamagotchi - Adult%.lss",
+      "sha256": "5a1d4308d09bed0fb5cfe3064ad944f3c16d1d7f754246f9b4531435aff2c842",
+      "attributed_elements": 45,
+      "status": "parsed",
+      "runHash": "651f1cfe0b009bfe2053f0651439f64ec6e6a42d140f3a7e1204cb13251505d1",
+      "routeHash": "7f23c5fa9a6c2ac18e6236978b62637f9758c68075116408c0af1a83880f25da"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Hoshi de Hakken!! Tamagotchi - Death%.lss",
+      "sha256": "4cdfbd588de89c7581bbe3018f9a35acd2993c1f26941a53fd2d02912f1988fa",
+      "attributed_elements": 11,
+      "status": "parsed",
+      "runHash": "a671dee607b64673211778f7be007c2c0a4a8a018da4b3572b2c0e12028b4d47",
+      "routeHash": "28d77ebccd2ea266ba82eccc238285214bc6145496270f98707d8b245ec11e55"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/IS Internal Section - Any%.lss",
+      "sha256": "d7d0a8cd740672b2cf46e1bab2b48a854a016d44ddbc1e378cf05ef551b1de71",
+      "attributed_elements": 123,
+      "status": "parsed",
+      "runHash": "0f79f34aba465851aa572bf9b208e818571adf2e7cc4692f27c68c2554a97e4d",
+      "routeHash": "5d3649ee4a0abc11ed3055059133f3c48e8256da8a27e5bbd6c6630ea9516496"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Infected - Any%.lss",
+      "sha256": "af88930c9a2d1dff367c10030afbdaea1ee8732245e4046c348d1db6bbe01301",
+      "attributed_elements": 145,
+      "status": "parsed",
+      "runHash": "0bde5475125fc0f85664a527b5fb4ef33e56bf0a3d1c184f3fbe6dcb6c839c97",
+      "routeHash": "3abee01f51578be0046c6f6aa8e813062c96c76bbb376782e7f93416375249ad"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Iron & Blood Warriors of Ravenloft - Head to Head.lss",
+      "sha256": "e00dd5ca1cd648d392f3fddbd4f91a2e4d8faaea0ecefd151aa52f8158430289",
+      "attributed_elements": 97,
+      "status": "parsed",
+      "runHash": "254fde910be65346326b15bb280eec74d214f3a4a23ec384528146192c713b7c",
+      "routeHash": "ee10f3c49a9fc520298e1cc3e8762e196d65d663e27291efd5e68e809a55c5c3"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Kirby's Dream Land - Beat the Game.lss",
+      "sha256": "dd612cdc6ffe9b34cac75c7cd364f46368f3e2d921e0681974cf42608d0a1898",
+      "attributed_elements": 289,
+      "status": "parsed",
+      "runHash": "36ebe7d18c1cdf43872f8f12477a40b17b5f4aa7311122273c711a7556709738",
+      "routeHash": "069b3908ebba551f67a8da25d34ebedb0ddacd34a62c5174edc8ccbb598b9496"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Krazy Ivan - Any%.lss",
+      "sha256": "2fb35d96cd6323b159c29a1a689e5fa838c1effcb6e3f20208e67f02e4cf3f83",
+      "attributed_elements": 40,
+      "status": "parsed",
+      "runHash": "9f514b0ed2ba2a0017dc548aed68d699c9e0150c2361089345c28b253358c570",
+      "routeHash": "97e6de775eb20ac1a2f707c084834be752e9c75f1d874af604aadd9df7c1160a"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Kwirk - Going up.lss",
+      "sha256": "c47a96bd129af3160f1efbf1532fbbffcec97b2c4212a65da22d57f3b0ef658c",
+      "attributed_elements": 27,
+      "status": "parsed",
+      "runHash": "74453d7a9469db187d3b500c5ed537d46fe2eeab51d4a5605003e9818b2b8651",
+      "routeHash": "034acf21d2d992b9fa63b10898b9601b40c3dad4cfc7daff70ed61128678955e"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Kwirk - Heading out 99 RMS.lss",
+      "sha256": "d050e074a24b99f79624e1e282728e11bd00fbd7b046bbd4e08fccb398ab969d",
+      "attributed_elements": 40,
+      "status": "parsed",
+      "runHash": "b4e0aac216a51bc008b9c84557ea2a99ff7514f5de9be2386719929d81f726dc",
+      "routeHash": "d00656db750fc48201626fe8232ed9fc763868ab94a6ce2734453a13e10b0cc7"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Lone Soldier - Any%.lss",
+      "sha256": "727ccf0c3d1d99f725abab6d6a7cb20f23dc3411229c3d2c498bf855ff3490a7",
+      "attributed_elements": 42,
+      "status": "parsed",
+      "runHash": "661616e7de84d4e5a2dc95f9d9476bff564d0fc5dbcc53ea294931781793765e",
+      "routeHash": "e41939b8be4de9865fa4f96ef03dd08d6ed2d2cff172d41a77e3837e643c54c1"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Love & Destroy - Kiki.lss",
+      "sha256": "7853281a70249f5c12fbb204136407078e17a4240cf21dfb9c5bf19f18f38228",
+      "attributed_elements": 64,
+      "status": "parsed",
+      "runHash": "d31a942cc01a2b3de6a72dd5d503eea5e242894452ccdec82e268882c260e294",
+      "routeHash": "b3cc02eb3903bb06ad329378530ea0d6099d69d97f34c12659cb702d7fa6d5a6"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/MDK - Any% (PS1).lss",
+      "sha256": "edaf95a16f14ca3c4ba4248ae21f0a7fdda425872bb85a15417b1a818470c517",
+      "attributed_elements": 90,
+      "status": "parsed",
+      "runHash": "fb6cef48ad4da940ba7e1f94b5356ec58dd4eda82370fb0fb2f3e1823efa7f8d",
+      "routeHash": "71fac6f07f51ac88c8b7acb8ee27f4b972c220b4d92d1b3cb0b407e8eaea4585"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Mad Stalker Full Metal Force - Story Mode - Easy.lss",
+      "sha256": "cfb9d753c46ae740871985ad8e7b69f12d23b1dd15816ec45965e4e2430eea42",
+      "attributed_elements": 141,
+      "status": "parsed",
+      "runHash": "e4b3e4d89fa792f07196bd6ddb3dd2fd66b5ccfc697507e1820aedd412e465da",
+      "routeHash": "6c32c430ac8f8cb653cc303ff74a7fcaa71c04df3c1140e5979e74129b41aab0"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Megatudo 2096 - Story Game - Easy (Samurai).lss",
+      "sha256": "1145f92d11312fffbe369473f4187e51705c63a4349c96c29d94d94de12934ad",
+      "attributed_elements": 51,
+      "status": "parsed",
+      "runHash": "45de8504569999811f62876977f030a99b842169141e841e85b4f9801d6eff89",
+      "routeHash": "1983d293a71adcdeff585179a6f6c7ed8da9ffb932147a4e78516f8a52036ee5"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Meta-Ph-List - Any%.lss",
+      "sha256": "0a3aa6a10d65c57f43b9913cebe6d0829163c11f10177d01817c5057ce6abbcb",
+      "attributed_elements": 140,
+      "status": "parsed",
+      "runHash": "180e1094e0c1961b0a5c0cf8a2b38a5dc382edd91ac757853566f6ec304d9beb",
+      "routeHash": "6efe30792d2fc401effe8904e11be3c4956809179d29931d032fc7c896a0aeea"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Mighty Morphin Power Rangers (SNES) - Any%.lss",
+      "sha256": "cf71d3f058fdf59c98f7d32f84c6ad6837e2743e71fd2862ed281d9e9beeab58",
+      "attributed_elements": 38,
+      "status": "parsed",
+      "runHash": "bd90a28c4853b161ffaf2bedff519e8eef8b789b6a621970ef3fcee95a42043a",
+      "routeHash": "d1f9f7ced8e85c5e1d47d818b3cd93fad52cb3b7d0287dbb485354c8072d34a1"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Mighty Morphin Power Rangers The Fighting Edition - Easy.lss",
+      "sha256": "8d0e3521ff1949574fdac033ff33b28af9db972116a7a828c77c4da86c17361b",
+      "attributed_elements": 275,
+      "status": "parsed",
+      "runHash": "45aa00cc45a638eaad8ee27b0ab58b995714aa93ac9ef68462a916dfb3a8fbfb",
+      "routeHash": "d6094fb1ded94cbc95a1fce7edcd2115fee0545b73a6708529f37c567d81ffaf"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Missland 2 - Any%.lss",
+      "sha256": "32e4212595f2e5e2ebcfc5602da206e0635b25ab4fc834371dc1fd0d7afacc03",
+      "attributed_elements": 299,
+      "status": "parsed",
+      "runHash": "380e6078c51c17ef9a35e4916bf2641d2d0756edffb7e3f644c958101d74745d",
+      "routeHash": "ca14c645a0a4e657a9d92f720d348264119856c1788e3963579906f010518597"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Mobile Police Patlabor - Any% No Restrictions.lss",
+      "sha256": "69b0e914a35455ba20b8e6792e635f448d7785c9e087f201395f5adfe44fe758",
+      "attributed_elements": 93,
+      "status": "parsed",
+      "runHash": "e3f9f2d90d6c887a89c873cfb75f0496948ec95f816252a45e469288b15b9715",
+      "routeHash": "363ea1180ac24be124e2b41f1b1f7d0f941816eefc594a3f2923780a99978a63"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Monsters' Den The Book of Dread - The Den of Corruption - Any%.lss",
+      "sha256": "01cd7be1d0f063ff6bdfdb366857238655e1891a46460f06fffd69fd85dc7e87",
+      "attributed_elements": 78,
+      "status": "parsed",
+      "runHash": "8b1647ae28cfe4bb811fa4347326170df79c575a90b2d5f57bccf362c5b4c54c",
+      "routeHash": "1fe969eb5cc9f752b2ee152cf50fcba9b92cddec24ea85a708752ce7fb256678"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Night Striker - Route P.lss",
+      "sha256": "7c641d048d647e11009faf8c0e43582d61da949c050bb269375e979833f3c9aa",
+      "attributed_elements": 38,
+      "status": "parsed",
+      "runHash": "2d4419907761fbc512eb3fba7cce23573fa5486d674b6030a8ae4d39d8ecc2d3",
+      "routeHash": "560ce85252dbc9813ca08f780c8808b278d6e2e165fa76717f2b15806444db87"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Night Striker - Route U.lss",
+      "sha256": "4cf8b784f49f8e3d0aa8936d861c600fea0ed1326583c39969c3466942817805",
+      "attributed_elements": 29,
+      "status": "parsed",
+      "runHash": "37c33fc14d63e88fe29510e81a5323d3f6ec3c19150e17115d4208854f5bc51b",
+      "routeHash": "70c1980f9f01cf19fd5b9ca8212a93064e3fd704f3d2c2bfcdfa26d24e5c0a0f"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Novastorm - Any% Easy.lss",
+      "sha256": "a310ec2ba37522d881b9405af56c180f9512e2e4ecd5d4c7fb82f0b4e96473d5",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "939a8bf9c6514e957e8d3dc12b96668365329eb76e5b365a9bf3888a96ba99d9",
+      "routeHash": "c3233b80d443092c27208575620eef59e7e229c27e5594d88f058222cd9bff4e"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Omega Boost - Any%.lss",
+      "sha256": "c2c8b99a25b2e18ae72e6a629b4dc120663dfaa7a0b1d7dda5d508094e755f14",
+      "attributed_elements": 15,
+      "status": "parsed",
+      "runHash": "5b38cfa6b9a944974af1cddd4ddb03c604c1bc76a1a9d1e8ba856e4ae949a3bd",
+      "routeHash": "0fa2ce4e4d71575d499b2bc5b12b99b931e4591e21cfef6351fd55ffe9999288"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Panzer Bandit - Story Mode - Easy (Ain).lss",
+      "sha256": "056db2eccf3f368e74409274d5715b4535dedc03237566e7c2883ce36ee478fa",
+      "attributed_elements": 41,
+      "status": "parsed",
+      "runHash": "e6a8cfab0279ef129f5381f7a93ba1be3e1864d2d200c97ddc65a146c317f589",
+      "routeHash": "d295610804fa3b4374480f37385c087d6ce49ac521684edb1019fb076d0ca085"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Panzer Bandit - Story Mode - Easy (Kasumi).lss",
+      "sha256": "ff075813d6d878ff7142e5ef17038b2ee533ac60c01f8add03c845ed02c57458",
+      "attributed_elements": 146,
+      "status": "parsed",
+      "runHash": "e15bcbd7d15757809c9c1a204a6fc2c8d30720096810411ed8a234a5df3be7e7",
+      "routeHash": "9c9805d28143d3b2073a1e2636cbedf7d4a5ca9d0dd87e5d212f1de78b2e9614"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Planet Dob - Good Ending.lss",
+      "sha256": "74e2a565e20f2862e1715da160bedd347720468a5ef98a02895188884be4cca6",
+      "attributed_elements": 23,
+      "status": "parsed",
+      "runHash": "dc82f790a5b5c47cc714f5e8dd05e5c34693bfb6a5dc8cec94b7829032273bbd",
+      "routeHash": "6183906ac2584242a0152084b421f239123f7d5a2d03f3ffdfa62d81e8ffc095"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Power Rangers Battle for the Grid - Arcade Any%.lss",
+      "sha256": "b38b10896c908b85bca057d6d95167b2a7b04ab381e0c5cd28ceeb15f9913a17",
+      "attributed_elements": 356,
+      "status": "parsed",
+      "runHash": "4a75aef8ad63b98903cc06336bc5f283b8eb1ec64a7237b07b47fed10c0a6721",
+      "routeHash": "2f466a2b0813758e8267d2f4efa5b4003b2397e94d1fa6ead00567b135434ff8"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Power Rangers Battle for the Grid - Story Mode.lss",
+      "sha256": "3fa17abc442070d0d3ae1aa2a96357fe35c84df6f6e65266dfda4c733a6c7bb8",
+      "attributed_elements": 146,
+      "status": "parsed",
+      "runHash": "75e600817aad7b7ad5f9c0bbebc273910f03e2467529de5db69eb8ce3c2b647c",
+      "routeHash": "b82075046f6953915b082e25c26e6b21924e28d8e432821cf5eda78d17838cb0"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Project Gaiaray - Attack - Untitled.lss",
+      "sha256": "aa7f10f39e0a917fbd651d5648c320c295e99f12ccd8e53433b29fdf555d3fd9",
+      "attributed_elements": 64,
+      "status": "parsed",
+      "runHash": "c428a6367ca72c74f2e38baa9bd76669c85f95b3248a5b93bb33f6df31f481f1",
+      "routeHash": "1bc4cec3a4a5b06d33481bbbc71cdec77e859da3a3e9a0051e02848875484f00"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Project Horned Owl - Any% Normal.lss",
+      "sha256": "ca9480e4c8c84c058e7e5e439689034b58f9073b5a298a59c02c941d71a42a9c",
+      "attributed_elements": 25,
+      "status": "parsed",
+      "runHash": "052d598759de801c84b0f68a7fa527497270c11961fd7ed8b82de9a633138910",
+      "routeHash": "3ab203140b2952f05f06b774434cfaea6d8de3fcd9086874b9c8e0c3def2e51c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force - Arcade Mode - Easy (Gates).lss",
+      "sha256": "9ec3326aaaa4d156e0528903cc0f5bb95947b6fe21e7760da5acc032cab35676",
+      "attributed_elements": 141,
+      "status": "parsed",
+      "runHash": "78afec8c4c34027392b68635ad24cd4e9b23e227f37573ee92eae6ab88301c37",
+      "routeHash": "532644f962dcc030e6f7e5f88c66985d43445f5e00f0def222cfa6bcda90f466"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force - Arcade Mode - Normal (Gates).lss",
+      "sha256": "60ff9e695894bc780d61bc3f3e00658618a35e78c6319ef63fa96bd24603249c",
+      "attributed_elements": 33,
+      "status": "parsed",
+      "runHash": "a5f26b062b1606f9aeedaec69ed1277cebb8d62816581cd3c26a979fccfafc8c",
+      "routeHash": "c53870b82fcd6fdd4e66fd3f62c6d4bdfab7d5904d477e58e9f803e997ead4b6"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force - Story Mode (Gates).lss",
+      "sha256": "17d40abe41bcd5835e9d9d8bfcff08368692e7f9a97bdcdc008b8a799a742857",
+      "attributed_elements": 183,
+      "status": "parsed",
+      "runHash": "479369d413d19852327d712a8b81063e6bfc536f430b811edd24b694d139e148",
+      "routeHash": "f1248eddd4aff5ba7ce4d0b040c82b8256eab682e0027712784e8729ebfb66c1"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force 2 - Arcade Mode - Any% (Regina).lss",
+      "sha256": "2238df5c7ba0d97849fc42be2fdc8d03f35171158b062931dedf9af97a17d9fe",
+      "attributed_elements": 77,
+      "status": "parsed",
+      "runHash": "fbd52f8be743c1b89d1359e76bb29f7b6fd0184f3dd63baacdb53c6639b04f8d",
+      "routeHash": "3972cf907fbc3b31c1349c8afee5f02ae134e4639f28c0629829018f20572ce1"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force 2 - Arcade Mode - Easiest (Regina).lss",
+      "sha256": "156a18549136a063b3e848038c278f873c32b3b078ab0169828fec1854fd31e6",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "65671cebfab28543183c670b1c21a24b62b671bff12851313cb47d6108981df0",
+      "routeHash": "7ce2f646537615d22d1082f709e4913d2638d88a2a893f0c6beea562ade0a12c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force 2 - Arcade Mode - Easy (Regina).lss",
+      "sha256": "8bd82b8efe822ce9f7fb0f6086ba8fe72838f96532fbc1f483a999c7be57365c",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "f2165cd46de3f7d8251b0cfc98088b193ef50ee1d0cc86410463c5952bd9c419",
+      "routeHash": "3474fdcafa94ec34a73f86a0e6b8f7ef81765c81f71ff44cd1e651380abf7e03"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Psychic Force 2 - Story Mode - Any% (Regina).lss",
+      "sha256": "d4aea315ebf085da135d09dda324ff1a1c47345b51ee8dead3aac998dd545bea",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "77cf7b12ce9bb2034b9e278fd15bed0c8e7683d1cd82342fc4364ba1b1cb8ac6",
+      "routeHash": "4b2235c129dbec881f47470c36752153874f297fa5314838c5e5cae11156ff35"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/R-Type Delta - R9.lss",
+      "sha256": "0122c2966d50ceba727cc210d36ffc8cd66158cf8ae5db5b4203c5152a1b1bc4",
+      "attributed_elements": 16,
+      "status": "parsed",
+      "runHash": "a726026ad61b61b7b996996b1dafaea6d08264338e54746591f5587afc50bd55",
+      "routeHash": "531d389ce06664662b82c14cb8052e3585f6fad0b659d660cb10ea6059192e49"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Rakugaki Showtime - Normal Mode (Mamu).lss",
+      "sha256": "191fa4a246184965b3269671ae752434890aa6c660877b824dfc32a6465e1d09",
+      "attributed_elements": 626,
+      "status": "parsed",
+      "runHash": "6c3b88c289ff32d7c5775fed0e987dc9143f2cf6ee0f3ec7ab3584d8bb57f071",
+      "routeHash": "0507ed203e7d6a0bd16578c506adb2ea8c3dfb090aa19a182da8f9b30c568c28"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Ray Tracers - Normal.lss",
+      "sha256": "2d8b750e014d1e166a23419242012107969ca21f97c0a185cad907efc07417f4",
+      "attributed_elements": 78,
+      "status": "parsed",
+      "runHash": "477c7432b064869c5fb6a02917d8c471800585fc8ecdeb4405d543c43948bdb6",
+      "routeHash": "3f570cf283770c486a966aab1416b1315b52ed375654bf265e74d12cdb9a3e78"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Re-Loaded - Any% 1 Player.lss",
+      "sha256": "974777569a55921027bb90144fe174fc301968eef38594190da11a287c7205a7",
+      "attributed_elements": 735,
+      "status": "parsed",
+      "runHash": "8dce93cc88de7f0b22e11af5274e87438a9be86eef48be5522ac17915e99eb68",
+      "routeHash": "0e9d75f617619d0dc1043b0e70ac2cffe5014a50e43311323596342b1d270dff"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Re-Loaded - Any% 2 Players.lss",
+      "sha256": "b25419b1734f86b4067484f5c95531c83c6e3f0fffe58bcc0bb4a89a32a3ba46",
+      "attributed_elements": 89,
+      "status": "parsed",
+      "runHash": "9e4a5edb6e4b4e461cd7a325852e4b6927522535ab080e6c32afdb09116d5693",
+      "routeHash": "474ce8ff4d497ef4aea5434aba25fb1630feea3c93fb3c25cadb132ca901fb41"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Realms of Arkania Shadows over Riva - 100%.lss",
+      "sha256": "7ce873ab3f5d3d2c9b14eb4ae4a5366a201bbea777f0248dca2dc109fe9e442b",
+      "attributed_elements": 255,
+      "status": "parsed",
+      "runHash": "b122675a32c3a91079f9b0617d020f69b6721db563eb0b2c80c38718ccc68252",
+      "routeHash": "ec78b5c08b2bc67fe7064b9aef4411fd9fd5f6842907fb24dc7b92ae6cce1d31"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Realms of Arkania Shadows over Riva - Any%.lss",
+      "sha256": "938096b0b2bd85aa5d3af64d4f53fcf84fb89d1a10e1496f3bc661238d6387f3",
+      "attributed_elements": 509,
+      "status": "parsed",
+      "runHash": "b7cb236ba5cbf6522c029f43a4b1e69d9943d6e11bb7ea09f22f8d29aa805947",
+      "routeHash": "48539da0f054678f9ae23f01515f7b6f2703cbf7d14d10067d4ba0c44aa66aac"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Ridegear Guybrave II - New Game+.lss",
+      "sha256": "9d99b2b05c113e7e70bf62166b7e3e04db361ff15f35a31a864d374ad7ae701b",
+      "attributed_elements": 126,
+      "status": "parsed",
+      "runHash": "7e41e0a7d53984246349d939b097054bcdd4ebfe8d9f7b0dea289bbd02cb215d",
+      "routeHash": "d85cca76591d73e70c060a34694e1227030ca86d8efe673ca02d6820a1bec061"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Ridge Racer (PSX) - Normal Cup.lss",
+      "sha256": "cdbd6a935982562195b0ba0393f5bdbba4e828e84ede949d3f9c8d35a8b31f45",
+      "attributed_elements": 10,
+      "status": "parsed",
+      "runHash": "bec5cbabc91582427c69665f5cb79cdfb3625fc1b1220c651295307586e42ee8",
+      "routeHash": "803b0802ad873a7572d9748a9e7e1e91d12b347272ec0dc979c400d3d3ad0e1a"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Segare Ijiri - Any%.lss",
+      "sha256": "c299e4b4ced4e8169ae8b50973ba5b4aa4489c3da2416d5d4daaaeb652277b10",
+      "attributed_elements": 83,
+      "status": "parsed",
+      "runHash": "7964a5b53af8a568f7a729724080497ae9b16b07867df99edd055af4ee4e8466",
+      "routeHash": "9557d13ad5425df2c06eae58182e076643561d494fa23e2024ae044957d046c4"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Shooter Starfighter Sanvein - Any%.lss",
+      "sha256": "680d1785a8d6bd95c5b84054a9af4ba8e1415ca73c9e09b91619ca48ef891088",
+      "attributed_elements": 57,
+      "status": "parsed",
+      "runHash": "f32fce66cea8e1d912c0938e8ac4d2d6fa2feee5254355a042ec655871f564fc",
+      "routeHash": "2430ba8efe48530eac1afa0b1a3199b4e16966775fde522340f32e7d986bfefd"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Soukyu Gurentai - Any% 1 Player.lss",
+      "sha256": "7fe15e094633d123d826fdc1ceb650fd0cac667c5eeacb4db87f00c6d764256b",
+      "attributed_elements": 49,
+      "status": "parsed",
+      "runHash": "f50a64f1ec2bc4c8300770bca1057e8cff3c1a17aac7ad9ebb2a0e38d9a959e5",
+      "routeHash": "7960539b815d3baa42c0d9f82e2dadc1eb6fd6ad4adb08771c93e57a5a2b2b1c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Speed Power Gunbike - Any%.lss",
+      "sha256": "5eb0206d794d0dff8a045a8ff3a0863e622b037e49632fead9191305e752afef",
+      "attributed_elements": 252,
+      "status": "parsed",
+      "runHash": "b06df3e055259c23faa92e14c3309768cb14f1d8ee665cbfca17091fbf0aad54",
+      "routeHash": "54c5cf877d34f2472f6e57b8b99f449391edb10f49a32d811a598a39ebd20209"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Spider The Video Game - Any%.lss",
+      "sha256": "46612687472de09634b316579a4742fc88dea8dcd531c9cd809a399515d532f7",
+      "attributed_elements": 552,
+      "status": "parsed",
+      "runHash": "e9472f4c65913071c50f0405cc4b2fcbf8a7e2c0631c64799e162d2ef4fedac4",
+      "routeHash": "371493afc34f702c2a0aab4909afa18a61dd9efb6f6df8771775645197447961"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Strider 2 - All Stages (Hien).lss",
+      "sha256": "2d497e7281cf6f2c878d689f92edf82c1b12e2d7bde7378410ae57701a37c50b",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "a15351692d93abd61d8c41e8d951cf1264ddcb8f439a50fef376da9bdb78a51b",
+      "routeHash": "0de732a000328d51b45dde79dc8340cf2ce2f1eeeec10b25f0022eb9c94287d7"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Strider 2 - Any% (Hiryu).lss",
+      "sha256": "a145e679606927f07b1b562dfcd5589fa0e03b108cef3b79af6f5443e31cf477",
+      "attributed_elements": 29,
+      "status": "parsed",
+      "runHash": "86a455ef10c2c8f3cc17c91a8389bbc609e0782c25d4da39fe2ef62fa401889d",
+      "routeHash": "e0f06e0e7a6f734966ece8f73ecbab659284df88cda9019b555731fb6081e163"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Super Mario Land 2 6 Golden Coins - Any% Glitchless.lss",
+      "sha256": "ed8ff25a5b27995475bbfd2a6e95d6ea6dd6d3ff347d705fb4520d447bdcea79",
+      "attributed_elements": 154,
+      "status": "parsed",
+      "runHash": "00c4ef43d3e69be2732009b05c5e18e2eadfcc1c5c4e200a3df32189fc7e0c12",
+      "routeHash": "59b68e324db496ceda9c93563629874cd65e306d2754cbacf1c035bd59166338"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Super Robot Shooting - Any%.lss",
+      "sha256": "718bde0eb42d682e41b9b3455ba125e0fac2cc0953b15d5a10e08225834551d8",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "670bf090827f7b7ad2e7a56331be94c5492a06e46b54d73c6b8c441f554e1df5",
+      "routeHash": "56726b204fb92506a74ffe18ac776c57344891ad0777f37b18519dcc793abd94"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Tamagotchi (GB) - Death%.lss",
+      "sha256": "04777d90b3e8de9bf79756a3d144b687bc713532c4479171463c169eab530449",
+      "attributed_elements": 51,
+      "status": "parsed",
+      "runHash": "65d624c83d7ee834faee597a06a702d010fe398a93d95e094a9cb22cdcae1149",
+      "routeHash": "bab402753c1afc3390c53d677f63b38921350e27e917db9749d7030c419f7219"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Tamagotchi (GB) - Mametchi%.lss",
+      "sha256": "d73632500d5bb6a20fb1ae03e9d1de76e9e5984ebdcb1ffaad8239967639fa4f",
+      "attributed_elements": 39,
+      "status": "parsed",
+      "runHash": "79087a5b2d2a6fe32cea9b6198483eebadc098b6797eac75315570c0390e5a6c",
+      "routeHash": "b2ce1d3111e9211c2e0f7dc22d56468c5cf8f65dc82bb393f7b4c4cb2a5ad0ac"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/The Pagemaster (GB) - Any%.lss",
+      "sha256": "14b3b8766263dc11d16be94c58403c552b43f1d0f50ac1858fbf704fe9a266af",
+      "attributed_elements": 326,
+      "status": "parsed",
+      "runHash": "466dc34661c364583e29fa71c90ba325853374ed6c671e6f6e172a576d123d3d",
+      "routeHash": "58139558c0570e993032f93f56bcba5138ac4cb382fef26d00e721ff917f5396"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Time Bokan Series Bokan Desuyo - Normal Mode.lss",
+      "sha256": "e024706b752be0e2dcb25af322bc7e06b9c99ff43fc8a7d1967e8e404e4b3a39",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "fd7a5a0fac00b0310b80eac9e01d2e11a75d12ed4c252cdc5ef9516d382dc97c",
+      "routeHash": "cf99538173b9d98420824b916f484b14a04015c48d72d649c03aa3571c608b56"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Tiny Toon Adventures Babs' Big Break - Any%.lss",
+      "sha256": "6ec8e68aff45158b37bf261b8a22d32b83758e659dcd43ee43ce3c536a6412ad",
+      "attributed_elements": 80,
+      "status": "parsed",
+      "runHash": "fa0ef95639a11ce70f5c6cdb87c758ae6b946b5bc060cf899cf05cb618b51f8a",
+      "routeHash": "bcfbef84da516e8dd49a61d542c833c9f91d24212f915143f6dc9c4f14c656f7"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Titus the Fox (GB) - Easy.lss",
+      "sha256": "b6b59fde096b0ce60053252bc4b70153e014f9aad22c89b9b8f8b83b6dd82cc9",
+      "attributed_elements": 130,
+      "status": "parsed",
+      "runHash": "b05a9e60ae6563b04ee16ed8ac32f035fd729192e680115605961add09bc6083",
+      "routeHash": "d2ccfe7459fbb0c522b56c5502de5f13ef80d62ca492b720b24ff926b187881f"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Titus the Fox (GB) - Hard.lss",
+      "sha256": "c5966c36fe43252674867b29d254b455434c3e1a84f3eff62a04574afb59b492",
+      "attributed_elements": 16,
+      "status": "parsed",
+      "runHash": "19e1ba81bac495ebad6ad23a80cdf0762aeb3b0fd9ac083ad26d58a5358ad8c0",
+      "routeHash": "95f16ef71a164b129004d1659cf93b2ead76bdcdbb399a28ada382a053f1e301"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Trap Gunner - Easy (John Bishous).lss",
+      "sha256": "829de78a02595099d745a1564f9fd0280fa3998c3c201b54df0641d874403d20",
+      "attributed_elements": 69,
+      "status": "parsed",
+      "runHash": "a25b60c2a8b5eb5d052e26bfdc083a44f5cd117fdba463feea2972589c005c1a",
+      "routeHash": "f200c3b20c621a3ae26634707b2ff75d3b95aca33da40f02527255d67895aa2a"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Vagrant Story - New Game+.lss",
+      "sha256": "2fa1b003b905e8a9825aba9d658cac8326d745de8177b34079ea2c1c75017338",
+      "attributed_elements": 985,
+      "status": "parsed",
+      "runHash": "bfd4e3c7c5bd44f5d254830619e85a60060b826bd9050f7e34cac7dcd4fe63e2",
+      "routeHash": "862aae2a3ccd8bc18c6b87c678bb49145cbf125c0113ca86abc71a6d88a881d1"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Vib-Ribbon - All Songs.lss",
+      "sha256": "3f3fafb75baad49bd1f859ef744d0946fa7dd1b274defaefb33ec8d34947618b",
+      "attributed_elements": 23,
+      "status": "parsed",
+      "runHash": "fe979d144c37570145418ccf84b89264a876bbfba7c856ac9322ef704fb1d27e",
+      "routeHash": "1b38c0589266bef73ecbe71c0a803737088d347826d5b5e6c3fd51b523e71a69"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wario Land II - Any% Glitchless.lss",
+      "sha256": "5ccdb6150555f47bf7ff0e190140829cafdb5e806ba5c5daf5c058cc80c554f1",
+      "attributed_elements": 125,
+      "status": "parsed",
+      "runHash": "358d4c2f8877fee13bcbda800c24ab3e3bb7e1f6e4e5065707fd9aa54a367f46",
+      "routeHash": "2426d08afa6a5721b4cb4460c4e98ed01c3c86c856fb93196d27c3f5aecad45c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wario Land Super Mario Land 3 - Any%.lss",
+      "sha256": "670e2d3c327b5fc9d996d73e5cbdb97de5bb1277997d095ee628d70e012580cc",
+      "attributed_elements": 85,
+      "status": "parsed",
+      "runHash": "3a121de0b600e209894d79b79f71b295086c2004d80d50dd528317e4fb55f48a",
+      "routeHash": "e3518ecd2440bd2f6243e1e064f24db13b954cdf74ff1542448cac3669f3b2cb"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wario Land Super Mario Land 3 - Glitchless.lss",
+      "sha256": "a418333625fc0e5c1c80bdb9de8d63a58398d26807bee85044abe5de88a29881",
+      "attributed_elements": 14,
+      "status": "parsed",
+      "runHash": "593879662bb91e69a650a275a77d3f33c126b12ae8d835b0bc4ed89d0b409548",
+      "routeHash": "36870d7446473a3b0f8fcfdc913757196881c10ae3d08285ad77b86183585c86"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wolf Fang Kuuga 2001 - Any% AAA.lss",
+      "sha256": "7e0e4ba97d9c4cd367cd77ddd62c55e0352bf2f118a59b2be2bfdc1d3dd0360c",
+      "attributed_elements": 25,
+      "status": "parsed",
+      "runHash": "366b9cce7b92d8f928cc82d6b0c28829816aae2c09177cbae7a6c38bca05ddc1",
+      "routeHash": "eb88fdc7733842eb39a0dd4f1f12f3bc4be237d75ffc79423858072297662600"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wolf Fang Kuuga 2001 - Any% ABB.lss",
+      "sha256": "19db9173f6218362ec39896a0327469211304592b9436c207649dde0120c0c88",
+      "attributed_elements": 25,
+      "status": "parsed",
+      "runHash": "9bf1250a8ae5a86cb547e761f7306c98680558d461ac63c0ca9bbbf19747bfdd",
+      "routeHash": "75c4acb241d14b3e522e43441894260e8335b1af12fe284ac91d7bf235592ff4"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wolf Fang Kuuga 2001 - Any% BCC.lss",
+      "sha256": "2760584aaf8fcbda278d7c1f9a6abb39d4ed5e7c3f7f05942e148c51dba7be06",
+      "attributed_elements": 25,
+      "status": "parsed",
+      "runHash": "e14bc0df72cb0bd8eb8ef463e826fd6ad3d34f36adece48bb4b8c0351b64415b",
+      "routeHash": "b29fd957c9a0a141fcd9c1b521fdb4f24f8c30c70c02c2cfa7c6ec213b0aab9c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Wolf Fang Kuuga 2001 - Any% BDD.lss",
+      "sha256": "c0753e3fde1472a942d85e08251caafe94f84d1a5b2d22910c019dfae712713c",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "d344f78b9dad6da1d76d5b33acbd6d6beb4bcb34e7d031c1e1a4b66c95013028",
+      "routeHash": "92dfccaae5d872d3e4edd7d997bd4aca2f4b8ffc6735a66d6230b96bd059ed7c"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - 1 Player (Console) - Easy 1.lss",
+      "sha256": "81835c3c596fda5ea3e8f166315a3c825f6b2796e87c37950c7eb98ac09828d2",
+      "attributed_elements": 664,
+      "status": "parsed",
+      "runHash": "c35a1eda46f75b3e5c03da79361295b7268d9c5f71f0e2885f8de615272ef638",
+      "routeHash": "765e571963ab796305f1ba15f64bb02ff4ff7e0583beb4f0130fc3a680319eec"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - 1 Player (Console) - Normal 1.lss",
+      "sha256": "d317b94c36f654a4ee88971e07da9d922cfe69c687c329af6bb195069bf2e659",
+      "attributed_elements": 116,
+      "status": "parsed",
+      "runHash": "d1f30945616e87c49e304de2a8d098063c19fe95809dd43d4a8fcd03fbef7709",
+      "routeHash": "1033607503974621bd34f506e99c586e360772fd9aa091f876435e8d48804972"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - 1 Player (Emulator) - Easy 1.lss",
+      "sha256": "03e66c47722e000bff37cd0483a6f196ca9775bf0a32c999fd548e2907b66582",
+      "attributed_elements": 385,
+      "status": "parsed",
+      "runHash": "e3bcf66803ee5ec3284cbd36e4fd7dceefa3d0ee76eb2f9e6add16d5f52427ea",
+      "routeHash": "9c7ff1cdc4eb56c338059485833ad453f6d4c02cc5823e3b2990c93fe9b90d76"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - 1 Player (Emulator) - Normal 1.lss",
+      "sha256": "c0b21abafd412ed81b26f7127bc440b05e1cfddbb165feaa3132c1a06006364d",
+      "attributed_elements": 95,
+      "status": "parsed",
+      "runHash": "ef35b2eb0f21df467811c3dd589de8f58e9e3ce261ec48a26f85987a10f6cd36",
+      "routeHash": "28a06695b685d4b63193933ffba5a643ab6ef56198567ace57c12dcc3e11e739"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - Time Attack (Console).lss",
+      "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "attributed_elements": 146,
+      "status": "parsed",
+      "runHash": "299c4328fb6dbe5d3f25d52edb25559b04af7ef2954827db6a1dc5484cb02b82",
+      "routeHash": "74481fd450394275fff67d3157c7a6278e924fdd60aa772f1a8ee92ec2ffefaa"
+    },
+    {
+      "id": "AmenAnthem/speedrun-livesplit-splits/Zero Divide 2 - The Secret Wish - Time Attack (Emulator).lss",
+      "sha256": "07f112ad5ff54b1cf2b1136f1d4bf3ae9b965b7da50c63b1e82db708c419916f",
+      "attributed_elements": 115,
+      "status": "parsed",
+      "runHash": "3859ae57add40f1ae380b465922261cd2b1912231a87f45bff8b6d1efd4b3d44",
+      "routeHash": "66a61c3e3276269b5a6c57658ea6eadef3aeefea640bb1d41541e27f74365221"
+    },
+    {
+      "id": "bubzia/speedrun_splits/15+Star+Blindfolded.lss",
+      "sha256": "62aff240afbca226f35fab92d03d1705b90bb13dd7366fb99a7bb7d7f0303130",
+      "attributed_elements": 169,
+      "status": "parsed",
+      "runHash": "ee9bdd0321a6d1076d647e738a4cb5d1a8604c2dd3ded3eb02812c3c49b6ae68",
+      "routeHash": "f1fbee1884ed10091ff3e3700585aaf247cf6a390963302649888269feb9dd6e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/16 blind.lss",
+      "sha256": "9514943ee7c07297b578d2fac4c04b8a11e60f0ee637ebd7b1ab38caca0dafb7",
+      "attributed_elements": 121,
+      "status": "parsed",
+      "runHash": "a60b1ac8519a3f980bf07ad75762e719c9d1a334dc062817fdd353300552ac97",
+      "routeHash": "66aab21a3d53bbf40aa6b6465653f81be67f560e130e9bd79b384bd70c39c33f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/50 star blindfolded.lss",
+      "sha256": "c888fae877f9c90c5ee6188741e614c0deef98d788d1aa3050ca12568dd7829e",
+      "attributed_elements": 94,
+      "status": "parsed",
+      "runHash": "5ba5a4b636773cdfd53d5dd0543270a6eb25dbbb877cdb89c5b6bb47cee2e1a7",
+      "routeHash": "11f448804b6364a25a3352c466ea59e5b4778fdb0e80cb16db7dae71f735bbcf"
+    },
+    {
+      "id": "bubzia/speedrun_splits/67ta.lss",
+      "sha256": "8aff5e0b816d34892488fc52af75da2fb59374463d64e5b65c3210f84f0c116a",
+      "attributed_elements": 871,
+      "status": "parsed",
+      "runHash": "1a18cb850c9692dcc718c5b65fffc36a4f5154a5028bbb72bf52063231ed3357",
+      "routeHash": "549b0e961576b5449af3b04cff77d2db19e55ccd99f7fd6cc9b6faeb14516c1d"
+    },
+    {
+      "id": "bubzia/speedrun_splits/6ajf.lss",
+      "sha256": "8d5ab32703605329efd921d573efb5e645460524edc83b2dfa7e3e9a1f6ca8b3",
+      "attributed_elements": 106,
+      "status": "parsed",
+      "runHash": "5cca1afa63b70b0fac3bf9fc3c55731554238b5fc795d458589850141bd2b849",
+      "routeHash": "51cf090bdc09550c2613dc1f4733575060644cc337b0a1cad39cf95202536df3"
+    },
+    {
+      "id": "bubzia/speedrun_splits/70 rando.lss",
+      "sha256": "23de1d63d9731bab577c5d6001abfad76b8c49cc6184c13fd8db82e34e3ce164",
+      "attributed_elements": 33,
+      "status": "parsed",
+      "runHash": "3227e8a1bf339ca91e56edb697dbb4fed0c1865b6cf3d6f13fbc8fe97df2b5bc",
+      "routeHash": "b7026862b6e32de6d9934871b2c04afe717d757c2cabccb33514bd0ee3f9ee34"
+    },
+    {
+      "id": "bubzia/speedrun_splits/725k.lss",
+      "sha256": "ab7139afb27b3cbfae6e15504022a2248c49c57798f34c279fa39570a6c00c0b",
+      "attributed_elements": 129,
+      "status": "parsed",
+      "runHash": "ac3dcf0877095c387841a4e790fda73e327f7c8bcf2eb4b8c98a7b820099a2d9",
+      "routeHash": "ec1858940a8e59a53bb836480fb9dfb02f42c464d5c01cf159b6caab3d12590c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/72oi.lss",
+      "sha256": "fe437c4e8e2c82794936c074ee2fb933d65cbf65a29690140cbae7accaf2ab99",
+      "attributed_elements": 393,
+      "status": "parsed",
+      "runHash": "f4aa12f3b8070a7be386f491d847db3ac40ced5c69a981de0f92cc0e44f11afb",
+      "routeHash": "59dbb026fea34370787fc786c7b5bf4a8651300c1d5b089e750b0525c52ddef7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/78r5.lss",
+      "sha256": "ce5c36232a9c168953f77b417487d018a9c37b3e6c9cf3da9017f10a58c41f5c",
+      "attributed_elements": 81,
+      "status": "parsed",
+      "runHash": "9094a5cbc492b96acbb7ab17de2b0c3343aae556d129397e6339af1060b5e6f4",
+      "routeHash": "f510d727321e11cdc9b5c2eea989ff0f5dcc6441e2e558fd2b3e8855c0f62f45"
+    },
+    {
+      "id": "bubzia/speedrun_splits/7si6.lss",
+      "sha256": "1771613b391e012a72f6f945e2e3915da506860e6ba57a486b0408a1681fe0a2",
+      "attributed_elements": 118,
+      "status": "parsed",
+      "runHash": "15baca3853379094b8fb5b0cd9e514c9413198722681c7127925f3bbb531e750",
+      "routeHash": "b5d8880af2cfceeea7dcd5c60ec86bebaa5010830f38b281e618b216488ce342"
+    },
+    {
+      "id": "bubzia/speedrun_splits/7sia.lss",
+      "sha256": "58338847594e291d2d2eb1b6d20c54f66eae4cd9ff6852a2243b3b2ac67c54b3",
+      "attributed_elements": 258,
+      "status": "parsed",
+      "runHash": "fea7e97368097ac105dfdea20b8978f736bdbfb1a1f3d1c286bb83af0c6c2fc5",
+      "routeHash": "3bd6585abc24040257d7c61191d733fc2c7153b1392f14591de1a8d73ef4f923"
+    },
+    {
+      "id": "bubzia/speedrun_splits/7sic (1).lss",
+      "sha256": "fc424f2a2bd3ce4ad8458785c6aa46cfc42141bab3ac3ff68eb977ee2b2b4b0b",
+      "attributed_elements": 120,
+      "status": "parsed",
+      "runHash": "2da31051c4da8701c27acbbe35df43d8b8fcaa7c05121744ad2d3616b6edb58f",
+      "routeHash": "28cd02aa91bbb923561eb274539944a28164b3b79d2baae88c5cf242865028c2"
+    },
+    {
+      "id": "bubzia/speedrun_splits/7sic.lss",
+      "sha256": "37b45929dd9f75af795e7299313eb114d6bbd44b89c50af520122dfe47dd84aa",
+      "attributed_elements": 198,
+      "status": "parsed",
+      "runHash": "43566f9ac1cc0f592b5dc3f35db3ecb7316cfb3d66d7407a39d3fa0af2fdf584",
+      "routeHash": "cc62f36f86afa6fb4fd4bfea5d1d7c070c64fc33598df3924d584ba74875f45b"
+    },
+    {
+      "id": "bubzia/speedrun_splits/7sih.lss",
+      "sha256": "24bd79be2ec941073cbe6e286319de0e57fa648f99a4409a82cd0340981982cc",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "1bb950780fa0be1dab62382a9b625b448468c511ba27de99115769f2248c73e8",
+      "routeHash": "087cd5c19378ff2a96f733f1c51520e4490c8564ca2553678fa392a3812c0b84"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Bounce Tales 64 - 0 Star Blindfolded.lss",
+      "sha256": "f23caa0afb965c6c406fdb68dce734e16c84cbcdc7cae69fbbc99964dcf28958",
+      "attributed_elements": 11,
+      "status": "parsed",
+      "runHash": "690d537093d18dd4c6104ec5a7f84f0bee867262eb4d4cc591818998c05b9a1d",
+      "routeHash": "c1e1bf523d58b64a97e92c056dfba463d77b9c91638f8a2f25c2cca6b9677acf"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Breath of The Wild Category Extensions - Blindfolded Ganon Only.lss",
+      "sha256": "6942e1d1267ab6dc45ef2322980fe7ac917f2ebf0baa8448d05151a6ed74d5c4",
+      "attributed_elements": 23,
+      "status": "parsed",
+      "runHash": "2a4d3f5afb659f6ad00cc0a356b9a23b75f240c0e30db725d1b999db06de7741",
+      "routeHash": "664d8c3eb3ca842c77c2ae8a3a8c846b84bb4dc53f11a7b93dd04748ffbed7b0"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Breath of The Wild Category Extensions - Blindfolded Ganon.lss",
+      "sha256": "3f452578abba740fd18cc1e55de862d9c31494394102ba7f79a5e18ad989daa5",
+      "attributed_elements": 305,
+      "status": "parsed",
+      "runHash": "3d3ae3c1a683e49948db547bd31fd6128015c4af695f555e542a89bfc29d0475",
+      "routeHash": "c103379f2c815dfcbfb6a33697b8dab6c250071a526091201980baf0d2f3b899"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Breath of The Wild Category Extensions - Blindfolded Naked.lss",
+      "sha256": "a92a15c195cadd55c41a45fb91156fc555cada73ddf3b40f96a47cbd862838e9",
+      "attributed_elements": 436,
+      "status": "parsed",
+      "runHash": "0dec4f55fb0172a5a3a53eb9c7805212ad6671629849cbaf92a44ae3738231e7",
+      "routeHash": "53bc88bab69c3f2779966305d63b646af5af0633fdbe0ace19dec7fefcaf465a"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Bubzia_Super Mario 64_70 Star.lss",
+      "sha256": "b1f418225aa24838c832987456f49fb9d8f4ad8235821265bc9fd382c8668409",
+      "attributed_elements": 153,
+      "status": "parsed",
+      "runHash": "ebb72c9460f5f64e4a81355625d659544e9d715af719ee02b49c2efe7fd93955",
+      "routeHash": "0f050b437ba4f8df676699ce25a8574098ac7e66bc82bceb0c974fed67583b44"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Dark Edition 16 Start.lss",
+      "sha256": "663ebd3dca505a19b56d5780e85237577615346254846c8c4dc6f3668118d2ce",
+      "attributed_elements": 208,
+      "status": "parsed",
+      "runHash": "17d153d98be7430fd10b28c680a7660c10151dc658c2c6cbdd02199713b60b6e",
+      "routeHash": "7fbea08c256196de04b87ad16ef9b150a5e1502e4489c2ef84d6dd88b05d80a7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Dark Souls Remastered - Any% Blindfolded.lss",
+      "sha256": "e68f0809a23bf87deab3dad53964fe3ffab86b1713fed19d6f40d3820a1bd36d",
+      "attributed_elements": 144,
+      "status": "parsed",
+      "runHash": "b60e9a18bcf3da6c9b33604329bb68c059181240506a6f7b798d2b929715542b",
+      "routeHash": "3acbab6c9aacf473f34860615218acacf038fe851cf1e306befd6a99f9c282b7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Deltarune - Any% Blindfolded.lss",
+      "sha256": "fecfda187b33260d0a44a10768253e8dcbd36f030c4b2d4c738f5d8f5f8beaad",
+      "attributed_elements": 136,
+      "status": "parsed",
+      "runHash": "eaf3538ea7d0ef85ada34db79a0eab48bd62effebd61456302da447a22339604",
+      "routeHash": "25e02f65f96c711a527666e13d2eddac56e927be4af0245c7a4ae9656e38f964"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Kingdom Hearts 1 - Destiny Island.lss",
+      "sha256": "f6d2cc2c3e26078c21bbb22cec2b4a4e6a474b4ab3f338a5fb61a76e4b92a4bc",
+      "attributed_elements": 27,
+      "status": "parsed",
+      "runHash": "8e5b61b072176e0ce5f3a046f9b34589941fd7c94381c800b96a7fb68dc31e94",
+      "routeHash": "f80cf4e77c74b62ef23c4ceeb84372c0db81f7c7c9e97c764cf6bb0c5451e302"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Mario Kart 64.lss",
+      "sha256": "f9cf972c9bfef2355d2729a70c39d7eaac2e1cea036df18da6742d41f260057c",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "4a9de5a695d8b77a935dcac2ef7617bd7a449e012ac8afd235d60f4516956406",
+      "routeHash": "d65af14ab130036b8e24f56d4ef186347bae4e2785274c3ba1601181ed63a4d1"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Nier Automata A Blindfolded.lss",
+      "sha256": "1c2c982441489c33ade06728d540a077bacfbc3756e3c8fd6fa9b503547aa0c3",
+      "attributed_elements": 137,
+      "status": "parsed",
+      "runHash": "daac9b9d5536b5ea9bf725527ca1ffe5e35e2785658ca4c6337685908a152bb7",
+      "routeHash": "05d54e37cf3a7ae499ab8da2313a54c02f46721d4a76f5b3261c0b6311449076"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Only Up SM64 - To the Top%.lss",
+      "sha256": "04c660afb4439659b36077e81058d9b1f02af3dd32791c2c68803f4170bd6d7f",
+      "attributed_elements": 66,
+      "status": "parsed",
+      "runHash": "f38a084f9b1f507e175bc5a28705bd1172e4a9e4c288f23ab833594035a7f557",
+      "routeHash": "4c3db1564dc296bf07b1d6391a0aa2a0a8b4590026502093c330702157b26ae2"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Rhythm Tengoku - Any% Blindfolded.lss",
+      "sha256": "c9ee24eddae0839f7e020c142db7377192bee71e435609ac2ce1e50ad748c262",
+      "attributed_elements": 29,
+      "status": "parsed",
+      "runHash": "5a0510fbf28ad09707cb7c22e90a73cc9cac793ac03d39bddd28e58574b05e8b",
+      "routeHash": "ff4bb3164ef4745b434cffb01842b7b4736c457da297ecd2241c21e5d7663413"
+    },
+    {
+      "id": "bubzia/speedrun_splits/SM64 - Dark Edition - 70 Star.lss",
+      "sha256": "84c60cc3f0828660a7c299907a6bf8ff1fdaa0d51c87788d854f012b621afbb5",
+      "attributed_elements": 143,
+      "status": "parsed",
+      "runHash": "5db1c5fa8834db8dd226c1454c30cce37c69adb21e25d8aab0c99d34051b729c",
+      "routeHash": "c80b7f67e1c7593b61f79e2de7720c1ab2d0384698b4ab2fb7ef131989b91412"
+    },
+    {
+      "id": "bubzia/speedrun_splits/SM64 70 Star Sl Reds.lss",
+      "sha256": "a41b2582287c41a8ee57f228dc11af4ab3b8dbfe4103b60cc1bf0bbcca88df46",
+      "attributed_elements": 135,
+      "status": "parsed",
+      "runHash": "ed46e8b816f3c4eebcfffcf04145e60bce61edb0eb51fb07a3fe54519cc4d2e0",
+      "routeHash": "b69d6890e617cd83c010eb8503ef00c8fd50383b44d694388a116954a735e118"
+    },
+    {
+      "id": "bubzia/speedrun_splits/SM64 Sapphire - 0 Star Blindfolded.lss",
+      "sha256": "52dfe6b48094df43f50feaa0da6a6a72ed25ff55dd01982849115eb375a1b767",
+      "attributed_elements": 6,
+      "status": "parsed",
+      "runHash": "3c9a4701446df12072b98453c6f32051470af24d3c90b73d17c254c463a5ff9e",
+      "routeHash": "783e3da72eb9c8a1292f40324069fe852490c432b34666516e8e1e77cce0929b"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Scrooge 64 - 0 Star.lss",
+      "sha256": "bdb738db83f883d692cf2ca62a4e97d617d882b285c87e1864a3cb606b06f72a",
+      "attributed_elements": 35,
+      "status": "parsed",
+      "runHash": "fc664ed379e68aa06e1240101bda6168c97dd750897980cac1b57bdb1ce31224",
+      "routeHash": "18f8eaec5976de195cac70bdb17c30ac9bb18f41834cb55e669a4e29a8c73153"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Smash 64 - Break The Targets Blindfolded.lss",
+      "sha256": "fe11cb9ee197c5de885d778f78307c390fa9ccb4d6eb5142c0be23faaaa8239c",
+      "attributed_elements": 71,
+      "status": "parsed",
+      "runHash": "7a089ef141bfd9d97033a3d71807d10b6465d40d4d70850eca3a890d80d277f4",
+      "routeHash": "427ef1415e16b4ce0417f07cdb4384fc1f2da4e0cdfa2a754cbfbbc76c9acdd5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Smash 64 Classic Mode.lss",
+      "sha256": "7a81782fb2aacde308c8bc7e8b97a34d01e6df4150fddd13d25768d0f87ebbeb",
+      "attributed_elements": 70,
+      "status": "parsed",
+      "runHash": "73086c457d54d131b1ec96be6ff7ccb8f0585a87a6a230b64421c1d020c89520",
+      "routeHash": "de964408bba68c4510f3f34a302a8a12928ad67a1d29c0d72216ad9dd4f45d2e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 -  Beat DW 2p1c.lss",
+      "sha256": "8e93580d08c3c1133575c82b17046161e15a37ab7c422d7180cc575ec1505305",
+      "attributed_elements": 13,
+      "status": "parsed",
+      "runHash": "0438531fac5088294c40e6b44d512e49c4ce8ee265d0a0e470ae7919c529f3f1",
+      "routeHash": "9af554b6f600cc03f4eeb81f2f13bca73af37f745848a54a9f8d681ab14b2b54"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 0 Star NEW Blindfolded.lss",
+      "sha256": "b7328f14657486fdcea28402e0cf67b17d318d3b99c10d788d571bcfed2db287",
+      "attributed_elements": 95,
+      "status": "parsed",
+      "runHash": "e097ddcc2df96dbcdc2d9abcb3ab739da5b040851214336d0b49c61d9dde7ad6",
+      "routeHash": "b87a9f3e7a5d15022d0ffb027dae688099ef83f893a6ed0bf7e068f03bdb6cf3"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 01 Star VISUAL.lss",
+      "sha256": "d6f46330881fb3ff41089cdb5caaf32a548a7c48417357ffb59e2734fc5a87f5",
+      "attributed_elements": 110,
+      "status": "parsed",
+      "runHash": "6675dea8472e488ac514d4094c3d7278612aab28f8f1e5e6356d0e1df25d0b26",
+      "routeHash": "0d06d1c83b6024124612d916787ba23b1ea37a4351d927c606b8282ea4eef820"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 1 Star Blindfolded (Crackslide-Era).lss",
+      "sha256": "7079cccd5ff07b248491ef4a65ea8c3d0793e0120a6433276212343ff222d970",
+      "attributed_elements": 296,
+      "status": "parsed",
+      "runHash": "c4ff5caf77179019d56602416bf5ffc1222a1fab5f220ef7ce4764f880f19909",
+      "routeHash": "0d1203757342ad2d81c62e4b7aa754aa3817f372d18201a3ebe73e393bb89d68"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 1 Star Blindfolded 2025.lss",
+      "sha256": "19a550307ef2d887ca83cdcb7152fe11a1fab6cb5a4c78968fb92db618c4d737",
+      "attributed_elements": 117,
+      "status": "parsed",
+      "runHash": "dff6fc4685897f23c68fda4c4174db978af1f33641651c183aa4d9e70ceb7e6f",
+      "routeHash": "fce1a1a665d06583d47ed99983462385a27f6a440c9d94c4114b43c7c5059c57"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 1 Star Blindfolded.lss",
+      "sha256": "117b7c288caa0ea369140cd0019252619a6e7ee4304d916a23cf35094c61b954",
+      "attributed_elements": 33,
+      "status": "parsed",
+      "runHash": "8d01642ed4fc812fb8ec86b94506b2dece3b2dcf2425f41ba09d912dea485cb7",
+      "routeHash": "ea9447f2a3e05c55c2ec216e8331bdc4ba8abdeeb72e774c9cb05b3905213070"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 1 Star Visual.lss",
+      "sha256": "cc464bc9294423a6a03c694f0380da0022ca2840ba042c410dc7f311d63cdfa1",
+      "attributed_elements": 75,
+      "status": "parsed",
+      "runHash": "866d8109c3988f14b31a2ac2e420e84b253a31fff4f4bd6b2fa50a039498c7ca",
+      "routeHash": "7a4921c4fd24314832aefb57dee60fd0127a72baf0b21433abfb54736e3a32b7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 1 Star.lss",
+      "sha256": "87fb99dc4444eb4a10730b4447fe7c17238498e3843c5d62a127ffd69b3243a8",
+      "attributed_elements": 29,
+      "status": "parsed",
+      "runHash": "f8251d2188f8cfcb6468879784446313f1b80bd49751631d782c88ee7dc06699",
+      "routeHash": "fbe561eb0011780a95ade5c0b5b7067b71ccdbcb6157984e7b6447a903e40a53"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 100 Star Blindfolded.lss",
+      "sha256": "7fdccca776bb5876c83a9d0705f1818067f03183db21c54e110ba39b070a9487",
+      "attributed_elements": 330,
+      "status": "parsed",
+      "runHash": "2eb97977183225d72754b7218703084feef5d4ffb028897ff17b347d7498f326",
+      "routeHash": "f11fd833e624e0933341901d64c99eb1d5812fe80ddd78c50c48907f8d00f690"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 100 Star.lss",
+      "sha256": "0b9ee3ddaf4ad514c8d1cb266b7fe1d58955d461c7b3abbd285d418fe31f4e66",
+      "attributed_elements": 347,
+      "status": "parsed",
+      "runHash": "1845f59a583a775b8255d5ca4718a3e6a02364ddcc10c82fdc167d5bf2c3839e",
+      "routeHash": "0c98b4b8472ef351bfa4e04fe89988f86939e2086cd4469bac15b30e65b43c90"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star Blindfolded (2026).lss",
+      "sha256": "7c14e82a88f71fdfae61b69ed66e26734cdab41038f4f30d65e857dad7075645",
+      "attributed_elements": 516,
+      "status": "parsed",
+      "runHash": "33811685257576733383e8f13791dae4fdff012512413c6ef048693acc554d85",
+      "routeHash": "74f9e1107d353b8f485e033344631439338438fc5568fa2de4e38ed340be5fba"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star Blindfolded STAGE.lss",
+      "sha256": "0dfe27d646fc7ccab907346bb80266cd275f10aec25f390bbc3941d398d4113d",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "6a78316529eec00785b2fed1b2e9a65fdb1a057f2060c8e539fc7cc4593e5fe3",
+      "routeHash": "e35bd6693396eb98243bb85f2e4c108d212306fd4d2c3331ec0ed02eb855d125"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star Blindfolded.lss",
+      "sha256": "1134775d6965cb6e73db21261d8958134865b0c7c5110a17110537126b33740f",
+      "attributed_elements": 45,
+      "status": "parsed",
+      "runHash": "3776480ba1c56fcaf83ee3749681dd810ebbbde96e43ffc12b8b21fd1dd7df09",
+      "routeHash": "77f15fb540f91c244e275b6fcc47fe768276998590993e307d506a37a9823fa9"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star REAL.lss",
+      "sha256": "3af7349a96b33169576c40e43ba3975a829583ea44994e39097db434be0ea3e0",
+      "attributed_elements": 666,
+      "status": "parsed",
+      "runHash": "404ad1c402f45f7343a27b522f9c319dcffd2fe8fe9ce90e103bba59bd30d214",
+      "routeHash": "53c2d8132aed30a4541006b84ad15c69c4e984ea06518c721eaaafc32c4872c9"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 120 Star STAGE SPLITS.lss",
+      "sha256": "111f906cb448372e592252fb540e8aa5308d9af2c1732ab3bfa110d6291c59d4",
+      "attributed_elements": 161,
+      "status": "parsed",
+      "runHash": "ab15ccf4185f85acb06e3da915151de952018d0ed802e23c77d4909d47b3259a",
+      "routeHash": "3946a3b67456cb1bad1af1e415555904d5ee0223a35c5f93e3413666e6b69649"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 15 Star Blindfolded.lss",
+      "sha256": "cc840967253d6fcea3c95ec5e539eef6a80c752c392e05f814f2d1b30154e64e",
+      "attributed_elements": 151,
+      "status": "parsed",
+      "runHash": "ea68b90864b04c0a391839f5c038321e2c1965209fec8ff3d1e4465bf395123d",
+      "routeHash": "5163d5930a39b62901c19dc4df97065c026c42e2693370eb0e2d4369dec78e5e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded (LBLJ Logless) 2025.lss",
+      "sha256": "0e68cc011362678524db9e146956a805292c90149ac16623196793e1e61e6d5b",
+      "attributed_elements": 842,
+      "status": "parsed",
+      "runHash": "94047eb4af743cf890083ff56af5558866a5edd90a549c4bcb2dd26a20f3fc9c",
+      "routeHash": "c5ab41100c3a15545e486c55cde2656c8a555a14ec7b6c51b3c65b6afe1fefe5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2022.lss",
+      "sha256": "71631c436c9737f80a30def99b48ae71948b2318058abc793a58198a711984ba",
+      "attributed_elements": 120,
+      "status": "parsed",
+      "runHash": "369ed89db42853b427a21a084671bd4530700097537a8af9911ca2063998ddb9",
+      "routeHash": "31285855f7b65ae43b87e99794c7d50ab647c45a5d65dd549925027194aa1793"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2024.lss",
+      "sha256": "aa8d2f2d5232f94d7d6cc730eb73a4d9ebe69003fbb4960c96ad76823de507f1",
+      "attributed_elements": 188,
+      "status": "parsed",
+      "runHash": "6b89f6964f86bab0a03bcde4dc27179641e9fce42f78012b631a702b01491a1b",
+      "routeHash": "a96a82e436dc637115e8adf2b562c7991aad07516e539c8635fa882c7f45bac3"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2025 REAL.lss",
+      "sha256": "1891e045ebd551ae79e566fd74e637aa19d9e187a77ac0a3e7fcc9335ccaa108",
+      "attributed_elements": 789,
+      "status": "parsed",
+      "runHash": "13d1ed0a8b637ac6dd86227febe7e0a4da10c34d825c836053acf0e404ba3b94",
+      "routeHash": "66392fbb98520b8c4767f20177234dc86f7262c9aacae1ed585603c06b4dc147"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded 2025.lss",
+      "sha256": "0c7b8f3d24856bbf3dcafb19a1b413bdf184e08e74cc2e628d36eace17984eaf",
+      "attributed_elements": 23,
+      "status": "parsed",
+      "runHash": "3efab594fe6aa4283ad4fc480dc0f363ecec74c550680aff9ae88fa8eece74f6",
+      "routeHash": "e280605a99f238234a089178931f7fd7b697159149f39f9ffb5c1254e4011c30"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded Basement RTA.lss",
+      "sha256": "7dbfb11061fd5ac332f6c2a616af04f1a8715d6fb63f56cdb303161c7220bbf1",
+      "attributed_elements": 186,
+      "status": "parsed",
+      "runHash": "481c49e6e1b0ab01340e5be8879def2e14f67d87762c47c240a1b34d32a46b70",
+      "routeHash": "6839d429b9c0ea8f3984e21f735718a76e5a4440350d6e07bded8255711be8fc"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded Damageless.lss",
+      "sha256": "15a118cbe4b05f9d46ae676fa65dc8005117c99f617441b2f2461368aacb6fc8",
+      "attributed_elements": 124,
+      "status": "parsed",
+      "runHash": "ae4356fb04741414492e4194cdf575ba031f5c80dbcc9d656398ea18e81d7676",
+      "routeHash": "69cdb8dd6679212edb829ed7025bb3856aa4f080d6f1177bf872c28b8c943c3c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded LBLJ Logless.lss",
+      "sha256": "0365f05469d4843df97d2a589108af8c92591a274ce666bbd89f68626a5a6465",
+      "attributed_elements": 842,
+      "status": "parsed",
+      "runHash": "3fd52a726e9bb14676ca729ab45fddc1d060f40959f25a379a4086f9d6ee6c1f",
+      "routeHash": "da56c92f955ca57f3dbf9b3a2ecf8192eab97f4697f6cb958bca6e0ca14d0fe5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded LBLJ.lss",
+      "sha256": "d6ab4ce0b01e390fc6e737b10019ed8abbb4f0ef1bb4392ef9ad9a1aed6b8c9b",
+      "attributed_elements": 204,
+      "status": "parsed",
+      "runHash": "59bb71898bd0eef9151e7000cbdaf74a7e4ba640f09774da282e9207f692c151",
+      "routeHash": "b976bb82ee5724c74b9090d95135e57593dca53bd0a6f26832c44c25cfdef1db"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded NO LBLJ SafetySave.lss",
+      "sha256": "a1dfb315721df45daa11b9a67b67ab875d5bdd16e9615b2c7b5dfdcf9ac94bc7",
+      "attributed_elements": 158,
+      "status": "parsed",
+      "runHash": "3a3968404c0f3e001c9dc9345ec24e2a9ca97c0b73c8835e8e9e180683857e2c",
+      "routeHash": "a68d83ad8c6391fdc3700ebe2abcc36c05f7ab8f6641ea6790e48ed61d64a361"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded NO LBLJ.lss",
+      "sha256": "368d22cba00b2a5a3024bae023c8456b4a01a550cf8d1ff9759e9e78607e5170",
+      "attributed_elements": 559,
+      "status": "parsed",
+      "runHash": "6c592733ac07e42d76a8c67e41be56fa26f09113639a0bde2a5a223ce4ba3cbf",
+      "routeHash": "82bef6d9d4085ff115369d5b6083e94e5a9a835d01d229936ea83fa350119dda"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded PSS Route.lss",
+      "sha256": "87f787f2d7fe77ddb4cb93f8884d9ee353cecd9a5f94b478a9ed206c5a306db0",
+      "attributed_elements": 130,
+      "status": "parsed",
+      "runHash": "5cd3fa3f2012191cba61550993d36c864136b4b7e382d18e4707c21c904e61ac",
+      "routeHash": "3c5f03332768f95be6cab186497f37faadb81fda99dd4fed957c86540f4744ca"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded Showcase.lss",
+      "sha256": "0371c93108816a5ea53a50ec9730453f10de0f753e35529a72ce4c9db8d73c75",
+      "attributed_elements": 393,
+      "status": "parsed",
+      "runHash": "77e0c737d706e54f44095f611c8ff3b3c5008ae59bfdeb7623730114f1a9965a",
+      "routeHash": "9a26edcbd2fbd4988ecbefa91bfae1119d4dc5a50e298573127cfb5dc645be33"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Blindfolded.lss",
+      "sha256": "6f92c407438781938161f8998458a9e32f19503e1ea2bf62268156f50479cc44",
+      "attributed_elements": 587,
+      "status": "parsed",
+      "runHash": "abaf17e80e991187fc1a60f501a61f99b17fb9bac3e8b437626a6b8afe6b37d5",
+      "routeHash": "ea14f6b4c51ba0d6efc464d7f1c41cf23749ccda66173633f1df3525d77be9f3"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Human TAS.lss",
+      "sha256": "826a3730749493745f73b507affbd7a2bd720c5cea3e4fbcc78dec11e2a432e6",
+      "attributed_elements": 85,
+      "status": "parsed",
+      "runHash": "7ea63c60793155e8217eda70603ae1e65bfe55ed110ca2dd56599dc6c6b9aa21",
+      "routeHash": "9ca9ab3839e334fb1668a685c3f4d7cb0d9ab058c0d63658c163655da5cd1f68"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star LBLJ VISUAL.lss",
+      "sha256": "568c584909b03d93a174a21bf46a7dd395156b88a7b4d49f006357230afbc661",
+      "attributed_elements": 22,
+      "status": "parsed",
+      "runHash": "b2969e30e28cc96521350e97b4a039f8b9ff8419f7bd0e5f534698d3ceafe3dd",
+      "routeHash": "078349951d88d8c63570c049397a59ac6870dda8d1584257a0f1db722f16f940"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star Mario Cam RTA.lss",
+      "sha256": "d54bd93df628987e3b67eefb1010b718c4384d6c5ef3e80d68218f934a015840",
+      "attributed_elements": 81,
+      "status": "parsed",
+      "runHash": "7b9f7ecaff79f238e4337a675dac9e6c188a7f038a6a6d4fadf499b9f78cac9e",
+      "routeHash": "b54f41457fa565511268ea7760bf7374ce3635d319174c56b95d80ee6464b28a"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star No LBLJ Blindfolded (PSS Route) August 25.lss",
+      "sha256": "e9142446a521e7347c72b29e7ae77c5089cada29dfc03d40f4b6847e27a43769",
+      "attributed_elements": 1562,
+      "status": "parsed",
+      "runHash": "dadc014ed2a6d50b26f741b1eed29a37e78045be7a5bae863fa4b4132cda6447",
+      "routeHash": "d25b00e604caade3333cb6aad5c6c1ce9bcd850dd6684981507df355362c3c17"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star No LBLJ Blindfolded 2025.lss",
+      "sha256": "4d0dc849d1578acebdb28f168b06894d48d33b5363ce771b55ef39164fc6db5a",
+      "attributed_elements": 823,
+      "status": "parsed",
+      "runHash": "5b4cb04c8e7e88d95e5e08fe78b1f2b7fe0e0a46c10e9c697ae947d140398783",
+      "routeHash": "b59d66d669e27e45af5ac602de055b8e9998514f5bc96939f81a17f538197808"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 16 Star No LBLJ.lss",
+      "sha256": "20a2726fe9e14a6036ba4270830121bbd5adf1267e0e967a02dd293bcb6fb8ad",
+      "attributed_elements": 319,
+      "status": "parsed",
+      "runHash": "6d6779469f9e0cc70a92bc6e0614b2cbb2b65f6b4abc5ea47cc43abc5a507443",
+      "routeHash": "d0d2c1b3787efbce31df76c97daf27d63fd008fe143f22bef5a69e729e3a1392"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 160 Star Blindfolded.lss",
+      "sha256": "bdc863bf04ce22ecffb4d24c571e990cbf2cc6806b9b4fbcb04955b0ff30720e",
+      "attributed_elements": 115,
+      "status": "parsed",
+      "runHash": "b5e9138616438d7bfcb2a5c5e65a2b70214aa272144d8da8d9002ca4b33baadb",
+      "routeHash": "1f532bffce534f9ed3a5a081a251eb14b49b26efe51e8f387e77f52feb6acb29"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded Tiny instead of Secrets.lss",
+      "sha256": "717c86b45eafa1a5d1da330d6676a56610bbfbd609ab488662feff02157c17d9",
+      "attributed_elements": 558,
+      "status": "parsed",
+      "runHash": "8bce606b43dcf91d7704ed069de87097891e4069ccaaa7a808bdb0845734a78c",
+      "routeHash": "f4dae23c8a3e7e9b096e68a66640d03e8b9daba3b25db4885a2f7d9461076a9b"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded WR no tiny bullies.lss",
+      "sha256": "4ddbd12e50dd5af8556d1c18f5c56ac33e5c002958820883a93dfad813d116d5",
+      "attributed_elements": 338,
+      "status": "parsed",
+      "runHash": "3a0266ac8d5614584bcf7cc64027fc9920bba21c35b767731c0fbd6ff61e316f",
+      "routeHash": "0b041b07a41d3e7a3e3c587081802a932057ff9dae2867b1f8efa3547045de29"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded WR.lss",
+      "sha256": "bcb2935dfa7abd13d9a4c5e38b2d745e6741ea53aed7cf8c44fc4a2b68c5670e",
+      "attributed_elements": 223,
+      "status": "parsed",
+      "runHash": "f48d2522d29c7a82b98a3837f0285990d2bcb999fa05df7d6d4485fa188a01c3",
+      "routeHash": "67ec9149f1827acdd59bcae0c8bc40ca7062dfa9e2603763ce78f7af8372a6d7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded safety save.lss",
+      "sha256": "8c465e750a1405b013bd8b0e671db281aa5ec92449b886ac68bded7588170657",
+      "attributed_elements": 399,
+      "status": "parsed",
+      "runHash": "7b58f7215c0150b634b0d42fb88e671f5e8d186b1ca29f25a940936ba62af548",
+      "routeHash": "51e9d1e1624ad3c980d4df688558e8dda29bce5324886c478f3a9c6052e6e906"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star Blindfolded.lss",
+      "sha256": "ca3e7c287552c6b5f0323c683261f200f0c49c58108d853115bd3a5fe916d217",
+      "attributed_elements": 82,
+      "status": "parsed",
+      "runHash": "c7608dec5d0a1d10827201d43521cd08414964d38629e35666c06f67e44128fa",
+      "routeHash": "ebf6642600fb128564b28ec2334a75b88453056ca6a26e47d980153979436d08"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 31 Star x 5 Times in a row.lss",
+      "sha256": "3b1ed0cfb7917a8b4e219d8323ce9d648523ea4708640d2654a3dd68a18b3b61",
+      "attributed_elements": 42,
+      "status": "parsed",
+      "runHash": "15a0a8777d893841f5acb30ca4e6c1851f08575d6aa01a1aa370e1fad6bc97ee",
+      "routeHash": "9e0e1f733adc71c199331026d0689c686501af427bc372ffc1a3e83afe8c4d36"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 350 Star Blindfolded.lss",
+      "sha256": "922e93e1d1466a3c75250298c0a2e4cdb260cd67658fef5c952c7434aea81895",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "6bf80748686fd119fb2c97db502f99be976f1f8a517e911f632c07f9e5bed485",
+      "routeHash": "756be09e0b0835c748544c50ad5a688d69a9cee94ecd62ba4fb45920c1788e89"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 40x BombClip Blindfolded.lss",
+      "sha256": "6ca4de8fa8d2f341a848fe628daba3a046d8b689cb59305ec090e3af2b359bc4",
+      "attributed_elements": 165,
+      "status": "parsed",
+      "runHash": "83e5775888b024a5a6a77d8c0c056317bc996f42d1a1d583ba7c83809d8175ad",
+      "routeHash": "dbf13e3873cf8e2602edc56c99c38d0f1035e35b50617924ff96f264ccd8f79a"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 50 Star Blindfolded (Marathon Route).lss",
+      "sha256": "0ec569e46bd3de726b541527251f34e39aaa580831dfda7b69cb9757201325c1",
+      "attributed_elements": 817,
+      "status": "parsed",
+      "runHash": "9d937a0847dfc56c29c4eb60b310fe6c370b43cda9fad077106b528338fb4279",
+      "routeHash": "3608055650f3cbb2f7ad2c2e979914ce60b83576b5b302cd6ad1a9bc8b7a4892"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 50 Star Blindfolded 2024.lss",
+      "sha256": "d9c8849ca1cd9191ea810bfa27530ae841eb68caef3bb9dd19d5c8767e1011f8",
+      "attributed_elements": 77,
+      "status": "parsed",
+      "runHash": "75f0a0015d03790426827e6fda27fffcf72634fb6c7266eb246f33438ba380ba",
+      "routeHash": "20c97a2cba4d35878c80d995a13fdc43e0d598329670b1ce21c989319d466b02"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 50 Star Blindfolded Single Star.lss",
+      "sha256": "a64b64f7ae630e1a8ec7d14a24b8ccb71e8b55d16e5d5d4ea2bd336bfbfb7a6b",
+      "attributed_elements": 351,
+      "status": "parsed",
+      "runHash": "30f710b1aa42d3c3b24dc2e516dc151176e3d5e5956c5c9b3d20d422e4ceb577",
+      "routeHash": "458688a821451c04d8c60bc3ab1594426ea5e1d7ad05647ee4e3529441339bde"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 50 Star Blindfolded.lss",
+      "sha256": "977065234947ae7a2b2e82bcdbafde18a06a4b2c7b4e1cca096d6ae1b156dd0d",
+      "attributed_elements": 114,
+      "status": "parsed",
+      "runHash": "21f3ef6687b9cef7f83896d386480f9720392b93309d3124133b839ec950d130",
+      "routeHash": "ae7fb0d71f3eb81727d75bd3d652d891ee9d504f6ad794c6e7302b4863b07665"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star 50xA.lss",
+      "sha256": "c03b7795cb181e661d744366f3cb8d8d4e7b183fdfd46a56cb63312e610b89e6",
+      "attributed_elements": 338,
+      "status": "parsed",
+      "runHash": "3f77c7c4c1d96b8a02b5b988f25b7b64ab444db5fda22155422e07522a29bb0d",
+      "routeHash": "2731924efd0cc75cf9b3b4142df5561884dd71b4a44c56762f07022b5c22c1c2"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded (CCM Late).lss",
+      "sha256": "78b36cb77cf5a10e28f7b56f45fa9c1624dc8f83af44bab594746996d6203bb6",
+      "attributed_elements": 1554,
+      "status": "parsed",
+      "runHash": "e8462b1b06fefa329c4c14b4c3980a0855074a98c61498a812402443cc8674e0",
+      "routeHash": "cac7eeec44fe366f05b3470f692d892e04982901c7e60a070a3c86727b026156"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded (WF Late).lss",
+      "sha256": "cb20ff9951682ce384a98e66d9fdcd258891b8789d015e273f81c6b190b530af",
+      "attributed_elements": 949,
+      "status": "parsed",
+      "runHash": "22f015efdef0371e83aaa817f1ce3a8316fec7d5cf1010dd8a0b471af85cdc58",
+      "routeHash": "92e944430c323c0f405b37365cebdcd17568a78e65f1ecb60edbe586fe7ea377"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded 2025 2.lss",
+      "sha256": "a02edb4871d6700dbffd67241a3d46efea36e70e15ff76d113c00eebc23c16ea",
+      "attributed_elements": 342,
+      "status": "parsed",
+      "runHash": "09e4d9976ac59d414f7318ccc40639a24abb73ac760c56330b03307c7f8e4655",
+      "routeHash": "91ed195d25bba9bbf0b70d82965b1c4d032dfe18f831072045affab60e37598c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded 2025.lss",
+      "sha256": "2dbdee74ad4f03574961e7f57374d1da2f75b5e08adc3acd3abb2c7980c14c46",
+      "attributed_elements": 462,
+      "status": "parsed",
+      "runHash": "92210e52666e6c113cb2c3d3457d4243349060885d59c9314a5381cbd7e7a0d7",
+      "routeHash": "7901f560018ce2f2857857c63247d3602f4e0d3cf7df8deacb257d37f324f80c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded BBH Reds instead of RR Cruiser.lss",
+      "sha256": "a70738d068e3c8fa6a5b0d4fb93d3590ee1a39394abd752349ecb4582cc77ebb",
+      "attributed_elements": 1377,
+      "status": "parsed",
+      "runHash": "f1d6b01637e6fac8c2263311900a318e0f4b125afd43013d1053cc68e2ba3c19",
+      "routeHash": "13edbe8464bb316b8f446b2822baa061e6898dce5990552d07f2878566b4d9ef"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded CCM Route (1).lss",
+      "sha256": "4ad5ed186197aeaa3f1f06dc303f843b1519d85379715c19f0a96896e143c896",
+      "attributed_elements": 956,
+      "status": "parsed",
+      "runHash": "1ae5af87669fda40c48cedf859ee3837c24246c114076c7334bfc855f2d9cb6e",
+      "routeHash": "2ffd365d6d1ba80b8032b955795e6470b701d568d887a8bbc0e46328c159bd16"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded Kopie.lss",
+      "sha256": "b4f579c8373231c65f44cc53cbb047b2c774f16ba1b2f9e9c0d5c612ef3a3220",
+      "attributed_elements": 232,
+      "status": "parsed",
+      "runHash": "4889bfea3205d46ab79a065aa632b9777f30c56ae143e090e993b8c389733705",
+      "routeHash": "5c09cc25f6fa5f4f3578e1c4cbf35246c989d37b655f9479a9ad1f3c53fbfe6f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded fixed.lss",
+      "sha256": "820ee4327750d054e0c33ac15ce22c33730f05d53f4c145f123c09f73942fb72",
+      "attributed_elements": 330,
+      "status": "parsed",
+      "runHash": "481cb9ad8825480760e8014196c97e1d8d6a511067f28eb4ca93fce63f968a50",
+      "routeHash": "c44b64af8ed2c5a9c67e259d0714fa21cbc7916f57f0c7212806e56dcc2ba461"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded no dw reds.lss",
+      "sha256": "598e328fc6c87e0f156088b5e8ab20730848d2e8e48bfed4d28821a164cc6a15",
+      "attributed_elements": 1422,
+      "status": "parsed",
+      "runHash": "eeb18cfd87a7391bd4a4f4c2c5be125856272a8c4d855a5b41f6eb4fecf459dc",
+      "routeHash": "42c8945eaa8c1278b068015b6010cc48be70a75c1196492a6a89a171dd0668d5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded savety.lss",
+      "sha256": "acdf20466b94f202f0cb40d4674770613c70c177fb0d6236ccbb210a0a0e2eab",
+      "attributed_elements": 283,
+      "status": "parsed",
+      "runHash": "b99998dfeaabcf561d6061247eb7477353ada2df4a111fbd104cdcf4564d1c28",
+      "routeHash": "1af2a8077ddcbc489c44ea76800d75e469f746c3d37e71eefbc3bcd36e570721"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Blindfolded.lss",
+      "sha256": "6fd1144964998e69b0c02e2600ad1218baef92a3bd1eb689d3815fee16bde94c",
+      "attributed_elements": 221,
+      "status": "parsed",
+      "runHash": "16d9d4de5d960b38d5a9a050d677572144c971f9cef9b586e5d881ab1590b037",
+      "routeHash": "a91e700ea9eb8e4f05ba40d2e326c3acb929c0472e8d1e1b668fac478295983d"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star Mario Cam.lss",
+      "sha256": "3aa18f7b28754ecf57b20ca285809d58097c5db328536c902a1e77d0bcb02340",
+      "attributed_elements": 54,
+      "status": "parsed",
+      "runHash": "fde3bebe2f0cc07e3b7909b58de6c32a6352f91b922fb29799d6f49fff36dab3",
+      "routeHash": "1214370df6a59b6ae6e28f51c64834bfdc1cb105ce9c2e3f0dbcf5b2c08b4e55"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Star.lss",
+      "sha256": "acdf20466b94f202f0cb40d4674770613c70c177fb0d6236ccbb210a0a0e2eab",
+      "attributed_elements": 283,
+      "status": "parsed",
+      "runHash": "b99998dfeaabcf561d6061247eb7477353ada2df4a111fbd104cdcf4564d1c28",
+      "routeHash": "1af2a8077ddcbc489c44ea76800d75e469f746c3d37e71eefbc3bcd36e570721"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 70 Upstairs Blindfolded.lss",
+      "sha256": "27b157843217d2bab4745ca78d31153ab61bfc0f6076b4c025b013c2502ed62c",
+      "attributed_elements": 182,
+      "status": "parsed",
+      "runHash": "0071d3334c1b5334237910d608968acc0b5d42a68cc53438f3d61f912261b9b8",
+      "routeHash": "5ce57dccbf6e5f603ea7fd3e388680fa32b0f233a095227d370d7db96f2bdc8e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 9 Star Blindfolded (1).lss",
+      "sha256": "56ccd6faa570a3f5642251597e1df81882e5364673929eaf9bf7abec50de64c4",
+      "attributed_elements": 222,
+      "status": "parsed",
+      "runHash": "400b1c8a81d13c3815d6da7dc86ec00c29e61f9230eb477a5b5ca9a7031efa63",
+      "routeHash": "dfd39de1cc9ba78918a8ac064bed8ca1d528e4b6c048faf510098c2fc3c72fa0"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - 9 Star Blindfolded.lss",
+      "sha256": "3329853609b9ac2c9e82a9fa846adae3a5cf31133b3317162217b221dcbe2861",
+      "attributed_elements": 18,
+      "status": "parsed",
+      "runHash": "c24f5bcffede3d8b37f1b93645c650826e71b55e51279972485e36f4b2658f40",
+      "routeHash": "3b9579c3d5cc77e5eacb0147ba1859cfafcb6b6fa94ee48184b073608a2bcece"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - All 100c Blindfolded.lss",
+      "sha256": "e1d9f1b86672387d8ec8c1bd16d995ab38387e26a7d68e92fd1075b3b584d26a",
+      "attributed_elements": 28,
+      "status": "parsed",
+      "runHash": "a633f17d25f14e6398d30e76430966cb9c3ea9fbce75ccd1601fb2ddfe9f1318",
+      "routeHash": "60b82ef3ab24d5c209e3a83cac75627e0e377020ba0cc9b01f2191a716bc82e9"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - All Achievements.lss",
+      "sha256": "5a73a60169569ce3019ee74b35a8f4eb088caecfbae1d7ac5fb7964aaed3cf52",
+      "attributed_elements": 124,
+      "status": "parsed",
+      "runHash": "56fbe5188db3ae90a93e3e92ab67a899b96ff029eac9c2d0237428140e060ca9",
+      "routeHash": "a3841a21fa422a39d2dabaa6e772e9879a99685eec6b8ddfe6ef1d0f87dac4dc"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - All Cannons Blindfolded.lss",
+      "sha256": "96207806de6a43354a8b9d567856cba8f3a92a5c1f7f0a6dcdda5922f4f348da",
+      "attributed_elements": 22,
+      "status": "parsed",
+      "runHash": "bff85da0ba611d05a9f705a3a51c749d320c5bfca903a93581d2005d878a9265",
+      "routeHash": "a3c79669efa7361ec76eac910bce4c1ace5f8799abaeb84166539bc8709e71a9"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - All Signs Blindfolded.lss",
+      "sha256": "98b0ae5de3d27144aba2e430f180e5d8538673579e64c7d754610826dc9cfce4",
+      "attributed_elements": 550,
+      "status": "parsed",
+      "runHash": "90d84ce3e8859b38a8c7a017f7308f59a2e5c332c32194c6a9d1980ddd4d7365",
+      "routeHash": "45cb807d8e51bfa1349f9a8ef79783d91b03930a7e256808c5bb27b282a5e18f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - BBH Stage RTA (70 Star).lss",
+      "sha256": "90808c21bc800f3b6e1a4a7cedffe5fc6093b73273fec768262c0d8a80f382e4",
+      "attributed_elements": 42,
+      "status": "parsed",
+      "runHash": "97d6c04e96f088c3afcf01784e935f9a98b6cacc9f128743892b8271ce33c301",
+      "routeHash": "9a4e546566e2ee18d1f0ec243468a2b2b3a9773510c7151da2554155c1529281"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - BBH Stage RTA Blindfolded.lss",
+      "sha256": "ca0b34e66ea9be3752d47ad8ac2d7472f88cf066dc8d37465f2e487009b6900d",
+      "attributed_elements": 75,
+      "status": "parsed",
+      "runHash": "028a58a19f70f172c0137e60edaa11316c23b927169a65715dd557209c6d4b47",
+      "routeHash": "c79ab58353ceb7e89548a34a0a3f170f0ca695f4921d76fdce06f4046f0e291d"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - BOB Stage RTA (70 Route).lss",
+      "sha256": "a6f2cb6bd812683c8757e946ce2ccf28550ea0c53c0d5ee744058f1370783a71",
+      "attributed_elements": 32,
+      "status": "parsed",
+      "runHash": "7aa56a6c86f516d8a2a6f838730c26315f153dc5cd32522154a53b0fcfd06b02",
+      "routeHash": "250d418adcd77c30559398d6103ef08633685c805d308966bcd0f9cec91f1489"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - BOB Stage RTA Blindfolded.lss",
+      "sha256": "fdc510eaa1bba8f5e94ceee8b2830b5f3963595ffd950a4e05e5e46c56437f0d",
+      "attributed_elements": 51,
+      "status": "parsed",
+      "runHash": "fc122c4532061b951efe1a6df4459f6e91e58c297da9a7b4d4423764c042c219",
+      "routeHash": "3a9674cbea89c4c3530106480a2508c54abc541e0efe5e2a1692c84d0c1f9cc5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Blindfolded 167 Star.lss",
+      "sha256": "b3558fce4cccb52d939fe51d38288c6ce4190fdc60392de2db592693c8a8226b",
+      "attributed_elements": 33,
+      "status": "parsed",
+      "runHash": "0b0e8f08e6640cf6f9f995c053886e0e5ab5df2ae2db7146cdbff4c4c03e6835",
+      "routeHash": "9d90270f57977755b68e68885a124efb75ee5cefd9320883f858f073256b8723"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - C Button Challenge.lss",
+      "sha256": "871ef62474d360aaeb73b022b553d47f61f61e7426d26c8c6763bd93b4d42ce6",
+      "attributed_elements": 81,
+      "status": "parsed",
+      "runHash": "53853794450f5889d651f7cba49355cc028a220f2aab91ec33067c9ffbeeeea6",
+      "routeHash": "8ab2dcf13e3acc1079d23125e85194ddfcfa0c911837e0c02973671317384f5d"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - CCM Stage RTA (70 Route).lss",
+      "sha256": "e9fd4e4aa750c27bd0794f8d64aa44a98bce8875fa3eebe54032ac374239e049",
+      "attributed_elements": 13,
+      "status": "parsed",
+      "runHash": "9d656a5382a0d3c2b0283529378283e6b625039dc3c3dbe54cc94c9405e67d21",
+      "routeHash": "5ddfb1daf314ecdefd259e3677ad7d3493e5c424f85f65c57d1b6113cbd02e87"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - CCM Stage RTA Blindfolded.lss",
+      "sha256": "63c904a0cf92c6d35472775eb73577316641ebb41e38249374c5eef07a75d04f",
+      "attributed_elements": 56,
+      "status": "parsed",
+      "runHash": "12c5a65d8df00be533563f3943c7d0bd0261ac6dcb6f98572c5f7359c7e3af84",
+      "routeHash": "5d16fb901320769b7f87445ae1a12ceef7dd8bda242ba993b6ec91e16dd7cd26"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - DDD Stage RTA (70 Star).lss",
+      "sha256": "db0b138f2994bd9cb5bd8b890d6f5f8bf15ecb32d9e66d181cb261f8a6d7bcac",
+      "attributed_elements": 16,
+      "status": "parsed",
+      "runHash": "3eea8c99f0768ce0bffb4e613e4d23a4c58cb284a863bfb8272c5b3a33f92bca",
+      "routeHash": "156b867c3b6eccf745be43cf4cb3b1ea3d3a223481a818499c682eac027c9071"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - DDD Stage RTA Blindfolded.lss",
+      "sha256": "6f3de74f481b7ecd6b04e2e705ed7438767a7eb3eebc84d45267a633a39df20b",
+      "attributed_elements": 56,
+      "status": "parsed",
+      "runHash": "470de379c8f003205455a80c35827521ad436b82f50eb6e51eb4044a0420475f",
+      "routeHash": "d9945d9c99d032db90de3a208e5eac7dd6ba8bfa88d696ab89d536c2b6515e29"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Dark Edition - 1 Star.lss",
+      "sha256": "0043b06d0d71680e7092ec40eb100f651cd60ac9bc570cd4d04348874136438a",
+      "attributed_elements": 11,
+      "status": "parsed",
+      "runHash": "6e298463485afb73d80a674ff814ae1e701571dcf32bf6b5e4b1e3677266a821",
+      "routeHash": "26ab8b96b00c0ef86c883d8322ba56f23c231f4f9e6403f629969719723770d3"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Dark Edition - 120 Star.lss",
+      "sha256": "22ae825dbacb4099251fe83007e387b5e70277576a04a17796f3dc1068712023",
+      "attributed_elements": 122,
+      "status": "parsed",
+      "runHash": "8ae5a4d80490938aaa98e0a69b629bdc15b1024d907a54cf34b61e1e7727e375",
+      "routeHash": "d3204be89931a930d842beb32ed6a7b69a8acd83b3a7a0dd8fec2a6d29ca133b"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Dark Edition - 16 Star LBLJ.lss",
+      "sha256": "8938fc70ede7ef3a0c7c85f7c85da3373e9e1ffae96dc19c3031d89f30c73531",
+      "attributed_elements": 172,
+      "status": "parsed",
+      "runHash": "39f473f6a0a2923bf3b8b35a7d44a83ad2917892f620c6ff72619e434e1398f2",
+      "routeHash": "eb9572e2076cfe3de30fb8de9c39c96d70c5f057b6001c1b43d46184421b1e41"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - H Stage RTA Blindfolded.lss",
+      "sha256": "2ddca4dbd5a9226078dc786320bbeda2943dd3e7bc7b4199960682495ea8b9f3",
+      "attributed_elements": 49,
+      "status": "parsed",
+      "runHash": "2adced8d0cb0eea090af66105eac00107fff98516501a63f41960a5a46b8e63d",
+      "routeHash": "64a5b8884ca6af976fa9d43363a2354f50f8d385eb78485a8bd1922a7140ac0c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - HMC Stage RTA (70 Route).lss",
+      "sha256": "8d41e5a785d9a41874dad6423e4b6c9b9be0b9890b6c293d2d6a82e53e440aee",
+      "attributed_elements": 53,
+      "status": "parsed",
+      "runHash": "102d35c157c85c0785ca394e8c94b0277d7082a21fc9572ea76348f162b8c142",
+      "routeHash": "fc6ace493a2e8d52306e52046d1f83387cb6b85507dea3e028a666347632d00f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - HMC Stage RTA Blindfolded.lss",
+      "sha256": "5dbf40d9856d2079760d414689cfa241b0ca19116f947401a1e7de0d588e5755",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "9dfb66ca83f08fed7afa2091709255bd81b5c1d2f1a29abf23783fbbf2677f7f",
+      "routeHash": "beebccff2167fe4bb44c2a739df6ee159daa142476ebde458acd48139ef94349"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - JRB Stage RTA Blindfolded.lss",
+      "sha256": "c9c1317fdb750770b03b868a71182a73056424c0cae86512f102b7712622d4ff",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "3a814d63dd5c5a3b46a07631bfdf6b7836981a56efc9b11d002e048a90a1dc37",
+      "routeHash": "4aa9fa260667d4a3e44c82f6ec7c920c847b09a78ef7b34a3abd668dc09587ab"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - LLL Stage RTA (70 Route).lss",
+      "sha256": "bc7441b4e984d1050ce47b008e1f033cca5369d949878157b248adaf0fb66036",
+      "attributed_elements": 6,
+      "status": "parsed",
+      "runHash": "9ee5beb2b5d73b82ecdd454a41dabc727821e8805d4e2c6e0d400ab03422541f",
+      "routeHash": "783e3da72eb9c8a1292f40324069fe852490c432b34666516e8e1e77cce0929b"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - LLL Stage RTA Blindfolded 2025.lss",
+      "sha256": "e8179951ef629236ca68596cf6dda541c295accc723d676202786d59eac15d1f",
+      "attributed_elements": 50,
+      "status": "parsed",
+      "runHash": "73653d004b8b747852e26ab0a847f0b20f723042b4294a7270b1fee13fe725a7",
+      "routeHash": "b3938c12547cecdec83e29bb038ff6ef6d820d7ec536113f8b6b8f20e1318625"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - LLL Stage RTA Blindfolded.lss",
+      "sha256": "1d67162bb24b040c1149fec195349bf413d6b6b50de26b5bb5be9317f99750ca",
+      "attributed_elements": 41,
+      "status": "parsed",
+      "runHash": "69bd35f0ff8720b87d9adfd68e2eedc6257c808855f740496f2742f5c2db1fad",
+      "routeHash": "dd15c8a6f8d118b66fc7a6472594b194a2de9391cbdf5cfb47b9ba903bc22c44"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Lobby RTA.lss",
+      "sha256": "26ba373d05ac294fbc134b559d3b098aee52cd1d809f9f14877fe521b088e3f8",
+      "attributed_elements": 142,
+      "status": "parsed",
+      "runHash": "0f82700a7eb40340899a7cbb78339b5f9082e5ade22efdacaee00a1a6117c733",
+      "routeHash": "a65d068adb573d180e6f727a9c09f58f1cdc8c9c1a211cb3812fdaee8b12d849"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - LockCam RTA.lss",
+      "sha256": "e9657f4d3f84f2224eb3fc132e42e9c7c093cb64f6ce0826acc65acae53a0cc3",
+      "attributed_elements": 162,
+      "status": "parsed",
+      "runHash": "6e14dcfe1a64170560062abae55fb505da8dd76c630566e6d40abcebe3ff8484",
+      "routeHash": "b92d8336136e71377a3c12e290de07f1456d2c6feb14e1dc6755f8481c03f5d4"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Majora's Mask.lss",
+      "sha256": "e66136aea17a0854f51697b0d43ff236ab993fdc43a37a46a7729de91c06b48f",
+      "attributed_elements": 11,
+      "status": "parsed",
+      "runHash": "53a00f145b79a04bdd68ed9c0d6c7364afd0be2fdd2c3b414d95b0b2d97c885b",
+      "routeHash": "820358470ab0995724e071b2e2d0dfd9ea29490d92637d59f71fb1924fbe1a89"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - RR Stage RTA (70 Star).lss",
+      "sha256": "d460bd430ad567319be204ce8eab72bf43d3bc84f777b931a071feaf5bd75bc2",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "af6f8576445516fd5bd851729a012d84a8736c775ee519a321526864819f44f6",
+      "routeHash": "f6c4674c2e2916ee3d0a7cc036839642487c98a4ff8e5f3a83e07d35ebbb3eb7"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - RR Stage RTA Blindfolded.lss",
+      "sha256": "0475952dea4f571c063130c7f93911db8d9c7ab793593589945ae9b9bd86637e",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "ba937ea54d1c1311c4984fdc71404130511ad81356ab1021e847a8d12fc66675",
+      "routeHash": "c9ac43f9b71e3b878c4f7228831f89544fcca3b614a55600c06062a3173e820e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - SL Stage RTA (70 Route).lss",
+      "sha256": "647d834eff79aec5e1a5f683e6070f364e73d887e4b55e5bad1c9b197d9c1c7a",
+      "attributed_elements": 47,
+      "status": "parsed",
+      "runHash": "225ffae1b30c5f1781bc98e67a8429a40c37ddb1db4f048fafa93272ddb0381f",
+      "routeHash": "d2b66fadb6f9a4c673a602c0820f84e37112258013b5514d9b3839aee0843905"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - SL Stage RTA Blindfolded.lss",
+      "sha256": "d1cd51817ecd73d5653ebf26dfaf0bb9d8780f678284830339edb862a7440168",
+      "attributed_elements": 73,
+      "status": "parsed",
+      "runHash": "d579294d706eca810617fc3897b6a4ff05d12f8e4eb0310b422b784d1d540251",
+      "routeHash": "c0c9cf966244b87e0a68d885f7b535a0ba9b728cfabf48122d57f2ca22d98f65"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - SSL Stage RTA (70 Route).lss",
+      "sha256": "ce67a185864412e050324946bcd895f03caecab373db88b4d540df276498caf5",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "49f6785724bd33eb82f9fabc7d598ce830b43823e14bb9275a843dc0e1172ea7",
+      "routeHash": "ea4d2e8b616d22febf6a9581419311f4525d5be10c0e75cd2c22accff4b1f813"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - SSL Stage RTA Blindfolded.lss",
+      "sha256": "e2657ed9d0adde81d1dd43b5dc88690509f810d3c5379771545009ace0366e2d",
+      "attributed_elements": 58,
+      "status": "parsed",
+      "runHash": "ff9d89a16bdfcd6e12a2b37176976d3fc5349f2c52138c7f95ef2df530cb6ee3",
+      "routeHash": "3ca131086977be126d807d93052e91d084eaf49d0a7afadf1f030a4297cf91d5"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - THI Stage RTA (70 Star).lss",
+      "sha256": "111317ee2e6776c4f528768a1aaee4263058c8300fe1dc2f9c5480786c09e8d6",
+      "attributed_elements": 17,
+      "status": "parsed",
+      "runHash": "98bb41b5efacb0c7294fbfc25c69d45e49593c282af5e19fc41770205a92ca0f",
+      "routeHash": "503d9f3f72202421850c8ff9c628f2dfc0210315787b25e19b302a400ea6e434"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - THI Stage RTA Blindfolded.lss",
+      "sha256": "9ac31abd9c32b8666e43998d92386cee9ccce157ed23386ca86b2e533549b674",
+      "attributed_elements": 65,
+      "status": "parsed",
+      "runHash": "75c57513086ad856dab2e0844dc6ce393c8293887a36d1cf2aef13185923b78f",
+      "routeHash": "246fbb293ad0cd1302e4f1acf7858786322f46362a0bb619aa7bf8a207f59ebf"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - TTC Stage RTA (70 Star).lss",
+      "sha256": "7ff5b4a71af232e127853b7ddcdf65c5b6fc8c4e15f232599a5719f7bebf54e1",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "6d62516f35df067c77ac082ee13598695d468c0ccc5737f9847330b74aecfd52",
+      "routeHash": "11b56daf3db8b6dc9dc10cb4156a479837d1d6bc1a72aa21fe71d02902f89065"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - TTC Stage RTA Blindfolded.lss",
+      "sha256": "9e5cbaada428c1a22cd46add63d0ef2e0cbab648228808d820853fed19b57687",
+      "attributed_elements": 69,
+      "status": "parsed",
+      "runHash": "01bfe9fe082a379218e308a2de5d36d4907b8473a0da0b7e1f3f06238010fee1",
+      "routeHash": "ba482292e2ea0bda4bd925a2094f97e0a9c16039935d4d66dc125b010fa50c08"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - TTM Stage RTA (70 Star).lss",
+      "sha256": "a6d85303c8033a8e04a77278e7973187e1d69e0ebb622edb3cef9ee5403e1f69",
+      "attributed_elements": 11,
+      "status": "parsed",
+      "runHash": "4a3846743e567cc9cc6a39d721e57af9d27bc3a9ca67ec2be0dceb9167667fc5",
+      "routeHash": "820358470ab0995724e071b2e2d0dfd9ea29490d92637d59f71fb1924fbe1a89"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - TTM Stage RTA Blindfolded.lss",
+      "sha256": "e3c4281a0fadc131859bbfd4ec5d9c3f6c61038ad05ed09bfad5b8363f0c7d06",
+      "attributed_elements": 55,
+      "status": "parsed",
+      "runHash": "83b5c669ccf408782391a7f1dfd377ef4b882cb7e98e7276b956046467c43745",
+      "routeHash": "6e8c7c800cf4b12d1a067797a67a219ba18dfdcfbba63afca0fd90c4acb7783a"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Tippy RTA Blindfolded.lss",
+      "sha256": "c6f31092c41f709276e0cbde7234cc50b78fde4d8907f32fe5a0a7e740792689",
+      "attributed_elements": 68,
+      "status": "parsed",
+      "runHash": "4e57e5e12f916e045d7b956ab13ee1b5fcb54252d186d1cca4a8dbbdab708374",
+      "routeHash": "eeb78ecf13de3986706f79fbcb2cb39e2185a66f24611fbe6b541697e5c61767"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - Upstairs RTA Blindfolded.lss",
+      "sha256": "013211c9a387a5771637e5783c6defa03fb29b30f71052beb120cfa4fc247b5c",
+      "attributed_elements": 99,
+      "status": "parsed",
+      "runHash": "bf858e9a28e0d7d12ce1be2d70ac0022fe93466050d9f439aa78dffbae3535b5",
+      "routeHash": "1627af84cdf3af01f14548f7816c33b8892db76c05c32a9a6c1d741e9479664f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - WDW Stage RTA (70 Star).lss",
+      "sha256": "054c3e5b809d5a84832ef4b9429e4ea10b8b911b653594823a7cdbcb9045c32b",
+      "attributed_elements": 31,
+      "status": "parsed",
+      "runHash": "1f33fa842dc7e24925f1247483c8f15b994f6d53ee2d604f236a4def38f67b17",
+      "routeHash": "d915868d8f41ae96c3e25092736ddde3d78e6b1cff2f5e8cfa50240740ed1436"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - WDW Stage RTA Blindfolded.lss",
+      "sha256": "73e781a5fe37e3aa85da4fadc6fd6d7dcc8c6fbae87b2d4d71cfe2f850e670c5",
+      "attributed_elements": 75,
+      "status": "parsed",
+      "runHash": "3c89926a94732d1f8d1083be3c8577e23c71e128ff9e35b93faea2976ef5fff6",
+      "routeHash": "7dc4ab0f7e3a8b6fca5dcf84dceab36a739ab4e870bcbe0a4657563f76e1fe2e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - WF Stage RTA (70 Route).lss",
+      "sha256": "5adb25e67ed0bb7c2457deaaf6a9d72109a25e734dd7c3416c6e613e0e993a48",
+      "attributed_elements": 39,
+      "status": "parsed",
+      "runHash": "d9b89846c37ef0e038393f26c58ce953eed8248208afd81c7389b89ae06978c7",
+      "routeHash": "98f0a74fcf2153510bd731b2a6190550efe822ae69d60833234bf0864b8aad40"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 - WF Stage RTA Blindfolded.lss",
+      "sha256": "410261e2fdb61b9cda01af6b286555b494a6979f0385594d1a767d85733b4524",
+      "attributed_elements": 81,
+      "status": "parsed",
+      "runHash": "b5ffe4230634f03039a59d028300001205178e6c2581a2a5416bbbc01af65c7e",
+      "routeHash": "0a343c69c7461f9735fdcc19e36d1840423215481a10d69ce4ee2d31eb674f48"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 120 star.lss",
+      "sha256": "043ac6fa531ccd15140d78bfb4b01ece7dd3276c8330ade05089fa7d9f393476",
+      "attributed_elements": 102,
+      "status": "parsed",
+      "runHash": "533276d129cbfeb0f160ed9dd974e2aa8b4bb99439a1071a6e34223b858ed7fa",
+      "routeHash": "650258dbdb699c633b6b2ff84d78df02f8360f116c6fd1ec7c8058e8f7910127"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 Randomizer - 70 Star non stop.lss",
+      "sha256": "aa84853d876bb9f798e20ae022d0de4a8a162346ef2817450f89f0364879a6e8",
+      "attributed_elements": 35,
+      "status": "parsed",
+      "runHash": "3e86d6df4fad82edfd9cb1014d6b441e2966e09be8a3b594bc4bedddbf211b74",
+      "routeHash": "4f9a4352c0d7b7a65d196e751e7176d73ae280387e7db89b91162dc8c0b54888"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Mario 64 Randomizer - 70 Star.lss",
+      "sha256": "1824ebccbb17c48507d6c2093b36548ab39be3f7f73fb7fd2c00ebd8801fd49b",
+      "attributed_elements": 17,
+      "status": "parsed",
+      "runHash": "baa9d89e152d16beb1e7156c9dfea3a437ef72011d80d2bfc787d6746f36bec5",
+      "routeHash": "d19046ee1548b330bddc3fadf47e39b0dcdbba484efd564c4f017fbb23599f58"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Smash Bros. Brawl - Classic.lss",
+      "sha256": "7fd668633673b8c6345670075a14ace3256ebb5f2651e7808972080cd4554b3e",
+      "attributed_elements": 80,
+      "status": "parsed",
+      "runHash": "99cc59f4943d9fb7b3ee4346af94126ecff2e415cdaacc5a7d02658fc77e1fe2",
+      "routeHash": "343913a36c822a98c2d14cc3af343dc4d567f65d2ab2937f9a413136897fc7cc"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super Smash Bros. Melee - Adventure Blindfolded No Reset.lss",
+      "sha256": "64022693dde6c1df9e9d7003b9ce16f1f905e9e321c8d2818ac477888e517c15",
+      "attributed_elements": 740,
+      "status": "parsed",
+      "runHash": "d289e152dc00a825c26c26f7befeb091f300be30fae833aabdda94887b8c0dd1",
+      "routeHash": "2bae1ecd16b480380678e985a1eb45797bc2cdc4a966462c3ac82c62955a2643"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super+Mario+64+TTM+Stage+RTA+Blindfolded.lss",
+      "sha256": "5f9e0bfb7e92766a1c123475c73491eb49527df2aebaaf18da8010493c4e1318",
+      "attributed_elements": 49,
+      "status": "parsed",
+      "runHash": "2adced8d0cb0eea090af66105eac00107fff98516501a63f41960a5a46b8e63d",
+      "routeHash": "64a5b8884ca6af976fa9d43363a2354f50f8d385eb78485a8bd1922a7140ac0c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/Super+Mario+64-BOB+Stage+RTA+Blindfolded.lss",
+      "sha256": "8c371c0f8ddd341d66ef14b0813b11329acf93b729cb391374bf0f00e5c558b0",
+      "attributed_elements": 39,
+      "status": "parsed",
+      "runHash": "6ca5fa1dc14b6c16b7a84025e656ecd4ea3cd8b860f101615dbdbcf8f3d3bd3b",
+      "routeHash": "584de47d008dbfd91e5c8a9910909d68c571537bf8c6ed64161baf432c32f356"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Breath of the Wild - Any% Blindfolded NoBLSS.lss",
+      "sha256": "57345e29c14ba3c6dded9bc1fbf1b020f0f553961f6aeb5f7197b659497b3352",
+      "attributed_elements": 401,
+      "status": "parsed",
+      "runHash": "7eedbc884984a57d8150b80ce1c20fcbf15ed0217e4deb38677d394516fe8c55",
+      "routeHash": "20b09c82c38070398f2d224d2c3d2571ed357c4d778bb1bb41597ba4a02bb6d2"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Breath of the Wild - Any% Blindfolded.lss",
+      "sha256": "e1df535198cdde7788a0ba51dd3528f9df7d862d24364f92e6732cff6effd5c4",
+      "attributed_elements": 215,
+      "status": "parsed",
+      "runHash": "e08ab074b48b1652f88f76c8532bf85fe0131ec11ab189caec6e8519f7061622",
+      "routeHash": "b92b9469ac82ea440115d0acc17b123e75a775edd5b872a2cf60e5b20750b328"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Breath of the Wild - Great Plateau Blindfolded.lss",
+      "sha256": "e11aaa298dbdf7c1240accebc966a6f7e4b4fa5444d498543fabd5763d0c758c",
+      "attributed_elements": 103,
+      "status": "parsed",
+      "runHash": "e0b10a23db0a48cf4c2e7ad13d0054f819a5cbed7325bc41d12b194716b5b221",
+      "routeHash": "7b1f9de55c50eeefab99cc64934bbac118a066af1f2b43f0e068f46bb24dd56d"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Majora's Mask - Any% Blindfolded (Intro).lss",
+      "sha256": "1d12ccba42630f822d3525cab58ea51f0738c2a9c3eb36b5ae41ac48d2e2ae4e",
+      "attributed_elements": 86,
+      "status": "parsed",
+      "runHash": "1042d59456e960e6ded71fc8a2dc9faf98c535f68ee306bfce07708ee1545bbb",
+      "routeHash": "a47fb2766d1c09b86d315eaa467d428ac649ef3903c440704d1f11551583f850"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Majora's Mask - Any% Blindfolded.lss",
+      "sha256": "1d12ccba42630f822d3525cab58ea51f0738c2a9c3eb36b5ae41ac48d2e2ae4e",
+      "attributed_elements": 86,
+      "status": "parsed",
+      "runHash": "1042d59456e960e6ded71fc8a2dc9faf98c535f68ee306bfce07708ee1545bbb",
+      "routeHash": "a47fb2766d1c09b86d315eaa467d428ac649ef3903c440704d1f11551583f850"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Majora's Mask - Any% No First Cycle Blindfolded.lss",
+      "sha256": "ede1ce21035b485c963bea7f1a4d6d50867eda53ecad9a6e215b8036faab6659",
+      "attributed_elements": 46,
+      "status": "parsed",
+      "runHash": "d1145647d168a9d3fea39e03fd39003be3ac0e2236737f4d5bb1be624b1c4af5",
+      "routeHash": "e94a160d455a41a031de771b00cc7530802e43490879007e6a5bf0bf49fd4c37"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Majora's Mask - Any% No Intro Blindfolded.lss",
+      "sha256": "af3a0ebcebb9864b62754b8febde46319db21976951a71b7c582da9f31a8db4c",
+      "attributed_elements": 28,
+      "status": "parsed",
+      "runHash": "454430a82867171942bb8d7a690164d79c3ae4107971844edaf3bf8fb73e1c77",
+      "routeHash": "1168e7037f4f62ff2584b970e268b04205f1e5073d14e86daadb88106424b52c"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Ocarina of Time - Any% Blindfolded.lss",
+      "sha256": "35e889206bd675cc5953b5ec2c6bd7f9efb3d5d4b61561eb549db9ba2a9a8af3",
+      "attributed_elements": 195,
+      "status": "parsed",
+      "runHash": "16d627817e8c5cf4e8f4119804121b638d43da1839a29863db9824c543942eb5",
+      "routeHash": "296595d5ab7d1b771969b76f7deeb04734a1feb474c1f563382b7f2fe44448b4"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Ocarina of Time - Dank% Blindfolded.lss",
+      "sha256": "d5952de790357c33285bbcbfab100b012fd031941383f94283adf2e109132584",
+      "attributed_elements": 114,
+      "status": "parsed",
+      "runHash": "eabc453df07fbd94b441ea2f8641572d6bfca0765b4508f4c62e0410199a9f8b",
+      "routeHash": "1a567ef1557cdd67f9787e00c3db1db04ef6883171800f9b55d4efcb0160aa49"
+    },
+    {
+      "id": "bubzia/speedrun_splits/The Legend of Zelda Ocarina of Time - Deku Tree Blindfolded.lss",
+      "sha256": "ef8cbd11ede0afb7185fffc5d68703a7989bc34bc24a080210d6f75e1f4ef113",
+      "attributed_elements": 17,
+      "status": "parsed",
+      "runHash": "1b193b54dfb0677e4ef23fe8a7ab3af13abd38968a5550404ecc812babd3ed54",
+      "routeHash": "dec54468d1bcd6002c4a74214097375147780b0e993d4a4316e21ed272d6eaed"
+    },
+    {
+      "id": "bubzia/speedrun_splits/classic.lss",
+      "sha256": "a00671cea1e5e0eed61dc99e17e284cf601acb6f8809efce9f68f2fb318a0cf5",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "a8deea9702e0594e6f208bac79b2967cebfb61fc218a47408ba4f0c7a460c6bc",
+      "routeHash": "5d1fa787215f76e8fcae049ade951b910753a5dd92bb16c6bba2c0aeb6c7d205"
+    },
+    {
+      "id": "bubzia/speedrun_splits/cpt falcon.lss",
+      "sha256": "1da8922be46809bcb4131d46c33dcd4756db96348765e84851d76bea3fb63477",
+      "attributed_elements": 46,
+      "status": "parsed",
+      "runHash": "bfd5743571061dbb44dbf45e212c0917c7751229bb5e19a1fc27b1d5746c0a11",
+      "routeHash": "25f3c702aa8ba6ebd7722d5dc8a86589835d9c3e98c487e9821704ce513abd5e"
+    },
+    {
+      "id": "bubzia/speedrun_splits/dark souls remastered.lss",
+      "sha256": "18ac40afcba9efbf2a2d6c2750597d6e75f743aa9d1d32c2defb3280b42848d1",
+      "attributed_elements": 35,
+      "status": "parsed",
+      "runHash": "00371f73deda1997bae8d75177e6cb3ef1c4f98a0d18884f8b7eb14b3c5f2383",
+      "routeHash": "fa8381a5226049c0732be93b458363b5c8fec2d5ee020e80f0e8058bb32a96ce"
+    },
+    {
+      "id": "bubzia/speedrun_splits/niersplits.lss",
+      "sha256": "c50d209ccfdc76f26e810c6792efdd30bdf68c84c176a622e91f9b4a9dc4d561",
+      "attributed_elements": 15,
+      "status": "parsed",
+      "runHash": "a5add378c92b30b834bc22eb661856a36b18b443903399ba11f2452034c5205b",
+      "routeHash": "c37e40da62f3652ef8701216c550e2e47d13026083846d0cd76ac5daa93292f6"
+    },
+    {
+      "id": "bubzia/speedrun_splits/simplyEvent.lss",
+      "sha256": "23ebe74c218cb63c17ed8c8c1a39e0a542ccc0b2effa01bb924b95afb88f4221",
+      "attributed_elements": 6,
+      "status": "parsed",
+      "runHash": "d91509d6691d74a6e4069ff04b9e5e6934ef58769003945ec15beeda141d1227",
+      "routeHash": "e173708f39c4ab4a50d8ee4130c14cc4db6fb6ec95962bc45f97969df33ac53f"
+    },
+    {
+      "id": "bubzia/speedrun_splits/test splits.lss",
+      "sha256": "1be685ec9b4ee507822333d1527cfc19cc1b8c81290c1959f9f6c2cd0d2e9472",
+      "attributed_elements": 33,
+      "status": "parsed",
+      "runHash": "67f405347f6a3bf22de5acfb59e802c13c07a2a9d104afcc8dfe7f8e1d31fb00",
+      "routeHash": "3eb2c72d34db8a5d67e0e146a327d05505034ad53315ae13bc41472d2ecde2c2"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Celeste - Any%.lss",
+      "sha256": "91b6b9511ee707f5062d3b9119026884b12d24c1f1304b86f5be71c6420baf99",
+      "attributed_elements": 70,
+      "status": "parsed",
+      "runHash": "fbdfee9c11652423a43368abf9219f3a89c3c6c727f83ecea9f3e9196eed1e95",
+      "routeHash": "32e277524640297fbf79e56f6f5a1c0479a9ae35debe65e7c41aed650328dc70"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Diablo II Lord of Destruction - Any% Hell.lss",
+      "sha256": "0a83f898831c65a4ba297895717d4723494bcd977102c1a1cfcdf7e707f566c5",
+      "attributed_elements": 19,
+      "status": "parsed",
+      "runHash": "626e8ff1b4544ffa8287bffafffc8f71769153bc20d243042bb1bb47d3d1d43a",
+      "routeHash": "5d952d81243f0b1c6e9fb80f8f728f5d1f8c4f5cb4e665f6f7df15f11cedbb0e"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Diablo II Lord of Destruction - Any% Normal.lss",
+      "sha256": "a03fb70c68840fdee2447eee2c2368ebc3cf4ef6b417392d9501a51372fcd486",
+      "attributed_elements": 15,
+      "status": "parsed",
+      "runHash": "18a0a7c3cf6f69375037319de4a6a867c4b03e77d9130eec7b50bbb9d853e695",
+      "routeHash": "9404613a96dcd7971fe895095bbe204a8c6a2f2e3db7b4081353111c617870e6"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Diablo II Lord of Destruction - Daily Goals.lss",
+      "sha256": "458e2265bdeb870ce4cc2061dd9530c0c69deb198187d2b289b2c9311c2cfb49",
+      "attributed_elements": 21,
+      "status": "parsed",
+      "runHash": "8b0ab355bef4bc670a935548b8c92439f605059f3052e48a040652ccd5d21bfe",
+      "routeHash": "0189b22abac1f43e58d83f393bae13d2d3cbe05940571bdcaed524d9a1c931ff"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Econo - Any%.lss",
+      "sha256": "e3f238f3ac0980d71915816fd0d541f883deeeed11252114f85054a1205d99c4",
+      "attributed_elements": 343,
+      "status": "parsed",
+      "runHash": "f41585a8d5717635b2080375201de24b57850f4703915efafbcf223eea9542b5",
+      "routeHash": "a296e2d4c510426bc930caa09ed069f0758adb21c57783ac2c857ee522872d3d"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/GOTH BROS  - Any%.lss",
+      "sha256": "afd92f1b9f6ae884991a9893daf441e98464ef394f60756c67ed2b1f58c98131",
+      "attributed_elements": 386,
+      "status": "parsed",
+      "runHash": "11bef6b1514004f5e2f6bf90729a7b0ef02d6adbff2501edd88c7effa91e7a84",
+      "routeHash": "39291183b57be11543b3054c8d737a62e390b123b35288e3a45c3a7c52b38969"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Gadiens Spring Cleaning - Any%.lss",
+      "sha256": "086657b82f9ea4c0c9c87d79c50ade2ec51344b3898f08cabcf211f29d275485",
+      "attributed_elements": 79,
+      "status": "parsed",
+      "runHash": "d8c4f8b75ad7dc632dbcac7d119291b93d675a3439115bdc8f34e4d5508e23a7",
+      "routeHash": "6c396ddbec01fe75e348608ff4f706b73e93e7355cbc6e811d04d2b788ec8462"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Git Up, Git Out, Git Gud - 100%.lss",
+      "sha256": "c2e7bcd06c41ddc861aeab0f5115e0275d3b2f833e57c4345cf9c460261f1ec2",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "f62ba31f180a45c2910a347dbc7d701d55c069b6844442a721dc8dcc13fbb9e6",
+      "routeHash": "2e3c7a1f817ab6fa969a0add0c9140dabafdd6e7a3e60d6bfebe42d56db23af5"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Git Up, Git Out, Git Gud - Any%.lss",
+      "sha256": "822ff1ccb03dad3fafeb9072b806537f9b81c68c4132810790eeea80e19bdfd1",
+      "attributed_elements": 119,
+      "status": "parsed",
+      "runHash": "6d0773672dc464f3bc9750f7cfc1f4a2ded4321ed8353b1620dda92285c0e88b",
+      "routeHash": "d4a55154ba76b1a065d8abc5adc85fc94f57feacce484c6699e78c03d4297a5f"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Haxor's Grocery Run - Any%.lss",
+      "sha256": "fa7150296f9d6e7b80549be61444c4f744ce1aae8db5ceaa3b3bca59d77a3a43",
+      "attributed_elements": 175,
+      "status": "parsed",
+      "runHash": "4793bab9e34caaae6465d2452cee046bae139deea10ac75ae7d447f96ce371b9",
+      "routeHash": "66801b2930a36a4a1a242b8231ff8aeecf46db44ebc75642241cce02fa63fb35"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Jabem's Well Done New York Strip - Any%.lss",
+      "sha256": "8723d0ba78228095b431b594b327a5163b788c88b69b000dc16b650c86ff4dc8",
+      "attributed_elements": 149,
+      "status": "parsed",
+      "runHash": "d0871b8e5e1411bb2af9de9cd6054498de9cd9f014cd4d8a2d2529034ce8a310",
+      "routeHash": "a008ba937381c9209f99ddcac2086d5e09adaa772ef2c8a22175432421dd5581"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Kamikaze Bros. 3 - Any %.lss",
+      "sha256": "2e3ec9c1c4fbba8e907545b4b1360f1ba632d5bdba1805d661389c0d68dac3e4",
+      "attributed_elements": 2139,
+      "status": "parsed",
+      "runHash": "8890df4a38a9110740b514b9878dd05c9bb1a7198c83d7058d0427dd19cbe4f3",
+      "routeHash": "a1f8f7e3f5182a2b7ab44d606f504b56b8c0bb32a9c0d25c39d818272a2002a9"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Mini Kaizo Bros. 3 - 100%.lss",
+      "sha256": "8762b1d4ca5ae85fbf88f1c6a8f35462dbdd61f3ba8ec3974762b3fa13f4ed67",
+      "attributed_elements": 26,
+      "status": "parsed",
+      "runHash": "9442c801b3db47bf325a5eb10def71ecef5e574d9a57b63ff40e194372b8ba1a",
+      "routeHash": "3fb6e989b1934338ef441190bb9eabe691b259d269bec59073651757e1cb54f6"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Mini Kaizo Bros. 3 - Any%.lss",
+      "sha256": "907aa16b29a4d64d28d89518f9e9558617124dc0581b55eae4e5c7025b69ce89",
+      "attributed_elements": 259,
+      "status": "parsed",
+      "runHash": "7bd9bf07a8543746586ffa19644c8c73eb32ffbd5501e3b4fb7ca9a8eb9bae45",
+      "routeHash": "dfa3e148e21caa7b175a7d03ad24e35bb6e27c451fc509ef75c85989ac021664"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/SMB3PHD - Any%.lss",
+      "sha256": "e73f64eba0a5b04614eb7ccd7e714b664640f94d236dfc7d7e0ba8eeca0e5a0d",
+      "attributed_elements": 27,
+      "status": "parsed",
+      "runHash": "309e6b357eff858a8320cbe6f17fd329d0cddb4a2a65db0cc21de765e1a05613",
+      "routeHash": "37af90dcfe6c6be321738741b6eeefd748105bc61261938d3646f309cfd22688"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Smb3 The Arobam Adventures - 100%.lss",
+      "sha256": "1022d2f31c065d7c110dc00355a7eb3ad7594c0039651861cff4f4316bcdb9f7",
+      "attributed_elements": 38,
+      "status": "parsed",
+      "runHash": "50286955d58ba7fa90c4760800a51eaebf238dfc6b21627abe9459e3ac48244f",
+      "routeHash": "be6f614e1a505d18bb184983569b7ca2523b23cbea7d32e7af011ee09a1b4059"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Smb3 The Arobam Adventures - Any% NG+.lss",
+      "sha256": "7b9fc8922d4eab3a015b1bbbcd238f922aa07a3815e4a7677f33c04543002f18",
+      "attributed_elements": 22,
+      "status": "parsed",
+      "runHash": "9044a831ca21d5e828cd77de80615652c727d7736cd829e7d01cad26b42c08ab",
+      "routeHash": "869bae8da00adc8d5082e865bb2c1f2ea605b18896fc507a6e51ffe3686c052f"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Smb3 The Arobam Adventures - Any%.lss",
+      "sha256": "5b74908e6e6c4e30cc7db1e5064afe190cc48a238e700d552554b730253f248b",
+      "attributed_elements": 259,
+      "status": "parsed",
+      "runHash": "57200bc6de9ce79dd8e8ae95d55c214d589c1b3cde2a32315b340edf70586afd",
+      "routeHash": "ead32c3fad21b4fb941bc1686070488ae70d82a4d4f3c7572b77fa2f8a460261"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Smb3 The Arobam Adventures - No Challenge World.lss",
+      "sha256": "0983c88919930ef9a7a17bb5bc09829c8c9d18e5de60a83b741e9aa5c79beeab",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "b4fc2e0765fbb5de84ea519a87abe1b299f1a7bdb54b76a10707dd5b029758ca",
+      "routeHash": "629863967c2e28bbebbaf6f28caef1d72e23709c82db25f20db7bedd8dc364d0"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Barb Bros. 3 - Any%.lss",
+      "sha256": "c9a87c9beff0076a17d1f1314c3fb7167c1de7c34dd572a64b347247af0e0ef7",
+      "attributed_elements": 207,
+      "status": "parsed",
+      "runHash": "66fb6a035e1f175ce2cc3c3c1dc751f4f00e9f57bddc0e26a5f9f2825c0c2855",
+      "routeHash": "8857ec947de36595ca0c192a88b776b89d6d55b4b044b87c465e7d93b2addb22"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Calm Bros 3 - 100%.lss",
+      "sha256": "8ba05d5be1d21b7f88c97260138283db58602682a7b5674ae4e6bf9456de9824",
+      "attributed_elements": 826,
+      "status": "parsed",
+      "runHash": "28d3a6e8254979640d49bb929d16cde72caad964379b564c01b312aff63994f2",
+      "routeHash": "402030c9a1192168f4e0f52d499a807403da7fca0648faf4c1df51809e7338a7"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Calm Bros 3 - Any%.lss",
+      "sha256": "60f89afbc839d92c1e0869f8cbd1eabcd6a53c8a2e7da3b31923e1f06850112f",
+      "attributed_elements": 1821,
+      "status": "parsed",
+      "runHash": "182cd17ffe92d98f8e39e377c9c441694afd3bcc85238750e10f57db5b7e4763",
+      "routeHash": "7b67aa874bd3cfc8c3e255235eacbb66f8ccdfd3f303280fc760f938dc16dcab"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Fraud Bros. - Any%.lss",
+      "sha256": "f64f0759378173fedc789b070b038370fceb2e73f721c1f06c7c2f1fb947aec4",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "cdb2be4db8d5bbd24272481a67e3a4a0a6adab7347e16decbe5c44c35fdfd64e",
+      "routeHash": "ac9e7a5fbfc357cbd8d4eec05c832fb7af700615e09536fdb0f47b986a38421d"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Fraud Bros. 2 - Any%.lss",
+      "sha256": "445bac22c4b8d112a8b17ed51a537dc0eab429d11891479b5ae2e29d1fe97b23",
+      "attributed_elements": 30,
+      "status": "parsed",
+      "runHash": "800609bf7960787fb82029a2898c297ad063f2e37627259897568098ae9578fe",
+      "routeHash": "42ea319c7136cd4954ea401e07855daa2debec9852bd29a595c9470c9a02eb83"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mandil Bros. 3 - 100%.lss",
+      "sha256": "4266477c371425758684be2fcb63b8befd3f0361aba0ab1033fc5b81ce669378",
+      "attributed_elements": 264,
+      "status": "parsed",
+      "runHash": "ecdb096bfcd7a7b345eb97e7a14398066d626af0c668ded5ec60cf3680d940c3",
+      "routeHash": "6f127ac920a259d8f19c0b0a2d7d2fdc11082174b7f64f0c39efea49e9103d4a"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 2 - Any%.lss",
+      "sha256": "7431b8df331db1ad6851368f2ad4712a945ed7173ad6f4900e4b339680dbb8b8",
+      "attributed_elements": 350,
+      "status": "parsed",
+      "runHash": "e8697d0b2a9f9b6fa2a9cfc9cb0ed886c3da47940e3b94212c2d754af3b5ec01",
+      "routeHash": "69fe56bf60b32b734cb87dd749e544b944e161dbcf30800b845aa1a779fe6cee"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - 100%.lss",
+      "sha256": "02afe06ccfbf06275d071dbe22f08c0d420464f0fdb67ec5e9cf9c1f90e9ba3a",
+      "attributed_elements": 330,
+      "status": "parsed",
+      "runHash": "065160a45355bc2c5ad15134de4c73c107482af07f45f777914399104c5a23c8",
+      "routeHash": "478d7f59ebdb40feb205365cdb4e61b4a2c4f49dd6e9d8732e86976a10e3b21d"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - AllForts.lss",
+      "sha256": "2575c6934799f27acfa55e273b5b235c3a1143d0a1f10c800d07eba9fdf70766",
+      "attributed_elements": 480,
+      "status": "parsed",
+      "runHash": "4d279e9dc589e458eed7cbc8df35a6df30cb43cd8d981ccce0c83c3af7e42754",
+      "routeHash": "0996fe75b0c1d4302d6c403af608a532383323ff923513d52031986a5ae512f6"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Any% (No Wrong Warp).lss",
+      "sha256": "8ecee9f52b89e5578a914aa3a3ccc36ca6e265096713a51950d81791632f480f",
+      "attributed_elements": 338,
+      "status": "parsed",
+      "runHash": "6b9ae4b53b4a04a74bb2a73f3312a2d55c02496384e2932f5492475bd5367db5",
+      "routeHash": "36e31edf0074ec4b9c637da9b49d6a6edba8ee863a8653a2cf00e25e1e5d8884"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Any% Warpless.lss",
+      "sha256": "539f09871f47b9aeb827669cb5300330ec29b9de3190407778d59bd7628206f0",
+      "attributed_elements": 15466,
+      "status": "parsed",
+      "runHash": "0647b9fa66f9ab89de86a15d2929a9b51d6c601cf2b0d330e38a47a482c65bf7",
+      "routeHash": "60510bea4ae834293e5af07504260b7e8282c56a7f58bef94a46a59dad5f4982"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Any%.lss",
+      "sha256": "755d1dfeda82aaf187c31efa4f5da5c0ac982ccaa39975f082f4e358a0b5d8a3",
+      "attributed_elements": 988,
+      "status": "parsed",
+      "runHash": "3190c8b4c0ac4db4d8c0d7174757e1f75418adbe6e186a19b53c11f70152d399",
+      "routeHash": "95a53af48501c94344dbdb15f7936864fac1e9600c5989342e4849ab4e35da10"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Pts Season3.lss",
+      "sha256": "0ecc2a5025664b3219b5430eb4e8dce798e979341cb1df99e78a27cacd528de6",
+      "attributed_elements": 140,
+      "status": "parsed",
+      "runHash": "f64de3944591370f9e19985e88a748425d1acefa1ab8c4cada5eec26a4c7cf22",
+      "routeHash": "2f1a32236b62f8292d5edd2985ccdb69c2ac1dd8cc0f994583aab86671db3d60"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Rando.lss",
+      "sha256": "a42167d3ed884d8ad83daff31e02349835ae46ddd92734c5178e397582756a37",
+      "attributed_elements": 162,
+      "status": "parsed",
+      "runHash": "ace8aa28b20427c870267956ed36492c8c361907b2fb307c47c5361767067daf",
+      "routeHash": "491d36d71ef9a9f7c9bd3e9854f7313fa5d8ae45ccf24ab375d6a55b75143f97"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - Secret Exits.lss",
+      "sha256": "a9ac2b4fe9be6aa7a495c641baf47363503d78b4de732380b33cbe1fb7b46a50",
+      "attributed_elements": 47,
+      "status": "parsed",
+      "runHash": "774bbd5722108310846261a35f63431b1d5a8a46af68716abd03c6a47adf58d7",
+      "routeHash": "ca93bf0c2b108ed6dae1cabf2e326f7ed5292583617cec9b1f7d4e81ac3b9f51"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - World 3.lss",
+      "sha256": "8e64bc1a2b8003ce18dd3721cb494fbd2eed1cb44c740535b20f1d3ebda3caf8",
+      "attributed_elements": 210,
+      "status": "parsed",
+      "runHash": "214c7a30eb5060a342b71b459fc905b858f368f406bd9639c7a49c0490dd7f83",
+      "routeHash": "cd063fe44d47dc01ded74c449294d0215abcac18354edb3c4f43f27ddbc55d4d"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - World 4.lss",
+      "sha256": "a4548edcef24c9b5da6e1aed832b35ce96ca419adc4b5ae3acc1219c9348d700",
+      "attributed_elements": 360,
+      "status": "parsed",
+      "runHash": "6882e72d660b3142fe4d6f8f003e7957ecf5d5862feb6820df2d5149c82566dd",
+      "routeHash": "ced1b9172cbcdb92c2ead6f9c0084f79dd4d28e8738e80edb35ca904492520da"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - World 5.lss",
+      "sha256": "6ad63a27eb614d96f97085a7f9f390b7bcb658a5cb31531200eb499f8dabeffa",
+      "attributed_elements": 85,
+      "status": "parsed",
+      "runHash": "04f5ecccc3b1fabd4c1ed07dc12e6c1fc7dfb0d80a9e7e58a3fdc14112917d5c",
+      "routeHash": "812fd1547ee99c7a775f32b01500b39a6af0679b6eb97357604ba18a9070d604"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 - World 6.lss",
+      "sha256": "5f9fafa16da476b537ff00aa5b5defd1bf23dc90c4936d3ad0804e34fc575bde",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "e8225b827af7c329e3d281844e9a6c9bd89040a0ded290319396f32e1b5efe02",
+      "routeHash": "0b251e181c5df47b534714949d4b23d63c271ca7cae111f1670d8935cba7696b"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+      "sha256": "d12d6f2a299aa0087e1cd23ab59d088105d3088ef4d41259bd96acdf1ab41cb1",
+      "attributed_elements": 134,
+      "status": "parsed",
+      "runHash": "936c6f3fed3235cbac0113b7e4221d8a71a99af4d62b4c76f01118a891480baf",
+      "routeHash": "1d319b95c33a46e944d7b512d65b03c9eb2ccf8eedebc75f2d605c9476c3b8cb"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 Race Edition - Any% Warpless .lss",
+      "sha256": "7988e73916164cc606e40cdbc15d3d7e08b9fce1425065c1d016a3b0878f227f",
+      "attributed_elements": 37,
+      "status": "parsed",
+      "runHash": "53a3c5ad6d98f44fac5e178102558f4a3a4b677d154b2b8fe79006b05a11303e",
+      "routeHash": "8969282d5f6dab610090d771e33e1dac326d06d95e8363c7304672a8b40561f6"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario Bros. 3 Romhack Trilogy - Any%.lss",
+      "sha256": "5162be078af47f8363d9a7ef3c80ac1a265f32eca7f6cb4b29e8c35053f506aa",
+      "attributed_elements": 101,
+      "status": "parsed",
+      "runHash": "440825c0fa8e260218efdecfc506af5e992531a968ad97adad126c25100aa58a",
+      "routeHash": "a6d0d87ed13409918377dd55e3628e3f62fa5efe902a49a43e694d2f0383f971"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Mario World - 11 exit.lss",
+      "sha256": "0bd5bc6e15af345071f34b5040a78ce49efc64b32b5761f54d32d0ec05b60321",
+      "attributed_elements": 122,
+      "status": "parsed",
+      "runHash": "db86e0e1f6fbac6b25465c08710f286292eb2f3ab567efd091b32c9f870c4b95",
+      "routeHash": "5b85c46673381e9fdbd01f06c2afac5d5427ed3e8735b1233a521a4131a2c5a7"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Orb Bros. - Any%.lss",
+      "sha256": "70bd7c0119f3ddd32f0b09addbeb25c42a167234ef8ce5cf62b66f370a4481d3",
+      "attributed_elements": 347,
+      "status": "parsed",
+      "runHash": "f2481bc8415d655cb071f53ee263f77d463bbbc9eb15902e2c017304641a03f5",
+      "routeHash": "265a9de4e1c7fa4d2d27092907ca717c094b410d2949de84949dcd0cd0de08d3"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Poo Bros 3 - Any%.lss",
+      "sha256": "dfcfa3dcde2590f99678d5491ab4943cbe244ca942043668321ef10b2aa618d4",
+      "attributed_elements": 66,
+      "status": "parsed",
+      "runHash": "689622c6ffb12d2c15c71aa568975c3e19d2fb796c43a173db9985981343207b",
+      "routeHash": "17a209645877be173cdee0cbdc66de142b1091f58719ec2cb03c9c298ea2aeda"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Riff Bros. 3 - 100%.lss",
+      "sha256": "40bd5c5420ca1162ad0c40ec248fb324c4b15ab599fcdcd68a7a0eec6406cf8c",
+      "attributed_elements": 54,
+      "status": "parsed",
+      "runHash": "a1ef5576b42e2259c6a5f9563fbed81615ae9bc3d98518e2ecc41af560c02249",
+      "routeHash": "9e42b21d8c2d2f3e37b68cf580c39f7067f0fc2599f9f38021ff5272f2857d0a"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Riff Bros. 3 - Any%.lss",
+      "sha256": "c782769c636601ed0c64d6a9dba2109d879d5d186776ff3035e1f4e42171cdf9",
+      "attributed_elements": 159,
+      "status": "parsed",
+      "runHash": "beea870c1c347c8ab2de0fd71064d0a41eab8d534416d3e7c8614703dffa1e73",
+      "routeHash": "85d74bb831cbd7ec98c507c5136a6b1ef4055452c5cc80f21691f63d5b1037f4"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Sheffy Bros. 3 - 100%.lss",
+      "sha256": "daa8fb091c4d90dcf436a25ed9b91520bb926af00a2f0bc626c42140d27d6082",
+      "attributed_elements": 111,
+      "status": "parsed",
+      "runHash": "43151e9c4d64b2e92ba1581b3ba5f46ddaf78a8cda7e217061a9a477ef29fb06",
+      "routeHash": "e92d304a53753ccf73546c58e5d2a56f3c34c81a64fb45937fd50d8dac6e6ee5"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Sheffy Bros. 3 - Any%.lss",
+      "sha256": "41a2b338e46785a02384c3ae3ea60fbe5b01de0467231e4cbee633ad8abb0540",
+      "attributed_elements": 157,
+      "status": "parsed",
+      "runHash": "fc57bba590814b6327fcc383ba5a1f20f6ee126e6837a5fb1e2811046ff1c25f",
+      "routeHash": "fa2a420949c700e9e05fc01760798e348c533b73c4b5faa28d13213758f869e2"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Slasher Bros. 3 - Any%.lss",
+      "sha256": "f00906b6a7b981e862b69c32de7670c2e68adcace9c697fdf1fef74dcd0e1a07",
+      "attributed_elements": 288,
+      "status": "parsed",
+      "runHash": "7d58c5809f1c292241e6d12150e473577157ae1fda1e1dc429be647c4c97b188",
+      "routeHash": "5b149a1758f929682c3744f410acce1e3e89116d41c93527dbc28a6c853dbb63"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Super Waw-is Bros. 3 - Any%.lss",
+      "sha256": "6cb5d49672292892906e19dd68c11183b23c2ae6d58afaf9051a800a0c202f70",
+      "attributed_elements": 144,
+      "status": "parsed",
+      "runHash": "8ae65df3f6e3d927514d85936c22f59094d9e7f93c6454182ec97a3d198db693",
+      "routeHash": "a1d8f78c1d98d3c9b6da9d188add1c87936515f15af8266548350f91ab41dd25"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Tea - English Breakfast%.lss",
+      "sha256": "9167daf40b6e4982f96d06a11b935fe213de3b7f91fcde824e87c22253300186",
+      "attributed_elements": 348,
+      "status": "parsed",
+      "runHash": "806ae3d5af7cdd6e708ae39c5e5cf902a1de820f136729462e71b7d2a7ac3037",
+      "routeHash": "cceac2ef84f88178e9e3045c9a4b3cab6c1474e51fe326fe0826fa505c1dbe97"
+    },
+    {
+      "id": "narfman0/livesplit-data/splits/Uncharted Territory Kaizo - Any%.lss",
+      "sha256": "e13558c7e9605a0de69c2afc50261afca25667b1dfcd8e9b2fc2daabead42238",
+      "attributed_elements": 61,
+      "status": "parsed",
+      "runHash": "3a06d78aeccf4cd95e4b4e5e4bbf6e81c12d86aefdf528d24e7a776bb3c39919",
+      "routeHash": "24fbafe13bcef5cbb7535aa474f639c470e863f14c5c5b910f0bd00d3dda0e0e"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Bad + Normal Ending, Hard.lss",
+      "sha256": "d85c4f91e258e8a2524d0ec7b8d79c78f9bfc65f8948b192f21ea65589eec87f",
+      "attributed_elements": 312,
+      "status": "parsed",
+      "runHash": "204e5a57593131b010d8e4004cf54b78a8bbaf056558e3015faba0b94f7646b3",
+      "routeHash": "ea7b08c2d320e08d83f49aca95033a549557ea7132813e5354764dde9efb74cd"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Bad Ending, Easy.lss",
+      "sha256": "0997e4a285b8214eddf56d005653986c4645f9a80d6e139e7be0869bb50b3dbd",
+      "attributed_elements": 165,
+      "status": "parsed",
+      "runHash": "b5dfc2adfcda65020f714371d3c9898ae8d875d82534a6c05517aaee2851227c",
+      "routeHash": "6158b5ff80dc772ac6cd7dc094caf1099b5a0753f6949b2f9e72e1d61a41932e"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Bad Ending, Normal.lss",
+      "sha256": "7fbb82ab4ac9dc261dac1613fc26ba2818dcbddb9de542ea3a5cef54492a4256",
+      "attributed_elements": 106,
+      "status": "parsed",
+      "runHash": "3b7b336d5658f746855eb94795230929378b3a44b430dace9519d6e86ca74394",
+      "routeHash": "0b1d10183050e3dc5fb3736ee2716ed87cb46a2bf454120637b2352a3dbb4fd8"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Best Ending, Easy.lss",
+      "sha256": "65ec0f5f404270c0193852eb1240db6dda63a67b87dd2a4731e8e7b42a8269b1",
+      "attributed_elements": 204,
+      "status": "parsed",
+      "runHash": "e0834838166543bf50d31a65467269537aee8015617e316953a81d13b7e3a4b2",
+      "routeHash": "a56c82550f6a8cee5f9f99c8c31000efbc466695ad987a121c35ec0c3d50f3d8"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Best Ending, Hard.lss",
+      "sha256": "8c6e23c576faafa3dcf11aefe916a52df3e99e2dc53578565eab011188d37687",
+      "attributed_elements": 471,
+      "status": "parsed",
+      "runHash": "f4ee5ee389af2d7893029b678034aff5ddd0292745e8b27aee0c68ff9c3adc97",
+      "routeHash": "bd44403ec1df145ab951d340eb48bd7638e4cae50d9e9767ae1a10496830bdbb"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Best Ending, Normal.lss",
+      "sha256": "2807637be173434528339241de02b73f3f3aff0317cca0d25432d0f091b447f7",
+      "attributed_elements": 973,
+      "status": "parsed",
+      "runHash": "ca23b170092ad8615ea325e790a053f630e7093eb82e79650a1f4d6182e5c320",
+      "routeHash": "10842de38af823c745c0e9d0579ee7abb54bc5a3e3ef32c44c24998a62587acd"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Get Panties (Easy).lss",
+      "sha256": "4297c2396335b7878c4d7b627563a3f84dc47581fbf56480001f34dfee2daba0",
+      "attributed_elements": 184,
+      "status": "parsed",
+      "runHash": "47df531b0036b758b334551dab734a5ac753dcc44294b346cc1bb1fec68a3705",
+      "routeHash": "403805d1f80e1cbe8f87b998398feef3a21f74a0ca26854fc5828f423820ebbd"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Get Panties (Hard).lss",
+      "sha256": "c09495383109fe36e57c41a44aaf03bf55deeee8a8494fd8babd6e4dadf1c98a",
+      "attributed_elements": 211,
+      "status": "parsed",
+      "runHash": "758a7142712c3f741ba4ecd7e3c7722accb885d972dedf03dd0af7f3a23faeb8",
+      "routeHash": "78bc28d3546d2ff20776358e6dd104812e1fcdda8082fe2d41fa747af6e73dc7"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Get Panties (Normal).lss",
+      "sha256": "fae7d7c44e38e3f14b606bf326c4ec188f0a67f0d16c8da59bd997492bc6745c",
+      "attributed_elements": 410,
+      "status": "parsed",
+      "runHash": "06f93f646fcc9a89fdabf116bae92207830f68bbd1c4eb9aec4ebf451b08e220",
+      "routeHash": "1d123f093387274531d5467fe9a28f4e16355babf3d231279fd1fbf659283572"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Normal Ending, Easy.lss",
+      "sha256": "140009a762bda903ecf3ce1ebcf87a4c3be2c30eeb219fd7164595d3467b78c5",
+      "attributed_elements": 150,
+      "status": "parsed",
+      "runHash": "23e3ae82d9a4029847625055d1ff4f77691a0cb67cb07b3eaedc205aefeeb66f",
+      "routeHash": "dbb50e04087db34028f81567a75f9f3a55e775057a642c017a0d2c3791c5b089"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (PC) - Normal Ending, Normal.lss",
+      "sha256": "3215be0ea1b17dade86dbeb2c52553345a52753d78d3c25e4f2fa93a72d49686",
+      "attributed_elements": 128,
+      "status": "parsed",
+      "runHash": "ba40e8d02f207661dbfa10c2da05ef4e137336cca6ba2f51679aeed317926216",
+      "routeHash": "7302aa57d2f0bdcc40aeab0d0650aaf7006d86b15c6d9fd496a3336dc541a9be"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Bad Ending, Easy.lss",
+      "sha256": "f265ea0204369f01bfb22eddad4a4a0cf23cf15c4fd650a189cc756e08f5eb08",
+      "attributed_elements": 46,
+      "status": "parsed",
+      "runHash": "331fd41cea870c6497fa77345eba5c348e018ca9524933a4745532c3dcd5248f",
+      "routeHash": "6e6898722b464c7436ff867df65b37cd898f0829d335dfa790e4f96856ad9312"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Bad Ending, Normal.lss",
+      "sha256": "e7e0607080686e01b95524f41724d4b68da49a358ecbf000d20fc35d5ee12a24",
+      "attributed_elements": 47,
+      "status": "parsed",
+      "runHash": "ebbe5243df21b3a861557c037aa6deafa99cde986393d04cd808f29734250b96",
+      "routeHash": "12f92aaf0e3c643c33d9c5ef16d65e4c6a931e0fa2910ce846077bdf3a68d444"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Best Ending, Easy.lss",
+      "sha256": "f1cfc8b3f3bc6e9f2fb5e088c406736aba77a3cc095c394dbd3d6ea1c559b7a1",
+      "attributed_elements": 109,
+      "status": "parsed",
+      "runHash": "a06ef9c2123bfb35b70043a3e2fb2a029014afb94a6a5dfc5f885f8d0284f1a6",
+      "routeHash": "fb73b6e2bbe7b639d3d134894c03754644a6cb9e7aa90516d4478b067a851667"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Best Ending, Normal.lss",
+      "sha256": "946e5db90d2f06a85f828a7877ecbfce720473e8f5b0e1b3bb6027fbde81bafa",
+      "attributed_elements": 234,
+      "status": "parsed",
+      "runHash": "f76535a99aafef2785febfbb62f35098188f0e6eed28c8c310c41ec35248c24b",
+      "routeHash": "bb085d1931f2c709333dba798d807cfbf50227086dd5dc8864bae5ab862ba447"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Normal Ending, Easy.lss",
+      "sha256": "4bab59e416aec99eb1d8aadcb47ddc6979dafc27b90e182531e57e5f84a10127",
+      "attributed_elements": 38,
+      "status": "parsed",
+      "runHash": "7e5633e876bde48ca7f1617fa4481e0f986f071e39a029f02cf1760758a9ac91",
+      "routeHash": "27a35ea5e777e96717f76864a1abd42f205abd8a9c5ab6aedfd7fc27452d2d28"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story+/Cave Story+ (Switch) - Normal Ending, Normal.lss",
+      "sha256": "a0417411a1fd69f1cc968cd70bb6c0f1c9b898351d26ea726f3ec7e24d7f5baa",
+      "attributed_elements": 90,
+      "status": "parsed",
+      "runHash": "ec3860650a0802bb53f16bbc52447cfd13e1d26e19d4dbf6be8270babe9141ef",
+      "routeHash": "4acb259207184196a8eee8f5c356bf7fa3fcd3f65225253290f4670c157eea7d"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story/Cave Story - Bad Ending.lss",
+      "sha256": "da7aa8ae06760052ed408b9cc7a74e3ea92b23033a3cbd6e424c298896fb9a3f",
+      "attributed_elements": 838,
+      "status": "parsed",
+      "runHash": "22e9c1ba7e855e5b2b686b1024e199e523926470470be29c32bf578aadfeca6c",
+      "routeHash": "0ae9fd7a76f8fe62b5f5d6c693b14d18d743fa638140d15a7c29bb2ef8d8fcda"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story/Cave Story - Best Ending.lss",
+      "sha256": "eae7ee636058d5c251e9ed55287084e932310996a9de8fb30e28a8b1ac86b50c",
+      "attributed_elements": 13079,
+      "status": "parsed",
+      "runHash": "9ea4a1e4ea8cfa960ce14ad8df1bd75e8dc4f94f7652f665e781925bb1103752",
+      "routeHash": "9af0e6a5d177f007eeabf402246903429151843682870cee55059266c6bfa06c"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story/Cave Story - Get Panties.lss",
+      "sha256": "2486bd4fe1d59fffcab90191cae76cdc419aef8bf613a5e3070a8cd5d62d7f99",
+      "attributed_elements": 1880,
+      "status": "parsed",
+      "runHash": "1f0f4ffb85859dfe6627b4a00d7cb5ea4be425dac46eff3e442b5a0f62e7a8ce",
+      "routeHash": "ab7a92aab0e25b5780c43144e877ee6257a05859470c26aa8f7599fa62669276"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Cave Story/Cave Story - Normal Ending.lss",
+      "sha256": "6f24a21512771d92718124f962bd33e19c38318098c61cf7e4d8d7c76a6c9246",
+      "attributed_elements": 606,
+      "status": "parsed",
+      "runHash": "c417eab562a8c0d2da8af11fc4eeda3d1f636e4606031339a4fc54977dd273cb",
+      "routeHash": "10ef50c1c1264f15d83318be09acef52a48056fee0b71ccaf7ce9a3a8bf7a322"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Cave Story - Best Ending (Turbo).lss",
+      "sha256": "406ca92ba5e6bedf390b75ebf1613d163a602884611d3dda5cb2f8af5d37b346",
+      "attributed_elements": 3364,
+      "status": "parsed",
+      "runHash": "4201748c80890d6fa9b583a04c02aeb98872c79e1511b1b369f001f322acccf6",
+      "routeHash": "329b2299ffabbaae0eabf5edd963bd1c3aef9ed720e424a37b4c5799f80b88d6"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Cave Story - CroakClip%.lss",
+      "sha256": "8567e0add9beee61923b9d7678a235146ebfa821d02bb44aa77648f077a3ca4d",
+      "attributed_elements": 39,
+      "status": "parsed",
+      "runHash": "2105f4e8bdec9428bb43da5b391596214b618b8dbb0d8c7386ff65ddaa865d7e",
+      "routeHash": "4f8515816b9d3c8d240fe773edae74e0f775f79250a132f16584000141c8f261"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Cave Story - Hell IL.lss",
+      "sha256": "b4fd9e9966a43172a3ddb27ef728bd536688a1939a19374f36536016e0fa9b89",
+      "attributed_elements": 4488,
+      "status": "parsed",
+      "runHash": "8a45339808401efaef4985f2dd70c3597dfc492965dab51e884d79245d160350",
+      "routeHash": "eafb80fd337bc25634f2e2cd9547afbff07e72cd7c243178fb139367bd710a30"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Cave Story+ - Hell IL.lss",
+      "sha256": "cbb9dbb0dfbe43e1bd280149c6edb54bff6d892fedd409df512a3ee5a9963663",
+      "attributed_elements": 651,
+      "status": "parsed",
+      "runHash": "f1724ea133e10f1e26c4984fdb70ae6a71385f41f0b8627f42b184459af40e8f",
+      "routeHash": "0268ea086bef72976b9be0d7b74378379a95e174a7d8e04c4307904a006e465b"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Mario Kart 8 Deluxe - 48 Tracks (150cc, Items).lss",
+      "sha256": "ee2249310ea0f51a8b37d1b98567efdfaa86569ecbe7fe0155d664f5604cf72d",
+      "attributed_elements": 535,
+      "status": "parsed",
+      "runHash": "40f98564bdb090f62de81b2d9e0b7aef9540df15bf17a659f3b6a7b79d37e88c",
+      "routeHash": "979d3e38826861bde80670c05161e69900697fb7aa2cd4f5114fc6fdf673fb7d"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Mario Kart 8 Deluxe - 96 Tracks (150cc, Items).lss",
+      "sha256": "1b41c268ca2d87ee62bb787b1f1ee03f7275c7449e8b723aae55013e6eca3834",
+      "attributed_elements": 587,
+      "status": "parsed",
+      "runHash": "bb97175657d30f2e6cbf01bd5a639f806a17d553760e52a4b0465e98f0179c5d",
+      "routeHash": "5706a4e6b947d5831bf5de3ee62f25198b50eceac6a5c8b4f6ba2469a3795c97"
+    },
+    {
+      "id": "periwinkle9/LiveSplit-Files/splits/Misc/Super Mario Bros. - Any%.lss",
+      "sha256": "7ea25e0573ef5a1cb14b02c7e94ed99c708d72f2a056ffd512fe6ad974c42c45",
+      "attributed_elements": 2622,
+      "status": "parsed",
+      "runHash": "70dbdd19732e6e6cdfac92fe23557e78a1734ced807712a4a5da9aa7b4f10b24",
+      "routeHash": "c4bec995b4c0e25503391995d28c43c31d5db1d2a086755fc29dab998dd89503"
+    },
+    {
+      "id": "zhrakula/nes/Battle City/Battle City - Any% (1 Player, Stage (1-35)).lss",
+      "sha256": "51f791bc198641558d48e928ff09b1a2d01d73d4b8b0b7d1c8cbb37a19e1de8e",
+      "attributed_elements": 84,
+      "status": "parsed",
+      "runHash": "738fb11e727ea6407f34b0c43727c9f31af0fafd11deac8cf5db126b190e2397",
+      "routeHash": "e2cd0b94aac696b467590f821cf62a1563bc2ae4a9035bdb0a63500c8ab0b4da"
+    },
+    {
+      "id": "zhrakula/nes/Chip n Dale Rescue Rangers 2/Chip 'n Dale Rescue Rangers 2 - Any% One Player.lss",
+      "sha256": "b9aa8d7e6d8bd65438f72712a4dab6e40f3a847d61abc4df32f78da07b7f93cc",
+      "attributed_elements": 2215,
+      "status": "parsed",
+      "runHash": "e45e0094e47d4c4328914cc2409025d65d4af417cec6b517a935061e88f0d3a8",
+      "routeHash": "1f67ada52cb0f42e2f366d16826813d8ef2174fff9ccc1a37da85c7503e53bcf"
+    },
+    {
+      "id": "zhrakula/nes/Contra Force/Contra Force - Any%.lss",
+      "sha256": "556ccf803cfa2357eddd308b28069d78c1d65cd3fdcfb6784c41c3a272f48d9b",
+      "attributed_elements": 141,
+      "status": "parsed",
+      "runHash": "a8f490e88197daf503fdfeb587e1b5cfdd41c6b10d3da6136658e66ba2a62ff6",
+      "routeHash": "3a91263a34321206d95018d5ab691a172b5ef3789eddafd6adcdfd5430e1f4e9"
+    },
+    {
+      "id": "zhrakula/nes/Contra/Contra - Any%.lss",
+      "sha256": "b12ad308db15094f3a0eea9f865273a8ae9103cd6fc918b4ab6286d361e63834",
+      "attributed_elements": 705,
+      "status": "parsed",
+      "runHash": "3bff85f5859f1f34d14a6705a4a5b3eb2325ec8755cb8cbc8d2b6a7557383449",
+      "routeHash": "b00c0d3f702e9663bfa5325eccf534a191d0d697f2c2c3beebd7db1ce207dfdf"
+    },
+    {
+      "id": "zhrakula/nes/Darkwing Duck/Darkwing Duck (NES) - Any%.lss",
+      "sha256": "cdad114d253b0037d9420b6770901633ba4fdde61448e617e64c2bca783ab2a7",
+      "attributed_elements": 1150,
+      "status": "parsed",
+      "runHash": "0563e4a138290b84fb72ff481e81eeea052cfdc27af72bbbfe97529c47a8d7b9",
+      "routeHash": "a58c7a373ab0e7294f324887ac6c0f1e2ec61d536c1c6b231c7568ad712b95c5"
+    },
+    {
+      "id": "zhrakula/nes/Darkwing Duck/Darkwing Duck (NES) - Low%.lss",
+      "sha256": "f1d0000555a43c0b011cea2457ccca0d1fe196b708dac8e9cb4fec9ccf4d736e",
+      "attributed_elements": 483,
+      "status": "parsed",
+      "runHash": "b1a5c3721dd24b74b9e2404c6dfaf515e577770f22a445b7c4d8458a1a6a892d",
+      "routeHash": "3198b6ee97c772cabd742e47581886152767b69f251359ffe48265c3dff44bc8"
+    },
+    {
+      "id": "zhrakula/nes/Darkwing Duck/Darkwing Duck (NES) - Pacifist.lss",
+      "sha256": "d01e7fec6045fd3b7ff40efe9d82103fcfa742425a6e998cb8bd4f8afa82b5ad",
+      "attributed_elements": 504,
+      "status": "parsed",
+      "runHash": "cf23657b13f007e0015dec0fac936450e41385f043511bbdb7e48923039c369c",
+      "routeHash": "07541438581faad298b60bc5ae51e07355750ab9f61d50a5cf72a15c389a420e"
+    },
+    {
+      "id": "zhrakula/nes/Doki Doki Crazy Land/Doki! Doki! Yuenchi Crazy Land Daisakusen - Any%.lss",
+      "sha256": "3e301785f5cf969c7b091ef96b8ea594f61057dd515d47718bea27a6da39be93",
+      "attributed_elements": 276,
+      "status": "parsed",
+      "runHash": "e347bf7acc584de303d5500ae7752a78308a9d3307b8b2c1898676f9263424f6",
+      "routeHash": "e203c6dedb657445ffb3811b8c739e343ef585bbddabcdcc5165c4106fdaa917"
+    },
+    {
+      "id": "zhrakula/nes/Dr. Mario/Dr. Mario (NES) - 0-20 (Glitchless).lss",
+      "sha256": "e9fc4f0d42315cfcfe51a8dd72273637514ec7afefe1166ad5dc0ab75cf874ce",
+      "attributed_elements": 182,
+      "status": "parsed",
+      "runHash": "049ae0e9bfb5a74e6148ed4fba7aab4e15d1ae9f9e07e2f8c93984ce883ea62b",
+      "routeHash": "6a6b988ee128d9ac8092a1dd2834c8d50de900b66019a13d0a063e61e8f94297"
+    },
+    {
+      "id": "zhrakula/nes/DuckTales2/DuckTales 2 (NES) - Any% (Easy).lss",
+      "sha256": "a7647a227507065cbca1dfa38d5ee88a6e967dbeb66e9928f2ea065e020a921c",
+      "attributed_elements": 224,
+      "status": "parsed",
+      "runHash": "e02f71fda27dfc0870f7f0c66eb3293cb9fb58087d802dc3b1a7b3fa0b99aab4",
+      "routeHash": "8e86891373ca793550aef6c7d96361fc73a7386df3e773313b787659dd7a1913"
+    },
+    {
+      "id": "zhrakula/nes/Little Mermaid/Little Mermaid.lss",
+      "sha256": "bd03f540aa2fdbf5f026624aadcb40ed6095763559bdd6367f7a5d89d2cf8915",
+      "attributed_elements": 55,
+      "status": "parsed",
+      "runHash": "39b45601328bf6f3e95aa30fa48a831e75536facb391039aaaad651b0b74e0c9",
+      "routeHash": "794b278daf07a3d5e93217ae6d2ce90c27f93aad6be2f45ac913c74ec4d97ad2"
+    },
+    {
+      "id": "zhrakula/nes/Little Nemo - The Dream Master/Little Nemo The Dream Master - English.lss",
+      "sha256": "d38a7b506eab9692f763a45373d3eda4a8cf20ade8887ead978b5ec9f216bb09",
+      "attributed_elements": 159,
+      "status": "parsed",
+      "runHash": "035d5edb3418cdcc30adc55e25cc69fb364ea0741c31c21eacb1da185a16bfa1",
+      "routeHash": "00912c3066097dec90002158ea5c7676c66971de45ed82ec178808d1a12c8049"
+    },
+    {
+      "id": "zhrakula/nes/Lunar Pool/Lunar Pool - Beat 1-10 Stages.lss",
+      "sha256": "4631dc8400f7def0d4ede104b81edeb88e55043215be67d571d25a589552b7e0",
+      "attributed_elements": 386,
+      "status": "parsed",
+      "runHash": "e2581128a47fb3ee35606c5efd51dbd823c39db7f122db89d7738857c159e4a1",
+      "routeHash": "41036f0318958b5a6e4326af9927de506eecd2da4f0c047c8e918992d68f9d95"
+    },
+    {
+      "id": "zhrakula/nes/Lunar Pool/Lunar Pool - Beat 60 Stages (without GameOver).lss",
+      "sha256": "d82ef180ce62b3b3c70a6e3be1f554bdb1626776e0198bfaf0e25a76c3f32298",
+      "attributed_elements": 465,
+      "status": "parsed",
+      "runHash": "032f5421b8d6dd5e8e245fbf5ad07eed184096466c8eb5880a15a66056157f77",
+      "routeHash": "bd2affe7f333145ccbb9a5fe131ceaaf4895dc86eb86a0f192a9db68b036e425"
+    },
+    {
+      "id": "zhrakula/nes/Nuts & Milk/Nuts & Milk - 50 stages completed game A.lss",
+      "sha256": "8a0cd2a59211f9f5afc0e10331d60c201c72d6974a3be3c6727faba253d3f69b",
+      "attributed_elements": 2553,
+      "status": "parsed",
+      "runHash": "7f610c343b4a501e682461ba2f80dd601fe1413170400b153f3c84fe60f384a7",
+      "routeHash": "98766e9f2e35cb2774f444d0c619ba80c34bd253ffb5f0523509584259c0920b"
+    },
+    {
+      "id": "zhrakula/nes/Nuts & Milk/Nuts & Milk - 50 stages completed game B.lss",
+      "sha256": "5f3fe5d02cc910522caf1c5423d0e4b9663be58b1fc16df99a0b4423b91af376",
+      "attributed_elements": 1076,
+      "status": "parsed",
+      "runHash": "d2875cb3062d3249725531cf7759c8b205af52921cc769d0b3f933beb9d2d96d",
+      "routeHash": "469542745f4c54221184ed5a64a1b9cbc16de36c2ee0d2bc7a30772e734574d5"
+    },
+    {
+      "id": "zhrakula/nes/Tank 1990/Tank C 1990 - 1 loop (1-12) 1p.lss",
+      "sha256": "735fab850fada584463782d8fafcaa6eadb4484024b387a316375afa66490d9e",
+      "attributed_elements": 18,
+      "status": "parsed",
+      "runHash": "7afa6941b57effb065821bcd8b1a23e1bea1e09fe730cea995992de7da97fd69",
+      "routeHash": "dadda95e7a4e217a31d718223d52d71ae8db45c73afc18d6ea904d8bfeb3c51d"
+    },
+    {
+      "id": "zhrakula/nes/Tank 1990/Tank H 1990 - 1 loop (1-12) 1p.lss",
+      "sha256": "4ae0ee9275393ce0fbb417b84ece08028e4bfc1fc54bba545265a2277ed59f4e",
+      "attributed_elements": 20,
+      "status": "parsed",
+      "runHash": "e593ea51fb0c4f8f31f4449495a735710c1d20fa5d500b48d0a5a4e5fa6b8d91",
+      "routeHash": "30045cf9e00fcd692be17285f0c2f4bf880dcb3f937263e69cc36cb962b4b28f"
+    },
+    {
+      "id": "zhrakula/nes/Tengen Tetris (NES)/Tengen Tetris (NES) - 100 Lines.lss",
+      "sha256": "6be62df0901704f7a973a38bab871b8a740435810890863c68b05e0b7881d51f",
+      "attributed_elements": 119,
+      "status": "parsed",
+      "runHash": "1412699a2a30a587f472bdbeaa88ed5dba1c7c4271a89283463ef7bddda79d13",
+      "routeHash": "dfa816ba83c0b9ba450531f0e546b366e2f53cf65ca2ee629e29cf4a3c5e5ebd"
+    },
+    {
+      "id": "zhrakula/nes/Tengen Tetris (NES)/Tengen Tetris (NES) - All levels (0-17).lss",
+      "sha256": "9f6eb196b45e28075b888193b2f412d6e0b9e53cf368393f32ba5d2cb9564395",
+      "attributed_elements": 56,
+      "status": "parsed",
+      "runHash": "b7844e7777056f32ba1ae077a364bff46f8450138d37dad106247e8a4d6368ea",
+      "routeHash": "ac0f58383bcf3655389f6dbd5e6c043cd891f8b082906f06c6e8af27d409bbe5"
+    },
+    {
+      "id": "zhrakula/nes/The Goonies/The Goonies - 100%.lss",
+      "sha256": "13b2e6230b410e9f0f5226399e84233515a8d8e35c57cd6c269a4565b4f7a09a",
+      "attributed_elements": 53,
+      "status": "parsed",
+      "runHash": "f83b56a9e281ed5e70661846597fd7899b76307b9851e58c10756a74e35f0f86",
+      "routeHash": "310667722b4ede1dc9b4144631cefbbc67116482ead661fa03b12b61c380ff58"
+    },
+    {
+      "id": "zhrakula/nes/The Goonies/The Goonies - Any%.lss",
+      "sha256": "dc12f2acb9da42dd69e742ac31de47ea0ce39652eded8104a96a0bb2831db2c4",
+      "attributed_elements": 1166,
+      "status": "parsed",
+      "runHash": "7a7d2cc002c8ebf63a1b89c4795a06462d8ff413f0b692a4630153f813e448a6",
+      "routeHash": "5c4d9a33434349e69378876ea7d4aad51108990fbae451aedd81dbf7080f1f0f"
+    },
+    {
+      "id": "zhrakula/nes/Tom & Jerry/Tom & Jerry (NES) - Any%.lss",
+      "sha256": "e3dd09f93c88094cb0aab6b3b59065026e324be6129cc13d41c39b74818a0cd2",
+      "attributed_elements": 1483,
+      "status": "parsed",
+      "runHash": "9b59d22ecc28673bd7c6ac8b011169569e618f1750e43ec3a62f7fcb3cbcc11a",
+      "routeHash": "a36d3b5dfbe7d70e5a9cd4593733b5348895a5ef329d50421028f0c68973cf56"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 01 - Landing Site to Early Supers.lss",
+      "sha256": "5641379ab707a7809ffa3b4e252aac529889d42950d9f752c4bb3353a37dab05",
+      "attributed_elements": 322,
+      "status": "parsed",
+      "runHash": "98a68ecf7fd19eb16f3a2e6dfbcd3d9d84fde5ef70b86a7b98801afc0a24a660",
+      "routeHash": "4a204a5c7b775f64fefa5871150d180c1127a829f1675dfa20831e0434534788"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 02 - Dachora Room To Business Center.lss",
+      "sha256": "2bb0ff2c5801d8b19817d3cf53cc295a7ca7dc08d2fef2549d0fd3e62cf26400",
+      "attributed_elements": 1292,
+      "status": "parsed",
+      "runHash": "5c46e92a140ec8a0691c7da218df7e5e78138a27540d9787e5f2aebda6ff2a38",
+      "routeHash": "ae78afd2e0d9ad225dbe142e03d35c185124fb1fd8c5504bf72a59c5229a15c2"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 03 - Business Center to Business Center.lss",
+      "sha256": "7530eff1ad5f50ec46ba11d20a03a9b076cea071dfa76b85d0bad3c34691be2a",
+      "attributed_elements": 229,
+      "status": "parsed",
+      "runHash": "9ce9d1828e93db4138d949f9d7196a8a1fb0bf8d4111486fa00debe870674504",
+      "routeHash": "2d2ecb26d1eaf060e8c1b484acb67b0075fa91852a881facd32659babc71abe9"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 04 - Alpha Spark to WS Left Supers.lss",
+      "sha256": "368a8c0034f1e73e840cc6774a0ec4e9edf9653085fe81195e81cffb43908e27",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "1cdd736a18282569878669ac06ab8c439a5cd1851de304ee73dffa6696b70a98",
+      "routeHash": "094961416ce198011e9a8f03815da98a92b76fa1d6b2bdc49820d9e79a483d33"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 05 - WS Shaft to Breaking the Tube.lss",
+      "sha256": "577a927e9343865a6832b76edb9587fd3636e63d32a28dd950925f3670aa1385",
+      "attributed_elements": 24,
+      "status": "parsed",
+      "runHash": "915d789da0de766892eb96880af6ed652b58a770c8d19930a3d42d2952d5abbe",
+      "routeHash": "5339435860d0890c10ef23f70e68f505893b9bf84229cb68875b9d3a2de07a98"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 06 - Breaking the Tube to Cac Alley.lss",
+      "sha256": "e2c23be8c9f540610170d1b8a66191ed37378ed1498be76ae37382be45651e19",
+      "attributed_elements": 87,
+      "status": "parsed",
+      "runHash": "07b5fd0af855126f418de40fa9d8e940c2c9482e0fee956db25622da54ed1c48",
+      "routeHash": "5d2e4ee41866b16bbe9bb466a70f8a1032c007236c8b1065fa7c1e6146f71879"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 07 - East Cac Alley to LN.lss",
+      "sha256": "1783965e011d49a9a524735d87b9c6380af4d969402ef096e00d3b29bc1cc4c6",
+      "attributed_elements": 70,
+      "status": "parsed",
+      "runHash": "3fed50c12cf12fc5e147dafc1eff6c9857e9104ee9afff707892ff92a9fb9cb9",
+      "routeHash": "fb72b97751c3ec4f9b069134e675ae5c2125cb2f7c77cb1155075ee299e3daf3"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 08 - LN to Single Chamber.lss",
+      "sha256": "ee8c1657e6ff13eca53c7f5053e12c7aaf870f98ea83ceb3f7589c3d19870449",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "9f45940dafa1ba30852bc3eaf2ca407f51c736d8d70aada7af0010ef27c84d0b",
+      "routeHash": "253fe1c78348582435ae97448d1e7b6f48c5a5f03b1ab03e5f0e0e3953954204"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 09 - Single Chamber to G4.lss",
+      "sha256": "9f5b1141260fd4ba429ff6f33e51c2149f907b639cc530afe3838e5e8df72153",
+      "attributed_elements": 20,
+      "status": "parsed",
+      "runHash": "a71d7c63579afeffdb3da353fe57533bdbfba4ace3f191292adcf09f9afdde76",
+      "routeHash": "09f0a35a21dfc37165a5cb33f4aac5635f67559ee3670d7995e46433682ead4f"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 10 - Metroid 1.lss",
+      "sha256": "7849a73fdcced40a61df1fc1bdf52ae0df9a3611362993ee18ed5871b65d4253",
+      "attributed_elements": 102,
+      "status": "parsed",
+      "runHash": "955e944fc1b1b8502773251be6795cd643cedbb16a01bbb18ac6e803b7bb5439",
+      "routeHash": "dd28169a5e78d42a7a941713041ff18ba89e4fc11ad7a45fabbb111978939659"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/Super Metroid - Any% KPDR.lss",
+      "sha256": "edbdb77aa5945166f24e7e47f26000dcea0e9db79a40e11282befa5597d67720",
+      "attributed_elements": 2075,
+      "status": "parsed",
+      "runHash": "0aa2d008b3eb03159406d3d7585551fbba22e62f255ac5d59a8f78443b2a220e",
+      "routeHash": "961aeee471c0e8dfaf987a17963f01a11867cc565033e5faa4f114d19f4d3e3a"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 01 - Landing Site to Early Supers.lss",
+      "sha256": "5641379ab707a7809ffa3b4e252aac529889d42950d9f752c4bb3353a37dab05",
+      "attributed_elements": 322,
+      "status": "parsed",
+      "runHash": "98a68ecf7fd19eb16f3a2e6dfbcd3d9d84fde5ef70b86a7b98801afc0a24a660",
+      "routeHash": "4a204a5c7b775f64fefa5871150d180c1127a829f1675dfa20831e0434534788"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 02 - Dachora Room To Business Center.lss",
+      "sha256": "2bb0ff2c5801d8b19817d3cf53cc295a7ca7dc08d2fef2549d0fd3e62cf26400",
+      "attributed_elements": 1292,
+      "status": "parsed",
+      "runHash": "5c46e92a140ec8a0691c7da218df7e5e78138a27540d9787e5f2aebda6ff2a38",
+      "routeHash": "ae78afd2e0d9ad225dbe142e03d35c185124fb1fd8c5504bf72a59c5229a15c2"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 03 - Business Center to Business Center.lss",
+      "sha256": "7530eff1ad5f50ec46ba11d20a03a9b076cea071dfa76b85d0bad3c34691be2a",
+      "attributed_elements": 229,
+      "status": "parsed",
+      "runHash": "9ce9d1828e93db4138d949f9d7196a8a1fb0bf8d4111486fa00debe870674504",
+      "routeHash": "2d2ecb26d1eaf060e8c1b484acb67b0075fa91852a881facd32659babc71abe9"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 04 - Alpha Spark to WS Left Supers.lss",
+      "sha256": "368a8c0034f1e73e840cc6774a0ec4e9edf9653085fe81195e81cffb43908e27",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "1cdd736a18282569878669ac06ab8c439a5cd1851de304ee73dffa6696b70a98",
+      "routeHash": "094961416ce198011e9a8f03815da98a92b76fa1d6b2bdc49820d9e79a483d33"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 05 - WS Shaft to Breaking the Tube.lss",
+      "sha256": "577a927e9343865a6832b76edb9587fd3636e63d32a28dd950925f3670aa1385",
+      "attributed_elements": 24,
+      "status": "parsed",
+      "runHash": "915d789da0de766892eb96880af6ed652b58a770c8d19930a3d42d2952d5abbe",
+      "routeHash": "5339435860d0890c10ef23f70e68f505893b9bf84229cb68875b9d3a2de07a98"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 06 - Breaking the Tube to Cac Alley.lss",
+      "sha256": "e2c23be8c9f540610170d1b8a66191ed37378ed1498be76ae37382be45651e19",
+      "attributed_elements": 87,
+      "status": "parsed",
+      "runHash": "07b5fd0af855126f418de40fa9d8e940c2c9482e0fee956db25622da54ed1c48",
+      "routeHash": "5d2e4ee41866b16bbe9bb466a70f8a1032c007236c8b1065fa7c1e6146f71879"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 07 - East Cac Alley to LN.lss",
+      "sha256": "1783965e011d49a9a524735d87b9c6380af4d969402ef096e00d3b29bc1cc4c6",
+      "attributed_elements": 70,
+      "status": "parsed",
+      "runHash": "3fed50c12cf12fc5e147dafc1eff6c9857e9104ee9afff707892ff92a9fb9cb9",
+      "routeHash": "fb72b97751c3ec4f9b069134e675ae5c2125cb2f7c77cb1155075ee299e3daf3"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 08 - LN to Single Chamber.lss",
+      "sha256": "ee8c1657e6ff13eca53c7f5053e12c7aaf870f98ea83ceb3f7589c3d19870449",
+      "attributed_elements": 36,
+      "status": "parsed",
+      "runHash": "9f45940dafa1ba30852bc3eaf2ca407f51c736d8d70aada7af0010ef27c84d0b",
+      "routeHash": "253fe1c78348582435ae97448d1e7b6f48c5a5f03b1ab03e5f0e0e3953954204"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 09 - Single Chamber to G4.lss",
+      "sha256": "9f5b1141260fd4ba429ff6f33e51c2149f907b639cc530afe3838e5e8df72153",
+      "attributed_elements": 20,
+      "status": "parsed",
+      "runHash": "a71d7c63579afeffdb3da353fe57533bdbfba4ace3f191292adcf09f9afdde76",
+      "routeHash": "09f0a35a21dfc37165a5cb33f4aac5635f67559ee3670d7995e46433682ead4f"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/KPDR Segment Practice Splits v2_1/Super Metroid Practice - 10 - Metroid 1.lss",
+      "sha256": "7849a73fdcced40a61df1fc1bdf52ae0df9a3611362993ee18ed5871b65d4253",
+      "attributed_elements": 102,
+      "status": "parsed",
+      "runHash": "955e944fc1b1b8502773251be6795cd643cedbb16a01bbb18ac6e803b7bb5439",
+      "routeHash": "dd28169a5e78d42a7a941713041ff18ba89e4fc11ad7a45fabbb111978939659"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Super Metroid - Any% KPDR.lss",
+      "sha256": "edbdb77aa5945166f24e7e47f26000dcea0e9db79a40e11282befa5597d67720",
+      "attributed_elements": 2075,
+      "status": "parsed",
+      "runHash": "0aa2d008b3eb03159406d3d7585551fbba22e62f255ac5d59a8f78443b2a220e",
+      "routeHash": "961aeee471c0e8dfaf987a17963f01a11867cc565033e5faa4f114d19f4d3e3a"
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Super Metroid blank.lss",
+      "sha256": "fed149b1aebf644b80c72538d4cc34e6582b899b64cf6a9683acc7d18a74ffc2",
+      "attributed_elements": 4,
+      "status": "rejected",
+      "error": "LssParseError: This file is missing required LiveSplit elements: Segments. It may be corrupted or not a splits file."
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/Celeste - Any% (1.2.1.5).lss",
+      "sha256": "59d1e39cf39da75a3fb692fe98d59d5229582d8e7e4eb3d24cfc985de86eb0af",
+      "attributed_elements": 1057,
+      "status": "parsed",
+      "runHash": "4fec5772e5e420cd10c82485c1939e407b3f661033e1ed6ac071d4fd3ae6b469",
+      "routeHash": "d5faad05931b552d9949ac5680f0e5e64429a6b3ad983bd76bfa0ef27ba356bd"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/celeste_native_segment_groups.lss",
+      "sha256": "095a9af1321f40abdbfb2aa65e3dfe8ca06195659a505eca3afb880b6597e242",
+      "attributed_elements": 1538,
+      "status": "parsed",
+      "runHash": "932cb4baa3e2e696248d3769fe707f946b4f9be5ce2215e91de91f2e574463a6",
+      "routeHash": "6aee87d6963d0be8af018b1195300801c852382e184735de1191d7dd66d3bfa8"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "sha256": "159d4ed64b72edebf2b2132e488fff990c4827187a8d054847f4066814c9fec8",
+      "attributed_elements": 579,
+      "status": "parsed",
+      "runHash": "d1d4e469ed592a85089b3967396b8a1f3bcef1fdd11b748016e5d0d0078c1bc2",
+      "routeHash": "04c151324d5290500a2e275c7f3fb1cef9896ba2e22a0fc9739c73e9f06e407a"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "sha256": "e4566bfc11a87a93ce812afdb633a14706cbb43619d8314d0eed5f9e81bafcf3",
+      "attributed_elements": 16,
+      "status": "parsed",
+      "runHash": "303778597ec675bbfe219e0fcbad745a049c6a762698b3c7fbf96585ca987d22",
+      "routeHash": "bead687d0939c92a6912f2396da215164d0ccf4a7dd471358bc9c4510ce65353"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "sha256": "ced71cd2a54f13914508038555a6bebea5743214d64ba5002ef62def1b0507e3",
+      "attributed_elements": 934,
+      "status": "parsed",
+      "runHash": "f3089b1b4c84f14d8a5091e03fbabf70b193dc6f9f22ddf10569999ee166a2df",
+      "routeHash": "2153edc5dd58fd1aa75637af242863973fc8ee68379ae7af68f1559020a2af8d"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "sha256": "7ed51a54bdc389c92118a1fe12cb1e140ca1ec76ca14e4594151a6ad6e1c6198",
+      "attributed_elements": 14,
+      "status": "parsed",
+      "runHash": "5b3bce25b14a745008ab42e1213b4150ccf5b5b20182bd379edc9f802412ad58",
+      "routeHash": "6c21a25d4c75ea152bffe236a6853d986c277e5618835864ff07b55fc7fea959"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6.lss",
+      "sha256": "0cbfc02a7f2cbb756af220abf4f005d72677bce62530fa57f3ed051045e6c98b",
+      "attributed_elements": 628,
+      "status": "parsed",
+      "runHash": "6907bca5cb5ead9c58e5992a6430110749cbfc920b4573b3f88b7fa26a0e954e",
+      "routeHash": "ec3e978ed419d6f6364d7f938f07d75d492b262615f6826167d8f826726da041"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6_gametime.lss",
+      "sha256": "f959b97e5af71cd2c88b8c6521061fc6944598b02c039e78cd3d18d43046d6c8",
+      "attributed_elements": 3224,
+      "status": "parsed",
+      "runHash": "fad4017c323843214ab692581911b9986186236bc2980f599ec2730484904acd",
+      "routeHash": "a89051822017176b9d798f0661d10daead25ef2248889d019f20b5d7cd56bd64"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_attempt_ended_bug.lss",
+      "sha256": "c6dbbbaf0eafc08e1260bd2530a6b342165b79a4ca2f7214f459c02735834956",
+      "attributed_elements": 6,
+      "status": "parsed",
+      "runHash": "06523e34285cf192dd94fcb1cb20d9b7a10f0dbbb66e03ea602ad82ca0fc0343",
+      "routeHash": "e173708f39c4ab4a50d8ee4130c14cc4db6fb6ec95962bc45f97969df33ac53f"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash.lss",
+      "sha256": "af26aa09bceaff3d28315e0f917c5cc0aff776095aaa18b8f04c3a2ad44bd66e",
+      "attributed_elements": 6,
+      "status": "rejected",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Expected closing tag 'Segment' (opened in line 18, col 5) instead of closing tag 'Name'.:19:45)"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash_utf8.lss",
+      "sha256": "72013aef851622652dae8f8ba0624ed1540d771284b0cb10f6607de6809ad9d3",
+      "attributed_elements": 2,
+      "status": "rejected",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Invalid '[    \"Run\",    \"Segments\",    \"Segment\"]' found.:1:1)"
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/Grand Theft Auto Vice City - Any% (No SSU).lss",
+      "sha256": "116d52663ef16be70eeea9e268e3d1d82ed4160bb5bb1c2966395ed86f8f4c94",
+      "attributed_elements": 1646,
+      "status": "parsed",
+      "runHash": "4cf16766d4c5e93773d6b9b25bdf63d6d1f49543dbf1a57bde1252fdd688545e",
+      "routeHash": "4b97ecc7fbda092e07b7d2b12f17cc9a9af75111a1c1f0c876b083ebf307a2f3"
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "sha256": "42647d95d93f61a388eb47adcc661bce39424cda056f154860a789264e020264",
+      "attributed_elements": 1269,
+      "status": "parsed",
+      "runHash": "daa41f04382277d5f83b26583ea292b91e0a79fb37415a6d42cd156d9eee2e92",
+      "routeHash": "8d91fca652c1758e5d94ba19d4427e50d588bdfcae6890255533d9edf464d59d"
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "sha256": "6712e44ec7aaf47d5fbe5fb3bc46390a5669e0d8bfe4590104039f59415c829b",
+      "attributed_elements": 14,
+      "status": "parsed",
+      "runHash": "5b3bce25b14a745008ab42e1213b4150ccf5b5b20182bd379edc9f802412ad58",
+      "routeHash": "6c21a25d4c75ea152bffe236a6853d986c277e5618835864ff07b55fc7fea959"
+    },
+    {
+      "id": "slaurent22/lss-tools/example-splits/4ms.lss",
+      "sha256": "e754727491b5bdb2d43c23944fd3d74e49aaa1cf92f3c4cd15fb2db320a538d9",
+      "attributed_elements": 2122,
+      "status": "parsed",
+      "runHash": "26edc6d764716b7d2bb6f2b1c951ea5e5c7eaf966e2a0407bddcd79970f1f58e",
+      "routeHash": "846ff951dc5ee760583d9511cbba16f34fe4af4abb5870ec0cb16092b8b2ca3a"
+    },
+    {
+      "id": "slaurent22/lss-tools/example-splits/allskills.lss",
+      "sha256": "3c5e93e54867d29540ee9fa6b86f3bde3245b4e98b0046f7b08f700e2410d1ef",
+      "attributed_elements": 2916,
+      "status": "parsed",
+      "runHash": "4f5cee9ed1bf88f731e3bddfc390244103bf653f6b244a1710658c3225e74b8d",
+      "routeHash": "537f7478442cc8633d474dbe565d8c79a944d8bef5e8452242d51747cd3bb3c9"
+    },
+    {
+      "id": "bluu0105/Livesplit-Best-Segment-Between-Multiple-Splits/TP_test.lss",
+      "sha256": "0802a6fae5a0caf06afc0d5b24857217d445a5919cd71585600be6dd58305146",
+      "attributed_elements": 1325,
+      "status": "parsed",
+      "runHash": "26b9e631d1636fb36fe3d1cd7bc3afb2921dccd03958d16f655028d32f747ef5",
+      "routeHash": "9522213b4248a2e1833925da0da6cc754756622165d2922611ed9a60a87a98e9"
+    },
+    {
+      "id": "gonX/livesplit2urn/example.lss",
+      "sha256": "41f18f53438fbe7635c46d9f87fe28e96b5e660135ccfb57fd303518c446a149",
+      "attributed_elements": 1139,
+      "status": "parsed",
+      "runHash": "6fd33d034f40d679b5058d317daa34b594b88eede9b2031ed73fcfdbaea10f8d",
+      "routeHash": "c9f4d3ab6d48277e224676de001978f34b03c39cd9a36a5d39dcde4826d8a5b2"
+    }
+  ]
+}

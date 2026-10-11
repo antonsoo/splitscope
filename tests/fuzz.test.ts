@@ -87,17 +87,20 @@ describe("fuzz", () => {
   it("a mutated splits file is rejected cleanly or analyzed without NaN", {
     timeout: 120_000,
   }, () => {
-    let analyzed = 0;
-    for (let seed = 0; seed < 1500; seed++) {
-      const xml = mutate(sources[seed % sources.length] as string, rng(seed));
+    // Require the unchanged sources to parse. A quota on accepted malformed
+    // mutations would incorrectly fail whenever record validation gets stricter.
+    for (let seed = -sources.length; seed < 1500; seed++) {
+      const xml =
+        seed < 0
+          ? (sources[seed + sources.length] as string)
+          : mutate(sources[seed % sources.length] as string, rng(seed));
       let run: ReturnType<typeof parseRun>;
       try {
         run = parseRun(xml);
       } catch (error) {
-        if (error instanceof LssParseError) continue;
+        if (seed >= 0 && error instanceof LssParseError) continue;
         throw new Error(`seed ${seed}: parseRun threw ${String(error)}`);
       }
-      analyzed++;
       expect(hasNaN(run), `seed ${seed}: NaN in the parsed run`).toBe(false);
       for (const method of ["RealTime", "GameTime"] as const) {
         const results: unknown[] = [
@@ -127,7 +130,6 @@ describe("fuzz", () => {
         expect(hasNaN(results), `seed ${seed} (${method}): NaN in the statistics`).toBe(false);
       }
     }
-    expect(analyzed).toBeGreaterThan(300);
   });
 
   it("empties icon and auto-splitter elements exactly as a lazy pattern would", () => {

@@ -1,0 +1,122 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 1440,
+    "mode": "after",
+    "attributed": {
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "realTime": 70,
+      "gameTime": 92
+    },
+    "inputKind": "constructed control, uploaded through the file picker",
+    "duplicate": {
+      "rejected": true,
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "total": 92,
+      "method": "GameTime"
+    },
+    "offline": true,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 375,
+    "mode": "after",
+    "attributed": {
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "realTime": 70,
+      "gameTime": 92
+    },
+    "inputKind": "constructed control, uploaded through the file picker",
+    "duplicate": {
+      "rejected": true,
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "total": 92,
+      "method": "GameTime"
+    },
+    "offline": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 1440,
+    "mode": "after",
+    "attributed": {
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "realTime": 70,
+      "gameTime": 92
+    },
+    "inputKind": "constructed control, uploaded through the file picker",
+    "duplicate": {
+      "rejected": true,
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "total": 92,
+      "method": "GameTime"
+    },
+    "offline": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 375,
+    "mode": "after",
+    "attributed": {
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "realTime": 70,
+      "gameTime": 92
+    },
+    "inputKind": "constructed control, uploaded through the file picker",
+    "duplicate": {
+      "rejected": true,
+      "source": {
+        "name": "attributed-control.lss",
+        "sha256": "53d2dac2ae6bc0d6b64d0e487e6a10938f262ada8ade30126b0412d3113a591f",
+        "bytes": 3951,
+        "synthetic": false
+      },
+      "total": 92,
+      "method": "GameTime"
+    },
+    "offline": true,
+    "errors": []
+  }
+]

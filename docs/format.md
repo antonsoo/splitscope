@@ -1,19 +1,20 @@
 # The LiveSplit `.lss` format
 
-splitscope's parser (`src/core/parser.ts`) is verified against LiveSplit's own
-parser, not against sample files or third-party writeups. The reference is:
+splitscope's parser (`src/core/parser.ts`) follows the version gates in the
+LiveSplit organization's `livesplit-core` parser. The compiled reference for
+the XML evidence study is:
 
 > LiveSplit/livesplit-core, `src/run/parser/livesplit.rs`, function `parse`
 > (and its helpers `parse_segment`, `parse_attempt_history`,
 > `parse_run_history`, `parse_metadata`, `parse_time_span`).
-> <https://github.com/LiveSplit/livesplit-core/blob/master/src/run/parser/livesplit.rs>
-> (LiveSplit organization, MIT-licensed; fetched 2026-09-24.)
+> <https://github.com/LiveSplit/livesplit-core/blob/fb62dd42505b16e813d2779468d81bbad7f01b5e/src/run/parser/livesplit.rs>
+> (LiveSplit organization, MIT-licensed; checked 2026-10-11.)
 
-`livesplit-core` is the Rust core LiveSplit itself is built on today, and its
-`.lss` reader is the authoritative implementation — the original C#
-`LiveSplit.Core` parser (`XMLRunFactory.cs`) has been superseded by it. Every
-element name, attribute, and version gate below is taken directly from that
-file, not reconstructed from memory.
+`livesplit-core` is a Rust timer library used by LiveSplit One and other timers.
+Splitscope has its own parser and deliberately rejects some inputs the reference
+accepts, including duplicate timing fields. The [XML evidence study](../studies/xml-evidence/README.md)
+records the acceptance boundaries and before/after checks; it does not establish
+interchangeability with every LiveSplit reader.
 
 ## Document shape
 
@@ -170,6 +171,16 @@ within each segment. AttemptCount is an unsigned 32-bit integer, versions have
 one to four unsigned 16-bit components, and durations must fit safe millisecond
 arithmetic (`abs(seconds) <= Number.MAX_SAFE_INTEGER / 1000`). Numeric XML
 character references are decoded once along with named entities.
+
+Text is retained when an element carries attributes, including `xml:space`.
+An attributed empty time remains unrecorded; an attributed zero remains zero.
+Repeated fields expected to occur once in a given parent (times, metadata and
+history containers) are rejected even when their values agree. This is stricter
+than the reference's last-value behavior for repeated time elements. Splitscope
+also rejects nested elements inside scalar fields it reads, empty individual
+records, and comparisons without a name, rather than dropping them. Optional
+absent or empty containers remain supported. This validates the fields used by
+the analysis, not every ignored extension or opaque payload in an `.lss` file.
 
 Consistency and Monte Carlo pools use IDs from the last N entries in the sorted
 attempt history. A segment with no measurements in that window has no recent

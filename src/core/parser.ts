@@ -137,12 +137,8 @@ function readDirectTime(text: string | undefined): DualTime {
   return { realTime: parseOptionalTimeSpan(text), gameTime: null };
 }
 
-function readTime(
-  version: Version,
-  node: XmlNode | undefined,
-  directText: string | undefined,
-): DualTime {
-  return gte(version, V_1_4_1) ? readNestedTime(node) : readDirectTime(directText);
+function readTime(version: Version, node: XmlNode | undefined): DualTime {
+  return gte(version, V_1_4_1) ? readNestedTime(node) : readDirectTime(ownText(node));
 }
 
 function parseSegment(
@@ -158,10 +154,13 @@ function parseSegment(
   if (gte(version, V_1_3_0)) {
     for (const splitTimeNode of childArray(childNode(node, "SplitTimes"), "SplitTime")) {
       const comparisonName = attr(splitTimeNode, "name");
-      if (comparisonName === undefined) continue;
+      if (comparisonName === undefined)
+        throw new LssParseError(
+          `A <SplitTime> in segment "${name}" is missing its name attribute.`,
+        );
       if (splitTimes.has(comparisonName))
         throw new LssParseError(`Duplicate comparison in segment "${name}".`);
-      splitTimes.set(comparisonName, readTime(version, splitTimeNode, ownText(splitTimeNode)));
+      splitTimes.set(comparisonName, readTime(version, splitTimeNode));
     }
   } else {
     // Pre-1.3.0 files have exactly one comparison, spelled out as its own element.
@@ -172,7 +171,9 @@ function parseSegment(
   }
 
   const bestSegmentNode = childNode(node, "BestSegmentTime");
-  const bestSegmentTime = readTime(version, bestSegmentNode, childText(node, "BestSegmentTime"));
+  const bestSegmentTime = gte(version, V_1_4_1)
+    ? readNestedTime(bestSegmentNode)
+    : readDirectTime(childText(node, "BestSegmentTime"));
 
   const history: SegmentHistoryEntry[] = [];
   const ids = new Set<number>();
@@ -181,7 +182,7 @@ function parseSegment(
     requireUnique(ids, attemptId, `history id in segment "${name}"`);
     history.push({
       attemptId,
-      time: readTime(version, timeNode, ownText(timeNode)),
+      time: readTime(version, timeNode),
     });
   }
   history.sort((a, b) => a.attemptId - b.attemptId);
@@ -204,43 +205,39 @@ function parseBool(text: string | undefined): boolean {
  * Missing, malformed or repeated IDs are rejected: guessing their identity would
  * merge unrelated histories or count the same attempt more than once.
  */
-function parseAttemptHistory(version: Version, root: XmlNode): Attempt[] {
+function parseAttemptHistory(root: XmlNode): Attempt[] {
   const ids = new Set<number>();
-  return childArray(root, "AttemptHistory")
-    .flatMap((container) => childArray(container, "Attempt"))
-    .map((node): Attempt => {
-      const id = readInteger(attr(node, "id"), "attempt id");
-      requireUnique(ids, id, "attempt id");
-      return {
-        id,
-        started: attr(node, "started") ?? null,
-        isStartedSynced: parseBool(attr(node, "isStartedSynced")),
-        ended: attr(node, "ended") ?? null,
-        isEndedSynced: parseBool(attr(node, "isEndedSynced")),
-        pauseTime: parseOptionalTimeSpan(childText(node, "PauseTime")),
-        time: readTime(version, node, childText(node, "RealTime")),
-      };
-    });
+  return childArray(childNode(root, "AttemptHistory"), "Attempt").map((node): Attempt => {
+    const id = readInteger(attr(node, "id"), "attempt id");
+    requireUnique(ids, id, "attempt id");
+    return {
+      id,
+      started: attr(node, "started") ?? null,
+      isStartedSynced: parseBool(attr(node, "isStartedSynced")),
+      ended: attr(node, "ended") ?? null,
+      isEndedSynced: parseBool(attr(node, "isEndedSynced")),
+      pauseTime: parseOptionalTimeSpan(childText(node, "PauseTime")),
+      time: readNestedTime(node),
+    };
+  });
 }
 
 /** `RunHistory` (< 1.5.0): just an id and an overall time, no timestamps. */
 function parseRunHistory(version: Version, root: XmlNode): Attempt[] {
   const ids = new Set<number>();
-  return childArray(root, "RunHistory")
-    .flatMap((container) => childArray(container, "Time"))
-    .map((node): Attempt => {
-      const id = readInteger(attr(node, "id"), "run history id");
-      requireUnique(ids, id, "run history id");
-      return {
-        id,
-        started: null,
-        isStartedSynced: false,
-        ended: null,
-        isEndedSynced: false,
-        pauseTime: null,
-        time: readTime(version, node, ownText(node)),
-      };
-    });
+  return childArray(childNode(root, "RunHistory"), "Time").map((node): Attempt => {
+    const id = readInteger(attr(node, "id"), "run history id");
+    requireUnique(ids, id, "run history id");
+    return {
+      id,
+      started: null,
+      isStartedSynced: false,
+      ended: null,
+      isEndedSynced: false,
+      pauseTime: null,
+      time: readTime(version, node),
+    };
+  });
 }
 
 /** Parses a LiveSplit `.lss` file's XML text into a {@link Run}. */
@@ -286,7 +283,7 @@ export function parseRun(xmlText: string): Run {
   }
 
   const attempts = gte(version, V_1_5_0)
-    ? parseAttemptHistory(version, root)
+    ? parseAttemptHistory(root)
     : parseRunHistory(version, root);
 
   return {

@@ -199,12 +199,18 @@ the element shapes have changed several times across LiveSplit's history —
 weren't split into their own child elements before `1.4.1`, and
 `AttemptHistory` (with real timestamps) replaced the older `RunHistory`
 (just an id and a time) at `1.5.0`. splitscope's parser
-(`src/core/parser.ts`) is verified line-by-line against LiveSplit's own
-parser, **livesplit-core**'s `src/run/parser/livesplit.rs`, not
-reconstructed from sample files — see [`docs/format.md`](docs/format.md)
+(`src/core/parser.ts`) follows the version gates in **livesplit-core**'s
+`src/run/parser/livesplit.rs` - see [`docs/format.md`](docs/format.md)
 for the full citation and a walkthrough of every version gate, and
 `tests/parser.test.ts` for fixtures spanning `1.0.0.0` to `1.8.1`, including
 empty history, skipped splits, and missing GameTime.
+
+The source checkout retains times on XML elements with attributes and rejects
+duplicate timing fields instead of converting them into missing evidence.
+[The import study](studies/xml-evidence/README.md) compares 45 constructed cases
+with the old parser and compiled `livesplit-core`; 436 hash-pinned public files
+retain exactly the same parsed records and routes (433 accepted, three rejected).
+Splitscope deliberately rejects ambiguous records that the reference may accept.
 
 A **split time** (a comparison like "Personal Best") is cumulative time
 since the run started; a **segment time** (gold, segment history) is that

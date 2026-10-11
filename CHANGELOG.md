@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Preserve text on attributed XML fields, including modern and legacy durations.
+  Reject repeated singleton fields, nested scalar content, empty records, and
+  unnamed comparisons rather than turning them into absent timing evidence.
+  Check 45 controls against compiled LiveSplit and retain unchanged results for
+  436 pinned public files, including copies with 153,680 added leaf attributes.
+
 - Keep large-history imports recoverable: parse and hash in a cancellable
   worker, report parser failures/timeouts, and restore the previous workspace
   when preparing its replacement fails. Fix an accepted 140,000-attempt
