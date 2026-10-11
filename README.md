@@ -113,8 +113,8 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
   up front, with a backtest against public attempt histories.
 - **Recoverable imports**: cancel a pending read, retry a sample, or replace a file.
   A failed replacement keeps the current analysis. **New file** clears the run
-  from the workspace. Files and sample responses are limited to 25 MiB. In the
-  source checkout, parsing is also cancellable and stops after 15 seconds;
+  from the workspace. Files and sample responses are limited to 25 MiB. Parsing
+  is also cancellable and stops after 15 seconds;
   large charts summarize their display while statistics use all observations.
   [Large-history behavior and verification](docs/large-histories.md).
 - **Export** a Markdown summary (for Discord, a wiki, a PR) or a PNG share
@@ -293,7 +293,7 @@ contain it.
 
 ### Performance
 
-The source checkout parses and hashes files in a worker. Cancelling, replacing
+The public demo parses and hashes files in a worker. Cancelling, replacing
 the file or starting a new workspace terminates that work. A 140,000-attempt
 control below the input limit previously left the page stuck on "Reading": a
 large-array chart operation failed after the import handler had discarded its
@@ -301,7 +301,8 @@ error context. It now loads, and a failed replacement restores the prior run.
 Delta and gold plots retain per-column extrema; distributions above 1,024
 timings use count histograms. The captions identify summarized displays.
 All statistics and evidence exports still use the full history. See the
-[reproduction and limits](docs/large-histories.md).
+[reproduction and limits](docs/large-histories.md) and the
+[hosted import/export verification](docs/publication-2026-10-11.md).
 
 `GameIcon`/`Icon` (base64 images) and `AutoSplitterSettings` are stripped
 from the XML text before parsing, since they're never read. On a synthetic
