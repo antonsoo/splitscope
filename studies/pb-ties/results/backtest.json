@@ -1,0 +1,339 @@
+{
+  "description": "Paired replays at 5,000 simulations per stopping point; current adaptive window in both versions. Descriptive point estimates only. Overlapping windows are not independent observations. No new tuning or calibration claim.",
+  "histories": 51,
+  "forecasts": 2886,
+  "changedForecasts": 13,
+  "unchangedOtherFields": true,
+  "skipped": {
+    "noPb": 24,
+    "insufficient": 1812,
+    "unknownOutcome": 14,
+    "emptyPool": 1798
+  },
+  "inputSha256": {
+    "before": "de2e075150c64521bacfb24b13bd6f78b6b138ec214a3f18df393254982926aa",
+    "after": "edef50aa339112de034326d85b9e8843e7577bd91a30b261a08c06ed323e4081"
+  },
+  "horizons": [
+    {
+      "attemptsAhead": 1,
+      "before": {
+        "windows": 2886,
+        "meanForecast": 0.003943797643797643,
+        "observedFrequency": 0.015592515592515593,
+        "brier": 0.01534665076923077
+      },
+      "after": {
+        "windows": 2886,
+        "meanForecast": 0.003942896742896743,
+        "observedFrequency": 0.015592515592515593,
+        "brier": 0.015346781455301455
+      }
+    },
+    {
+      "attemptsAhead": 10,
+      "before": {
+        "windows": 2813,
+        "meanForecast": 0.03705753205078796,
+        "observedFrequency": 0.09598293636686811,
+        "brier": 0.08328563786264008
+      },
+      "after": {
+        "windows": 2813,
+        "meanForecast": 0.03704864674824769,
+        "observedFrequency": 0.09598293636686811,
+        "brier": 0.08328621476719017
+      }
+    },
+    {
+      "attemptsAhead": 50,
+      "before": {
+        "windows": 2513,
+        "meanForecast": 0.14317421419434537,
+        "observedFrequency": 0.30919220055710306,
+        "brier": 0.2067654266490565
+      },
+      "after": {
+        "windows": 2513,
+        "meanForecast": 0.14313601719629707,
+        "observedFrequency": 0.30919220055710306,
+        "brier": 0.20677424503209496
+      }
+    }
+  ],
+  "changes": [
+    {
+      "file": {
+        "i": 18,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Mini Kaizo Bros. 3 - Any%.lss",
+        "attempts": 433,
+        "finishes": 13,
+        "segments": 5,
+        "method": "RealTime"
+      },
+      "k": 105,
+      "pb": 387.026,
+      "before": 0.005,
+      "after": 0.0048,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 1
+      }
+    },
+    {
+      "file": {
+        "i": 18,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Mini Kaizo Bros. 3 - Any%.lss",
+        "attempts": 433,
+        "finishes": 13,
+        "segments": 5,
+        "method": "RealTime"
+      },
+      "k": 115,
+      "pb": 387.026,
+      "before": 0.0046,
+      "after": 0.0044,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 1
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 180,
+      "pb": 1239.845,
+      "before": 0.0018,
+      "after": 0.0016,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 195,
+      "pb": 1239.845,
+      "before": 0.0066,
+      "after": 0.0064,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 200,
+      "pb": 1239.845,
+      "before": 0.0048,
+      "after": 0.0046,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 205,
+      "pb": 1239.845,
+      "before": 0.0032,
+      "after": 0.003,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 210,
+      "pb": 1239.845,
+      "before": 0.0042,
+      "after": 0.004,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 26,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Mario Bros. 3 Category Extensions - Any% Small Mario Only.lss",
+        "attempts": 273,
+        "finishes": 10,
+        "segments": 3,
+        "method": "RealTime"
+      },
+      "k": 230,
+      "pb": 1239.845,
+      "before": 0.0014,
+      "after": 0.0012,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": null
+      }
+    },
+    {
+      "file": {
+        "i": 27,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Riff Bros. 3 - Any%.lss",
+        "attempts": 130,
+        "finishes": 15,
+        "segments": 5,
+        "method": "RealTime"
+      },
+      "k": 50,
+      "pb": 1803.91,
+      "before": 0.0058,
+      "after": 0.0056,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 27,
+        "runner": 2,
+        "repo": "narfman0/livesplit-data",
+        "path": "splits/Super Riff Bros. 3 - Any%.lss",
+        "attempts": 130,
+        "finishes": 15,
+        "segments": 5,
+        "method": "RealTime"
+      },
+      "k": 60,
+      "pb": 1803.91,
+      "before": 0.0056,
+      "after": 0.0054,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 36,
+        "runner": 3,
+        "repo": "periwinkle9/LiveSplit-Files",
+        "path": "splits/Misc/Super Mario Bros. - Any%.lss",
+        "attempts": 1379,
+        "finishes": 64,
+        "segments": 8,
+        "method": "RealTime"
+      },
+      "k": 884,
+      "pb": 298.596,
+      "before": 0.0004,
+      "after": 0.0002,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 0
+      }
+    },
+    {
+      "file": {
+        "i": 42,
+        "runner": 4,
+        "repo": "zhrakula/nes",
+        "path": "Darkwing Duck/Darkwing Duck (NES) - Any%.lss",
+        "attempts": 747,
+        "finishes": 25,
+        "segments": 14,
+        "method": "RealTime"
+      },
+      "k": 395,
+      "pb": 788.53,
+      "before": 0.0076,
+      "after": 0.0074,
+      "outcomes": {
+        "y1": 0,
+        "y10": 0,
+        "y50": 1
+      }
+    },
+    {
+      "file": {
+        "i": 45,
+        "runner": 4,
+        "repo": "zhrakula/nes",
+        "path": "DuckTales2/DuckTales 2 (NES) - Any% (Easy).lss",
+        "attempts": 440,
+        "finishes": 19,
+        "segments": 6,
+        "method": "RealTime"
+      },
+      "k": 305,
+      "pb": 561.066,
+      "before": 0.0074,
+      "after": 0.0072,
+      "outcomes": {
+        "y1": 1,
+        "y10": 1,
+        "y50": 1
+      }
+    }
+  ]
+}

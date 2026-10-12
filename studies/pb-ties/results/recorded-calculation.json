@@ -1,0 +1,54 @@
+{
+  "segments": [
+    {
+      "segment": "Stage 1",
+      "attemptId": 1,
+      "storedTime": "00:00:36.0059810",
+      "nanoseconds": "36005981000"
+    },
+    {
+      "segment": "Stage 2",
+      "attemptId": 1,
+      "storedTime": "00:00:36.9990401",
+      "nanoseconds": "36999040100"
+    },
+    {
+      "segment": "Stage 3",
+      "attemptId": 1,
+      "storedTime": "00:00:34.1037762",
+      "nanoseconds": "34103776200"
+    },
+    {
+      "segment": "Stage 4",
+      "attemptId": 1,
+      "storedTime": "00:00:40.8716247",
+      "nanoseconds": "40871624700"
+    },
+    {
+      "segment": "Stage 5",
+      "attemptId": 1,
+      "storedTime": "00:00:36.7117428",
+      "nanoseconds": "36711742800"
+    },
+    {
+      "segment": "Stage 6",
+      "attemptId": 1,
+      "storedTime": "00:00:42.7916130",
+      "nanoseconds": "42791613000"
+    },
+    {
+      "segment": "Stage 7",
+      "attemptId": 1,
+      "storedTime": "00:00:43.6795092",
+      "nanoseconds": "43679509200"
+    },
+    {
+      "segment": "Final Stage",
+      "attemptId": 1,
+      "storedTime": "00:00:36.8479291",
+      "nanoseconds": "36847929100"
+    }
+  ],
+  "sumNanoseconds": "308011216100",
+  "personalBestNanoseconds": "308011216100"
+}

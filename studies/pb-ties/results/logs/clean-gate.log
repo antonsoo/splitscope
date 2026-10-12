@@ -1,0 +1,288 @@
+npm notice run splitscope@0.2.4 ci
+npm notice run npm run lint && npm run typecheck && npm run test && npm run build
+npm notice run splitscope@0.2.4 lint
+npm notice run biome check .
+biome.json:11:13 deserialize  DEPRECATED  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i The use of the recommended field has been deprecated, and will removed in the next major version of Biome. Use preset instead.
+  
+     9 │     "lineWidth": 100
+    10 │   },
+  > 11 │   "linter": {
+       │             ^
+  > 12 │     "enabled": true,
+        ...
+  > 27 │     }
+  > 28 │   },
+       │   ^
+    29 │   "javascript": {
+    30 │     "formatter": {
+  
+  i Migrate the configuration with the proper command
+  
+  $ biome migrate
+  
+
+src/core/parser.ts:196:57 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    194 │ function withLabels(segments: Omit<Segment, "label" | "group" | "isSubsplit">[]): Segment[] {
+    195 │   const labels = segmentLabels(segments.map((segment) => segment.name));
+  > 196 │   return segments.map((segment, i) => ({ ...segment, ...labels[i]! }));
+        │                                                         ^^^^^^^^^^
+    197 │ }
+    198 │ 
+  
+
+tests/browser/workspace.spec.ts:157:19 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    155 │       throw new Error("Oversized file must not be read");
+    156 │     };
+  > 157 │     const input = document.querySelector<HTMLInputElement>("#file-input")!;
+        │                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    158 │     Object.defineProperty(input, "files", { configurable: true, value: [file] });
+    159 │     input.dispatchEvent(new Event("change"));
+  
+
+tests/data-integrity.test.ts:80:62 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    78 │ describe("honest history statistics", () => {
+    79 │   it("uses the same recent attempt window for every segment, excluding old/imported samples", () => {
+  > 80 │     const older = { ...run, attempts: [...run.attempts, { ...run.attempts[0]!, id: 4 }] };
+       │                                                              ^^^^^^^^^^^^^^^^
+    81 │     expect(recentSegmentSeconds(older, 0, "RealTime", 1)).toEqual([]);
+    82 │     expect(recentSegmentSeconds(older, 0, "RealTime", 2)).toEqual([55]);
+  
+
+tests/data-integrity.test.ts:94:28 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    92 │   });
+    93 │   it("counts GameTime-only completions and complete attempts with deleted segment histories", () => {
+  > 94 │     const completed = { ...run.attempts[1]!, time: { realTime: null, gameTime: 230 } };
+       │                            ^^^^^^^^^^^^^^^^
+    95 │     const partial = {
+    96 │       ...run,
+  
+
+tests/data-integrity.test.ts:115:14 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    113 │       ...run,
+    114 │       attempts: [
+  > 115 │         { ...run.attempts[1]!, started: "2/30/2026 10:00:00", ended: "3/2/2026 11:00:00" },
+        │              ^^^^^^^^^^^^^^^^
+    116 │       ],
+    117 │     };
+  
+
+tests/montecarlo.test.ts:123:26 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    121 │     attemptCount: poolSize,
+    122 │     attempts: Array.from({ length: poolSize }, (_, i) =>
+  > 123 │       makeAttempt(i + 1, samplesA[i]! + samplesB[i]!),
+        │                          ^^^^^^^^^^^^
+    124 │     ),
+    125 │     segments: [makeSegment("A", samplesA), makeSegment("B", samplesB)],
+  
+
+tests/montecarlo.test.ts:123:41 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    121 │     attemptCount: poolSize,
+    122 │     attempts: Array.from({ length: poolSize }, (_, i) =>
+  > 123 │       makeAttempt(i + 1, samplesA[i]! + samplesB[i]!),
+        │                                         ^^^^^^^^^^^^
+    124 │     ),
+    125 │     segments: [makeSegment("A", samplesA), makeSegment("B", samplesB)],
+  
+
+tests/montecarlo.test.ts:144:21 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    142 │     // Bootstrap resampling from a finite (if large) empirical sample plus Monte Carlo
+    143 │     // noise both contribute error; 0.02 is generous relative to sqrt(p(1-p)/30000) ~ 0.003.
+  > 144 │     expect(Math.abs(result.pbProbabilityPerAttempt! - closedForm)).toBeLessThan(0.02);
+        │                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    145 │   });
+    146 │ 
+  
+
+tests/montecarlo.test.ts:158:47 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    156 │     });
+    157 │     const [lo, hi] = result.pbProbabilityPerAttemptCi;
+  > 158 │     expect(closedForm).toBeGreaterThanOrEqual(lo! - 1e-9);
+        │                                               ^^^
+    159 │     expect(closedForm).toBeLessThanOrEqual(hi! + 1e-9);
+    160 │   });
+  
+
+tests/montecarlo.test.ts:159:44 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    157 │     const [lo, hi] = result.pbProbabilityPerAttemptCi;
+    158 │     expect(closedForm).toBeGreaterThanOrEqual(lo! - 1e-9);
+  > 159 │     expect(closedForm).toBeLessThanOrEqual(hi! + 1e-9);
+        │                                            ^^^
+    160 │   });
+    161 │ });
+  
+
+tests/montecarlo.test.ts:261:65 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    259 │     });
+    260 │     const [lo, hi] = r.pbProbabilityPerAttemptCi;
+  > 261 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo!) ** 5, 12);
+        │                                                                 ^^^
+    262 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi!) ** 5, 12);
+    263 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+  
+
+tests/montecarlo.test.ts:262:65 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    260 │     const [lo, hi] = r.pbProbabilityPerAttemptCi;
+    261 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo!) ** 5, 12);
+  > 262 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi!) ** 5, 12);
+        │                                                                 ^^^
+    263 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+    264 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+  
+
+tests/montecarlo.test.ts:263:64 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    261 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeCloseTo(1 - (1 - lo!) ** 5, 12);
+    262 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi!) ** 5, 12);
+  > 263 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+        │                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    264 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+    265 │     expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi!, 9);
+  
+
+tests/montecarlo.test.ts:264:67 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    262 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeCloseTo(1 - (1 - hi!) ** 5, 12);
+    263 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+  > 264 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+        │                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    265 │     expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi!, 9);
+    266 │     expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo!, 9);
+  
+
+tests/montecarlo.test.ts:265:60 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    263 │     expect(r.probabilityAtLeastOnePbCi[0]).toBeLessThanOrEqual(r.probabilityAtLeastOnePb!);
+    264 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+  > 265 │     expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi!, 9);
+        │                                                            ^^^
+    266 │     expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo!, 9);
+    267 │   });
+  
+
+tests/montecarlo.test.ts:266:60 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    264 │     expect(r.probabilityAtLeastOnePbCi[1]).toBeGreaterThanOrEqual(r.probabilityAtLeastOnePb!);
+    265 │     expect(r.expectedAttemptsUntilPbCi[0]).toBeCloseTo(1 / hi!, 9);
+  > 266 │     expect(r.expectedAttemptsUntilPbCi[1]).toBeCloseTo(1 / lo!, 9);
+        │                                                            ^^^
+    267 │   });
+    268 │ 
+  
+
+tests/names.test.ts:69:74 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    67 │ describe("a run laid out with subsplits", () => {
+    68 │   const plain = readFileSync(join(fixturesDir, "modern-full.lss"), "utf-8");
+  > 69 │   const names = [...plain.matchAll(/<Name>([^<]*)<\/Name>/g)].map((m) => m[1]!);
+       │                                                                          ^^^^^
+    70 │   // The same run with its first segments written as steps of a section.
+    71 │   const renamed: Record<string, string> = {
+  
+
+tests/names.test.ts:72:6 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    70 │   // The same run with its first segments written as steps of a section.
+    71 │   const renamed: Record<string, string> = {
+  > 72 │     [names[0]!]: `-${names[0]}`,
+       │      ^^^^^^^^^
+    73 │     [names[1]!]: `{Opening}${names[1]}`,
+    74 │   };
+  
+
+tests/names.test.ts:73:6 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    71 │   const renamed: Record<string, string> = {
+    72 │     [names[0]!]: `-${names[0]}`,
+  > 73 │     [names[1]!]: `{Opening}${names[1]}`,
+       │      ^^^^^^^^^
+    74 │   };
+    75 │   const subsplit = plain.replace(
+  
+
+The number of diagnostics exceeds the limit allowed. Use --max-diagnostics to increase it.
+Diagnostics not shown: 15.
+Checked 97 files in 189ms. No fixes applied.
+Found 34 warnings.
+Found 1 info.
+npm notice run splitscope@0.2.4 typecheck
+npm notice run tsc -p tsconfig.json --noEmit
+npm notice run splitscope@0.2.4 test
+npm notice run vitest run
+
+ RUN  v5.0.1 /tmp/claude-1000/splitscope-pb-ties/clean
+
+
+ Test Files  17 passed (17)
+      Tests  223 passed (223)
+   Start at  01:33:32
+   Duration  38.80s (tests 85%, transform 10%, import 5%)
+
+npm notice run splitscope@0.2.4 build
+npm notice run tsc -p tsconfig.json --noEmit && vite build
+vite v6.4.3 building for production...
+transforming...
+✓ 29 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         2.23 kB │ gzip:  0.81 kB
+dist/assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2    9.32 kB
+dist/assets/martian-mono-cyrillic-B84CD5C_.woff2       10.56 kB
+dist/assets/martian-mono-latin-ext-DlL6xMw5.woff2      15.91 kB
+dist/assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2    19.59 kB
+dist/assets/martian-mono-latin-5W32yIyr.woff2          23.56 kB
+dist/assets/hanken-grotesk-latin-CaVRRdDk.woff2        34.70 kB
+dist/assets/index-DA_d0CwC.css                         65.95 kB │ gzip: 11.52 kB
+dist/assets/index-0jG8I5PB.js                         143.29 kB │ gzip: 49.17 kB │ map: 268.53 kB
+✓ built in 2.38s

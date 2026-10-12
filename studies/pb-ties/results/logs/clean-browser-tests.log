@@ -1,0 +1,141 @@
+npm notice run splitscope@0.2.4 test:browser
+npm notice run npm run build && playwright test
+npm notice run splitscope@0.2.4 build
+npm notice run tsc -p tsconfig.json --noEmit && vite build
+vite v6.4.3 building for production...
+transforming...
+✓ 29 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         2.23 kB │ gzip:  0.81 kB
+dist/assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2    9.32 kB
+dist/assets/martian-mono-cyrillic-B84CD5C_.woff2       10.56 kB
+dist/assets/martian-mono-latin-ext-DlL6xMw5.woff2      15.91 kB
+dist/assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2    19.59 kB
+dist/assets/martian-mono-latin-5W32yIyr.woff2          23.56 kB
+dist/assets/hanken-grotesk-latin-CaVRRdDk.woff2        34.70 kB
+dist/assets/index-DA_d0CwC.css                         65.95 kB │ gzip: 11.52 kB
+dist/assets/index-0jG8I5PB.js                         143.29 kB │ gzip: 49.17 kB │ map: 268.53 kB
+✓ built in 1.65s
+[WebServer] (node:2097487) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 74 tests using 2 workers
+
+(node:2097579) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2097577) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › tests/browser/best-route.spec.ts:79:1 › source controls keep keyboard focus, then recalculate for game time (2.0s)
+  ✓   1 [chromium] › tests/browser/best-route.spec.ts:45:1 › public skipped-split evidence changes the total and exports the original records offline (2.8s)
+  ✓   3 [chromium] › tests/browser/best-route.spec.ts:102:1 › an absent gold can use PB evidence; a missing path stays unavailable (1.3s)
+  ✓   4 [chromium] › tests/browser/best-route.spec.ts:117:1 › a failed replacement preserves evidence; New file clears it (1.4s)
+  ✓   5 [chromium] › tests/browser/best-route.spec.ts:129:3 › source evidence is accessible without page overflow at 375px (3.5s)
+  ✓   6 [chromium] › tests/browser/best-route.spec.ts:129:3 › source evidence is accessible without page overflow at 1440px (3.6s)
+  ✓   8 [chromium] › tests/browser/large-history.spec.ts:64:1 › cancelling actual worker parsing preserves the previous run and allows a replacement (6.4s)
+  ✓   9 [chromium] › tests/browser/large-history.spec.ts:86:1 › a render failure reports an error and restores the previous workspace (1.5s)
+  ✓  10 [chromium] › tests/browser/large-history.spec.ts:117:1 › worker startup failures remain recoverable (808ms)
+  ✓   7 [chromium] › tests/browser/large-history.spec.ts:38:1 › accepted long histories load and use all timings without unbounded chart nodes (11.5s)
+  ✓  12 [chromium] › tests/browser/large-history.spec.ts:144:1 › every-attempt records retain endpoints and a bounded, labelled gold plot (9.2s)
+  ✓  13 [chromium] › tests/browser/practice.spec.ts:43:1 › a recorded example opens its exact reset members, raw records and full export (1.7s)
+  ✓  14 [chromium] › tests/browser/practice.spec.ts:85:1 › sparse IDs, missing histories, combined times and the other timing method remain distinct (1.8s)
+  ✓  11 [chromium] › tests/browser/large-history.spec.ts:128:1 › a parser that never responds times out and can be retried (15.9s)
+  ✓  15 [chromium] › tests/browser/practice.spec.ts:114:1 › invalid ranges preserve applied evidence and historical ranges have no overlapping IDs (1.7s)
+  ✓  16 [chromium] › tests/browser/practice.spec.ts:132:1 › attempt pagination stays bounded and keyboard focus survives the last page (1.1s)
+  ✓  17 [chromium] › tests/browser/practice.spec.ts:152:1 › keyboard review and filtered exports remain available offline across theme and chart changes (3.7s)
+  ✓  18 [chromium] › tests/browser/practice.spec.ts:193:1 › real review and selected records are accessible in both themes at desktop and phone widths (13.1s)
+  ✓  20 [chromium] › tests/browser/workspace.spec.ts:78:1 › bad first input retains controls and the same file can be loaded again (2.0s)
+  ✓  21 [chromium] › tests/browser/workspace.spec.ts:91:1 › failed replacements keep the run and settings intact (1.0s)
+  ✓  22 [chromium] › tests/browser/workspace.spec.ts:107:1 › a slow sample cannot replace a newer file (718ms)
+  ✓  23 [chromium] › tests/browser/workspace.spec.ts:129:1 › cancel and reset prevent a pending load from reopening private data (1.5s)
+  ✓  24 [chromium] › tests/browser/workspace.spec.ts:149:1 › rejects oversized local files before reading and retains the prior run (611ms)
+  ✓  25 [chromium] › tests/browser/workspace.spec.ts:165:1 › sample HTTP failures can be retried (744ms)
+  ✓  26 [chromium] › tests/browser/workspace.spec.ts:179:1 › slider drags survive intermediate events and keyboard edits keep focus and details (1.1s)
+  ✓  27 [chromium] › tests/browser/workspace.spec.ts:210:1 › invalid numeric settings do not alter the analysis (1.3s)
+  ✓  28 [chromium] › tests/browser/workspace.spec.ts:234:1 › missing PBs and golds remain unavailable on screen and in Markdown (556ms)
+  ✓  29 [chromium] › tests/browser/workspace.spec.ts:251:1 › exports include sample provenance and PNG has the intended dimensions (847ms)
+  ✓  30 [chromium] › tests/browser/workspace.spec.ts:266:1 › PNG failure is announced without losing the run (670ms)
+  ✓  31 [chromium] › tests/browser/workspace.spec.ts:277:1 › empty and GameTime-only histories remain usable and accessible (4.3s)
+  ✓  32 [chromium] › tests/browser/workspace.spec.ts:290:1 › imported labels render as text and analysis works offline (1.0s)
+  ✓  33 [chromium] › tests/browser/workspace.spec.ts:301:1 › a delayed file read is cancelled when a newer file is selected (819ms)
+  ✓  34 [chromium] › tests/browser/workspace.spec.ts:324:1 › sample streams cannot exceed the byte budget even without a declared size (787ms)
+  ✓  35 [chromium] › tests/browser/workspace.spec.ts:344:1 › malformed and ambiguous records retain the old analysis or show unknown outcomes (954ms)
+  ✓  36 [chromium] › tests/browser/xml-evidence.spec.ts:22:3 › attributed times import offline; ambiguous replacement preserves evidence at 375px (2.0s)
+  ✓  37 [chromium] › tests/browser/xml-evidence.spec.ts:22:3 › attributed times import offline; ambiguous replacement preserves evidence at 1440px (2.1s)
+(node:2099309) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  38 [firefox] › tests/browser/best-route.spec.ts:45:1 › public skipped-split evidence changes the total and exports the original records offline (5.2s)
+  ✓  19 [chromium] › tests/browser/workspace.spec.ts:46:1 › intake and both sample workspaces are accessible in both themes and widths (41.6s)
+(node:2099777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  39 [firefox] › tests/browser/best-route.spec.ts:79:1 › source controls keep keyboard focus, then recalculate for game time (2.6s)
+  ✓  41 [firefox] › tests/browser/best-route.spec.ts:117:1 › a failed replacement preserves evidence; New file clears it (2.0s)
+  ✓  40 [firefox] › tests/browser/best-route.spec.ts:102:1 › an absent gold can use PB evidence; a missing path stays unavailable (4.7s)
+  ✓  42 [firefox] › tests/browser/best-route.spec.ts:129:3 › source evidence is accessible without page overflow at 375px (5.6s)
+  ✓  43 [firefox] › tests/browser/best-route.spec.ts:129:3 › source evidence is accessible without page overflow at 1440px (5.3s)
+  ✓  45 [firefox] › tests/browser/large-history.spec.ts:64:1 › cancelling actual worker parsing preserves the previous run and allows a replacement (4.3s)
+  ✓  46 [firefox] › tests/browser/large-history.spec.ts:86:1 › a render failure reports an error and restores the previous workspace (2.6s)
+  ✓  47 [firefox] › tests/browser/large-history.spec.ts:117:1 › worker startup failures remain recoverable (1.8s)
+  ✓  44 [firefox] › tests/browser/large-history.spec.ts:38:1 › accepted long histories load and use all timings without unbounded chart nodes (13.2s)
+  ✓  49 [firefox] › tests/browser/large-history.spec.ts:144:1 › every-attempt records retain endpoints and a bounded, labelled gold plot (11.0s)
+  ✓  50 [firefox] › tests/browser/practice.spec.ts:43:1 › a recorded example opens its exact reset members, raw records and full export (2.5s)
+  ✓  48 [firefox] › tests/browser/large-history.spec.ts:128:1 › a parser that never responds times out and can be retried (17.8s)
+  ✓  51 [firefox] › tests/browser/practice.spec.ts:85:1 › sparse IDs, missing histories, combined times and the other timing method remain distinct (3.2s)
+  ✓  53 [firefox] › tests/browser/practice.spec.ts:132:1 › attempt pagination stays bounded and keyboard focus survives the last page (2.3s)
+  ✓  52 [firefox] › tests/browser/practice.spec.ts:114:1 › invalid ranges preserve applied evidence and historical ranges have no overlapping IDs (3.7s)
+  ✓  54 [firefox] › tests/browser/practice.spec.ts:152:1 › keyboard review and filtered exports remain available offline across theme and chart changes (9.0s)
+  ✓  55 [firefox] › tests/browser/practice.spec.ts:193:1 › real review and selected records are accessible in both themes at desktop and phone widths (34.1s)
+  ✓  57 [firefox] › tests/browser/workspace.spec.ts:78:1 › bad first input retains controls and the same file can be loaded again (6.4s)
+  ✓  58 [firefox] › tests/browser/workspace.spec.ts:91:1 › failed replacements keep the run and settings intact (6.1s)
+  ✓  59 [firefox] › tests/browser/workspace.spec.ts:107:1 › a slow sample cannot replace a newer file (2.8s)
+  ✓  60 [firefox] › tests/browser/workspace.spec.ts:129:1 › cancel and reset prevent a pending load from reopening private data (3.4s)
+  ✓  61 [firefox] › tests/browser/workspace.spec.ts:149:1 › rejects oversized local files before reading and retains the prior run (2.1s)
+  ✓  62 [firefox] › tests/browser/workspace.spec.ts:165:1 › sample HTTP failures can be retried (2.3s)
+  ✓  63 [firefox] › tests/browser/workspace.spec.ts:179:1 › slider drags survive intermediate events and keyboard edits keep focus and details (4.5s)
+  ✘  56 [firefox] › tests/browser/workspace.spec.ts:46:1 › intake and both sample workspaces are accessible in both themes and widths (52.7s)
+  ✓  64 [firefox] › tests/browser/workspace.spec.ts:210:1 › invalid numeric settings do not alter the analysis (5.1s)
+(node:2103067) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  65 [firefox] › tests/browser/workspace.spec.ts:251:1 › exports include sample provenance and PNG has the intended dimensions (2.9s)
+  ✓  67 [firefox] › tests/browser/workspace.spec.ts:266:1 › PNG failure is announced without losing the run (2.7s)
+  ✓  66 [firefox] › tests/browser/workspace.spec.ts:234:1 › missing PBs and golds remain unavailable on screen and in Markdown (4.1s)
+  ✓  69 [firefox] › tests/browser/workspace.spec.ts:290:1 › imported labels render as text and analysis works offline (1.5s)
+  ✓  70 [firefox] › tests/browser/workspace.spec.ts:301:1 › a delayed file read is cancelled when a newer file is selected (1.3s)
+  ✓  71 [firefox] › tests/browser/workspace.spec.ts:324:1 › sample streams cannot exceed the byte budget even without a declared size (1.3s)
+  ✓  68 [firefox] › tests/browser/workspace.spec.ts:277:1 › empty and GameTime-only histories remain usable and accessible (7.5s)
+  ✓  72 [firefox] › tests/browser/workspace.spec.ts:344:1 › malformed and ambiguous records retain the old analysis or show unknown outcomes (1.9s)
+  ✓  73 [firefox] › tests/browser/xml-evidence.spec.ts:22:3 › attributed times import offline; ambiguous replacement preserves evidence at 375px (4.1s)
+  ✓  74 [firefox] › tests/browser/xml-evidence.spec.ts:22:3 › attributed times import offline; ambiguous replacement preserves evidence at 1440px (3.3s)
+
+
+  1) [firefox] › tests/browser/workspace.spec.ts:46:1 › intake and both sample workspaces are accessible in both themes and widths 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: frame.evaluate: Test timeout of 45000ms exceeded.
+
+      17 |
+      18 | async function scan(page: Page) {
+    > 19 |   const result = await new AxeBuilder({ page }).analyze();
+         |                  ^
+      20 |   expect(
+      21 |     result.violations.map(({ id, nodes }) => ({ id, targets: nodes.map((n) => n.target) })),
+      22 |   ).toEqual([]);
+        at AxeBuilder.runPartialRecursive (/tmp/claude-1000/splitscope-pb-ties/clean/node_modules/@axe-core/playwright/dist/index.mjs:283:34)
+        at AxeBuilder.analyze (/tmp/claude-1000/splitscope-pb-ties/clean/node_modules/@axe-core/playwright/dist/index.mjs:210:28)
+        at scan (/tmp/claude-1000/splitscope-pb-ties/clean/tests/browser/workspace.spec.ts:19:18)
+        at /tmp/claude-1000/splitscope-pb-ties/clean/tests/browser/workspace.spec.ts:59:9
+
+    Error Context: test-results/workspace-intake-and-both--08925-e-in-both-themes-and-widths-firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/workspace-intake-and-both--08925-e-in-both-themes-and-widths-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/workspace-intake-and-both--08925-e-in-both-themes-and-widths-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [firefox] › tests/browser/workspace.spec.ts:46:1 › intake and both sample workspaces are accessible in both themes and widths 
+  73 passed (3.5m)

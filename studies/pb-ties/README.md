@@ -100,6 +100,61 @@ node_modules/.bin/tsx studies/pb-odds-backtest/backtest.ts --src ../../src --sim
 python3 studies/pb-ties/backtest.py /tmp/claude-1000/splitscope-backtest-before.json /tmp/claude-1000/splitscope-backtest-after.json /tmp/claude-1000/splitscope-backtest-comparison.json
 ```
 
-Verification results and screenshots are retained alongside this study after
-clean-checkout verification. Source publication does not update the hosted
-application or create a package release.
+## Retained verification
+
+The [baseline report](results/before.json) matches 985 of 1,018 contracts; the
+[clean-archive report](results/after.json) matches all 1,018. These comparisons
+include unavailable states, not 1,018 usable forecasts: the public files yield
+362 numeric PB estimates, 499 unavailable histories, and five finish-only
+estimates without a PB. Those availability counts are unchanged. Thirteen
+public estimates change. Four constructed calls newly report the precision
+limit; the remaining constructed changes correct tied outcomes.
+
+| Input | Baseline next-attempt PB probability | Corrected |
+| --- | ---: | ---: |
+| Recorded Psychic Force 2 completion | 100% | 0% |
+| Constructed 120.3 + 120.6 = 240.9 | 100% | 0% |
+| One nanosecond faster | 100% | 100% |
+| Mixed faster/tied/slower pools (8,000 draws) | 67.3125% | 33.9125% |
+| Same pool with resets (8,000 draws) | 33.4625% | 16.6% |
+
+The mixed-pool population probabilities are exactly 1/3 and 1/6; the displayed
+values above are the realized seeded simulation counts. The [original eight
+stage times](results/recorded-calculation.json) sum to exactly 308,011,216,100
+nanoseconds, equal to the recorded PB.
+
+![Actual downloaded card before correction](../../docs/assets/pb-ties/before/chromium-recorded-psychic-force-card.png)
+![Actual downloaded card after correction](../../docs/assets/pb-ties/after/chromium-recorded-psychic-force-card.png)
+
+The [verification receipt](results/verification.json) identifies source commit
+`b653513`, its archive, 80 identical build/check inputs, and 18 identical build
+files. The clean Node 24.21.0 / npm 12.0.1 install passes lint, typecheck, 223
+core tests and the production build. Lint retains 34 pre-existing warnings and
+one pre-existing informational diagnostic. No new dependency or package version
+is introduced. The complete production-browser suite passes 73 of 74 scenarios
+in one invocation. An existing Firefox accessibility scenario reaches its
+45-second timeout during concurrent checks, then passes unchanged in isolation
+in 30.4 seconds. Both the full run and isolated retry are retained in
+[`results/logs`](results/logs); this is not reported as a wholly green first run.
+
+Across both revisions, the browser replay performs 28 offline imports, 56
+Markdown downloads and eight PNG downloads. All 56 Markdown files are
+byte-identical to native exports. The 16 panel captures and eight downloaded
+cards have been visually inspected. The corrected clean build repeats the
+same browser observations and asset hashes. Its panel screenshots match the
+development build byte-for-byte; two Firefox PNG encodings differ but their
+pixels are identical. [Before browser receipt](results/before/browser.json),
+[after browser receipt](results/after/browser.json), and the [paired backtest](results/backtest.json)
+retain the actual observations.
+
+Harness notes: initial asset verification mistakenly treated the inline
+worker's blob URL as an HTTP file. Initial offline checks also attempted to
+load a deferred font; both families are now explicitly loaded before the
+network is disabled. The first independent PRNG replay failed to trim XML
+labels before deriving the seed; matching the documented parser normalization
+resolved four draw mismatches. None of those harness corrections changed
+product code. A combined clean-install/gate shell ended with signal 143 after
+the build; the standalone gate completed with exit 0.
+
+Source publication does not update the hosted application or create a package
+release.

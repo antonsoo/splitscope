@@ -1,0 +1,463 @@
+{
+  "revision": "after",
+  "rows": [
+    {
+      "browser": "chromium",
+      "id": "exact-tie",
+      "inputSha256": "62d08fb961c993f4f542f2484266495b88fabe1362743f1f657b4af76773eac8",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "da913f3f9179e8fe2814fe0a298a9596a988f4e74e626f070ac36f110a7d203c"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "588f8cc75c2d9ccba8dcbb379d3768c13b7441e0392a52bcf252db0fb39b8f2d"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "one-tick-faster",
+      "inputSha256": "9242c6b48ec57c92a63bd923abcc3f70f554ad3ae1643e2d081c0cff1661c6f7",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "e2df814dae614bf6694cd4e4fd89ceccb1a2afe3b2abc2eb613f141f8619fb20"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "c1eeac68d6071ba997f1d3954e4c1c4b85fe7d304fd4898814ed06c0ae403bde"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "one-nanosecond-faster",
+      "inputSha256": "042892ddad7d060a5b5674f78d26cafe3287a1df996906cc1e7c5f0bcdd42ce5",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "e3addccb3a2babdd000d3b74bbcf9abc1024cdf46ef5927052b78b8fe7dec59b"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "f4ebd11d0ca1f9e39987fa8ea259af72c45af39f7c9beed2cc073ff7857a8f3e"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "one-nanosecond-slower",
+      "inputSha256": "2bb101544dc94eaaab738546c902765abde204a0a1bc9d5afb9b8003c073e3d6",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "d101f8b376cd2f2ced5f80ea33668f628f23888ce15e8033c2f509a95e9cd92a"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "8d5a733a2e05607b1197f9aaee84c79c4835ea46deb902427818b6af837b384e"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "mixed-ties",
+      "inputSha256": "d21d61ed8ba53e8e65b1f2ef255b4107112f9ff7072deb0e1487a61972b79d73",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n33.91%\n\n95% CI 32.88% – 34.96%\n\nExpected attempts to next PB\n\n3\n\n95% CI 3 – 3\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 33.91%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "33.91%",
+            "3"
+          ],
+          "markdownSha256": "cb8a4c1bb8dafa07a8797d042e88de5586318796477dffafd56eb030cf3cdcf7"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n33.91%\n\n95% CI 32.88% – 34.96%\n\nExpected attempts to next PB\n\n3\n\n95% CI 3 – 3\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 33.91%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "33.91%",
+            "3"
+          ],
+          "markdownSha256": "2cdcd6c914bc57ba4675307a79db11b8c309711e04ef71b6d593be2bb3e0e2ea"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "precision-unavailable",
+      "inputSha256": "04f859fa96e8c8a9006515ae7a6c74cd168eb202a8b9b17f376c05ac5ef20922",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nPB odds are unavailable: these times exceed the numeric precision supported by the forecast. The PB and each sampled segment must be within 1,048,576 seconds of zero, and all possible partial sums must fit in exact integer nanoseconds.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "5c77ea65795bdab8967c832c95bee8be19b5e1987a9b11fa4646ec9597fde080"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nPB odds are unavailable: these times exceed the numeric precision supported by the forecast. The PB and each sampled segment must be within 1,048,576 seconds of zero, and all possible partial sums must fit in exact integer nanoseconds.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "24e7bc2e580b9acec0775f3a8e3707d99bdf109613b82beb169123d9d75d5cba"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "id": "recorded-psychic-force",
+      "inputSha256": "156a18549136a063b3e848038c278f873c32b3b078ab0169828fec1854fd31e6",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 1) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 1 attempts. PB target: 5:08.01.\n\nRecent form\n1 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "650efe01b91b1088ed532067471e6450f055625f41e5ec85c6c882383acc4566"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nNo PB recorded yet — nothing to compare simulated attempts against.\n\nRecent form\n1 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "22ea2abdbb0c0a2ee8f220e128d9f24f73bd213f73d68ddb88fe1dba18017fff"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "errors": [],
+      "offlineRequests": [],
+      "assets": [
+        {
+          "file": "index.html",
+          "sha256": "b7f7d07c155e19e271a924c52393206c3c223279908d92bd3355835fe1192d65",
+          "bytes": 2231
+        },
+        {
+          "file": "assets/index-DA_d0CwC.css",
+          "sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+          "bytes": 65953
+        },
+        {
+          "file": "assets/index-0jG8I5PB.js",
+          "sha256": "cc7596c92b98338f50d3d2585adae4cede5925aa741cfb3f3eb08b40a9ebf3ca",
+          "bytes": 143291
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "exact-tie",
+      "inputSha256": "62d08fb961c993f4f542f2484266495b88fabe1362743f1f657b4af76773eac8",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "da913f3f9179e8fe2814fe0a298a9596a988f4e74e626f070ac36f110a7d203c"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "588f8cc75c2d9ccba8dcbb379d3768c13b7441e0392a52bcf252db0fb39b8f2d"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "one-tick-faster",
+      "inputSha256": "9242c6b48ec57c92a63bd923abcc3f70f554ad3ae1643e2d081c0cff1661c6f7",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "e2df814dae614bf6694cd4e4fd89ceccb1a2afe3b2abc2eb613f141f8619fb20"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "c1eeac68d6071ba997f1d3954e4c1c4b85fe7d304fd4898814ed06c0ae403bde"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "one-nanosecond-faster",
+      "inputSha256": "042892ddad7d060a5b5674f78d26cafe3287a1df996906cc1e7c5f0bcdd42ce5",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "e3addccb3a2babdd000d3b74bbcf9abc1024cdf46ef5927052b78b8fe7dec59b"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n100.00%\n\n95% CI 99.95% – 100.00%\n\nExpected attempts to next PB\n\n1\n\n95% CI 1 – 1\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 100.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "100.00%",
+            "1"
+          ],
+          "markdownSha256": "f4ebd11d0ca1f9e39987fa8ea259af72c45af39f7c9beed2cc073ff7857a8f3e"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "one-nanosecond-slower",
+      "inputSha256": "2bb101544dc94eaaab738546c902765abde204a0a1bc9d5afb9b8003c073e3d6",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "d101f8b376cd2f2ced5f80ea33668f628f23888ce15e8033c2f509a95e9cd92a"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "8d5a733a2e05607b1197f9aaee84c79c4835ea46deb902427818b6af837b384e"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "mixed-ties",
+      "inputSha256": "d21d61ed8ba53e8e65b1f2ef255b4107112f9ff7072deb0e1487a61972b79d73",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n33.91%\n\n95% CI 32.88% – 34.96%\n\nExpected attempts to next PB\n\n3\n\n95% CI 3 – 3\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 33.91%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "33.91%",
+            "3"
+          ],
+          "markdownSha256": "cb8a4c1bb8dafa07a8797d042e88de5586318796477dffafd56eb030cf3cdcf7"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n100.0%\n\n95% CI 100.0% – 100.0%\n\nChance the very next attempt beats PB\n\n33.91%\n\n95% CI 32.88% – 34.96%\n\nExpected attempts to next PB\n\n3\n\n95% CI 3 – 3\n\nfinish rate (last 3) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 33.91%\n\n8,000 simulated attempts, resampled from the last 3 attempts. PB target: 4:00.90.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "100.0%",
+            "33.91%",
+            "3"
+          ],
+          "markdownSha256": "2cdcd6c914bc57ba4675307a79db11b8c309711e04ef71b6d593be2bb3e0e2ea"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "precision-unavailable",
+      "inputSha256": "04f859fa96e8c8a9006515ae7a6c74cd168eb202a8b9b17f376c05ac5ef20922",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nPB odds are unavailable: these times exceed the numeric precision supported by the forecast. The PB and each sampled segment must be within 1,048,576 seconds of zero, and all possible partial sums must fit in exact integer nanoseconds.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "5c77ea65795bdab8967c832c95bee8be19b5e1987a9b11fa4646ec9597fde080"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nPB odds are unavailable: these times exceed the numeric precision supported by the forecast. The PB and each sampled segment must be within 1,048,576 seconds of zero, and all possible partial sums must fit in exact integer nanoseconds.\n\nRecent form\n3 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "24e7bc2e580b9acec0775f3a8e3707d99bdf109613b82beb169123d9d75d5cba"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "id": "recorded-psychic-force",
+      "inputSha256": "156a18549136a063b3e848038c278f873c32b3b078ab0169828fec1854fd31e6",
+      "methods": [
+        {
+          "method": "rta",
+          "text": "MONTE CARLO\nPB odds\n\nChance of a PB in your next 50 attempts\n\n0.0%\n\n95% CI 0.0% – 2.4%\n\nChance the very next attempt beats PB\n\n0.00%\n\n95% CI 0.00% – 0.05%\n\nExpected attempts to next PB\n\n—\n\n95% CI 2,083 or more\n\nfinish rate (last 1) 100.0% · all-time 100.0%\n\nP(beat PB ∣ finish) 0.00%\n\n8,000 simulated attempts, resampled from the last 1 attempts. PB target: 5:08.01.\n\nRecent form\n1 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [
+            "0.0%",
+            "0.00%",
+            "—"
+          ],
+          "markdownSha256": "650efe01b91b1088ed532067471e6450f055625f41e5ec85c6c882383acc4566"
+        },
+        {
+          "method": "igt",
+          "text": "MONTE CARLO\nPB odds\n\nNo PB recorded yet — nothing to compare simulated attempts against.\n\nRecent form\n1 attempts\nLook ahead\n50 attempts\nSimulations\n8,000\nHow this is modeled, and what it assumes",
+          "values": [],
+          "markdownSha256": "22ea2abdbb0c0a2ee8f220e128d9f24f73bd213f73d68ddb88fe1dba18017fff"
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "errors": [],
+      "offlineRequests": [],
+      "assets": [
+        {
+          "file": "index.html",
+          "sha256": "b7f7d07c155e19e271a924c52393206c3c223279908d92bd3355835fe1192d65",
+          "bytes": 2231
+        },
+        {
+          "file": "assets/index-0jG8I5PB.js",
+          "sha256": "cc7596c92b98338f50d3d2585adae4cede5925aa741cfb3f3eb08b40a9ebf3ca",
+          "bytes": 143291
+        },
+        {
+          "file": "assets/index-DA_d0CwC.css",
+          "sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+          "bytes": 65953
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        },
+        {
+          "file": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+          "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+          "bytes": 34704
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        },
+        {
+          "file": "assets/martian-mono-latin-5W32yIyr.woff2",
+          "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+          "bytes": 23556
+        }
+      ]
+    }
+  ]
+}
