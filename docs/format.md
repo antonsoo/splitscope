@@ -201,3 +201,25 @@ are never read by this app, so `parser.ts` strips them with a linear string scan
 before the general XML parse (`stripOpaqueBlobs`). This is a real, measured
 win, not a guess — see the "Accuracy and limitations" section of the README
 for the number on this repository's own sample file.
+
+### Precision of simulated PB comparisons (source checkout)
+
+The forecast rounds each sampled duration and the PB target to integer
+nanoseconds before adding or comparing them. A tie is not a PB. The unit covers
+both .NET TimeSpan's seven decimal places and
+[LiveSplit Core's nine-place saved times](https://github.com/LiveSplit/livesplit-core/blob/fb62dd42505b16e813d2779468d81bbad7f01b5e/src/timing/formatter/complete.rs).
+This does not change stored/displayed seconds or the random draws.
+
+Because the parser exposes seconds as JavaScript numbers, the forecast accepts
+only PB targets and individual samples with magnitude at most 2^20 seconds
+(1,048,576 seconds). Within that range, the XML integer fields plus at most nine
+fractional places can be recovered to the nearest nanosecond. Values supplied
+programmatically with finer precision are rounded to that unit. The sum of the
+largest absolute duration in each segment pool must also be no larger than
+`Number.MAX_SAFE_INTEGER` nanoseconds. This bounds every partial sum, including
+cancellation with negative start times. If either check fails, PB odds are
+unavailable with a reason; other imported evidence remains inspectable.
+
+These are arithmetic limits, not confidence in the model. The empirical pools,
+reset hazards, independence assumptions and simulation-only intervals still
+apply. [Counterexamples and independent verification](../studies/pb-ties/README.md).

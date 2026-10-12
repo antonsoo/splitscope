@@ -1,0 +1,12 @@
+{
+  "synthetic": false,
+  "repo": "AmenAnthem/speedrun-livesplit-splits",
+  "commit": "21676ae91d9379b0c1380104c817cfc3d5b71776",
+  "license": "MIT",
+  "path": "Psychic Force 2 - Arcade Mode - Easiest (Regina).lss",
+  "bytes": 246568,
+  "sha256": "156a18549136a063b3e848038c278f873c32b3b078ab0169828fec1854fd31e6",
+  "local": "psychic-force.lss",
+  "licenseUrl": "https://raw.githubusercontent.com/AmenAnthem/speedrun-livesplit-splits/21676ae91d9379b0c1380104c817cfc3d5b71776/LICENSE",
+  "licenseSha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7"
+}

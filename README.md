@@ -33,6 +33,14 @@ These additions remain unreleased.
 
 ## PB odds, checked against what happened next
 
+**Exact ties no longer count as new PBs (source checkout, unreleased).** An
+unchanged public Psychic Force 2 file previously received a 100% PB forecast
+from resampling its one recorded completion. Its segment times sum exactly to
+the saved PB. The forecast now compares integer nanoseconds and reports no
+simulated improvements, while preserving genuine one-nanosecond gains.
+[Recorded input, before/after reports and independent replay](studies/pb-ties/README.md).
+
+
 The recorded backtest found low PB forecasts. Across 51 real attempt histories
 (62,197 attempts, from public repositories), the mean predicted chance of at
 least one PB in the next 50 attempts was **14.3%**; a PB occurred in **30.9%**

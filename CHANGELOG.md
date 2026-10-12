@@ -4,6 +4,13 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Compare simulated totals with the PB in integer nanoseconds: equal stored
+  times remain ties, including nine-decimal LiveSplit Core files. Preserve
+  genuine one-nanosecond improvements. Return an explicit precision limit
+  instead of numeric odds when safe conversion or accumulation is unavailable.
+  Retain the unchanged public Psychic Force 2 counterexample and before/after
+  browser reports. See `studies/pb-ties/README.md`.
+
 - Preserve text on attributed XML fields, including modern and legacy durations.
   Reject repeated singleton fields, nested scalar content, empty records, and
   unnamed comparisons rather than turning them into absent timing evidence.

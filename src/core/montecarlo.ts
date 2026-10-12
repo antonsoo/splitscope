@@ -78,6 +78,7 @@ export interface PbOddsResult {
 export const DEFAULT_MIN_SEGMENT_SAMPLES = 3;
 
 const ASSUMPTIONS = [
+  "Simulated durations and the PB target are compared in integer nanoseconds. An exact tie is not a new PB. Forecasts are unavailable when the recorded times exceed the supported numeric precision.",
   "Segment times are drawn independently of each other (a slow segment doesn't change the odds of the next one being slow or fast).",
   "The recent-form window is assumed stationary: it represents skill for every simulated future attempt, not a runner who is still improving. In the recorded backtest, mean 50-attempt PB probability was 14.3%; a PB occurred in 30.9% of evaluated windows. Windows overlap; this is not a per-runner calibration guarantee.",
   "Reset hazard per segment is estimated from historical frequency and assumed constant going forward.",
@@ -129,8 +130,41 @@ export function effectiveWindow(
 }
 
 interface SegmentModel {
+  /** Integer nanoseconds once prepared for simulation; seconds from buildSegmentModels. */
   readonly pool: readonly number[];
   readonly hazard: number;
+}
+
+const NANOSECONDS_PER_SECOND = 1_000_000_000;
+// The parser exposes seconds as doubles. Below 2^20 seconds, parsing the
+// integer fields plus fractional seconds and multiplying by 1e9 introduces
+// less than half a nanosecond of rounding, so the stored integer can be
+// recovered. Larger values can lose a ns before this function sees them.
+const MAX_PRECISE_SECONDS = 2 ** 20;
+
+function prepareDurations(models: readonly SegmentModel[], pbTime: number | null) {
+  if (pbTime !== null && Math.abs(pbTime) > MAX_PRECISE_SECONDS) return null;
+  let absoluteBound = 0;
+  const prepared: SegmentModel[] = [];
+  for (const model of models) {
+    const pool: number[] = [];
+    let largest = 0;
+    for (const seconds of model.pool) {
+      if (!Number.isFinite(seconds) || Math.abs(seconds) > MAX_PRECISE_SECONDS) return null;
+      const nanoseconds = Math.round(seconds * NANOSECONDS_PER_SECOND);
+      pool.push(nanoseconds);
+      largest = Math.max(largest, Math.abs(nanoseconds));
+    }
+    // Bound every partial sum, including cancellation with negative first
+    // segments. Do this once, not in the simulation's inner loop.
+    if (largest > Number.MAX_SAFE_INTEGER - absoluteBound) return null;
+    absoluteBound += largest;
+    prepared.push({ pool, hazard: model.hazard });
+  }
+  return {
+    models: prepared,
+    pb: pbTime === null ? null : Math.round(pbTime * NANOSECONDS_PER_SECOND),
+  };
 }
 
 function buildSegmentModels(run: Run, method: TimingMethod, window: number): SegmentModel[] {
@@ -193,6 +227,7 @@ export function simulatePbOdds(
     options.minSegmentSamples ?? DEFAULT_MIN_SEGMENT_SAMPLES,
   );
   const models = buildSegmentModels(run, options.method, window);
+  const durations = prepareDurations(models, pbTime);
   const unknownOutcome = run.attempts
     .slice(-window)
     .some((a) => !hasCompletionTime(a) && reachedSegmentIndex(run, a) >= run.segments.length - 1);
@@ -200,7 +235,9 @@ export function simulatePbOdds(
     ? "A recent attempt reaches the final segment but has no overall time. Its completion/reset outcome is unknown, so PB odds are unavailable."
     : run.segments.length === 0 || models.some((m) => m.pool.length === 0)
       ? "Not enough segment history in the selected window to simulate a full run. Try a larger recent-form window."
-      : null;
+      : durations === null
+        ? "PB odds are unavailable: these times exceed the numeric precision supported by the forecast. The PB and each sampled segment must be within 1,048,576 seconds of zero, and all possible partial sums must fit in exact integer nanoseconds."
+        : null;
   const insufficientData = unavailableReason !== null;
 
   const seed =
@@ -211,12 +248,12 @@ export function simulatePbOdds(
   let beatPb = 0;
   const S = options.simulations;
 
-  if (!insufficientData) {
+  if (!insufficientData && durations !== null) {
     for (let i = 0; i < S; i++) {
-      const total = simulateOne(rng, models);
+      const total = simulateOne(rng, durations.models);
       if (total !== null) {
         finished++;
-        if (pbTime !== null && total < pbTime) beatPb++;
+        if (durations.pb !== null && total < durations.pb) beatPb++;
       }
     }
   }

@@ -8,3 +8,6 @@ test-results/
 playwright-report/
 /studies/*/cache/
 __pycache__/
+
+# Reproduced by studies/pb-ties/generate.py from the retained manifest.
+/studies/pb-ties/fixtures/grid-*.lss

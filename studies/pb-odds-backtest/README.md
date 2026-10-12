@@ -7,6 +7,11 @@ whole attempt history, so the future is in the file: stop at attempt t, show
 splitscope only what it would have seen then, and look at what the runner did
 next. This study does that at 4,698 points in 51 real histories.
 
+The later [exact-tie correction](../pb-ties/README.md) replays these same
+stopping points with identical draws. It changes 13 of 2,886 forecasts; the
+rounded headline values below remain unchanged. The historical artifacts here
+are preserved, and the paired arithmetic comparison is retained separately.
+
 **What came out**
 
 - **The mean forecast is below the observed frequency.** The predicted chance

@@ -1,0 +1,688 @@
+{
+  "synthetic": true,
+  "description": "Constructed recorded-time controls; no observed gameplay. Integer nanoseconds generate XML independently of the app.",
+  "cases": [
+    {
+      "id": "exact-tie",
+      "sha256": "62d08fb961c993f4f542f2484266495b88fabe1362743f1f657b4af76773eac8",
+      "bytes": 1796,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "one-tick-faster",
+      "sha256": "9242c6b48ec57c92a63bd923abcc3f70f554ad3ae1643e2d081c0cff1661c6f7",
+      "bytes": 1802,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "one-tick-slower",
+      "sha256": "89f736db8a90c6d33815152a5812f2f0361524e7d4d391c2bee4f938cbb17f49",
+      "bytes": 1802,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "one-nanosecond-faster",
+      "sha256": "042892ddad7d060a5b5674f78d26cafe3287a1df996906cc1e7c5f0bcdd42ce5",
+      "bytes": 1808,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "one-nanosecond-slower",
+      "sha256": "2bb101544dc94eaaab738546c902765abde204a0a1bc9d5afb9b8003c073e3d6",
+      "bytes": 1808,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "negative-offset-tie",
+      "sha256": "301521a158c3634c9660ef1829781dfab0600f4a5aeffd88c8c3fdb6c244f57c",
+      "bytes": 1817,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "mixed-ties",
+      "sha256": "d21d61ed8ba53e8e65b1f2ef255b4107112f9ff7072deb0e1487a61972b79d73",
+      "bytes": 1797,
+      "expected": {
+        "exactPbProbability": "1/3",
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "mixed-with-resets",
+      "sha256": "695e01b252e360a8930015dd82c9e3c1f1241443de5b8e379dce765dd93c5ce1",
+      "bytes": 1858,
+      "expected": {
+        "exactPbProbability": "1/6",
+        "exactFinishProbability": "1/2"
+      }
+    },
+    {
+      "id": "many-segments",
+      "sha256": "501de293e21194fec8789425be5f01dc0cfacfdd4d30695e6a6deef043ee13d2",
+      "bytes": 454036,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "day-crossing",
+      "sha256": "4574d24f4e7d0a2e0714ab705b989ebea08213089036d36b605daa1524acfcbb",
+      "bytes": 454035,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "precision-boundary-tie",
+      "sha256": "daf9ccd7f78b5f72091aaf708188b46e4d5865534b13e66c54a372db0a20afe9",
+      "bytes": 1827,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "precision-boundary-faster",
+      "sha256": "a41cfb0ae20bede899c990d52065214be918c13d1a23f512f10e362efa0452f9",
+      "bytes": 1838,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "precision-boundary-slower",
+      "sha256": "ce11faf2a67199348da64effa1f60233106d187efee1ce1149f183dcb0ea424b",
+      "bytes": 1830,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "cancellation-tie",
+      "sha256": "0f6c83327a01425e71dc37c97e3592995cf2a1fa8a3701e06d1206eca0ea7ac7",
+      "bytes": 1833,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "precision-unavailable",
+      "sha256": "04f859fa96e8c8a9006515ae7a6c74cd168eb202a8b9b17f376c05ac5ef20922",
+      "bytes": 1196,
+      "expected": {
+        "unavailable": "precision"
+      }
+    },
+    {
+      "id": "sum-unavailable",
+      "sha256": "9c2fd8944c77daca4a90159554e34a43439788248341bd84db9145d1d7dc635d",
+      "bytes": 6949,
+      "expected": {
+        "unavailable": "precision"
+      }
+    },
+    {
+      "id": "grid-00",
+      "sha256": "5d929b090225f4c7586fbb8c9e99d7c028600dae8c5640f6ba45a39bde45d5a2",
+      "bytes": 9964,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-01",
+      "sha256": "12a3330c2beb6a78fafe2e8200e26abda39d96b5ba7df033160a691c2d840c1f",
+      "bytes": 18141,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-02",
+      "sha256": "ecc31841686d6ceb956f34bce9f38a80fb2aba4fc6941643bc19966a366c8c50",
+      "bytes": 6819,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-03",
+      "sha256": "e02ce8947291db81699f3c3b8267da9ac1d05e955f3c74249a53241898fbf3e4",
+      "bytes": 24431,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-04",
+      "sha256": "f046c8df8124893f59286db201c68dbe201400abb2bc197c4b20ef94026977ae",
+      "bytes": 11222,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-05",
+      "sha256": "5cb60e85a3777c28c4fdf60ef3cbbc6f9134414da044420c2b2c7e969a2d8b4e",
+      "bytes": 18770,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-06",
+      "sha256": "ab1321c786ff5cc44ab713132cb9baa443a228b05503d46a350a6d59db84440b",
+      "bytes": 14996,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-07",
+      "sha256": "1661a7e573d2ac5e389c96ec63a2c21c4c17c628036981c55431e5a07133e0f6",
+      "bytes": 20657,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-08",
+      "sha256": "d2a741af0df9f9cb232b68253e65a1e7228a0d1567859cc7e383cd05946249f8",
+      "bytes": 20657,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-09",
+      "sha256": "d7015b9f0768c6c6e4979994e7f39de4991b3880a8e50fedf6438f78935dfd30",
+      "bytes": 4306,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-10",
+      "sha256": "3d37a4dfa53a4aea5eb02d31842c91ac70c93409ebf4949985d639054729b695",
+      "bytes": 3678,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-11",
+      "sha256": "4d46ab3524b1ca264f756e5c1ad519f9c76d37e28e5fcfb853c9bc82fa05946a",
+      "bytes": 5562,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-12",
+      "sha256": "bcb8bdcb5240e8ac9498af895834a6aaf304155f4218879e5e4f706710022125",
+      "bytes": 23173,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-13",
+      "sha256": "9a9d4408afe19ca4d3772edfcf34955d268856fc1eae65fc50df6ea60645a436",
+      "bytes": 24431,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-14",
+      "sha256": "3b170dd3a561cd2cb9c62349d8a04c81b44ef52bee98f762358769445ef342cb",
+      "bytes": 26947,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-15",
+      "sha256": "9f6fb328e47014aaccf6800314ce74060c89adbad9073ce9e99c7951527aa86f",
+      "bytes": 23802,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-16",
+      "sha256": "66b5149f4e03f334f6c035ee77357fb7821562b06504f8f9192e4a8d610ea46c",
+      "bytes": 17512,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-17",
+      "sha256": "8a8a9e5e5cd5e470ba7e19bbec731cd8e6e7926cf56f2c4efaea4d2440720172",
+      "bytes": 7448,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-18",
+      "sha256": "346620948a14d21e918223054a2432158e7dc99104325a24b57b78232e190791",
+      "bytes": 6819,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-19",
+      "sha256": "fbda26068a7f030b35be191ba7b2f0dcef6991e494ac23dab7fc6b88adeee822",
+      "bytes": 23173,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-20",
+      "sha256": "5ec7a2f624d34c38e37bb488c614af4ae817533c4aa88f9b0f2c3d32a488ee61",
+      "bytes": 12480,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-21",
+      "sha256": "a43f7568b4f96ca1c3211d30ed932eb1c9eaefc3c55384ec2bbbbab9d60e8469",
+      "bytes": 15625,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-22",
+      "sha256": "58cfbf48b0b424b2aa278968f3053cbc7d19c5c9a4a5f9a826180c91d897ed46",
+      "bytes": 20657,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-23",
+      "sha256": "e03e4e1392d0565299bc6afa6023de1c143f8b90769a2a2fd332e5daef25ea29",
+      "bytes": 11222,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-24",
+      "sha256": "1414fc0b3002fd85278a4f71ac16cfeacc1402d8409168382c0891b65d9873e1",
+      "bytes": 9964,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-25",
+      "sha256": "32d59f144c4ec127f4751b616aaa36811b075809284fffdab685d32eda1ae057",
+      "bytes": 27576,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-26",
+      "sha256": "d1504c1364bee2191c2b0820847942869f1ff6e69bde3da174a089d6616860f3",
+      "bytes": 16883,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-27",
+      "sha256": "4c2f33c00cd3044a253ad8981d8d1e6acdab1c76449624ef9e08945d94307e8b",
+      "bytes": 26947,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-28",
+      "sha256": "2e481e849afedfaefcd90d2ff79bf6f1b510aa3f9c5c049ca45d29dae552ae30",
+      "bytes": 9335,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-29",
+      "sha256": "65356e369a6e1a53dc904c998167731e7b4c0aa615e22e1914feba065f752f5e",
+      "bytes": 24431,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-30",
+      "sha256": "58b141dd85024adefa23420eba334f2528ba46aacbfeb0dcd1a37523a9c71ba9",
+      "bytes": 18141,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-31",
+      "sha256": "849737180ca33b073911983a29b9d3e7c83a7c6a55f8cfeba77f2134a6f015d0",
+      "bytes": 22544,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-32",
+      "sha256": "28fdd873e1a35404b8526219d9753f3ec3cbe48a74377d57488404466d043914",
+      "bytes": 14367,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-33",
+      "sha256": "2dd5afa9ade3b47589a4ce79d4c784d8a9af84333124d2e336726ce4bbe7761f",
+      "bytes": 23173,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-34",
+      "sha256": "af5b6b0c353a86f09d078a3ca85f0b4c4a48edf287d0adf3c72a4a1e7d7fb823",
+      "bytes": 8077,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-35",
+      "sha256": "9643bad46026ba75f351a93d5c60b8ef394d38702412ecce379b7131fce79457",
+      "bytes": 16883,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-36",
+      "sha256": "c7a6e4fd35c347a64bf4f76acbcdfea6bdfc93267d69bda50911d915767e70d9",
+      "bytes": 11851,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-37",
+      "sha256": "a8c273c7998ee2aaca8e77497c800b6b2862c3f05088d51e6ce81b199b05cb8e",
+      "bytes": 2422,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-38",
+      "sha256": "c6e11c2661c5dff7b4c9d6778ba0c71b68faefdde60d15c1907e4a24bd027b0c",
+      "bytes": 28834,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-39",
+      "sha256": "e3099de679c4ae31ce74dc21b92d173a535221a7262e7398cca0feffe89f8873",
+      "bytes": 26947,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-40",
+      "sha256": "a324b4581904f50e9b7e5778fe0b1e92fdf3f63d546fcfd23d113c9c57f413ba",
+      "bytes": 10593,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-41",
+      "sha256": "3e8bcc20b821974d231ab0fa66367fbb3863c603634e41d871a1c2d8aa5a9831",
+      "bytes": 20657,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-42",
+      "sha256": "d26f81cfcffdec747204d1d516402c7a8460beb0d39ced54ab55f7a8191bcdda",
+      "bytes": 8077,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-43",
+      "sha256": "a88998d4ff50d22e8016b2ba9bd4475cfd154503622d9d53c51b746aefb8f02c",
+      "bytes": 14996,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-44",
+      "sha256": "4599d8fc814eafdb1063322bcf15114a996d7a7200738ba19899c7a587c2579e",
+      "bytes": 9335,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-45",
+      "sha256": "5d00b48b85a3e1810632513e85f199bbf9646885d674cdbc004ec1e26f68a071",
+      "bytes": 22544,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-46",
+      "sha256": "bdfedf47604560a34ebef0e613a4284564bed3ead2d255285e88a9f80c49c3a0",
+      "bytes": 23802,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-47",
+      "sha256": "89e0d99584f816ae2ba40af8e2e9db04ec7a550b8c384912aa0a93c71d28f77e",
+      "bytes": 10593,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-48",
+      "sha256": "2884cf30be6948f6430461d78691790ed56a22942bd624b86a0b4946a6623c5c",
+      "bytes": 23173,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-49",
+      "sha256": "348fcf20b47036ba55230bb3a2cbe0f3ed5dda46488b64ce664e43e190f15ec3",
+      "bytes": 15625,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-50",
+      "sha256": "a5611c288813d3c88420b6eda440664bb1507b99ba420ee8c833b5a296fb23b5",
+      "bytes": 21915,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-51",
+      "sha256": "12f96e43da0bf01d4c6d7704dff699df43c560121b854a1484e4b6ddc3b7b293",
+      "bytes": 16254,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-52",
+      "sha256": "e493289eadcc2524d1510cd8902c556c36af50e537e7031aa97947aa1ba05e82",
+      "bytes": 25689,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-53",
+      "sha256": "ab79bf0e1a7597bc216160f387edda795821f08a787b2ba4619ad0e07255db31",
+      "bytes": 10593,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-54",
+      "sha256": "0af7a5b4bc26145d7cc11f4434bdce9c5e8638c1e10271d182e78e96d3d5135b",
+      "bytes": 15625,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-55",
+      "sha256": "fe16e5d2f02181bb72d354faa73277c7518cd8b7452406fce66fd618140d23fb",
+      "bytes": 30721,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-56",
+      "sha256": "0ddf5a9c38bf41d05097f92851e5cc74d1b714aaf4f84dd0746b3d262bdb74bd",
+      "bytes": 29463,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-57",
+      "sha256": "f1ae95d91b090d9107251d30b2ddfcc7ac1488eb94dc345c4e749d11b0a2f22e",
+      "bytes": 14996,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-58",
+      "sha256": "e017773cf6464a70a86bff510d23d658d3bdf4a174eae2886e72387aadbb4413",
+      "bytes": 6190,
+      "expected": {
+        "pbProbability": 1,
+        "finishProbability": 1
+      }
+    },
+    {
+      "id": "grid-59",
+      "sha256": "13714f0a5123c95c8a73cae856b3d877e46c637626dd0d5d890671ded8f92eae",
+      "bytes": 25060,
+      "expected": {
+        "pbProbability": 0,
+        "finishProbability": 1
+      }
+    }
+  ]
+}
