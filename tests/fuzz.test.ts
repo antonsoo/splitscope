@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { LssParseError } from "../src/core/errors.js";
 import { simulatePbOdds } from "../src/core/montecarlo.js";
-import { parseRun, stripOpaqueBlobs } from "../src/core/parser.js";
+import { parseRun } from "../src/core/parser.js";
 import * as stats from "../src/core/stats.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -129,25 +129,6 @@ describe("fuzz", () => {
         });
         expect(hasNaN(results), `seed ${seed} (${method}): NaN in the statistics`).toBe(false);
       }
-    }
-  });
-
-  it("empties icon and auto-splitter elements exactly as a lazy pattern would", () => {
-    const pieces = ["<Icon>", "</Icon>", "<GameIcon>", "</GameIcon>", "<AutoSplitterSettings>",
-      "</AutoSplitterSettings>", "AAAA", "<Name>x</Name>", "\n", "<Icon/>", "<Icons>", " "]; // biome-ignore format: a list of cases
-    const reference = (xml: string): string =>
-      xml
-        .replace(/<GameIcon>[\s\S]*?<\/GameIcon>/g, "<GameIcon/>")
-        .replace(/<Icon>[\s\S]*?<\/Icon>/g, "<Icon/>")
-        .replace(
-          /<AutoSplitterSettings>[\s\S]*?<\/AutoSplitterSettings>/g,
-          "<AutoSplitterSettings/>",
-        );
-    for (let seed = 0; seed < 3000; seed++) {
-      const r = rng(seed);
-      let xml = "";
-      for (let n = Math.floor(r() * 14); n > 0; n--) xml += pieces[Math.floor(r() * pieces.length)];
-      expect(stripOpaqueBlobs(xml), JSON.stringify(xml)).toBe(reference(xml));
     }
   });
 

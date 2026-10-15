@@ -27,6 +27,10 @@ const xmlParser = new XMLParser({
   parseAttributeValue: false,
   trimValues: true,
   isArray: (tagName) => REPEATED_TAGS.has(tagName),
+  // Keep large payloads opaque at their actual schema paths. Let the XML
+  // parser identify nodes: tag-like text in comments, CDATA or instructions
+  // must never remove timing records before validation.
+  stopNodes: ["Run.GameIcon", "Run.Segments.Segment.Icon", "Run.AutoSplitterSettings"],
 });
 
 /** A parsed 4-component version, e.g. `1.7.0.0`. Missing components default to 0. */
@@ -82,42 +86,6 @@ function compareVersion(a: Version, b: Version): number {
 }
 
 const gte = (a: Version, b: Version) => compareVersion(a, b) >= 0;
-
-/**
- * Icons and auto-splitter settings are opaque, often large (base64-encoded
- * images or serialized game-specific state), and never read by this app.
- * Stripping their text before the general XML parse avoids holding megabytes
- * of irrelevant data in memory for a big splits collection.
- */
-export function stripOpaqueBlobs(xml: string): string {
-  let out = xml;
-  for (const tag of ["GameIcon", "Icon", "AutoSplitterSettings"]) out = emptyElements(out, tag);
-  return out;
-}
-
-/**
- * Replaces every `<tag>...</tag>` with `<tag/>`, pairing each opening tag with the nearest
- * closing tag after it. Done with `indexOf` rather than a lazy `[\s\S]*?` pattern: a file with
- * thousands of opening tags and no closing one makes that pattern rescan to the end of the
- * file from each of them (seconds for a few hundred kilobytes, minutes for a few megabytes).
- */
-function emptyElements(xml: string, tag: string): string {
-  const open = `<${tag}>`;
-  const close = `</${tag}>`;
-  const kept: string[] = [];
-  let cursor = 0;
-  let from = xml.indexOf(open);
-  while (from !== -1) {
-    const end = xml.indexOf(close, from + open.length);
-    if (end === -1) break; // unclosed: the XML parser reports it
-    kept.push(xml.slice(cursor, from), `<${tag}/>`);
-    cursor = end + close.length;
-    from = xml.indexOf(open, cursor);
-  }
-  if (cursor === 0) return xml;
-  kept.push(xml.slice(cursor));
-  return kept.join("");
-}
 
 /**
  * Reads a `<RealTime>`/`<GameTime>` pair from a node. Before format 1.4.1,
@@ -248,7 +216,7 @@ export function parseRun(xmlText: string): Run {
 
   let parsed: unknown;
   try {
-    parsed = xmlParser.parse(stripOpaqueBlobs(xmlText), true);
+    parsed = xmlParser.parse(xmlText, true);
   } catch (cause) {
     throw new LssParseError(
       `Could not parse this file as XML. Is it really a LiveSplit .lss file? (${(cause as Error).message})`,
