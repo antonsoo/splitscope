@@ -135,3 +135,8 @@ code changes, and the complete serial replay then passed **74/74**. The initial
 failures remain in the receipt. All 18 built files match the working build and
 the HTTP bytes used in the offline capture. The saved screenshots were inspected
 at desktop and phone widths.
+
+The [public-source receipt](results/publication.json) records clean source at
+`5efd5f85979c27e76aee945c187df3b35a14f425`, equal remote HEAD and byte matches for all
+25 changed files fetched from pinned GitHub URLs. The subsequent receipt
+commit changes documentation only.
