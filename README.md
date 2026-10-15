@@ -119,6 +119,9 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
   simulation of your probability of beating your PB, on the next attempt or
   within the next *K*, with a confidence interval and its assumptions stated
   up front, with a backtest against public attempt histories.
+- **XML boundaries (source checkout)**: comments, instructions and CDATA preserve
+  timing evidence. An authored annotation previously changed Destrega's sum of
+  best by 98.789 seconds. [Before/after imports, downloads and limits](studies/opaque-xml/README.md).
 - **Recoverable imports**: cancel a pending read, retry a sample, or replace a file.
   A failed replacement keeps the current analysis. **New file** clears the run
   from the workspace. Files and sample responses are limited to 25 MiB. Parsing
@@ -318,15 +321,14 @@ All statistics and evidence exports still use the full history. See the
 [reproduction and limits](docs/large-histories.md) and the
 [hosted import/export verification](docs/publication-2026-10-11.md).
 
-`GameIcon`/`Icon` (base64 images) and `AutoSplitterSettings` are stripped
-from the XML text before parsing, since they're never read. On a synthetic
-4.6&nbsp;MB `.lss` with realistic embedded icon sizes, that's the difference
-between 86.7&nbsp;ms and 14.7&nbsp;ms per parse — a 5.9× speedup — measured
-with `performance.now()`, 15-iteration average after warmup, on this
-project's own dev box (14 vCPU WSL2 Linux, 48 GB RAM). The real 450-attempt,
-14-segment sample committed in `examples/` (731&nbsp;KB, no icons) parses in
-about 49&nbsp;ms on the same machine — a 30-iteration average, also
-`performance.now()`.
+`GameIcon`/`Icon` and `AutoSplitterSettings` use the XML parser's opaque-node
+handling at their schema paths. The original XML is validated before its
+payloads are skipped; text that merely mentions those tags cannot erase
+timing records. This costs more work for large icons: the retained synthetic
+10 MiB icon control changed from 2.37 to 141.93 ms, while the bundled
+748,304-byte history changed from 264.26 to 237.13 ms on the shared host.
+These five-sample medians describe the retained Node 26 experiment, not a
+general speed guarantee. [Reproduction and correctness evidence](studies/opaque-xml/README.md).
 
 The analyses index each attempt's furthest segment in one pass over the
 segment history. On a generated 5,000-attempt, 30-segment run, the reset

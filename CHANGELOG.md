@@ -4,6 +4,14 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Preserve timing records and literal names when XML comments, processing
+  instructions or CDATA mention icon/settings tags. Replace raw-text rewriting
+  with schema-scoped opaque-node handling and validate the original XML before
+  skipping payloads. Reject mismatched opaque structure without replacing the
+  prior workspace. Retain annotated Destrega evidence, 25 controls, independent
+  XML checks, unchanged public-file results and offline downloads in
+  `studies/opaque-xml/`.
+
 - Compare simulated totals with the PB in integer nanoseconds: equal stored
   times remain ties, including nine-decimal LiveSplit Core files. Preserve
   genuine one-nanosecond improvements. Return an explicit precision limit

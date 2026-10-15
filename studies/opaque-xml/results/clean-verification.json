@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "c746723d6ad31d005b45ffb9c832c38d33c91a96",
+  "baselineCommit": "403d5c6e87265a409758ff4cd4ad1a69128c893e",
+  "node": "v26.7.0",
+  "npm": "12.0.1",
+  "checks": [
+    {
+      "name": "install",
+      "exitCode": 0,
+      "logSha256": "5db7bb87c16c89c0f660ebcd7b6cfc7832d5a2616b80ac7eaf6f198c90a44acd",
+      "tail": "\nadded 68 packages, and audited 69 packages in 3s\n\n19 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n"
+    },
+    {
+      "name": "lint",
+      "exitCode": 0,
+      "logSha256": "fbda69fa7ff9a03e8bb1621cb2e5a9d9f3cfa9db14465c31d53a114a742a890b",
+      "tail": "[\"Cave Entrance\", \"Crystal Lake\", \"Boss Room\"]);\n  > 24 \u2502     const caveEntrance = run.segments[0]!;\n       \u2502                          ^^^^^^^^^^^^^^^^\n    25 \u2502     expect(caveEntrance.splitTimes.get(\"Personal Best\")).toEqual({ realTime: 60, gameTime: 58 });\n    26 \u2502     expect(caveEntrance.bestSegmentTime).toEqual({ realTime: 55, gameTime: 53 });\n  \n\nThe number of diagnostics exceeds the limit allowed. Use --max-diagnostics to increase it.\nDiagnostics not shown: 15.\nChecked 98 files in 106ms. No fixes applied.\nFound 34 warnings.\nFound 1 info.\n"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "logSha256": "9187bbcfe345b70e44ee41b554e44eaac930843bba7e66138875d23bd67c6861",
+      "tail": "npm notice run splitscope@0.2.4 typecheck\nnpm notice run tsc -p tsconfig.json --noEmit\n"
+    },
+    {
+      "name": "tests",
+      "exitCode": 0,
+      "logSha256": "6d683cf4f8e30cbf03e90348e30cd72e9a0c0ac693eea99762b64de8bfb08b4a",
+      "tail": "npm notice run splitscope@0.2.4 test\nnpm notice run vitest run --maxWorkers 3\n\n RUN  v5.0.1 <clean>/source\n\n\n Test Files  18 passed (18)\n      Tests  239 passed (239)\n   Start at  14:21:42\n   Duration  37.35s (tests 92%, import 5%, transform 2%)\n\n"
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "logSha256": "e1ef316f61bd21f23695cd39e4735e09e9dce6d3c16db1fd38d18370fb354235",
+      "tail": "tnamese-CHiFlh_0.woff2    9.32 kB\ndist/assets/martian-mono-cyrillic-B84CD5C_.woff2       10.56 kB\ndist/assets/martian-mono-latin-ext-DlL6xMw5.woff2      15.91 kB\ndist/assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2    19.59 kB\ndist/assets/martian-mono-latin-5W32yIyr.woff2          23.56 kB\ndist/assets/hanken-grotesk-latin-CaVRRdDk.woff2        34.70 kB\ndist/assets/index-DA_d0CwC.css                         65.95 kB \u2502 gzip: 11.52 kB\ndist/assets/index-DcUd8L43.js                         143.03 kB \u2502 gzip: 49.06 kB \u2502 map: 268.53 kB\n\u2713 built in 1.12s\n"
+    },
+    {
+      "name": "browser",
+      "exitCode": 1,
+      "logSha256": "1604ac69d76aa5be68697825fc1433045059c27cda406a5a25b9d19e6e587f7b",
+      "tail": "  Usage:\n\n        npx playwright show-trace test-results/workspace-intake-and-both--08925-e-in-both-themes-and-widths-chromium/trace.zip\n\n    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n  2 failed\n    [chromium] \u203a tests/browser/practice.spec.ts:193:1 \u203a real review and selected records are accessible in both themes at desktop and phone widths \n    [chromium] \u203a tests/browser/workspace.spec.ts:46:1 \u203a intake and both sample workspaces are accessible in both themes and widths \n  72 passed (2.5m)\n"
+    },
+    {
+      "name": "browser-rerun",
+      "exitCode": 0,
+      "logSha256": "4947fedb6ff3e54c760034a061981a9dba9c4b430d2658c19d63aa5d62470d77",
+      "tail": "w where the warning was created)\n\nRunning 2 tests using 1 worker\n\n(node:793737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n  \u2713  1 [chromium] \u203a tests/browser/practice.spec.ts:193:1 \u203a real review and selected records are accessible in both themes at desktop and phone widths (4.2s)\n  \u2713  2 [chromium] \u203a tests/browser/workspace.spec.ts:46:1 \u203a intake and both sample workspaces are accessible in both themes and widths (23.5s)\n\n  2 passed (28.8s)\n"
+    },
+    {
+      "name": "browser-serial",
+      "exitCode": 0,
+      "logSha256": "2fd16dc6533da9ba663dbd8da13e36ce345a3b98a59a5d131f261afeaf6900a2",
+      "tail": " streams cannot exceed the byte budget even without a declared size (753ms)\n  \u2713  72 [firefox] \u203a tests/browser/workspace.spec.ts:344:1 \u203a malformed and ambiguous records retain the old analysis or show unknown outcomes (906ms)\n  \u2713  73 [firefox] \u203a tests/browser/xml-evidence.spec.ts:22:3 \u203a attributed times import offline; ambiguous replacement preserves evidence at 375px (1.3s)\n  \u2713  74 [firefox] \u203a tests/browser/xml-evidence.spec.ts:22:3 \u203a attributed times import offline; ambiguous replacement preserves evidence at 1440px (1.2s)\n\n  74 passed (2.6m)\n"
+    }
+  ],
+  "finalLint": {
+    "exitCode": 0,
+    "logSha256": "27697af82b8ad8f549f2fea9038e268197ba52be9c8a782425a898946f295324"
+  },
+  "sourceFiles": {
+    "src/core/best-route.ts": "c3ab4a4fba78ab9b60f3c6f1399621759b4303c70a2dc0aab2d854547d7c66ee",
+    "src/core/decode.ts": "a65eaa932e2acfa7c560b26a31b927c61afff3762f8e62898d6874f491f1c078",
+    "src/core/errors.ts": "441bc037c26631ab72d076b012b6352a357bad8731edc9f4156f888d07a6090e",
+    "src/core/montecarlo.ts": "0ead32edbb11408a44a4435cd8c1bf8b9321881f10ab25a51b22d3b1d682806a",
+    "src/core/names.ts": "ac29fdc5b26eb252deb73dbeaa11edfc25fa9047964a6c2af3ef10328b666432",
+    "src/core/parser.ts": "f20ec2d5a08e663dbc78f75cecc4d973102eb18dbe6646beb1e0d49f37cb0646",
+    "src/core/review.ts": "9f0409ce3312eb64e6a849997f99aae2bbee829bf1330babdc67561480b37157",
+    "src/core/rng.ts": "498e3d9a3b5861f8169d475ed391db4cb3c6de6848a10743d50aef611639f08e",
+    "src/core/stats.ts": "3fbae37f8e699bd63e7e99eb955c1e02fe66e2b166f4edd4e9cb7733a3e3fd8a",
+    "src/core/timespan.ts": "d47cb41ce9f9dd40af4c5ae497adaae5d4e0cfe918d2389cc653166702c1f9cb",
+    "src/core/types.ts": "1c09d41ee70e78770b86c220d5dd4ded548de19c6fd6f1d5b8786d743faeab8d",
+    "src/core/xml-helpers.ts": "bf7554c1bcca39776d068e2271a27df5ac4c4ed5bd88df533d13409401409ab9",
+    "src/fonts/LICENSE.txt": "26ff01d30304ca6dc862c560bc80cd145c7f9ede745b4bc801f0207f1438e417",
+    "src/fonts/fonts.css": "3312b81f69128be83c4574f0af3cbbd705a2fa3c19d9b70444b119d7813cc43a",
+    "src/fonts/hanken-grotesk-cyrillic-ext.woff2": "7ba47c78279dc529afe577dc2476bc8fd3c0e32f78efa26dca9f9382d49a157d",
+    "src/fonts/hanken-grotesk-latin-ext.woff2": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24",
+    "src/fonts/hanken-grotesk-latin.woff2": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+    "src/fonts/hanken-grotesk-vietnamese.woff2": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a",
+    "src/fonts/martian-mono-cyrillic-ext.woff2": "25c291c2abbc28b2b7e7a3c42608239f92b4aa7a2494761e396e5e1f484e1601",
+    "src/fonts/martian-mono-cyrillic.woff2": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529",
+    "src/fonts/martian-mono-latin-ext.woff2": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5",
+    "src/fonts/martian-mono-latin.woff2": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+    "src/main.ts": "cfcebc3c3a6b3d6eefa9ecaee8786f0d35221e7e2e3acdead6302a3903bb0531",
+    "src/styles.css": "a579bc546f1266a0b19de7ced4b8427c06aec6e8d4854307d1c3d23045cd3396",
+    "src/ui/app.ts": "8dcbbfb208daa8305e19e58885a9c9bc42d58c60c930972145dbb7437f0f8f01",
+    "src/ui/charts/large-series.ts": "db1d598e0bd2d0c516001d264e7a9a7a173f1153e502d4d10b4a7749b664cdb5",
+    "src/ui/charts/scale.ts": "062951cae48075b6f3036395409e3c012feae85a6a4cac0676e1330a0ea60db3",
+    "src/ui/dom.ts": "226768b4f62ab8912c45b0abfd87b8d1ac7078be56fa031f00ff6c1fdb4cc6b4",
+    "src/ui/export.ts": "f4a357fbebdffb7b9d856fc8b6bed945788114b46237bcc7a82be683bb9f7a56",
+    "src/ui/format.ts": "a7c9ab2732617bafc6a78a3a9fedb010382e15a7d703a4126f2171aa8bee1311",
+    "src/ui/input.ts": "8f615f1398630c3c0704f31489753db0582fbcd39c16443269d4cc431e187688",
+    "src/ui/parse-input.ts": "ecfcdf612a4dd860f958c4b928a7401d0415a7e7ad85632dac879488d55d99ef",
+    "src/ui/parse.worker.ts": "e5bb9bcd1a82cae815dc2d79599bb8e053cf80e5517e6f3226edd582b3b84603",
+    "src/ui/sections/bestRoute.ts": "25411bdaf77d919820e32f71055780ca6b96b773961aa18258a040642dfb6284",
+    "src/ui/sections/deltaChart.ts": "51ae66700d46fa3b66644d6aa13a37d6995e9ab80d6c6aacdcbb3f92ac0bbff8",
+    "src/ui/sections/distributions.ts": "1c40aa2e43b432d4a4ef67f8cd3813e902e975ac7c69460793da0f9e81890c66",
+    "src/ui/sections/pbOdds.ts": "427ac8470e59af3d08e62da9de81158cfb898a69ce12a0865d78892accb3247b",
+    "src/ui/sections/practiceReview.ts": "1f1157ed158fb113c82b921fd75757b45226b3f8759e7105077a65108453bc43",
+    "src/ui/sections/segmentTable.ts": "51beb9019ced1c7fad4b4705112d51198e6a7d97dc63777fe325a7767e885ac3",
+    "src/ui/sections/survivalChart.ts": "234188986ae67cb649c9aab43962c847dd44ee61deb09e6afba892a567312166"
+  },
+  "allWorkingSourceBytesMatchCleanArchive": true,
+  "browserNotes": "Initial parallel run: 72 pass, one accessibility contrast finding and one 45 s accessibility timeout. Both failed checks pass isolated unchanged (2/2); complete serial replay passes 74/74. Retained initial results are not called passing.",
+  "servedAssetsReceipt": "served-assets.json",
+  "registryRelease": false,
+  "manualHostedDeployment": false
+}

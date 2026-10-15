@@ -1,0 +1,454 @@
+{
+  "date": "2026-10-15",
+  "baselineCommit": "403d5c6e87265a409758ff4cd4ad1a69128c893e",
+  "referenceCommit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+  "referenceTotalToleranceSeconds": 1e-09,
+  "referenceExecutableSha256": "6eb0bc78278b1ee61958d0201f5ebe2d877d36da5fd762ceba1625fe2b4c4bab",
+  "baselineSources": {
+    "src/core/best-route.ts": "c3ab4a4fba78ab9b60f3c6f1399621759b4303c70a2dc0aab2d854547d7c66ee",
+    "src/core/decode.ts": "a65eaa932e2acfa7c560b26a31b927c61afff3762f8e62898d6874f491f1c078",
+    "src/core/errors.ts": "441bc037c26631ab72d076b012b6352a357bad8731edc9f4156f888d07a6090e",
+    "src/core/montecarlo.ts": "0ead32edbb11408a44a4435cd8c1bf8b9321881f10ab25a51b22d3b1d682806a",
+    "src/core/names.ts": "ac29fdc5b26eb252deb73dbeaa11edfc25fa9047964a6c2af3ef10328b666432",
+    "src/core/parser.ts": "2e531a2b7e2f7398855fb6701fb92b8b894ef6a1bdf38bc50b3142239a60cbed",
+    "src/core/review.ts": "9f0409ce3312eb64e6a849997f99aae2bbee829bf1330babdc67561480b37157",
+    "src/core/rng.ts": "498e3d9a3b5861f8169d475ed391db4cb3c6de6848a10743d50aef611639f08e",
+    "src/core/stats.ts": "3fbae37f8e699bd63e7e99eb955c1e02fe66e2b166f4edd4e9cb7733a3e3fd8a",
+    "src/core/timespan.ts": "d47cb41ce9f9dd40af4c5ae497adaae5d4e0cfe918d2389cc653166702c1f9cb",
+    "src/core/types.ts": "1c09d41ee70e78770b86c220d5dd4ded548de19c6fd6f1d5b8786d743faeab8d",
+    "src/core/xml-helpers.ts": "bf7554c1bcca39776d068e2271a27df5ac4c4ed5bd88df533d13409401409ab9"
+  },
+  "controls": 25,
+  "beforePassing": 4,
+  "afterPassing": 25,
+  "exactInputAcceptedByReference": 3,
+  "referenceLimitation": "The pinned reference rejects annotated forms. Expat establishes their XML equivalence; original native records establish expected values.",
+  "cases": [
+    {
+      "id": "synthetic-original",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": true,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": true,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "comment-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "pi-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "cdata-name-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "comment-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "pi-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "cdata-name-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "comment-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "pi-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "cdata-name-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "opaque-literal-closers-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "rejected",
+      "afterStatus": "parsed",
+      "beforeTotals": null,
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "opaque-literal-closers-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "rejected",
+      "afterStatus": "parsed",
+      "beforeTotals": null,
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "opaque-literal-closers-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "rejected",
+      "afterStatus": "parsed",
+      "beforeTotals": null,
+      "afterTotals": [
+        160,
+        210
+      ]
+    },
+    {
+      "id": "malformed-opaque-GameIcon",
+      "xmlWellFormedByExpat": false,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "application rejects",
+      "beforeStatus": "parsed",
+      "afterStatus": "rejected",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": null
+    },
+    {
+      "id": "malformed-opaque-Icon",
+      "xmlWellFormedByExpat": false,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "application rejects",
+      "beforeStatus": "parsed",
+      "afterStatus": "rejected",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": null
+    },
+    {
+      "id": "malformed-opaque-AutoSplitterSettings",
+      "xmlWellFormedByExpat": false,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "application rejects",
+      "beforeStatus": "parsed",
+      "afterStatus": "rejected",
+      "beforeTotals": [
+        160,
+        210
+      ],
+      "afterTotals": null
+    },
+    {
+      "id": "nested-icon-in-name",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": true,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "application rejects",
+      "beforeStatus": "rejected",
+      "afterStatus": "rejected",
+      "beforeTotals": null,
+      "afterTotals": null
+    },
+    {
+      "id": "destrega-original",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": true,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": true,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        1511.0169999999998,
+        null
+      ],
+      "afterTotals": [
+        1511.0169999999998,
+        null
+      ]
+    },
+    {
+      "id": "destrega-comment-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        1609.8059999999998,
+        null
+      ],
+      "afterTotals": [
+        1511.0169999999998,
+        null
+      ]
+    },
+    {
+      "id": "destrega-comment-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        1609.8059999999998,
+        null
+      ],
+      "afterTotals": [
+        1511.0169999999998,
+        null
+      ]
+    },
+    {
+      "id": "destrega-comment-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        1609.8059999999998,
+        null
+      ],
+      "afterTotals": [
+        1511.0169999999998,
+        null
+      ]
+    },
+    {
+      "id": "zero-divide-2-original",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": true,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": true,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        332.93300000000005,
+        null
+      ],
+      "afterTotals": [
+        332.93300000000005,
+        null
+      ]
+    },
+    {
+      "id": "zero-divide-2-comment-Icon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        332.93300000000005,
+        null
+      ],
+      "afterTotals": [
+        332.93300000000005,
+        null
+      ]
+    },
+    {
+      "id": "zero-divide-2-comment-GameIcon",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        332.93300000000005,
+        null
+      ],
+      "afterTotals": [
+        332.93300000000005,
+        null
+      ]
+    },
+    {
+      "id": "zero-divide-2-comment-AutoSplitterSettings",
+      "xmlWellFormedByExpat": true,
+      "beforeMeetsContract": false,
+      "afterMeetsContract": true,
+      "referenceAcceptsExactInput": false,
+      "oracle": "independent Expat tree plus native original data",
+      "beforeStatus": "parsed",
+      "afterStatus": "parsed",
+      "beforeTotals": [
+        332.93300000000005,
+        null
+      ],
+      "afterTotals": [
+        332.93300000000005,
+        null
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "node": "v26.7.0",
+  "platform": "linux 6.18.54.1-microsoft-standard-WSL2",
+  "logicalCpus": 14,
+  "memoryGiB": 47.047183990478516,
+  "twoWarmupsFiveAlternatingSamples": true,
+  "cpuAffinity": false,
+  "rows": [
+    {
+      "name": "recorded-destrega",
+      "bytes": 84972,
+      "inputSha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "synthetic": false,
+      "status": "parsed",
+      "runHash": "3d8b94eb5d7decb12980e3a34b6bf8422c91f3318ec1b480796801d1e7440f81",
+      "beforeMilliseconds": [
+        11.634715999999912,
+        19.10841400000004,
+        7.997329000000036,
+        9.395033000000012,
+        11.71512400000006
+      ],
+      "afterMilliseconds": [
+        18.883136000000036,
+        16.95989700000007,
+        9.33446200000003,
+        13.612622999999985,
+        22.503512999999998
+      ],
+      "beforeMedianMs": 11.634715999999912,
+      "afterMedianMs": 16.95989700000007
+    },
+    {
+      "name": "bundled-history",
+      "bytes": 748304,
+      "inputSha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5",
+      "synthetic": true,
+      "status": "parsed",
+      "runHash": "ae0a1ec9ded22af284b63f95b77ff94c96b7a9efa7bff2c63c279cf36f2b7c52",
+      "beforeMilliseconds": [
+        264.25967800000035,
+        289.05656799999997,
+        347.3351560000001,
+        226.3964679999999,
+        197.5225129999999
+      ],
+      "afterMilliseconds": [
+        293.72895800000015,
+        223.76524700000027,
+        268.71693400000004,
+        237.12874699999975,
+        197.0605740000001
+      ],
+      "beforeMedianMs": 264.25967800000035,
+      "afterMedianMs": 237.12874699999975
+    },
+    {
+      "name": "opaque-icon-1MiB",
+      "bytes": 1051835,
+      "inputSha256": "8886e4b234e0f735745fec6b9863d19f718afbc91d0b58a1f5669e1e6628ef3d",
+      "synthetic": true,
+      "status": "parsed",
+      "runHash": "1a917590cce7c6678058cdfbc72e09e943266d14c16c4c26c0c549e9e358c96b",
+      "beforeMilliseconds": [
+        1.7038250000005064,
+        0.84906299999966,
+        1.326031000000512,
+        1.247016999999687,
+        1.3961970000000292
+      ],
+      "afterMilliseconds": [
+        14.672348000000056,
+        18.624845000000278,
+        14.789416000000529,
+        13.779059000000416,
+        13.420196000000033
+      ],
+      "beforeMedianMs": 1.326031000000512,
+      "afterMedianMs": 14.672348000000056
+    },
+    {
+      "name": "opaque-icon-10MiB",
+      "bytes": 10489019,
+      "inputSha256": "332a0188d800904744af4793a10708bf9e0fac03374607832b4f8931f09ad3d0",
+      "synthetic": true,
+      "status": "parsed",
+      "runHash": "1a917590cce7c6678058cdfbc72e09e943266d14c16c4c26c0c549e9e358c96b",
+      "beforeMilliseconds": [
+        3.0134640000005675,
+        1.8481969999993453,
+        5.892487000000074,
+        2.1568569999999454,
+        2.3697570000003907
+      ],
+      "afterMilliseconds": [
+        125.02734099999998,
+        326.4397879999997,
+        121.3958390000007,
+        141.92815999999948,
+        361.85315399999945
+      ],
+      "beforeMedianMs": 2.3697570000003907,
+      "afterMedianMs": 141.92815999999948
+    },
+    {
+      "name": "opaque-settings-25000",
+      "bytes": 403295,
+      "inputSha256": "3f05700fe214a235d9767528b91187d5cb1372192217f59d1cb18caad620329f",
+      "synthetic": true,
+      "status": "parsed",
+      "runHash": "1a917590cce7c6678058cdfbc72e09e943266d14c16c4c26c0c549e9e358c96b",
+      "beforeMilliseconds": [
+        2.2752690000006623,
+        2.4984220000005735,
+        2.1300550000005387,
+        2.5632779999996274,
+        2.812292999999954
+      ],
+      "afterMilliseconds": [
+        17.028502999999546,
+        37.43143299999974,
+        42.95843799999966,
+        50.3820110000006,
+        20.944728999999825
+      ],
+      "beforeMedianMs": 2.4984220000005735,
+      "afterMedianMs": 37.43143299999974
+    },
+    {
+      "name": "unclosed-settings-32000",
+      "bytes": 704011,
+      "inputSha256": "2e83342565863b0c8f4d4bd42358ccc4e0922ff6549b52379ff74351bd104030",
+      "synthetic": true,
+      "status": "rejected",
+      "runHash": "20cd938a2ea64f612b3523bc9219130c6fc66cd09b394ea38437488c0b8898b2",
+      "beforeMilliseconds": [
+        31.498977999999624,
+        29.73251099999925,
+        28.344498999999814,
+        30.514640999999756,
+        36.80681799999911
+      ],
+      "afterMilliseconds": [
+        22.701076999999714,
+        23.864204999999856,
+        21.177585999999792,
+        23.562247000000752,
+        44.54917900000055
+      ],
+      "beforeMedianMs": 30.514640999999756,
+      "afterMedianMs": 23.562247000000752
+    }
+  ]
+}

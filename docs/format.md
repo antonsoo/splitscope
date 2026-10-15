@@ -196,11 +196,16 @@ reference starts the previous split at zero; the simulator does not add it twice
 ## Performance
 
 `GameIcon`, per-segment `Icon`, and `AutoSplitterSettings` can be the bulk of
-a real `.lss` file's bytes (base64 images, serialized autosplitter state) and
-are never read by this app, so `parser.ts` strips them with a linear string scan
-before the general XML parse (`stripOpaqueBlobs`). This is a real, measured
-win, not a guess — see the "Accuracy and limitations" section of the README
-for the number on this repository's own sample file.
+a real `.lss` file's bytes. `parser.ts` uses `fast-xml-parser`'s `stopNodes`
+at `Run.GameIcon`, `Run.Segments.Segment.Icon` and `Run.AutoSplitterSettings`.
+It validates the unchanged source XML and avoids building a child tree for
+those payloads. Comments, processing instructions and CDATA keep their XML
+meaning. Nested elements in a scalar field such as `Name` remain invalid.
+
+The previous raw-text preprocessor could delete actual timing records between
+tag-like comments and rewrite literal names before XML validation. The
+[opaque XML study](../studies/opaque-xml/README.md) retains the correction,
+independent XML equivalence checks, public-file replay and validation cost.
 
 ### Precision of simulated PB comparisons (source checkout)
 

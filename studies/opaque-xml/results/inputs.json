@@ -1,0 +1,152 @@
+[
+  {
+    "id": "synthetic-original",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3250,
+    "sha256": "a8054dfb97531066fc63ba9829de62add32fbcc7bc26cabb40793ed620bb17ad"
+  },
+  {
+    "id": "comment-Icon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3281,
+    "sha256": "84fa012076a20570c6d2b9aea19807df29284fc1ee86004a475c658460d1eb87"
+  },
+  {
+    "id": "pi-Icon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3283,
+    "sha256": "d938f1cc0922600502c6a06ba285a583a1a621de61486b237ae7ea6cd1f3ec5f"
+  },
+  {
+    "id": "cdata-name-Icon",
+    "expectedName": "Cave <Icon>literal</Icon> Entrance",
+    "bytes": 3283,
+    "sha256": "f3e0767ba536f71ac15fea976c025995430be4da63f8e4ddd930e254e895acbc"
+  },
+  {
+    "id": "comment-GameIcon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3289,
+    "sha256": "215b8fccf79466a6a31ad0b508a259733a91931834349fd1f56d9c0917f486f4"
+  },
+  {
+    "id": "pi-GameIcon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3291,
+    "sha256": "ff9b32bacc332f904e76db029682dc6571b8530717c5b1fac021df1e918c90a8"
+  },
+  {
+    "id": "cdata-name-GameIcon",
+    "expectedName": "Cave <GameIcon>literal</GameIcon> Entrance",
+    "bytes": 3291,
+    "sha256": "5082003a1670b16e29e5143352c31902b5e7d65250795fd5a4325c51d2013fe4"
+  },
+  {
+    "id": "comment-AutoSplitterSettings",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3313,
+    "sha256": "31c93c29d857ddcedcadbec67c81cee7f80f2cb1470e082608b6feacd61e9531"
+  },
+  {
+    "id": "pi-AutoSplitterSettings",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3315,
+    "sha256": "a2ba4ca9cdf3c77d854d5c97156719cdd23eb9d31de8d812bb50d8ee9fef3283"
+  },
+  {
+    "id": "cdata-name-AutoSplitterSettings",
+    "expectedName": "Cave <AutoSplitterSettings>literal</AutoSplitterSettings> Entrance",
+    "bytes": 3315,
+    "sha256": "649f8109467f4746f11a489c4f0cc1f39e6cd3a4896f201a09cc1a6e79fd7429"
+  },
+  {
+    "id": "opaque-literal-closers-Icon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3310,
+    "sha256": "eadbe1b49c0f7645b665c379f1c38cfd94fc8eb81f54348b25490a64480dd0cc"
+  },
+  {
+    "id": "opaque-literal-closers-GameIcon",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3322,
+    "sha256": "c8436e499ccff302f2a69e15eb734267e51c4d8891b8f9ad0aee885f38a29b88"
+  },
+  {
+    "id": "opaque-literal-closers-AutoSplitterSettings",
+    "equivalentTo": "synthetic-original",
+    "bytes": 3382,
+    "sha256": "60bb67b8a74b3c4f8620c495fd5f64e8ff8ded336ba4b98804784faf8e557ef5"
+  },
+  {
+    "id": "malformed-opaque-GameIcon",
+    "expected": "rejected",
+    "bytes": 3269,
+    "sha256": "ca681f88dd694c688ed653361b5fe04d2a58a110e2442b55a6ed05cbd4dc46a7"
+  },
+  {
+    "id": "malformed-opaque-Icon",
+    "expected": "rejected",
+    "bytes": 3265,
+    "sha256": "3ce5c73e3bd7c20e9678808179888a72ce67f5e101f33930673bb4051411a0f7"
+  },
+  {
+    "id": "malformed-opaque-AutoSplitterSettings",
+    "expected": "rejected",
+    "bytes": 3305,
+    "sha256": "7bca9aab59877610169148b2c7fad54466bccfec4171b2020471dce676bad474"
+  },
+  {
+    "id": "nested-icon-in-name",
+    "expected": "rejected",
+    "bytes": 3270,
+    "sha256": "acab6a9748fc9cd55ae94c91bb397849e36e146d17d60844512a9920efb92460"
+  },
+  {
+    "id": "destrega-original",
+    "equivalentTo": "destrega-original",
+    "bytes": 84972,
+    "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54"
+  },
+  {
+    "id": "destrega-comment-Icon",
+    "equivalentTo": "destrega-original",
+    "bytes": 85003,
+    "sha256": "2ecfb7562c523652738d141c82f58d847ed8c9d82ab14b36b72362dc2741a95e"
+  },
+  {
+    "id": "destrega-comment-GameIcon",
+    "equivalentTo": "destrega-original",
+    "bytes": 85011,
+    "sha256": "eee88d8de1c4815851907497bf0b122e8c8df16031798100eeb25435a1407c7a"
+  },
+  {
+    "id": "destrega-comment-AutoSplitterSettings",
+    "equivalentTo": "destrega-original",
+    "bytes": 85035,
+    "sha256": "ca01cdbbccc9850f6602e03ee435f55a58cfd120c9f08f2106b5dea8f507c330"
+  },
+  {
+    "id": "zero-divide-2-original",
+    "equivalentTo": "zero-divide-2-original",
+    "bytes": 75529,
+    "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb"
+  },
+  {
+    "id": "zero-divide-2-comment-Icon",
+    "equivalentTo": "zero-divide-2-original",
+    "bytes": 75560,
+    "sha256": "3f898f706faea42c265c62161421ba2671be82cce22a960f294a32532e4667f4"
+  },
+  {
+    "id": "zero-divide-2-comment-GameIcon",
+    "equivalentTo": "zero-divide-2-original",
+    "bytes": 75568,
+    "sha256": "c15c01a638f49b9aa0ef5b4fcf4604eb2365858cab96b1bec2e5fdb758bead3d"
+  },
+  {
+    "id": "zero-divide-2-comment-AutoSplitterSettings",
+    "equivalentTo": "zero-divide-2-original",
+    "bytes": 75592,
+    "sha256": "acedddc4660f7fc186687778169de7845491e272d1cc085cc3b5c062d9638c91"
+  }
+]
