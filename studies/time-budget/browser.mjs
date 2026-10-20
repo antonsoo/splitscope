@@ -58,6 +58,14 @@ for (const [name, engine, width, theme] of profiles) {
   const receipt = { engine: name, width, theme, url: base, mode, downloads: [], interactions: [] };
   try {
     await page.goto(base);
+    if (mode !== "before") {
+      await expect(page).toHaveTitle("splitscope · inspect your LiveSplit attempt history");
+      await expect(page.locator("main h1")).toHaveText("Open the history behind your splits.");
+      assert.equal(
+        await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),
+        false,
+      );
+    }
     if (theme === "light") await page.getByRole("button", { name: "Light", exact: true }).click();
     async function upload(bytes, filename) {
       await page

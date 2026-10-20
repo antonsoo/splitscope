@@ -536,9 +536,9 @@ export function mountApp(root: HTMLElement): void {
   function renderContent(): HTMLElement {
     if (!state.run) {
       return el("div", { class: "empty" }, [
-        el("h1", { tabindex: -1 }, ["Your LiveSplit file knows more than your timer shows."]),
+        el("h1", { tabindex: -1 }, ["Open the history behind your splits."]),
         el("p", { class: "lede" }, [
-          "Find your realistic time save, your reset habits, and your odds of a PB — from the .lss file you already have. Everything runs in your browser; nothing is uploaded.",
+          "Compare recorded attempts, inspect the time behind your resets, and open the saved records behind a sum of best. Analysis stays in your browser.",
         ]),
         el(
           "div",
