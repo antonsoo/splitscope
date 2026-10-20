@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 5000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/splitscope/",
+  "state": "verified",
+  "attempts": 1,
+  "startedAtUtc": "2026-10-20T08:09:35.868Z",
+  "checkedAtUtc": "2026-10-20T08:09:36.766Z",
+  "buildManifestSha256": "2fef527852e8d188cee008b9cd2ce4ed61bb049c11685767ff1058e31a72ed8e",
+  "expectedFileCount": 18,
+  "checkedFileCount": 18,
+  "verifiedFileCount": 18,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 2231,
+    "sha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "httpStatus": 200,
+    "observedBytes": 2231,
+    "observedSha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 2231,
+    "sha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "httpStatus": 200,
+    "observedBytes": 2231,
+    "observedSha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+      "bytes": 34704,
+      "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-latin-CaVRRdDk.woff2",
+      "httpStatus": 200,
+      "observedBytes": 34704,
+      "observedSha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+      "state": "verified"
+    },
+    {
+      "path": "assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+      "bytes": 19588,
+      "sha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-latin-ext-Dg-wlmqe.woff2",
+      "httpStatus": 200,
+      "observedBytes": 19588,
+      "observedSha256": "768af2923e0ab1549f1dfba0a5c8ea749c4c01f01d8e77ffaf7fcd12f57a0a24",
+      "state": "verified"
+    },
+    {
+      "path": "assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+      "bytes": 9320,
+      "sha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a",
+      "url": "https://antonsoo.github.io/splitscope/assets/hanken-grotesk-vietnamese-CHiFlh_0.woff2",
+      "httpStatus": 200,
+      "observedBytes": 9320,
+      "observedSha256": "992b5d147edde9d637ce22e7bb9cc9e6909c05410226b36a2e581ada9877eb4a",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-DA_d0CwC.css",
+      "bytes": 65953,
+      "sha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-DA_d0CwC.css",
+      "httpStatus": 200,
+      "observedBytes": 65953,
+      "observedSha256": "58a37a67a82e532ec1a8b5fa333c35a3df2205d6f50daea7d626c05edb297a36",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-Igny-MLL.js",
+      "bytes": 141882,
+      "sha256": "8e8c688daa27b7b66e5135e269d0266dda664db8ff1202779a67b3258b92e847",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-Igny-MLL.js",
+      "httpStatus": 200,
+      "observedBytes": 141882,
+      "observedSha256": "8e8c688daa27b7b66e5135e269d0266dda664db8ff1202779a67b3258b92e847",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-Igny-MLL.js.map",
+      "bytes": 265560,
+      "sha256": "72ff2266cf1125f1b7e377dade7fd3aee037d8ae5db4d09e14233c1a81c8c3fb",
+      "url": "https://antonsoo.github.io/splitscope/assets/index-Igny-MLL.js.map",
+      "httpStatus": 200,
+      "observedBytes": 265560,
+      "observedSha256": "72ff2266cf1125f1b7e377dade7fd3aee037d8ae5db4d09e14233c1a81c8c3fb",
+      "state": "verified"
+    },
+    {
+      "path": "assets/martian-mono-cyrillic-B84CD5C_.woff2",
+      "bytes": 10560,
+      "sha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-cyrillic-B84CD5C_.woff2",
+      "httpStatus": 200,
+      "observedBytes": 10560,
+      "observedSha256": "2d30189f145a92ec118dc73194c7d813f218db9ec084444f6c071d419ce6b529",
+      "state": "verified"
+    },
+    {
+      "path": "assets/martian-mono-latin-5W32yIyr.woff2",
+      "bytes": 23556,
+      "sha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-latin-5W32yIyr.woff2",
+      "httpStatus": 200,
+      "observedBytes": 23556,
+      "observedSha256": "d0be3a78a854bcea53a9dc26b6620ba322eaa515ccbd92bb4b6ec20a3c91b291",
+      "state": "verified"
+    },
+    {
+      "path": "assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+      "bytes": 15908,
+      "sha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5",
+      "url": "https://antonsoo.github.io/splitscope/assets/martian-mono-latin-ext-DlL6xMw5.woff2",
+      "httpStatus": 200,
+      "observedBytes": 15908,
+      "observedSha256": "c26a87eedc388afebc0c6331d99b248196ea64a883322fc519831278ffd169d5",
+      "state": "verified"
+    },
+    {
+      "path": "assets/parse.worker-DuQ9bvF_.js.map",
+      "bytes": 342545,
+      "sha256": "c3b2fc8a288355a4cf29a64a01e48cc9edec1f5a23677a21bcfe103cfd2d6447",
+      "url": "https://antonsoo.github.io/splitscope/assets/parse.worker-DuQ9bvF_.js.map",
+      "httpStatus": 200,
+      "observedBytes": 342545,
+      "observedSha256": "c3b2fc8a288355a4cf29a64a01e48cc9edec1f5a23677a21bcfe103cfd2d6447",
+      "state": "verified"
+    },
+    {
+      "path": "crystal-caverns-any.lss",
+      "bytes": 748304,
+      "sha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5",
+      "url": "https://antonsoo.github.io/splitscope/crystal-caverns-any.lss",
+      "httpStatus": 200,
+      "observedBytes": 748304,
+      "observedSha256": "10cd33b033b56e1f5111edd88492b6c8407760aaa80ee19e4e01f99e5971c3d5",
+      "state": "verified"
+    },
+    {
+      "path": "crystal-caverns-fresh-start.lss",
+      "bytes": 13892,
+      "sha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2",
+      "url": "https://antonsoo.github.io/splitscope/crystal-caverns-fresh-start.lss",
+      "httpStatus": 200,
+      "observedBytes": 13892,
+      "observedSha256": "428b6689bc602b84e4c5b6c3fb3015af865de921e25ab59ccdf66988f5acc2b2",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2231,
+      "sha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+      "url": "https://antonsoo.github.io/splitscope/index.html",
+      "httpStatus": 200,
+      "observedBytes": 2231,
+      "observedSha256": "8543a04f690d26601459ef46c1ca0ce08d57f29f81e8b342747ced0140c0c97b",
+      "state": "verified"
+    },
+    {
+      "path": "recorded/LICENSE.txt",
+      "bytes": 1067,
+      "sha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7",
+      "url": "https://antonsoo.github.io/splitscope/recorded/LICENSE.txt",
+      "httpStatus": 200,
+      "observedBytes": 1067,
+      "observedSha256": "ec7710f84321e57785f1d72131e5464e235b83013e5d2ab23ff2eb7924b07eb7",
+      "state": "verified"
+    },
+    {
+      "path": "recorded/destrega-source.json",
+      "bytes": 458,
+      "sha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a",
+      "url": "https://antonsoo.github.io/splitscope/recorded/destrega-source.json",
+      "httpStatus": 200,
+      "observedBytes": 458,
+      "observedSha256": "30996b96edde7b3be7c7dcf916903c4a52c335f6e2e90d363f898e81d2272b8a",
+      "state": "verified"
+    },
+    {
+      "path": "recorded/destrega.lss",
+      "bytes": 84972,
+      "sha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "url": "https://antonsoo.github.io/splitscope/recorded/destrega.lss",
+      "httpStatus": 200,
+      "observedBytes": 84972,
+      "observedSha256": "6e69bb66fc8b83e20821614d652ced68578ec91f6c7c5e896bedae1e4c34db54",
+      "state": "verified"
+    },
+    {
+      "path": "recorded/source.json",
+      "bytes": 488,
+      "sha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf",
+      "url": "https://antonsoo.github.io/splitscope/recorded/source.json",
+      "httpStatus": 200,
+      "observedBytes": 488,
+      "observedSha256": "7ef39e8e6ced452dafddeb087fb231ffe24aade4ce52bae51e4ce855e3d066cf",
+      "state": "verified"
+    },
+    {
+      "path": "recorded/zero-divide-2.lss",
+      "bytes": 75529,
+      "sha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "url": "https://antonsoo.github.io/splitscope/recorded/zero-divide-2.lss",
+      "httpStatus": 200,
+      "observedBytes": 75529,
+      "observedSha256": "67946e46df7b51b64d99211b5ca3fd385d504ad70ad79c3bb8f300e67e4c22eb",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

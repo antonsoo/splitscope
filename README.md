@@ -47,7 +47,7 @@ To run it from source:
 
 ```sh
 git clone https://github.com/antonsoo/splitscope.git && cd splitscope
-npm install
+npm ci
 npm run dev
 ```
 

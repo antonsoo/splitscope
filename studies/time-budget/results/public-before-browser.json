@@ -1,0 +1,22 @@
+[
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "theme": "dark",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "mode": "before",
+    "downloads": [
+      {
+        "label": "before",
+        "file": "chromium-1440-before.json",
+        "sha256": "2b129f03c4837e556a13fb62106e547232e31e9d752ed0268152d950d152f499",
+        "bytes": 74911
+      }
+    ],
+    "interactions": [],
+    "screenshot": "before-chromium-1440.png",
+    "externalRequests": 0,
+    "runtimeErrors": 0,
+    "elapsedMilliseconds": 568
+  }
+]

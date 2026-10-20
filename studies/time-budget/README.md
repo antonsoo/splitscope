@@ -78,6 +78,21 @@ unknown upload provenance and native clock controls. Offline interactions and
 downloads operate on loaded inputs. Both themes are used; each profile has zero
 runtime/CSP/unhandled-rejection errors, off-origin requests and Axe violations.
 
+The clean Node 24.22.0 install passes 245 unit tests and 74 existing browser
+checks. Its 20 static files are byte-identical to the Node 26.7.0 build. All 372
+tracked files in the final copied source tree match the immutable Git archive.
+The full suite runs at `9008ab4`; the subsequent `ead0599` changes only landing
+copy, HTML metadata and their browser assertions, leaving functional code and
+dependencies identical. The 32-download study then exercises that final artifact
+in all four profiles. [`results/clean-build.json`](results/clean-build.json)
+records the boundaries.
+
+The local before replay uses the original checkout `b961309`. The existing
+public artifact is older (`gh-pages` `fb235031`); its 18 served files are
+verified separately against that branch's bytes, and a real public before replay
+confirms the missing time breakdown. Both observations remain separate from the
+new artifact and its publication.
+
 The screenshots in `docs/assets/time-budget/` are actual unedited local views.
 [`results/expected.json`](results/expected.json) retains only the two browser
 inputs' checked configurations. Full implementation and upstream JSONL outputs
