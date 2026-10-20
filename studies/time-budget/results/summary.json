@@ -1,0 +1,2661 @@
+{
+  "publicFiles": 436,
+  "authoredNativeFiles": 1,
+  "accepted": 434,
+  "rejected": [
+    {
+      "id": "SirCabby/splitSync/Test Data/Super Metroid blank.lss",
+      "sha256": "fed149b1aebf644b80c72538d4cc34e6582b899b64cf6a9683acc7d18a74ffc2",
+      "error": "LssParseError: This file is missing required LiveSplit elements: Segments. It may be corrupted or not a splits file."
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash.lss",
+      "sha256": "af26aa09bceaff3d28315e0f917c5cc0aff776095aaa18b8f04c3a2ad44bd66e",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Expected closing tag 'Segment' (opened in line 18, col 5) instead of closing tag 'Name'.:19:45)"
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_fuzz_crash_utf8.lss",
+      "sha256": "72013aef851622652dae8f8ba0624ed1540d771284b0cb10f6607de6809ad9d3",
+      "error": "LssParseError: Could not parse this file as XML. Is it really a LiveSplit .lss file? (Invalid '[    \"Run\",    \"Segments\",    \"Segment\"]' found.:1:1)"
+    }
+  ],
+  "checks": {
+    "cohort_pairs": 1302,
+    "attempts": 85520,
+    "recorded": 85192,
+    "reversed": 9,
+    "missing": 319,
+    "compiled_clock_matches": 85192
+  },
+  "unavailableClocks": [
+    {
+      "id": "zhrakula/nes/Battle City/Battle City - Any% (1 Player, Stage (1-35)).lss",
+      "attemptId": 1493,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "zhrakula/nes/Chip n Dale Rescue Rangers 2/Chip 'n Dale Rescue Rangers 2 - Any% One Player.lss",
+      "attemptId": 239,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "zhrakula/nes/Nuts & Milk/Nuts & Milk - 50 stages completed game A.lss",
+      "attemptId": 470,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "zhrakula/nes/Tengen Tetris (NES)/Tengen Tetris (NES) - 100 Lines.lss",
+      "attemptId": 471,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Backup/Super Metroid - Any% KPDR.lss",
+      "attemptId": 165,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "SirCabby/splitSync/Test Data/Super Metroid - Any% KPDR.lss",
+      "attemptId": 165,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 7,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 8,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 9,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 10,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 11,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 12,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 13,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 14,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 15,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 16,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 17,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 18,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 19,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 20,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 21,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 22,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 23,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 24,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 25,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 26,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 27,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 28,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 29,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 30,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 31,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 32,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 33,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 34,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 35,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 36,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 37,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 38,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 39,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 40,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 41,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 42,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 43,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 44,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 45,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 46,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 47,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 48,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 49,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 50,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 51,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 52,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 53,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 54,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 55,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 56,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 57,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 58,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 59,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 60,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 61,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 62,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 63,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 64,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 65,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 66,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 67,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 68,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 69,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 70,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 71,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 72,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 73,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 74,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 75,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 76,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 77,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 78,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 79,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 80,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 81,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 82,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 83,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 84,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 85,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 86,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 87,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 88,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 89,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 90,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 91,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 92,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 93,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 94,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 95,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 96,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 97,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 98,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 99,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 100,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 101,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 102,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 103,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 104,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 105,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 106,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 107,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 108,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 109,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 110,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 111,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 112,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 113,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 114,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 115,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 116,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 117,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 118,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 119,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 120,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 121,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 122,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 123,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 124,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 125,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/clean_sum_of_best.lss",
+      "attemptId": 126,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.0.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 7,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 8,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 9,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 10,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 11,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 12,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 13,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 14,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 15,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 16,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 17,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 18,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 19,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 20,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 21,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 22,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 23,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 24,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 25,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 26,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.4.lss",
+      "attemptId": 27,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 7,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 8,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 9,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 10,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 11,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 12,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 13,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 14,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 15,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 16,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 17,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 18,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 19,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 20,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 21,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 22,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 23,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 24,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 25,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 26,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 27,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 28,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 29,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 30,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 31,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 32,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 33,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 34,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 35,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 36,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 37,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 38,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 39,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 40,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 41,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 42,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 43,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 44,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 45,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 46,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 47,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 48,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 49,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 50,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 51,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 52,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 53,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 54,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 55,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 56,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 57,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 58,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 59,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 60,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 61,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 62,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 63,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 64,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.5.lss",
+      "attemptId": 65,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6_gametime.lss",
+      "attemptId": 13,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit1.6_gametime.lss",
+      "attemptId": 15,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "LiveSplit/livesplit-core/tests/run_files/livesplit_attempt_ended_bug.lss",
+      "attemptId": 42,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 7,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 8,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 9,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 10,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 11,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 12,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 13,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 14,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 15,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 16,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 17,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 18,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 19,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 20,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 21,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 22,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 23,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 24,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 25,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 26,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/gcb.lss",
+      "attemptId": 27,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 1,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 2,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 3,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 4,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 5,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 7,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 8,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 9,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 10,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 11,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 12,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 13,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 14,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 15,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 16,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 17,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 18,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 19,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 20,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 21,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 22,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 23,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 24,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 25,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 26,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 27,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 28,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 29,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 30,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 31,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 32,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 33,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 34,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 35,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 36,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 37,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 38,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 39,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 40,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 41,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 42,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 43,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 44,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 45,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 46,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 47,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 48,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 49,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 50,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 51,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 52,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 53,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 54,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 55,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 56,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 57,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 58,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 59,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 60,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 61,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 62,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 63,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 64,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "jaspersiebring/saltysplits/tests/run_files/livesplit1.5.lss",
+      "attemptId": 65,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "gonX/livesplit2urn/example.lss",
+      "attemptId": 14,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    },
+    {
+      "id": "authored/native-clocks.lss",
+      "attemptId": 6,
+      "status": "missing",
+      "elapsedSeconds": null,
+      "synchronized": false,
+      "overlap": null
+    },
+    {
+      "id": "authored/native-clocks.lss",
+      "attemptId": 7,
+      "status": "reversed",
+      "elapsedSeconds": null,
+      "synchronized": true,
+      "overlap": null
+    }
+  ],
+  "reference": {
+    "repository": "LiveSplit/livesplit-core",
+    "commit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+    "method": "compiled parser and Attempt::duration; compare only available, nonnegative timestamp pairs"
+  }
+}

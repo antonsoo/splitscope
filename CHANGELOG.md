@@ -4,6 +4,16 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+- Review elapsed attempt time by outcome and inferred reset location alongside
+  reset counts. Sort recent counts or durations, open exact members and inspect
+  saved timestamp pairs, RTA/IGT and pauses. Bundle the unchanged, MIT-licensed
+  Re-Loaded example showing different leaders by count and elapsed time.
+- Preserve unavailable timestamp reasons, whole-second zeros, clock-sync flags
+  and overlap witnesses, including intervals outside the selected groups.
+  Practice JSON schema 2 retains the full time breakdown and clocks; uploads
+  have unknown synthetic provenance. Label the former Playtime headline as
+  Elapsed attempts because its sum includes pauses.
+
 - Preserve timing records and literal names when XML comments, processing
   instructions or CDATA mention icon/settings tags. Replace raw-text rewriting
   with schema-scoped opaque-node handling and validate the original XML before

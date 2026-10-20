@@ -1,3 +1,5 @@
+import { attemptClocks } from "../../core/attempt-clock.js";
+import { comparePracticeTime, type TimeBudget } from "../../core/practice-time.js";
 import {
   type AttemptFilter,
   type AttemptReview,
@@ -59,6 +61,9 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
   let windowSize = Math.min(30, Math.max(1, run.attempts.length));
   let endOrdinal = run.attempts.length;
   let comparison = comparePractice(run, method, windowSize, endOrdinal);
+  let timeBudget = comparePracticeTime(run, comparison);
+  let resetMeasure: "count" | "elapsed" = "count";
+  let resetOrder: "split" | "count" | "elapsed" = "split";
   let side: CohortSide = "recent";
   let filter: AttemptFilter = { outcome: "all", resetSegment: null };
   let page = 0;
@@ -98,7 +103,7 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
       );
       return;
     }
-    section.append(controls(), summaries());
+    section.append(controls(), summaries(), elapsedTable());
     section.append(el("div", { class: "review-columns" }, [resetTable(), attemptList()]));
     if (selectedId !== null) section.append(attemptDetail(selectedId));
     section.append(
@@ -162,6 +167,7 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
     windowSize = size;
     endOrdinal = end;
     comparison = comparePractice(run, method, windowSize, endOrdinal);
+    timeBudget = comparePracticeTime(run, comparison);
     resetSelection();
     render();
   }
@@ -330,11 +336,116 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
     );
   }
 
+  function budgetText(value: TimeBudget): string {
+    if (!value.attempts) return "No attempts";
+    if (!value.timedAttempts) return "Unavailable";
+    if (value.sumStatus === "out-of-range") return "Out of range";
+    return formatSeconds(value.elapsedSeconds, 0);
+  }
+
+  function clockNotes(value: TimeBudget): string[] {
+    return [
+      value.sumStatus === "out-of-range"
+        ? "summed duration exceeds the supported exact integer range"
+        : null,
+      value.unavailable.missing
+        ? `${value.unavailable.missing} missing timestamp ${value.unavailable.missing === 1 ? "pair" : "pairs"}`
+        : null,
+      value.unavailable.invalid
+        ? `${value.unavailable.invalid} invalid timestamp ${value.unavailable.invalid === 1 ? "pair" : "pairs"}`
+        : null,
+      value.unavailable.reversed
+        ? `${value.unavailable.reversed} end-before-start ${value.unavailable.reversed === 1 ? "pair" : "pairs"}`
+        : null,
+      value.unsynchronizedAttempts
+        ? `${value.unsynchronizedAttempts} timed ${value.unsynchronizedAttempts === 1 ? "attempt" : "attempts"} without both clock-sync flags`
+        : null,
+      value.overlappingAttempts
+        ? `${value.overlappingAttempts} timed ${value.overlappingAttempts === 1 ? "attempt overlaps" : "attempts overlap"} another saved attempt`
+        : null,
+    ].filter((text): text is string => text !== null);
+  }
+
+  function elapsedTable(): HTMLElement {
+    const outcomes = [
+      ["All attempts", "total", "all"],
+      ["Completed", "completed", "completed"],
+      ["Inferred resets", "inferredResets", "inferred-reset"],
+      ["Unknown outcomes", "unknown", "unknown"],
+    ] as const;
+    return el("div", { class: "panel review-panel", id: "practice-time-budget" }, [
+      el("h3", {}, ["Elapsed time by outcome"]),
+      el("p", { class: "section-desc" }, [
+        "Saved end minus start, including pauses. Open a total to inspect its attempts.",
+      ]),
+      tableRegion(
+        "Practice elapsed time",
+        el("table", { class: "review-table" }, [
+          headingRow(["Outcome", "Previous", "Recent"]),
+          el(
+            "tbody",
+            {},
+            outcomes.map(([label, field, outcome]) =>
+              el("tr", {}, [
+                el("th", { scope: "row" }, [label]),
+                ...(["previous", "recent"] as const).map((key) => {
+                  const value = timeBudget[key][field];
+                  return el("td", {}, [
+                    el(
+                      "button",
+                      {
+                        type: "button",
+                        class: "review-reset-count",
+                        id: `elapsed-${key}-${field}`,
+                        disabled: !value.attempts,
+                        "aria-label": `Inspect ${label.toLowerCase()} in ${key} group: ${budgetText(value)} elapsed, ${value.timedAttempts} of ${value.attempts} timed`,
+                        onclick: () => chooseGroup(key, { outcome, resetSegment: null }),
+                      },
+                      [
+                        el("span", {}, [budgetText(value)]),
+                        el("span", { class: "review-rate" }, [
+                          `${value.timedAttempts} / ${value.attempts} timed`,
+                        ]),
+                      ],
+                    ),
+                  ]);
+                }),
+              ]),
+            ),
+          ),
+        ]),
+      ),
+      ...(["previous", "recent"] as const).flatMap((key) => {
+        const notes = clockNotes(timeBudget[key].total);
+        return notes.length
+          ? [
+              el("p", { class: "section-desc" }, [
+                `${key === "recent" ? "Recent" : "Previous"}: ${notes.join("; ")}.`,
+              ]),
+            ]
+          : [];
+      }),
+      el("p", { class: "section-desc" }, [
+        "Whole-attempt durations at one-second resolution; gaps between attempts are excluded. Coverage counts include saved zero durations. Clock limits and pause handling are explained below.",
+      ]),
+    ]);
+  }
+
   function resetTable(): HTMLElement {
-    const rows = run.segments
+    const indices = run.segments.map((_segment, index) => index);
+    if (resetOrder !== "split")
+      indices.sort((a, b) => {
+        const metric = (i: number) =>
+          resetOrder === "count"
+            ? (comparison.recent.segments[i]?.resets ?? 0)
+            : (timeBudget.recent.byResetSegment[i]?.elapsedSeconds ?? -1);
+        return metric(b) - metric(a) || a - b;
+      });
+    const rows = indices
       .slice(segmentPage * SEGMENT_PAGE, (segmentPage + 1) * SEGMENT_PAGE)
-      .map((segment, offset) => {
-        const index = segmentPage * SEGMENT_PAGE + offset;
+      .map((index) => {
+        const segment = run.segments[index];
+        if (!segment) return el("tr");
         return el("tr", {}, [
           el("th", { scope: "row" }, [
             el("span", { class: "review-segment-number" }, [`${index + 1}. `]),
@@ -342,7 +453,8 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
           ]),
           ...(["previous", "recent"] as const).map((key) => {
             const counts = comparison[key].segments[index];
-            if (!counts) return el("td");
+            const elapsed = timeBudget[key].byResetSegment[index];
+            if (!counts || !elapsed) return el("td");
             return el("td", {}, [
               el(
                 "button",
@@ -351,23 +463,81 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
                   class: `review-reset-count review-${key}`,
                   id: `resets-${key}-${index}`,
                   disabled: !counts.resets,
-                  "aria-label": `Inspect ${counts.resets} inferred resets at ${segment.label} in ${key} group`,
+                  "aria-label":
+                    resetMeasure === "count"
+                      ? `Inspect ${counts.resets} inferred resets at ${segment.label} in ${key} group`
+                      : `Inspect ${counts.resets} inferred resets at ${segment.label} in ${key} group: ${budgetText(elapsed)} elapsed, ${elapsed.timedAttempts} of ${counts.resets} timed`,
                   onclick: () =>
                     chooseGroup(key, { outcome: "inferred-reset", resetSegment: index }),
                 },
-                [
-                  el("span", {}, [`${counts.resets} / ${counts.started}`]),
-                  el("span", { class: "review-rate" }, [formatPercent(counts.resetRate, 0)]),
-                ],
+                resetMeasure === "count"
+                  ? [
+                      el("span", {}, [`${counts.resets} / ${counts.started}`]),
+                      el("span", { class: "review-rate" }, [formatPercent(counts.resetRate, 0)]),
+                    ]
+                  : [
+                      el("span", {}, [counts.resets ? budgetText(elapsed) : "No resets"]),
+                      el("span", { class: "review-rate" }, [
+                        `${elapsed.timedAttempts} / ${counts.resets} timed`,
+                      ]),
+                    ],
               ),
             ]);
           }),
         ]);
       });
     return el("div", { class: "panel review-panel" }, [
-      el("h3", {}, ["Resets / attempts reaching each segment"]),
+      el("h3", {}, [
+        resetMeasure === "count"
+          ? "Resets / attempts reaching each segment"
+          : "Elapsed time on attempts ending here",
+      ]),
       el("p", { class: "section-desc" }, [
-        "Open a nonzero count to inspect its attempts. Rates use attempts reaching that segment, so later segments have smaller denominators.",
+        resetMeasure === "count"
+          ? "Open a nonzero count to inspect its attempts. Rates use attempts reaching that segment, so later segments have smaller denominators."
+          : "These are whole-attempt durations before an inferred reset here, including earlier segments and pauses. Open a duration to inspect all its attempts, including any without timestamps.",
+      ]),
+      el("div", { class: "review-list-controls" }, [
+        el("label", { for: "practice-reset-measure", class: "review-outcome" }, [
+          "Show",
+          el(
+            "select",
+            {
+              id: "practice-reset-measure",
+              onchange: (event: Event) => {
+                resetMeasure = (event.target as HTMLSelectElement).value as typeof resetMeasure;
+                render();
+              },
+            },
+            [
+              ["count", "Reset counts"],
+              ["elapsed", "Elapsed on resets"],
+            ].map(([value, label]) =>
+              el("option", { value, selected: value === resetMeasure }, [label]),
+            ),
+          ),
+        ]),
+        el("label", { for: "practice-reset-order", class: "review-outcome" }, [
+          "Order",
+          el(
+            "select",
+            {
+              id: "practice-reset-order",
+              onchange: (event: Event) => {
+                resetOrder = (event.target as HTMLSelectElement).value as typeof resetOrder;
+                segmentPage = 0;
+                render();
+              },
+            },
+            [
+              ["split", "Split order"],
+              ["count", "Most resets: recent group"],
+              ["elapsed", "Most elapsed: recent group"],
+            ].map(([value, label]) =>
+              el("option", { value, selected: value === resetOrder }, [label]),
+            ),
+          ),
+        ]),
       ]),
       tableRegion(
         "Practice reset comparison",
@@ -458,7 +628,7 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
         ? tableRegion(
             "Practice attempts",
             el("table", { class: "review-table review-attempt-table" }, [
-              headingRow(["Attempt", "Recorded outcome", method]),
+              headingRow(["Attempt", "Recorded outcome", `Elapsed / ${method}`]),
               el(
                 "tbody",
                 {},
@@ -486,7 +656,15 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
                       ]),
                       el("td", {}, [outcomeLabel(run, row)]),
                       el("td", { class: "review-time" }, [
-                        formatSeconds(pick(row.attempt.time, method)),
+                        el("div", {}, [
+                          formatSeconds(
+                            attemptClocks(run).get(row.attempt.id)?.elapsedSeconds ?? null,
+                            0,
+                          ),
+                        ]),
+                        el("div", { class: "review-rate" }, [
+                          formatSeconds(pick(row.attempt.time, method)),
+                        ]),
                       ]),
                     ],
                   ),
@@ -507,6 +685,7 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
   function attemptDetail(id: number): HTMLElement {
     const row = comparison[side].attempts.find((item) => item.attempt.id === id);
     if (!row) return el("div");
+    const clock = attemptClocks(run).get(id);
     const records = inspectAttempt(run, id, method);
     const rows = records
       .slice(detailPage * SEGMENT_PAGE, (detailPage + 1) * SEGMENT_PAGE)
@@ -570,6 +749,12 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
           ["Back to attempt list"],
         ),
       ]),
+      el("p", { class: "review-attempt-times", id: "practice-attempt-elapsed" }, [
+        `Elapsed from saved timestamps: ${formatSeconds(clock?.elapsedSeconds ?? null, 0)}${clock?.status === "recorded" ? " (includes pauses)" : ` (${clock?.status ?? "unavailable"} timestamp pair)`}.`,
+      ]),
+      el("p", { class: "section-desc" }, [
+        `Clock sync flags · start ${row.attempt.isStartedSynced ? "yes" : "no"} · end ${row.attempt.isEndedSynced ? "yes" : "no"}.${clock?.overlap ? ` Overlaps attempt #${clock.overlap.attemptId}: ${clock.overlap.started} to ${clock.overlap.ended}.` : ""}`,
+      ]),
       el("p", { class: "review-attempt-times" }, [
         `Recorded totals · RTA ${formatSeconds(row.attempt.time.realTime)} · IGT ${formatSeconds(row.attempt.time.gameTime)} · pause ${formatSeconds(row.attempt.pauseTime)}`,
       ]),
@@ -601,6 +786,7 @@ export function createPracticeReview(run: Run, initialMethod: TimingMethod, sour
       if (method === next) return;
       method = next;
       comparison = comparePractice(run, method, windowSize, endOrdinal);
+      timeBudget = comparePracticeTime(run, comparison);
       render();
     },
   };

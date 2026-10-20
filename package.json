@@ -1,7 +1,7 @@
 {
   "name": "splitscope",
   "version": "0.2.4",
-  "description": "In-browser analyzer for LiveSplit (.lss) speedrun files: time save, segment consistency, reset survival, and Monte Carlo PB odds.",
+  "description": "Local LiveSplit history review: inspectable resets, elapsed attempt budgets, segment consistency, and hypothetical best-time routes.",
   "type": "module",
   "author": "Anton Soloviev",
   "license": "MIT",

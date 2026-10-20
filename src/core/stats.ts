@@ -5,6 +5,7 @@
  * no hidden state, no I/O — so each one is independently testable against
  * hand-computed values (see `tests/stats.test.ts`).
  */
+import { parseLiveSplitTimestamp } from "./attempt-clock.js";
 import { bestRoute } from "./best-route.js";
 import { type Attempt, PERSONAL_BEST, pick, type Run, type TimingMethod } from "./types.js";
 
@@ -332,28 +333,6 @@ export interface PlaytimeSummary {
   readonly totalPlaytimeSeconds: number;
   /** Attempts lacking a `started`/`ended` timestamp pair, excluded from the playtime sum. */
   readonly attemptsMissingTimestamps: number;
-}
-
-function parseLiveSplitTimestamp(text: string): number | null {
-  // LiveSplit writes "M/D/YYYY H:mm:ss" (see docs/format.md); Date.parse doesn't reliably
-  // accept that shape across engines, so it's parsed by hand.
-  const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4}) (\d{1,2}):(\d{2}):(\d{2})$/.exec(text.trim());
-  if (!m) return null;
-  const [, month, day, year, hour, minute, second] = m;
-  const date = new Date(0);
-  date.setUTCFullYear(Number(year), Number(month) - 1, Number(day));
-  date.setUTCHours(Number(hour), Number(minute), Number(second), 0);
-  if (
-    Number(year) < 1 ||
-    date.getUTCFullYear() !== Number(year) ||
-    date.getUTCMonth() !== Number(month) - 1 ||
-    date.getUTCDate() !== Number(day) ||
-    date.getUTCHours() !== Number(hour) ||
-    date.getUTCMinutes() !== Number(minute) ||
-    date.getUTCSeconds() !== Number(second)
-  )
-    return null;
-  return date.getTime();
 }
 
 export function playtimeSummary(run: Run): PlaytimeSummary {

@@ -1,63 +1,31 @@
 # splitscope
 
-**Your LiveSplit file knows more than your timer shows.**
+**Inspect the attempts behind your reset counts and recorded time.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/live%20demo-antonsoo.github.io%2Fsplitscope-6fb7ff)](https://antonsoo.github.io/splitscope/)
 
 LiveSplit's `.lss` file can retain thousands of attempts and their segment
-times. splitscope opens that history locally: compare recent practice, inspect
-which attempts contributed to a reset count, find time-save opportunities, and
-estimate PB odds with the model's assumptions visible. Missing or edited
-history limits what the file can establish.
+times. splitscope opens that history locally: compare recent practice, find
+which attempts contributed to a reset count, inspect their original records,
+and calculate hypothetical best-time routes. Missing or edited history limits
+what the file can establish.
 
-**A sum of best needs its source records.** In the source checkout, an unchanged
-public Destrega file now gives **25:11.017**, where adding its individual golds
-previously gave **26:49.806**. A saved skipped-split span accounts for the
-98.789-second difference. Open the combined-split example to inspect the exact
-entries and download the complete calculation. These are hypothetical saved-time
-combinations, not a claim about achievable pace. The
-[compiled LiveSplit comparison](studies/sum-of-best/README.md) checks 2,868
-calculations and every selected source span. This change is **unreleased**.
+In the bundled **Re-Loaded** history, ten resets inferred at Desert account
+for **3:56**, while four at Monestary account for **48:18**. Choose **Open
+time-budget example (Re-Loaded)**, then **Elapsed on resets** and **Most elapsed:
+recent group**. Every duration opens its attempts and saved timestamps. It measures
+the whole attempt before the inferred reset, including pauses and earlier
+segments. [Walkthrough and limits](docs/time-budget.md).
+This addition is in the source checkout and remains unreleased.
 
-![The two original records behind Destrega's faster combined span](docs/assets/sum-of-best/chromium-1440-dark.png)
+![Recorded Re-Loaded attempts: elapsed time by outcome, with reset durations linked to their exact attempts](docs/assets/time-budget/recorded-desktop.png)
 
-**New in this source checkout:** the recorded-practice example compares two
-groups in a public Zero Divide 2 history. Resets inferred at the first fight
-drop from 29 of 30 attempts to 15 of 30; open either count to inspect its exact
-members and original split records. The example is a licensed, unchanged file,
-not simulated gameplay. [Walkthrough and verification](docs/practice-review.md).
-These additions remain unreleased.
-
-![Comparing two groups of actual recorded attempts, with reset counts linked to individual attempts](docs/assets/practice-chromium-1440.png)
-
-## PB odds, checked against what happened next
-
-**Exact ties no longer count as new PBs (source checkout, unreleased).** An
-unchanged public Psychic Force 2 file previously received a 100% PB forecast
-from resampling its one recorded completion. Its segment times sum exactly to
-the saved PB. The forecast now compares integer nanoseconds and reports no
-simulated improvements, while preserving genuine one-nanosecond gains.
-[Recorded input, before/after reports and independent replay](studies/pb-ties/README.md).
-
-
-The recorded backtest found low PB forecasts. Across 51 real attempt histories
-(62,197 attempts, from public repositories), the mean predicted chance of at
-least one PB in the next 50 attempts was **14.3%**; a PB occurred in **30.9%**
-of the 2,513 evaluated windows (777 windows). These windows overlap, so they
-are not independent observations or a count of distinct PB records. It still
-ranks well: its Brier score beats "never", the PB frequency of the last 100
-attempts and the long-run PB frequency at both 10 and 50 attempts ahead,
-except against the long-run frequency on the three held-out runners at 50;
-at 50 only the difference from "never" is clear of zero when runners are
-resampled.
-Widening the recent window until every segment has three samples (source
-checkout, unreleased) lifts the share of stopping points that get a forecast from
-39% to 61% and lowers the 50-attempt Brier score on the points both versions
-forecast, from 0.237 to 0.223, a difference within the noise of nine runners. The 0.2.4 release has neither.
-Only nine repositories supplied forecasts; each is treated as one runner,
-an approximation. Every interval is wide.
-Details, reliability diagram and what did not work: [`studies/pb-odds-backtest`](studies/pb-odds-backtest/README.md).
+You can also inspect the [combined spans behind a sum of best](docs/sum-of-best.md),
+review [changes between practice groups](docs/practice-review.md), and explore
+PB odds with the model's assumptions and [recorded backtest](studies/pb-odds-backtest/README.md)
+visible. These tools describe different questions; a saved-time combination or
+simulation does not establish an achievable pace.
 
 ## Contents
 
@@ -92,6 +60,11 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
   original records, compare with the gold-only sum and export all calculation
   inputs. Missing paths remain unavailable. [Rules and limits](docs/sum-of-best.md).
 
+- **Recorded attempt time (source checkout)**: compare elapsed durations by
+  outcome and inferred reset location, sort reset counts or durations, and inspect
+  every member. Missing and reversed clocks remain unavailable; coverage, clock-sync
+  flags and overlap witnesses travel with the JSON. Includes an unchanged, licensed
+  Re-Loaded history. [Native records and independent accounting](studies/time-budget/README.md).
 - **Recorded practice review (source checkout)**: compare consecutive groups
   ending at any recorded attempt, open reset counts and inspect original split
   records. Skipped, combined and absent times stay distinct. Download both
@@ -149,55 +122,36 @@ Open the URL Vite prints (`http://localhost:5173/splitscope/` by default).
    simulation count live.
 6. **Export → Download Markdown summary** or **Download PNG card** to share.
 
-### Example output
+### Example: recorded attempt time
 
-Running splitscope's Markdown export against this repo's own committed
-sample file (`examples/crystal-caverns-any.lss`, 450 synthetic attempts across
-14 segments) produces, byte for byte:
+The default groups in the bundled Re-Loaded file contain 30 attempts each:
 
-```markdown
-# Crystal Caverns — Any%
+| Saved elapsed time | Previous #99-#128 | Recent #129-#158 |
+| --- | ---: | ---: |
+| All attempts | 3:38:11 | 5:29:15 |
+| Completed attempts | 1:09:23 (3 attempts) | 3:48:01 (10 attempts) |
+| Inferred resets | 2:28:48 (27 attempts) | 1:41:14 (20 attempts) |
 
-Generated by [splitscope](https://antonsoo.github.io/splitscope/) · timing method: RealTime · 450 attempts · 73.1h played
+All 60 attempts have timestamp pairs. One earlier pair lacks both sync flags.
+The groups span several dates; gaps between attempts are excluded. These
+observations do not establish a change in skill or a continuous practice session.
 
-## Headline
+**Download both groups + split records** retains the original attempt fields
+and computed clocks. This is one complete clock record from that download:
 
-- **PB:** 11:48.87
-- **Sum of best:** 10:37.27
-- **Total possible time save:** 1:11.60
-- **Finished attempts:** 246 / 450 (54.7%)
-- **Where runs die most:** Mossy Tunnels (43 resets)
-
-## Biggest time-save opportunities
-
-| Segment | Possible save |
-| --- | ---: |
-| Obsidian Spire | 0:10.67 |
-| Boss Room | 0:09.86 |
-| Mossy Tunnels | 0:07.44 |
-| Echo Chamber | 0:07.30 |
-| Glowing Passage | 0:05.60 |
-
-## PB odds (Monte Carlo)
-
-- **P(next attempt beats PB):** 0.03% (95% CI 0.01%–0.07%)
-- **P(≥ 1 PB in next 50 attempts):** 1.5% (95% CI 0.7%–3.2%)
-- **Expected attempts to next PB:** 3,333 (95% CI 1,528 – 7,273)
-- Based on 20,000 simulated attempts, resampled from the last 30 attempts. The intervals cover simulation noise only. Assumes independent segments and a stationary recent-form window — see the app for full assumptions.
+```json
+{
+  "attemptId": 139,
+  "status": "recorded",
+  "elapsedSeconds": 0,
+  "synchronized": true,
+  "overlap": null
+}
 ```
 
-The `crystal-caverns-any` sample deliberately models a *veteran* runner: 450
-attempts in, the PB is already tight against the sum of best, so the odds of
-beating it on any given attempt are genuinely low — that's not a bug in the
-model, it's what a well-optimized run's odds actually look like. (This repo
-also ships `crystal-caverns-fresh-start.lss`, ten attempts into the same
-category, for the opposite end of that story.)
-
-The panel below is the same file in the app, at its default 8,000
-simulations rather than the export's 20,000, which is why its point
-estimates differ a little; the intervals overlap.
-
-![The PB odds panel: a 2.5% chance of a PB in the next 50 attempts (95% CI 1.0%–6.2%), a 0.05% chance the very next attempt beats PB (95% CI 0.02%–0.13%), and an expected 2,000 attempts to the next PB (95% CI 778–5,143), with the finish rate broken out as both a recent-window and an all-time figure, and live sliders for recent-form window, look-ahead, and simulation count](docs/assets/pb-odds.png)
+Both timestamps for #139 are saved as `11/03/2021 12:59:16`. The zero remains
+an observed, whole-second difference. An absent timestamp instead produces
+`elapsedSeconds: null`, with its reason and without a substituted RTA or IGT.
 
 ## How it works
 
@@ -267,6 +221,22 @@ and PB odds are withheld if it lies in the selected recent window.
 
 This inference assumes histories have not been selectively removed from reset
 attempts. A trimmed history cannot establish where those attempts actually ended.
+
+### Recorded attempt time
+
+The timestamp index parses LiveSplit's saved UTC calendar fields directly.
+Valid end-minus-start differences have whole-second resolution and include
+pauses. The displayed timer offset does not enter this subtraction. It partitions these durations using the
+same completion/reset/unknown-outcome records as the practice review. Missing,
+invalid and end-before-start pairs stay unavailable; timer totals and segment
+sums never fill them. An empty `PauseTime` does not establish zero pause time.
+
+Elapsed sums use integer arithmetic before conversion to the JSON number range.
+Overlapping positive intervals are flagged against the entire recorded history,
+including a source witness when the other attempt lies outside both groups.
+The sum remains a sum of attempt durations, with explicit coverage and clock
+flags; it is not occupied calendar time or a measure of active play.
+[Accounting rules, native-writer controls and compiled LiveSplit comparison](studies/time-budget/README.md).
 
 ### PB odds (Monte Carlo)
 

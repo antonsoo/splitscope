@@ -1,0 +1,8 @@
+{
+  "kind": "authored native-writer controls, not recorded gameplay",
+  "producer": "../oracle.rs",
+  "upstreamCommit": "fb62dd42505b16e813d2779468d81bbad7f01b5e",
+  "file": "native-clocks.lss",
+  "bytes": 2028,
+  "sha256": "2b8eaddb9b322a64064c47c13e62dab7d2123eccc6b1309d852a62a38022e211"
+}

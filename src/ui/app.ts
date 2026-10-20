@@ -49,6 +49,11 @@ const SAMPLE_FILES = [
     synthetic: false,
   },
   {
+    label: "Open time-budget example (Re-Loaded)",
+    path: "recorded/re-loaded.lss",
+    synthetic: false,
+  },
+  {
     label: "Open recorded practice (124 attempts)",
     path: "recorded/zero-divide-2.lss",
     synthetic: false,
@@ -147,7 +152,7 @@ export function mountApp(root: HTMLElement): void {
   async function importRun(
     label: string,
     sourceName: string,
-    isSample: boolean,
+    isSample: boolean | null,
     read: (signal: AbortSignal) => Promise<Uint8Array>,
     retry: () => void,
   ): Promise<void> {
@@ -179,7 +184,7 @@ export function mountApp(root: HTMLElement): void {
         loading: null,
         error: null,
         exportStatus: null,
-        isSample,
+        isSample: isSample === true,
         method: run.segments.some((s) => s.splitTimes.get("Personal Best")?.realTime != null)
           ? "RealTime"
           : run.segments.some((s) => s.splitTimes.get("Personal Best")?.gameTime != null)
@@ -216,7 +221,7 @@ export function mountApp(root: HTMLElement): void {
     void importRun(
       `Reading ${file.name}…`,
       file.name,
-      false,
+      null,
       (signal) => readFileBytes(file, signal),
       () => loadFile(file),
     );
@@ -410,7 +415,7 @@ export function mountApp(root: HTMLElement): void {
             ]),
           ]),
           el("div", { class: "hero-stat" }, [
-            el("p", { class: "hero-stat-label" }, ["Playtime"]),
+            el("p", { class: "hero-stat-label" }, ["Elapsed attempts"]),
             el("p", { class: "hero-stat-value" }, [
               playtime.attemptsMissingTimestamps === run.attempts.length
                 ? "—"
@@ -579,7 +584,7 @@ export function mountApp(root: HTMLElement): void {
             ]),
             el("p", {}, ["or drop a file here · splits.lss lives in your LiveSplit folder"]),
             el("p", { class: "recorded-credit" }, [
-              "Recorded examples: Destrega and Zero Divide 2, shared by ",
+              "Recorded examples: Destrega, Re-Loaded and Zero Divide 2, shared by ",
               el(
                 "a",
                 {

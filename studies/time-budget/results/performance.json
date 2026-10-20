@@ -1,0 +1,25 @@
+{
+  "node": "v26.7.0",
+  "vcpus": 14,
+  "memoryGiB": 47.047183990478516,
+  "platform": "linux",
+  "input": {
+    "id": "zhrakula/nes/Tengen Tetris (NES)/Tengen Tetris (NES) - 100 Lines.lss",
+    "sha256": "6be62df0901704f7a973a38bab871b8a740435810890863c68b05e0b7881d51f",
+    "attempts": 20266,
+    "segments": 4
+  },
+  "scope": "30-attempt groups; cold rebuilds the entire clock index with a fresh wrapper around unchanged parsed records; cached retains that index. Parsing and prior review-count computation excluded. Shared WSL2 host; not a general performance guarantee.",
+  "cold": {
+    "n": 21,
+    "medianMilliseconds": 94.56057800000053,
+    "minMilliseconds": 84.44748700000036,
+    "maxMilliseconds": 125.91816800000015
+  },
+  "cached": {
+    "n": 100,
+    "medianMilliseconds": 0.018145000000004075,
+    "minMilliseconds": 0.009739000000081433,
+    "maxMilliseconds": 0.20157799999924464
+  }
+}

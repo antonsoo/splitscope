@@ -1,4 +1,5 @@
 /** Observed practice cohorts and their original attempt/segment evidence. No forecasting. */
+import { comparePracticeTime } from "./practice-time.js";
 import { furthestSegmentIndex, hasCompletionTime, pbSegmentDuration } from "./stats.js";
 import { type Attempt, type DualTime, pick, type Run, type TimingMethod } from "./types.js";
 
@@ -211,7 +212,8 @@ export interface ReviewSource {
   readonly name: string;
   readonly sha256: string;
   readonly bytes: number;
-  readonly synthetic: boolean;
+  /** Known for bundled examples; null for uploads whose origin has not been established. */
+  readonly synthetic: boolean | null;
 }
 
 export const REVIEW_ASSUMPTIONS = [
@@ -220,6 +222,9 @@ export const REVIEW_ASSUMPTIONS = [
   "Without an overall time, a reset is inferred after the last segment-history entry. Deleted histories or changes to the split layout can invalidate that location.",
   "Final-segment history without an overall time has an unknown outcome. Unknown outcomes remain in reached counts but are never assigned a reset.",
   "An empty entry is not zero. A time following consecutive empty entries covers those segments together. Missing entries do not establish a skipped split.",
+  "Elapsed time is the sum of saved end-minus-start timestamps for those attempts, including pauses and earlier segments. It is not time spent only at the reset segment. Gaps between attempts are excluded.",
+  "Timestamp precision is one second. Missing, invalid and reversed timestamps remain unavailable; timer totals and segment sums do not fill them. An absent PauseTime does not establish zero pause time.",
+  "Unsynchronized clocks and overlapping recorded intervals are flagged. Elapsed totals sum attempt durations; they are not a union of occupied calendar time or a measure of active play.",
   "These are observed counts, not a skill estimate or a test of improvement. Reset choices, routes and recording practices can differ between groups.",
 ] as const;
 
@@ -232,7 +237,7 @@ export function buildPracticeExport(
     [...comparison.previous.attempts, ...comparison.recent.attempts].map((row) => row.attempt.id),
   );
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     source,
     run: {
       gameName: run.gameName,
@@ -244,6 +249,7 @@ export function buildPracticeExport(
     },
     assumptions: REVIEW_ASSUMPTIONS,
     comparison,
+    timeBudget: comparePracticeTime(run, comparison),
     // Sparse original records: absent entries stay absent and imported history
     // outside these attempt cohorts is not presented as observed practice.
     segments: run.segments.map((segment, segmentIndex) => ({

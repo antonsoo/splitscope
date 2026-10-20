@@ -1,0 +1,4916 @@
+{
+  "reloaded": {
+    "id": "AmenAnthem/speedrun-livesplit-splits/Re-Loaded - Any% 1 Player.lss",
+    "sha256": "974777569a55921027bb90144fe174fc301968eef38594190da11a287c7205a7",
+    "clocks": [
+      {
+        "attemptId": 1,
+        "status": "recorded",
+        "elapsedSeconds": 1242,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 2,
+        "status": "recorded",
+        "elapsedSeconds": 2,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 3,
+        "status": "recorded",
+        "elapsedSeconds": 2,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 4,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 5,
+        "status": "recorded",
+        "elapsedSeconds": 204,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 6,
+        "status": "recorded",
+        "elapsedSeconds": 356,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 7,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 8,
+        "status": "recorded",
+        "elapsedSeconds": 2308,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 9,
+        "status": "recorded",
+        "elapsedSeconds": 2005,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 10,
+        "status": "recorded",
+        "elapsedSeconds": 1839,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 11,
+        "status": "recorded",
+        "elapsedSeconds": 1845,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 12,
+        "status": "recorded",
+        "elapsedSeconds": 509,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 13,
+        "status": "recorded",
+        "elapsedSeconds": 1710,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 14,
+        "status": "recorded",
+        "elapsedSeconds": 165,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 15,
+        "status": "recorded",
+        "elapsedSeconds": 89,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 16,
+        "status": "recorded",
+        "elapsedSeconds": 1668,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 17,
+        "status": "recorded",
+        "elapsedSeconds": 747,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 18,
+        "status": "recorded",
+        "elapsedSeconds": 529,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 19,
+        "status": "recorded",
+        "elapsedSeconds": 1612,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 20,
+        "status": "recorded",
+        "elapsedSeconds": 1078,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 21,
+        "status": "recorded",
+        "elapsedSeconds": 90,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 22,
+        "status": "recorded",
+        "elapsedSeconds": 144,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 23,
+        "status": "recorded",
+        "elapsedSeconds": 39,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 24,
+        "status": "recorded",
+        "elapsedSeconds": 175,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 25,
+        "status": "recorded",
+        "elapsedSeconds": 223,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 26,
+        "status": "recorded",
+        "elapsedSeconds": 1594,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 27,
+        "status": "recorded",
+        "elapsedSeconds": 89,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 28,
+        "status": "recorded",
+        "elapsedSeconds": 45,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 29,
+        "status": "recorded",
+        "elapsedSeconds": 389,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 30,
+        "status": "recorded",
+        "elapsedSeconds": 395,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 31,
+        "status": "recorded",
+        "elapsedSeconds": 76,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 32,
+        "status": "recorded",
+        "elapsedSeconds": 170,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 33,
+        "status": "recorded",
+        "elapsedSeconds": 531,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 34,
+        "status": "recorded",
+        "elapsedSeconds": 42,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 35,
+        "status": "recorded",
+        "elapsedSeconds": 159,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 36,
+        "status": "recorded",
+        "elapsedSeconds": 1602,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 37,
+        "status": "recorded",
+        "elapsedSeconds": 40,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 38,
+        "status": "recorded",
+        "elapsedSeconds": 182,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 39,
+        "status": "recorded",
+        "elapsedSeconds": 1563,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 40,
+        "status": "recorded",
+        "elapsedSeconds": 91,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 41,
+        "status": "recorded",
+        "elapsedSeconds": 66,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 42,
+        "status": "recorded",
+        "elapsedSeconds": 483,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 43,
+        "status": "recorded",
+        "elapsedSeconds": 1535,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 44,
+        "status": "recorded",
+        "elapsedSeconds": 67,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 45,
+        "status": "recorded",
+        "elapsedSeconds": 330,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 46,
+        "status": "recorded",
+        "elapsedSeconds": 47,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 47,
+        "status": "recorded",
+        "elapsedSeconds": 40,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 48,
+        "status": "recorded",
+        "elapsedSeconds": 169,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 49,
+        "status": "recorded",
+        "elapsedSeconds": 32,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 50,
+        "status": "recorded",
+        "elapsedSeconds": 41,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 51,
+        "status": "recorded",
+        "elapsedSeconds": 735,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 52,
+        "status": "recorded",
+        "elapsedSeconds": 4,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 53,
+        "status": "recorded",
+        "elapsedSeconds": 15,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 54,
+        "status": "recorded",
+        "elapsedSeconds": 3,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 55,
+        "status": "recorded",
+        "elapsedSeconds": 64,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 56,
+        "status": "recorded",
+        "elapsedSeconds": 62,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 57,
+        "status": "recorded",
+        "elapsedSeconds": 376,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 58,
+        "status": "recorded",
+        "elapsedSeconds": 532,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 59,
+        "status": "recorded",
+        "elapsedSeconds": 740,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 60,
+        "status": "recorded",
+        "elapsedSeconds": 39,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 61,
+        "status": "recorded",
+        "elapsedSeconds": 125,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 62,
+        "status": "recorded",
+        "elapsedSeconds": 152,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 63,
+        "status": "recorded",
+        "elapsedSeconds": 396,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 64,
+        "status": "recorded",
+        "elapsedSeconds": 936,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 65,
+        "status": "recorded",
+        "elapsedSeconds": 940,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 66,
+        "status": "recorded",
+        "elapsedSeconds": 532,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 67,
+        "status": "recorded",
+        "elapsedSeconds": 743,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 68,
+        "status": "recorded",
+        "elapsedSeconds": 168,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 69,
+        "status": "recorded",
+        "elapsedSeconds": 1531,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 70,
+        "status": "recorded",
+        "elapsedSeconds": 37,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 71,
+        "status": "recorded",
+        "elapsedSeconds": 168,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 72,
+        "status": "recorded",
+        "elapsedSeconds": 482,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 73,
+        "status": "recorded",
+        "elapsedSeconds": 46,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 74,
+        "status": "recorded",
+        "elapsedSeconds": 805,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 75,
+        "status": "recorded",
+        "elapsedSeconds": 1039,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 76,
+        "status": "recorded",
+        "elapsedSeconds": 1526,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 77,
+        "status": "recorded",
+        "elapsedSeconds": 1517,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 78,
+        "status": "recorded",
+        "elapsedSeconds": 81,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 79,
+        "status": "recorded",
+        "elapsedSeconds": 516,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 80,
+        "status": "recorded",
+        "elapsedSeconds": 173,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 81,
+        "status": "recorded",
+        "elapsedSeconds": 38,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 82,
+        "status": "recorded",
+        "elapsedSeconds": 375,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 83,
+        "status": "recorded",
+        "elapsedSeconds": 511,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 84,
+        "status": "recorded",
+        "elapsedSeconds": 1483,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 85,
+        "status": "recorded",
+        "elapsedSeconds": 1551,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 86,
+        "status": "recorded",
+        "elapsedSeconds": 1551,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 87,
+        "status": "recorded",
+        "elapsedSeconds": 1514,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 88,
+        "status": "recorded",
+        "elapsedSeconds": 1617,
+        "synchronized": false,
+        "overlap": null
+      },
+      {
+        "attemptId": 89,
+        "status": "recorded",
+        "elapsedSeconds": 1593,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 90,
+        "status": "recorded",
+        "elapsedSeconds": 2,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 91,
+        "status": "recorded",
+        "elapsedSeconds": 1508,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 92,
+        "status": "recorded",
+        "elapsedSeconds": 1381,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 93,
+        "status": "recorded",
+        "elapsedSeconds": 2,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 94,
+        "status": "recorded",
+        "elapsedSeconds": 1416,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 95,
+        "status": "recorded",
+        "elapsedSeconds": 27,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 96,
+        "status": "recorded",
+        "elapsedSeconds": 1408,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 97,
+        "status": "recorded",
+        "elapsedSeconds": 1073,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 98,
+        "status": "recorded",
+        "elapsedSeconds": 769,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 99,
+        "status": "recorded",
+        "elapsedSeconds": 1116,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 100,
+        "status": "recorded",
+        "elapsedSeconds": 134,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 101,
+        "status": "recorded",
+        "elapsedSeconds": 1401,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 102,
+        "status": "recorded",
+        "elapsedSeconds": 353,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 103,
+        "status": "recorded",
+        "elapsedSeconds": 67,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 104,
+        "status": "recorded",
+        "elapsedSeconds": 33,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 105,
+        "status": "recorded",
+        "elapsedSeconds": 711,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 106,
+        "status": "recorded",
+        "elapsedSeconds": 311,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 107,
+        "status": "recorded",
+        "elapsedSeconds": 61,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 108,
+        "status": "recorded",
+        "elapsedSeconds": 64,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 109,
+        "status": "recorded",
+        "elapsedSeconds": 1386,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 110,
+        "status": "recorded",
+        "elapsedSeconds": 33,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 111,
+        "status": "recorded",
+        "elapsedSeconds": 732,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 112,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 113,
+        "status": "recorded",
+        "elapsedSeconds": 290,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 114,
+        "status": "recorded",
+        "elapsedSeconds": 727,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 115,
+        "status": "recorded",
+        "elapsedSeconds": 77,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 116,
+        "status": "recorded",
+        "elapsedSeconds": 68,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 117,
+        "status": "recorded",
+        "elapsedSeconds": 1185,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 118,
+        "status": "recorded",
+        "elapsedSeconds": 56,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 119,
+        "status": "recorded",
+        "elapsedSeconds": 64,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 120,
+        "status": "recorded",
+        "elapsedSeconds": 54,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 121,
+        "status": "recorded",
+        "elapsedSeconds": 378,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 122,
+        "status": "recorded",
+        "elapsedSeconds": 30,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 123,
+        "status": "recorded",
+        "elapsedSeconds": 738,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 124,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": false,
+        "overlap": null
+      },
+      {
+        "attemptId": 125,
+        "status": "recorded",
+        "elapsedSeconds": 1061,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 126,
+        "status": "recorded",
+        "elapsedSeconds": 1376,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 127,
+        "status": "recorded",
+        "elapsedSeconds": 166,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 128,
+        "status": "recorded",
+        "elapsedSeconds": 417,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 129,
+        "status": "recorded",
+        "elapsedSeconds": 34,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 130,
+        "status": "recorded",
+        "elapsedSeconds": 25,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 131,
+        "status": "recorded",
+        "elapsedSeconds": 1374,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 132,
+        "status": "recorded",
+        "elapsedSeconds": 678,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 133,
+        "status": "recorded",
+        "elapsedSeconds": 107,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 134,
+        "status": "recorded",
+        "elapsedSeconds": 34,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 135,
+        "status": "recorded",
+        "elapsedSeconds": 147,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 136,
+        "status": "recorded",
+        "elapsedSeconds": 1000,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 137,
+        "status": "recorded",
+        "elapsedSeconds": 31,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 138,
+        "status": "recorded",
+        "elapsedSeconds": 720,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 139,
+        "status": "recorded",
+        "elapsedSeconds": 0,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 140,
+        "status": "recorded",
+        "elapsedSeconds": 724,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 141,
+        "status": "recorded",
+        "elapsedSeconds": 59,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 142,
+        "status": "recorded",
+        "elapsedSeconds": 129,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 143,
+        "status": "recorded",
+        "elapsedSeconds": 1349,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 144,
+        "status": "recorded",
+        "elapsedSeconds": 1559,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 145,
+        "status": "recorded",
+        "elapsedSeconds": 1404,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 146,
+        "status": "recorded",
+        "elapsedSeconds": 1352,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 147,
+        "status": "recorded",
+        "elapsedSeconds": 1338,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 148,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 149,
+        "status": "recorded",
+        "elapsedSeconds": 1342,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 150,
+        "status": "recorded",
+        "elapsedSeconds": 24,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 151,
+        "status": "recorded",
+        "elapsedSeconds": 27,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 152,
+        "status": "recorded",
+        "elapsedSeconds": 429,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 153,
+        "status": "recorded",
+        "elapsedSeconds": 1323,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 154,
+        "status": "recorded",
+        "elapsedSeconds": 776,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 155,
+        "status": "recorded",
+        "elapsedSeconds": 1,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 156,
+        "status": "recorded",
+        "elapsedSeconds": 1329,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 157,
+        "status": "recorded",
+        "elapsedSeconds": 1128,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 158,
+        "status": "recorded",
+        "elapsedSeconds": 1311,
+        "synchronized": true,
+        "overlap": null
+      }
+    ],
+    "groups": [
+      {
+        "window": 30,
+        "end": 158,
+        "previous": {
+          "total": {
+            "attempts": 30,
+            "timedAttempts": 30,
+            "elapsedSeconds": 13091,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 3,
+            "timedAttempts": 3,
+            "elapsedSeconds": 4163,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 27,
+            "timedAttempts": 27,
+            "elapsedSeconds": 8928,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 13,
+              "timedAttempts": 13,
+              "elapsedSeconds": 609,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 1,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 134,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 166,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 5,
+              "timedAttempts": 5,
+              "elapsedSeconds": 1749,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 4,
+              "timedAttempts": 4,
+              "elapsedSeconds": 2908,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 2177,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 1185,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 99,
+              "status": "recorded",
+              "elapsedSeconds": 1116,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 100,
+              "status": "recorded",
+              "elapsedSeconds": 134,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 101,
+              "status": "recorded",
+              "elapsedSeconds": 1401,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 102,
+              "status": "recorded",
+              "elapsedSeconds": 353,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 103,
+              "status": "recorded",
+              "elapsedSeconds": 67,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 104,
+              "status": "recorded",
+              "elapsedSeconds": 33,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 105,
+              "status": "recorded",
+              "elapsedSeconds": 711,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 106,
+              "status": "recorded",
+              "elapsedSeconds": 311,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 107,
+              "status": "recorded",
+              "elapsedSeconds": 61,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 108,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 109,
+              "status": "recorded",
+              "elapsedSeconds": 1386,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 110,
+              "status": "recorded",
+              "elapsedSeconds": 33,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 111,
+              "status": "recorded",
+              "elapsedSeconds": 732,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 112,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 113,
+              "status": "recorded",
+              "elapsedSeconds": 290,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 114,
+              "status": "recorded",
+              "elapsedSeconds": 727,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 115,
+              "status": "recorded",
+              "elapsedSeconds": 77,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 116,
+              "status": "recorded",
+              "elapsedSeconds": 68,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 117,
+              "status": "recorded",
+              "elapsedSeconds": 1185,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 118,
+              "status": "recorded",
+              "elapsedSeconds": 56,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 119,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 120,
+              "status": "recorded",
+              "elapsedSeconds": 54,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 121,
+              "status": "recorded",
+              "elapsedSeconds": 378,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 122,
+              "status": "recorded",
+              "elapsedSeconds": 30,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 123,
+              "status": "recorded",
+              "elapsedSeconds": 738,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 124,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 125,
+              "status": "recorded",
+              "elapsedSeconds": 1061,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 126,
+              "status": "recorded",
+              "elapsedSeconds": 1376,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 127,
+              "status": "recorded",
+              "elapsedSeconds": 166,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 128,
+              "status": "recorded",
+              "elapsedSeconds": 417,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        },
+        "recent": {
+          "total": {
+            "attempts": 30,
+            "timedAttempts": 30,
+            "elapsedSeconds": 19755,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 10,
+            "timedAttempts": 10,
+            "elapsedSeconds": 13681,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 20,
+            "timedAttempts": 20,
+            "elapsedSeconds": 6074,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 10,
+              "timedAttempts": 10,
+              "elapsedSeconds": 236,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 3,
+              "timedAttempts": 3,
+              "elapsedSeconds": 383,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 429,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 4,
+              "timedAttempts": 4,
+              "elapsedSeconds": 2898,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 1000,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 1128,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 129,
+              "status": "recorded",
+              "elapsedSeconds": 34,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 130,
+              "status": "recorded",
+              "elapsedSeconds": 25,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 131,
+              "status": "recorded",
+              "elapsedSeconds": 1374,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 132,
+              "status": "recorded",
+              "elapsedSeconds": 678,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 133,
+              "status": "recorded",
+              "elapsedSeconds": 107,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 134,
+              "status": "recorded",
+              "elapsedSeconds": 34,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 135,
+              "status": "recorded",
+              "elapsedSeconds": 147,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 136,
+              "status": "recorded",
+              "elapsedSeconds": 1000,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 137,
+              "status": "recorded",
+              "elapsedSeconds": 31,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 138,
+              "status": "recorded",
+              "elapsedSeconds": 720,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 139,
+              "status": "recorded",
+              "elapsedSeconds": 0,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 140,
+              "status": "recorded",
+              "elapsedSeconds": 724,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 141,
+              "status": "recorded",
+              "elapsedSeconds": 59,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 142,
+              "status": "recorded",
+              "elapsedSeconds": 129,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 143,
+              "status": "recorded",
+              "elapsedSeconds": 1349,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 144,
+              "status": "recorded",
+              "elapsedSeconds": 1559,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 145,
+              "status": "recorded",
+              "elapsedSeconds": 1404,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 146,
+              "status": "recorded",
+              "elapsedSeconds": 1352,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 147,
+              "status": "recorded",
+              "elapsedSeconds": 1338,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 148,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 149,
+              "status": "recorded",
+              "elapsedSeconds": 1342,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 150,
+              "status": "recorded",
+              "elapsedSeconds": 24,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 151,
+              "status": "recorded",
+              "elapsedSeconds": 27,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 152,
+              "status": "recorded",
+              "elapsedSeconds": 429,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 153,
+              "status": "recorded",
+              "elapsedSeconds": 1323,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 154,
+              "status": "recorded",
+              "elapsedSeconds": 776,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 155,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 156,
+              "status": "recorded",
+              "elapsedSeconds": 1329,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 157,
+              "status": "recorded",
+              "elapsedSeconds": 1128,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 158,
+              "status": "recorded",
+              "elapsedSeconds": 1311,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        }
+      },
+      {
+        "window": 17,
+        "end": 79,
+        "previous": {
+          "total": {
+            "attempts": 17,
+            "timedAttempts": 17,
+            "elapsedSeconds": 3176,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 17,
+            "timedAttempts": 17,
+            "elapsedSeconds": 3176,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 10,
+              "timedAttempts": 10,
+              "elapsedSeconds": 347,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 277,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 169,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 376,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 3,
+              "timedAttempts": 3,
+              "elapsedSeconds": 2007,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 46,
+              "status": "recorded",
+              "elapsedSeconds": 47,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 47,
+              "status": "recorded",
+              "elapsedSeconds": 40,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 48,
+              "status": "recorded",
+              "elapsedSeconds": 169,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 49,
+              "status": "recorded",
+              "elapsedSeconds": 32,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 50,
+              "status": "recorded",
+              "elapsedSeconds": 41,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 51,
+              "status": "recorded",
+              "elapsedSeconds": 735,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 52,
+              "status": "recorded",
+              "elapsedSeconds": 4,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 53,
+              "status": "recorded",
+              "elapsedSeconds": 15,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 54,
+              "status": "recorded",
+              "elapsedSeconds": 3,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 55,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 56,
+              "status": "recorded",
+              "elapsedSeconds": 62,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 57,
+              "status": "recorded",
+              "elapsedSeconds": 376,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 58,
+              "status": "recorded",
+              "elapsedSeconds": 532,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 59,
+              "status": "recorded",
+              "elapsedSeconds": 740,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 60,
+              "status": "recorded",
+              "elapsedSeconds": 39,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 61,
+              "status": "recorded",
+              "elapsedSeconds": 125,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 62,
+              "status": "recorded",
+              "elapsedSeconds": 152,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        },
+        "recent": {
+          "total": {
+            "attempts": 17,
+            "timedAttempts": 17,
+            "elapsedSeconds": 11463,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 2,
+            "timedAttempts": 2,
+            "elapsedSeconds": 3043,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 15,
+            "timedAttempts": 15,
+            "elapsedSeconds": 8420,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 3,
+              "timedAttempts": 3,
+              "elapsedSeconds": 164,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 336,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 878,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 1048,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 1548,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 3,
+              "timedAttempts": 3,
+              "elapsedSeconds": 2915,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 1531,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 63,
+              "status": "recorded",
+              "elapsedSeconds": 396,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 64,
+              "status": "recorded",
+              "elapsedSeconds": 936,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 65,
+              "status": "recorded",
+              "elapsedSeconds": 940,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 66,
+              "status": "recorded",
+              "elapsedSeconds": 532,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 67,
+              "status": "recorded",
+              "elapsedSeconds": 743,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 68,
+              "status": "recorded",
+              "elapsedSeconds": 168,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 69,
+              "status": "recorded",
+              "elapsedSeconds": 1531,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 70,
+              "status": "recorded",
+              "elapsedSeconds": 37,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 71,
+              "status": "recorded",
+              "elapsedSeconds": 168,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 72,
+              "status": "recorded",
+              "elapsedSeconds": 482,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 73,
+              "status": "recorded",
+              "elapsedSeconds": 46,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 74,
+              "status": "recorded",
+              "elapsedSeconds": 805,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 75,
+              "status": "recorded",
+              "elapsedSeconds": 1039,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 76,
+              "status": "recorded",
+              "elapsedSeconds": 1526,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 77,
+              "status": "recorded",
+              "elapsedSeconds": 1517,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 78,
+              "status": "recorded",
+              "elapsedSeconds": 81,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 79,
+              "status": "recorded",
+              "elapsedSeconds": 516,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        }
+      },
+      {
+        "window": 158,
+        "end": 158,
+        "previous": {
+          "total": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": []
+        },
+        "recent": {
+          "total": {
+            "attempts": 158,
+            "timedAttempts": 158,
+            "elapsedSeconds": 93509,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 2,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 34,
+            "timedAttempts": 34,
+            "elapsedSeconds": 52141,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 124,
+            "timedAttempts": 124,
+            "elapsedSeconds": 41368,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 57,
+              "timedAttempts": 57,
+              "elapsedSeconds": 3877,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 1,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 13,
+              "timedAttempts": 13,
+              "elapsedSeconds": 1858,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 6,
+              "timedAttempts": 6,
+              "elapsedSeconds": 1088,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 18,
+              "timedAttempts": 18,
+              "elapsedSeconds": 7484,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 6,
+              "timedAttempts": 6,
+              "elapsedSeconds": 3802,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 11,
+              "timedAttempts": 11,
+              "elapsedSeconds": 8123,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 5,
+              "timedAttempts": 5,
+              "elapsedSeconds": 4993,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 4,
+              "timedAttempts": 4,
+              "elapsedSeconds": 4631,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 2313,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 2,
+              "timedAttempts": 2,
+              "elapsedSeconds": 3199,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 1,
+              "status": "recorded",
+              "elapsedSeconds": 1242,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 2,
+              "status": "recorded",
+              "elapsedSeconds": 2,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 3,
+              "status": "recorded",
+              "elapsedSeconds": 2,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 4,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 5,
+              "status": "recorded",
+              "elapsedSeconds": 204,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 6,
+              "status": "recorded",
+              "elapsedSeconds": 356,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 7,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 8,
+              "status": "recorded",
+              "elapsedSeconds": 2308,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 9,
+              "status": "recorded",
+              "elapsedSeconds": 2005,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 10,
+              "status": "recorded",
+              "elapsedSeconds": 1839,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 11,
+              "status": "recorded",
+              "elapsedSeconds": 1845,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 12,
+              "status": "recorded",
+              "elapsedSeconds": 509,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 13,
+              "status": "recorded",
+              "elapsedSeconds": 1710,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 14,
+              "status": "recorded",
+              "elapsedSeconds": 165,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 15,
+              "status": "recorded",
+              "elapsedSeconds": 89,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 16,
+              "status": "recorded",
+              "elapsedSeconds": 1668,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 17,
+              "status": "recorded",
+              "elapsedSeconds": 747,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 18,
+              "status": "recorded",
+              "elapsedSeconds": 529,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 19,
+              "status": "recorded",
+              "elapsedSeconds": 1612,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 20,
+              "status": "recorded",
+              "elapsedSeconds": 1078,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 21,
+              "status": "recorded",
+              "elapsedSeconds": 90,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 22,
+              "status": "recorded",
+              "elapsedSeconds": 144,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 23,
+              "status": "recorded",
+              "elapsedSeconds": 39,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 24,
+              "status": "recorded",
+              "elapsedSeconds": 175,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 25,
+              "status": "recorded",
+              "elapsedSeconds": 223,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 26,
+              "status": "recorded",
+              "elapsedSeconds": 1594,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 27,
+              "status": "recorded",
+              "elapsedSeconds": 89,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 28,
+              "status": "recorded",
+              "elapsedSeconds": 45,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 29,
+              "status": "recorded",
+              "elapsedSeconds": 389,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 30,
+              "status": "recorded",
+              "elapsedSeconds": 395,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 31,
+              "status": "recorded",
+              "elapsedSeconds": 76,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 32,
+              "status": "recorded",
+              "elapsedSeconds": 170,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 33,
+              "status": "recorded",
+              "elapsedSeconds": 531,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 34,
+              "status": "recorded",
+              "elapsedSeconds": 42,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 35,
+              "status": "recorded",
+              "elapsedSeconds": 159,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 36,
+              "status": "recorded",
+              "elapsedSeconds": 1602,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 37,
+              "status": "recorded",
+              "elapsedSeconds": 40,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 38,
+              "status": "recorded",
+              "elapsedSeconds": 182,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 39,
+              "status": "recorded",
+              "elapsedSeconds": 1563,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 40,
+              "status": "recorded",
+              "elapsedSeconds": 91,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 41,
+              "status": "recorded",
+              "elapsedSeconds": 66,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 42,
+              "status": "recorded",
+              "elapsedSeconds": 483,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 43,
+              "status": "recorded",
+              "elapsedSeconds": 1535,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 44,
+              "status": "recorded",
+              "elapsedSeconds": 67,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 45,
+              "status": "recorded",
+              "elapsedSeconds": 330,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 46,
+              "status": "recorded",
+              "elapsedSeconds": 47,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 47,
+              "status": "recorded",
+              "elapsedSeconds": 40,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 48,
+              "status": "recorded",
+              "elapsedSeconds": 169,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 49,
+              "status": "recorded",
+              "elapsedSeconds": 32,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 50,
+              "status": "recorded",
+              "elapsedSeconds": 41,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 51,
+              "status": "recorded",
+              "elapsedSeconds": 735,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 52,
+              "status": "recorded",
+              "elapsedSeconds": 4,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 53,
+              "status": "recorded",
+              "elapsedSeconds": 15,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 54,
+              "status": "recorded",
+              "elapsedSeconds": 3,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 55,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 56,
+              "status": "recorded",
+              "elapsedSeconds": 62,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 57,
+              "status": "recorded",
+              "elapsedSeconds": 376,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 58,
+              "status": "recorded",
+              "elapsedSeconds": 532,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 59,
+              "status": "recorded",
+              "elapsedSeconds": 740,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 60,
+              "status": "recorded",
+              "elapsedSeconds": 39,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 61,
+              "status": "recorded",
+              "elapsedSeconds": 125,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 62,
+              "status": "recorded",
+              "elapsedSeconds": 152,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 63,
+              "status": "recorded",
+              "elapsedSeconds": 396,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 64,
+              "status": "recorded",
+              "elapsedSeconds": 936,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 65,
+              "status": "recorded",
+              "elapsedSeconds": 940,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 66,
+              "status": "recorded",
+              "elapsedSeconds": 532,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 67,
+              "status": "recorded",
+              "elapsedSeconds": 743,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 68,
+              "status": "recorded",
+              "elapsedSeconds": 168,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 69,
+              "status": "recorded",
+              "elapsedSeconds": 1531,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 70,
+              "status": "recorded",
+              "elapsedSeconds": 37,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 71,
+              "status": "recorded",
+              "elapsedSeconds": 168,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 72,
+              "status": "recorded",
+              "elapsedSeconds": 482,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 73,
+              "status": "recorded",
+              "elapsedSeconds": 46,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 74,
+              "status": "recorded",
+              "elapsedSeconds": 805,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 75,
+              "status": "recorded",
+              "elapsedSeconds": 1039,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 76,
+              "status": "recorded",
+              "elapsedSeconds": 1526,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 77,
+              "status": "recorded",
+              "elapsedSeconds": 1517,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 78,
+              "status": "recorded",
+              "elapsedSeconds": 81,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 79,
+              "status": "recorded",
+              "elapsedSeconds": 516,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 80,
+              "status": "recorded",
+              "elapsedSeconds": 173,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 81,
+              "status": "recorded",
+              "elapsedSeconds": 38,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 82,
+              "status": "recorded",
+              "elapsedSeconds": 375,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 83,
+              "status": "recorded",
+              "elapsedSeconds": 511,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 84,
+              "status": "recorded",
+              "elapsedSeconds": 1483,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 85,
+              "status": "recorded",
+              "elapsedSeconds": 1551,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 86,
+              "status": "recorded",
+              "elapsedSeconds": 1551,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 87,
+              "status": "recorded",
+              "elapsedSeconds": 1514,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 88,
+              "status": "recorded",
+              "elapsedSeconds": 1617,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 89,
+              "status": "recorded",
+              "elapsedSeconds": 1593,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 90,
+              "status": "recorded",
+              "elapsedSeconds": 2,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 91,
+              "status": "recorded",
+              "elapsedSeconds": 1508,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 92,
+              "status": "recorded",
+              "elapsedSeconds": 1381,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 93,
+              "status": "recorded",
+              "elapsedSeconds": 2,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 94,
+              "status": "recorded",
+              "elapsedSeconds": 1416,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 95,
+              "status": "recorded",
+              "elapsedSeconds": 27,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 96,
+              "status": "recorded",
+              "elapsedSeconds": 1408,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 97,
+              "status": "recorded",
+              "elapsedSeconds": 1073,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 98,
+              "status": "recorded",
+              "elapsedSeconds": 769,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 99,
+              "status": "recorded",
+              "elapsedSeconds": 1116,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 100,
+              "status": "recorded",
+              "elapsedSeconds": 134,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 101,
+              "status": "recorded",
+              "elapsedSeconds": 1401,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 102,
+              "status": "recorded",
+              "elapsedSeconds": 353,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 103,
+              "status": "recorded",
+              "elapsedSeconds": 67,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 104,
+              "status": "recorded",
+              "elapsedSeconds": 33,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 105,
+              "status": "recorded",
+              "elapsedSeconds": 711,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 106,
+              "status": "recorded",
+              "elapsedSeconds": 311,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 107,
+              "status": "recorded",
+              "elapsedSeconds": 61,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 108,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 109,
+              "status": "recorded",
+              "elapsedSeconds": 1386,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 110,
+              "status": "recorded",
+              "elapsedSeconds": 33,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 111,
+              "status": "recorded",
+              "elapsedSeconds": 732,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 112,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 113,
+              "status": "recorded",
+              "elapsedSeconds": 290,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 114,
+              "status": "recorded",
+              "elapsedSeconds": 727,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 115,
+              "status": "recorded",
+              "elapsedSeconds": 77,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 116,
+              "status": "recorded",
+              "elapsedSeconds": 68,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 117,
+              "status": "recorded",
+              "elapsedSeconds": 1185,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 118,
+              "status": "recorded",
+              "elapsedSeconds": 56,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 119,
+              "status": "recorded",
+              "elapsedSeconds": 64,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 120,
+              "status": "recorded",
+              "elapsedSeconds": 54,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 121,
+              "status": "recorded",
+              "elapsedSeconds": 378,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 122,
+              "status": "recorded",
+              "elapsedSeconds": 30,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 123,
+              "status": "recorded",
+              "elapsedSeconds": 738,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 124,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 125,
+              "status": "recorded",
+              "elapsedSeconds": 1061,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 126,
+              "status": "recorded",
+              "elapsedSeconds": 1376,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 127,
+              "status": "recorded",
+              "elapsedSeconds": 166,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 128,
+              "status": "recorded",
+              "elapsedSeconds": 417,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 129,
+              "status": "recorded",
+              "elapsedSeconds": 34,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 130,
+              "status": "recorded",
+              "elapsedSeconds": 25,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 131,
+              "status": "recorded",
+              "elapsedSeconds": 1374,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 132,
+              "status": "recorded",
+              "elapsedSeconds": 678,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 133,
+              "status": "recorded",
+              "elapsedSeconds": 107,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 134,
+              "status": "recorded",
+              "elapsedSeconds": 34,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 135,
+              "status": "recorded",
+              "elapsedSeconds": 147,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 136,
+              "status": "recorded",
+              "elapsedSeconds": 1000,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 137,
+              "status": "recorded",
+              "elapsedSeconds": 31,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 138,
+              "status": "recorded",
+              "elapsedSeconds": 720,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 139,
+              "status": "recorded",
+              "elapsedSeconds": 0,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 140,
+              "status": "recorded",
+              "elapsedSeconds": 724,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 141,
+              "status": "recorded",
+              "elapsedSeconds": 59,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 142,
+              "status": "recorded",
+              "elapsedSeconds": 129,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 143,
+              "status": "recorded",
+              "elapsedSeconds": 1349,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 144,
+              "status": "recorded",
+              "elapsedSeconds": 1559,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 145,
+              "status": "recorded",
+              "elapsedSeconds": 1404,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 146,
+              "status": "recorded",
+              "elapsedSeconds": 1352,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 147,
+              "status": "recorded",
+              "elapsedSeconds": 1338,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 148,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 149,
+              "status": "recorded",
+              "elapsedSeconds": 1342,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 150,
+              "status": "recorded",
+              "elapsedSeconds": 24,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 151,
+              "status": "recorded",
+              "elapsedSeconds": 27,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 152,
+              "status": "recorded",
+              "elapsedSeconds": 429,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 153,
+              "status": "recorded",
+              "elapsedSeconds": 1323,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 154,
+              "status": "recorded",
+              "elapsedSeconds": 776,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 155,
+              "status": "recorded",
+              "elapsedSeconds": 1,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 156,
+              "status": "recorded",
+              "elapsedSeconds": 1329,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 157,
+              "status": "recorded",
+              "elapsedSeconds": 1128,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 158,
+              "status": "recorded",
+              "elapsedSeconds": 1311,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "controls": {
+    "id": "authored/native-clocks.lss",
+    "sha256": "2b8eaddb9b322a64064c47c13e62dab7d2123eccc6b1309d852a62a38022e211",
+    "clocks": [
+      {
+        "attemptId": 1,
+        "status": "recorded",
+        "elapsedSeconds": 120,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 2,
+        "status": "recorded",
+        "elapsedSeconds": 90,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 3,
+        "status": "recorded",
+        "elapsedSeconds": 45,
+        "synchronized": false,
+        "overlap": null
+      },
+      {
+        "attemptId": 4,
+        "status": "recorded",
+        "elapsedSeconds": 0,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 5,
+        "status": "recorded",
+        "elapsedSeconds": 300,
+        "synchronized": true,
+        "overlap": {
+          "attemptId": 8,
+          "started": "01/01/2026 00:13:20",
+          "ended": "01/01/2026 00:14:10"
+        }
+      },
+      {
+        "attemptId": 6,
+        "status": "missing",
+        "elapsedSeconds": null,
+        "synchronized": false,
+        "overlap": null
+      },
+      {
+        "attemptId": 7,
+        "status": "reversed",
+        "elapsedSeconds": null,
+        "synchronized": true,
+        "overlap": null
+      },
+      {
+        "attemptId": 8,
+        "status": "recorded",
+        "elapsedSeconds": 50,
+        "synchronized": true,
+        "overlap": {
+          "attemptId": 5,
+          "started": "01/01/2026 00:11:40",
+          "ended": "01/01/2026 00:16:40"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "window": 30,
+        "end": 8,
+        "previous": {
+          "total": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": []
+        },
+        "recent": {
+          "total": {
+            "attempts": 8,
+            "timedAttempts": 6,
+            "elapsedSeconds": 605,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 1,
+              "invalid": 0,
+              "reversed": 1
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 2
+          },
+          "completed": {
+            "attempts": 3,
+            "timedAttempts": 2,
+            "elapsedSeconds": 165,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 1,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 4,
+            "timedAttempts": 3,
+            "elapsedSeconds": 140,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 1
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 1
+          },
+          "unknown": {
+            "attempts": 1,
+            "timedAttempts": 1,
+            "elapsedSeconds": 300,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 1
+          },
+          "byResetSegment": [
+            {
+              "attempts": 3,
+              "timedAttempts": 2,
+              "elapsedSeconds": 50,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 1
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 1
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 90,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 1,
+              "status": "recorded",
+              "elapsedSeconds": 120,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 2,
+              "status": "recorded",
+              "elapsedSeconds": 90,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 3,
+              "status": "recorded",
+              "elapsedSeconds": 45,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 4,
+              "status": "recorded",
+              "elapsedSeconds": 0,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 5,
+              "status": "recorded",
+              "elapsedSeconds": 300,
+              "synchronized": true,
+              "overlap": {
+                "attemptId": 8,
+                "started": "01/01/2026 00:13:20",
+                "ended": "01/01/2026 00:14:10"
+              }
+            },
+            {
+              "attemptId": 6,
+              "status": "missing",
+              "elapsedSeconds": null,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 7,
+              "status": "reversed",
+              "elapsedSeconds": null,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 8,
+              "status": "recorded",
+              "elapsedSeconds": 50,
+              "synchronized": true,
+              "overlap": {
+                "attemptId": 5,
+                "started": "01/01/2026 00:11:40",
+                "ended": "01/01/2026 00:16:40"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "window": 17,
+        "end": 4,
+        "previous": {
+          "total": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": []
+        },
+        "recent": {
+          "total": {
+            "attempts": 4,
+            "timedAttempts": 4,
+            "elapsedSeconds": 255,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 2,
+            "timedAttempts": 2,
+            "elapsedSeconds": 165,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 2,
+            "timedAttempts": 2,
+            "elapsedSeconds": 90,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 0,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 90,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 1,
+              "status": "recorded",
+              "elapsedSeconds": 120,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 2,
+              "status": "recorded",
+              "elapsedSeconds": 90,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 3,
+              "status": "recorded",
+              "elapsedSeconds": 45,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 4,
+              "status": "recorded",
+              "elapsedSeconds": 0,
+              "synchronized": true,
+              "overlap": null
+            }
+          ]
+        }
+      },
+      {
+        "window": 8,
+        "end": 8,
+        "previous": {
+          "total": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "completed": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "unknown": {
+            "attempts": 0,
+            "timedAttempts": 0,
+            "elapsedSeconds": null,
+            "sumStatus": "unavailable",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 0
+          },
+          "byResetSegment": [
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            },
+            {
+              "attempts": 0,
+              "timedAttempts": 0,
+              "elapsedSeconds": null,
+              "sumStatus": "unavailable",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": []
+        },
+        "recent": {
+          "total": {
+            "attempts": 8,
+            "timedAttempts": 6,
+            "elapsedSeconds": 605,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 1,
+              "invalid": 0,
+              "reversed": 1
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 2
+          },
+          "completed": {
+            "attempts": 3,
+            "timedAttempts": 2,
+            "elapsedSeconds": 165,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 1,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 1,
+            "overlappingAttempts": 0
+          },
+          "inferredResets": {
+            "attempts": 4,
+            "timedAttempts": 3,
+            "elapsedSeconds": 140,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 1
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 1
+          },
+          "unknown": {
+            "attempts": 1,
+            "timedAttempts": 1,
+            "elapsedSeconds": 300,
+            "sumStatus": "available",
+            "unavailable": {
+              "missing": 0,
+              "invalid": 0,
+              "reversed": 0
+            },
+            "unsynchronizedAttempts": 0,
+            "overlappingAttempts": 1
+          },
+          "byResetSegment": [
+            {
+              "attempts": 3,
+              "timedAttempts": 2,
+              "elapsedSeconds": 50,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 1
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 1
+            },
+            {
+              "attempts": 1,
+              "timedAttempts": 1,
+              "elapsedSeconds": 90,
+              "sumStatus": "available",
+              "unavailable": {
+                "missing": 0,
+                "invalid": 0,
+                "reversed": 0
+              },
+              "unsynchronizedAttempts": 0,
+              "overlappingAttempts": 0
+            }
+          ],
+          "clocks": [
+            {
+              "attemptId": 1,
+              "status": "recorded",
+              "elapsedSeconds": 120,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 2,
+              "status": "recorded",
+              "elapsedSeconds": 90,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 3,
+              "status": "recorded",
+              "elapsedSeconds": 45,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 4,
+              "status": "recorded",
+              "elapsedSeconds": 0,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 5,
+              "status": "recorded",
+              "elapsedSeconds": 300,
+              "synchronized": true,
+              "overlap": {
+                "attemptId": 8,
+                "started": "01/01/2026 00:13:20",
+                "ended": "01/01/2026 00:14:10"
+              }
+            },
+            {
+              "attemptId": 6,
+              "status": "missing",
+              "elapsedSeconds": null,
+              "synchronized": false,
+              "overlap": null
+            },
+            {
+              "attemptId": 7,
+              "status": "reversed",
+              "elapsedSeconds": null,
+              "synchronized": true,
+              "overlap": null
+            },
+            {
+              "attemptId": 8,
+              "status": "recorded",
+              "elapsedSeconds": 50,
+              "synchronized": true,
+              "overlap": {
+                "attemptId": 5,
+                "started": "01/01/2026 00:11:40",
+                "ended": "01/01/2026 00:16:40"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

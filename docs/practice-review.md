@@ -78,11 +78,15 @@ record does not establish that a split was skipped.
 
 ## Exports and interaction
 
-The JSON has `schemaVersion: 1`, the source filename, byte length and SHA-256,
+The JSON has `schemaVersion: 2`, the source filename, byte length and SHA-256,
 sample provenance, applied window and endpoint, both complete groups and their
 statistics, the original attempt records, and sparse per-segment history for
 those IDs. It retains both timing methods and the saved PB/gold comparisons.
-It contains no autosplitter settings or icons. It is evidence for these groups,
+The `timeBudget` field adds both groups' elapsed durations by outcome and reset
+location, their coverage and every selected attempt's clock. Uploaded files have
+`source.synthetic: null`; known bundled examples retain their explicit true/false
+classification. See the [time-budget guide](time-budget.md). It contains no
+autosplitter settings or icons. It is evidence for these groups,
 not a replacement `.lss` file.
 
 Ten attempts and twenty segments are shown per table page. Keyboard focus moves
