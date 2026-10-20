@@ -17,7 +17,8 @@ time-budget example (Re-Loaded)**, then **Elapsed on resets** and **Most elapsed
 recent group**. Every duration opens its attempts and saved timestamps. It measures
 the whole attempt before the inferred reset, including pauses and earlier
 segments. [Walkthrough and limits](docs/time-budget.md).
-This addition is in the source checkout and remains unreleased.
+This addition is in the source checkout and [live demo](https://antonsoo.github.io/splitscope/);
+it remains outside the tagged 0.2.4 release.
 
 ![Recorded Re-Loaded attempts: elapsed time by outcome, with reset durations linked to their exact attempts](docs/assets/time-budget/recorded-desktop.png)
 

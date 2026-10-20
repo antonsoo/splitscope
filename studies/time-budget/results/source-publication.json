@@ -1,0 +1,188 @@
+{
+  "sourceHead": "1b8dd7c5be61dc017c55423f863a184cd966f590",
+  "base": "b9613093cc4bf9de0996501b07136f15c54a64c9",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 11110,
+      "sha256": "f14e3f28e243499e807a68d7e0f35e11d96d8a0c170db1cdf1df76ad4161ca1e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20412,
+      "sha256": "e20f58ac2c958d74080b7793ea31925f718cd9b703d4c138ccd9a2a40b409819"
+    },
+    {
+      "path": "docs/assets/time-budget/before-chromium-1440.png",
+      "bytes": 120173,
+      "sha256": "9fe755f667d06c062e50edd31df45c3354eaee706e61fd4edc2bacf6e050ef98"
+    },
+    {
+      "path": "docs/assets/time-budget/recorded-desktop.png",
+      "bytes": 121908,
+      "sha256": "f4584500a8196abb89ada88bfe3a02b9ac2081c9c7dd9215ad422700bc73eb9b"
+    },
+    {
+      "path": "docs/assets/time-budget/recorded-phone.png",
+      "bytes": 85598,
+      "sha256": "a1edcd60a04418549d9440f5efcde3115fb3eda3e47e4329c11b7bd5eb45dc10"
+    },
+    {
+      "path": "docs/practice-review.md",
+      "bytes": 6768,
+      "sha256": "60f92f3619ef287cf030521250154f2d1224490c1a9f8d6d2c6df233b4b05896"
+    },
+    {
+      "path": "docs/time-budget.md",
+      "bytes": 5224,
+      "sha256": "d6c806e0c2d059b91b508a4e6fe2bebe4308dac18c58a80fc9e2c4d60784bd6b"
+    },
+    {
+      "path": "examples/recorded/re-loaded-source.json",
+      "bytes": 459,
+      "sha256": "5520424f873486bfda27aa94ededd751320a9ce494829a604d65daedd1e0ded0"
+    },
+    {
+      "path": "examples/recorded/re-loaded.lss",
+      "bytes": 139525,
+      "sha256": "974777569a55921027bb90144fe174fc301968eef38594190da11a287c7205a7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1808,
+      "sha256": "de524a4ed7b99f5f41eeba6b0dc6e97ccf683abf997e85cce25de0ddbe4f1402"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1625,
+      "sha256": "04138497e375c828f7f30cdd2a349f2173b00a106ac496def8bd12ab524cbf3e"
+    },
+    {
+      "path": "src/core/attempt-clock.ts",
+      "bytes": 3761,
+      "sha256": "c466edc65c65551daf10bcffc72f0c7b247d77e5e206e3ce42d261140dd0ba04"
+    },
+    {
+      "path": "src/core/practice-time.ts",
+      "bytes": 3218,
+      "sha256": "8204da28fabdcd8b88be6dd9944f27bccd36633823e9c70111fed6a4e789991d"
+    },
+    {
+      "path": "src/core/review.ts",
+      "bytes": 10659,
+      "sha256": "23dfcc3ad08adc724dfd503da92603853e6321d92a3434f8611f4d21d94818ed"
+    },
+    {
+      "path": "src/core/stats.ts",
+      "bytes": 14274,
+      "sha256": "63befe77d8d25685e9d4d331b21b546754143469a5461dc2cb7c9ed77b2d6bc6"
+    },
+    {
+      "path": "src/ui/app.ts",
+      "bytes": 30916,
+      "sha256": "b2e5ac72f75dc2f397f34216cde96f41ef43dfdeef3133fefa06145448589e22"
+    },
+    {
+      "path": "src/ui/export.ts",
+      "bytes": 10683,
+      "sha256": "30df91d3bc3a3a9fbaae776fd361830a46f175a247317942379e85ff38f0e17a"
+    },
+    {
+      "path": "src/ui/sections/practiceReview.ts",
+      "bytes": 30255,
+      "sha256": "1582039e66013e4fb0a8ab49efb8bde4fe72140469be8b8db32f8ebe50881718"
+    },
+    {
+      "path": "studies/time-budget/README.md",
+      "bytes": 7728,
+      "sha256": "2c30c8e99e52c2834ccaaa33ca1dacdb1800f52fe87d747951edc922591dd790"
+    },
+    {
+      "path": "studies/time-budget/analyze.ts",
+      "bytes": 1732,
+      "sha256": "e98ced59038e55fa4527cbdd0d64340b5780ad3f8ba6cc6807d60805b2d14682"
+    },
+    {
+      "path": "studies/time-budget/benchmark.ts",
+      "bytes": 2954,
+      "sha256": "a483255e276c6296343246217e36908c868d81185fd6ddc40123d2c146a52925"
+    },
+    {
+      "path": "studies/time-budget/browser.mjs",
+      "bytes": 12751,
+      "sha256": "31c2e3afabe20e5a3a5f4b504c570360d1a1707ffd0b8e7189847aade418db15"
+    },
+    {
+      "path": "studies/time-budget/build-oracle.sh",
+      "bytes": 1261,
+      "sha256": "b9fd77e294defed37b5baf2219d7829490f551c9ce4c558d78c4a749820b3bc8"
+    },
+    {
+      "path": "studies/time-budget/controls/native-clocks.lss",
+      "bytes": 2028,
+      "sha256": "2b8eaddb9b322a64064c47c13e62dab7d2123eccc6b1309d852a62a38022e211"
+    },
+    {
+      "path": "studies/time-budget/controls/source.json",
+      "bytes": 293,
+      "sha256": "a8cc7448b225f5d2f9cc929fb0a614ee63e95cc293ce860b52805a9a88e15c78"
+    },
+    {
+      "path": "studies/time-budget/oracle.rs",
+      "bytes": 3665,
+      "sha256": "f609a9c4ee3c184e126a25ca1d888107799acc6bb8a0ad43af2213e11e179ea2"
+    },
+    {
+      "path": "studies/time-budget/results/before-browser.json",
+      "bytes": 523,
+      "sha256": "d72b5ec489e4dbcbeda2b48f6b187f1f72ab8b1c4faf1c224e291e658c966c50"
+    },
+    {
+      "path": "studies/time-budget/results/clean-build.json",
+      "bytes": 2700,
+      "sha256": "1597fc14a87c2dd4fdb5ce758ed8e14edc5110fde72b5560bf3a07adb76efa64"
+    },
+    {
+      "path": "studies/time-budget/results/expected.json",
+      "bytes": 134043,
+      "sha256": "0625d380818fdd7e3dbd0b88b0626102ed8c1cac9b79157d47ae205c1b5a8851"
+    },
+    {
+      "path": "studies/time-budget/results/hosted-before.json",
+      "bytes": 9150,
+      "sha256": "db034b2024507983da3813df6ee3c7797036ca762b7b01836b177fe099e70b9d"
+    },
+    {
+      "path": "studies/time-budget/results/local-browser.json",
+      "bytes": 10116,
+      "sha256": "b859b465be0e8a5d9047cd44532bec2ccf9cc3742fbae854ab7a7b882da4fce0"
+    },
+    {
+      "path": "studies/time-budget/results/performance.json",
+      "bytes": 907,
+      "sha256": "86905145fc82c2402a9ad6f07f9a54efdca0d017dd26bde6d541307e878115ad"
+    },
+    {
+      "path": "studies/time-budget/results/public-before-browser.json",
+      "bytes": 528,
+      "sha256": "2311899415486bad27251815f1e0674cc86b9fb0be961658a0edf2bd2704549d"
+    },
+    {
+      "path": "studies/time-budget/results/summary.json",
+      "bytes": 73307,
+      "sha256": "9087f3eea6cb1c0ac1d8617a7ae133198d9c9855b064b9a26537a25063481a4a"
+    },
+    {
+      "path": "studies/time-budget/verify.py",
+      "bytes": 12036,
+      "sha256": "c86cf7636cfb91d950d7ad316d8330663cb2e511e518bb0745e13a12bbe1be23"
+    },
+    {
+      "path": "tests/practice-time.test.ts",
+      "bytes": 6759,
+      "sha256": "848cf2d0b651077b56ba61d948aa7dc523620c079a4e83d45161f740e4cdf6e0"
+    }
+  ],
+  "changedFilesMatched": 36,
+  "scope": "Immutable public Git source bytes. Does not establish registry release, CI execution or hosted browser behavior."
+}

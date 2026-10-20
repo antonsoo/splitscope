@@ -1,0 +1,304 @@
+[
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "theme": "dark",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "mode": "after",
+    "downloads": [
+      {
+        "label": "recorded",
+        "file": "chromium-1440-recorded.json",
+        "sha256": "6825a633fe0f4a7bc670bba477b98e39d30e8d7d7bc2fe221dc1787335be42ef",
+        "bytes": 96773
+      },
+      {
+        "label": "filtered-offline",
+        "file": "chromium-1440-filtered-offline.json",
+        "sha256": "257220695744c47f41e0975f6e53c0708dc3a5e0cbe5f514e5487e38de133af5",
+        "bytes": 96755
+      },
+      {
+        "label": "historical-offline",
+        "file": "chromium-1440-historical-offline.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "invalid-range-retained",
+        "file": "chromium-1440-invalid-range-retained.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "whole-history-offline",
+        "file": "chromium-1440-whole-history-offline.json",
+        "sha256": "def2ee1a3569d020d66ad9db0d4d93eb82eba1ca20ee1a1feb29c19f2a348c73",
+        "bytes": 220761
+      },
+      {
+        "label": "native-controls",
+        "file": "chromium-1440-native-controls.json",
+        "sha256": "64be0983c8caccc1372e18aa1122c76df3e67da03efdb609d67d427b4c476c49",
+        "bytes": 13554
+      },
+      {
+        "label": "overlap-outside-groups",
+        "file": "chromium-1440-overlap-outside-groups.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      },
+      {
+        "label": "controls-offline",
+        "file": "chromium-1440-controls-offline.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      }
+    ],
+    "interactions": [
+      "real native example",
+      "time order",
+      "exact reset members",
+      "raw timestamp and absent pause",
+      "saved zero duration",
+      "timing-method and theme preservation",
+      "offline filtered and complete exports",
+      "historical cohorts",
+      "invalid range retains report",
+      "native writer pauses, missing end and reversed clocks",
+      "overlap witness outside both groups",
+      "upload provenance unknown"
+    ],
+    "screenshot": "recorded-desktop.png",
+    "axeViolations": 0,
+    "externalRequests": 0,
+    "runtimeErrors": 0,
+    "elapsedMilliseconds": 3199
+  },
+  {
+    "engine": "chromium",
+    "width": 375,
+    "theme": "light",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "mode": "after",
+    "downloads": [
+      {
+        "label": "recorded",
+        "file": "chromium-375-recorded.json",
+        "sha256": "6825a633fe0f4a7bc670bba477b98e39d30e8d7d7bc2fe221dc1787335be42ef",
+        "bytes": 96773
+      },
+      {
+        "label": "filtered-offline",
+        "file": "chromium-375-filtered-offline.json",
+        "sha256": "257220695744c47f41e0975f6e53c0708dc3a5e0cbe5f514e5487e38de133af5",
+        "bytes": 96755
+      },
+      {
+        "label": "historical-offline",
+        "file": "chromium-375-historical-offline.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "invalid-range-retained",
+        "file": "chromium-375-invalid-range-retained.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "whole-history-offline",
+        "file": "chromium-375-whole-history-offline.json",
+        "sha256": "def2ee1a3569d020d66ad9db0d4d93eb82eba1ca20ee1a1feb29c19f2a348c73",
+        "bytes": 220761
+      },
+      {
+        "label": "native-controls",
+        "file": "chromium-375-native-controls.json",
+        "sha256": "64be0983c8caccc1372e18aa1122c76df3e67da03efdb609d67d427b4c476c49",
+        "bytes": 13554
+      },
+      {
+        "label": "overlap-outside-groups",
+        "file": "chromium-375-overlap-outside-groups.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      },
+      {
+        "label": "controls-offline",
+        "file": "chromium-375-controls-offline.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      }
+    ],
+    "interactions": [
+      "real native example",
+      "time order",
+      "exact reset members",
+      "raw timestamp and absent pause",
+      "saved zero duration",
+      "timing-method and theme preservation",
+      "offline filtered and complete exports",
+      "historical cohorts",
+      "invalid range retains report",
+      "native writer pauses, missing end and reversed clocks",
+      "overlap witness outside both groups",
+      "upload provenance unknown"
+    ],
+    "axeViolations": 0,
+    "externalRequests": 0,
+    "runtimeErrors": 0,
+    "elapsedMilliseconds": 2820
+  },
+  {
+    "engine": "firefox",
+    "width": 1440,
+    "theme": "light",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "mode": "after",
+    "downloads": [
+      {
+        "label": "recorded",
+        "file": "firefox-1440-recorded.json",
+        "sha256": "6825a633fe0f4a7bc670bba477b98e39d30e8d7d7bc2fe221dc1787335be42ef",
+        "bytes": 96773
+      },
+      {
+        "label": "filtered-offline",
+        "file": "firefox-1440-filtered-offline.json",
+        "sha256": "257220695744c47f41e0975f6e53c0708dc3a5e0cbe5f514e5487e38de133af5",
+        "bytes": 96755
+      },
+      {
+        "label": "historical-offline",
+        "file": "firefox-1440-historical-offline.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "invalid-range-retained",
+        "file": "firefox-1440-invalid-range-retained.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "whole-history-offline",
+        "file": "firefox-1440-whole-history-offline.json",
+        "sha256": "def2ee1a3569d020d66ad9db0d4d93eb82eba1ca20ee1a1feb29c19f2a348c73",
+        "bytes": 220761
+      },
+      {
+        "label": "native-controls",
+        "file": "firefox-1440-native-controls.json",
+        "sha256": "64be0983c8caccc1372e18aa1122c76df3e67da03efdb609d67d427b4c476c49",
+        "bytes": 13554
+      },
+      {
+        "label": "overlap-outside-groups",
+        "file": "firefox-1440-overlap-outside-groups.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      },
+      {
+        "label": "controls-offline",
+        "file": "firefox-1440-controls-offline.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      }
+    ],
+    "interactions": [
+      "real native example",
+      "time order",
+      "exact reset members",
+      "raw timestamp and absent pause",
+      "saved zero duration",
+      "timing-method and theme preservation",
+      "offline filtered and complete exports",
+      "historical cohorts",
+      "invalid range retains report",
+      "native writer pauses, missing end and reversed clocks",
+      "overlap witness outside both groups",
+      "upload provenance unknown"
+    ],
+    "axeViolations": 0,
+    "externalRequests": 0,
+    "runtimeErrors": 0,
+    "elapsedMilliseconds": 3962
+  },
+  {
+    "engine": "firefox",
+    "width": 375,
+    "theme": "dark",
+    "url": "https://antonsoo.github.io/splitscope/",
+    "mode": "after",
+    "downloads": [
+      {
+        "label": "recorded",
+        "file": "firefox-375-recorded.json",
+        "sha256": "6825a633fe0f4a7bc670bba477b98e39d30e8d7d7bc2fe221dc1787335be42ef",
+        "bytes": 96773
+      },
+      {
+        "label": "filtered-offline",
+        "file": "firefox-375-filtered-offline.json",
+        "sha256": "257220695744c47f41e0975f6e53c0708dc3a5e0cbe5f514e5487e38de133af5",
+        "bytes": 96755
+      },
+      {
+        "label": "historical-offline",
+        "file": "firefox-375-historical-offline.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "invalid-range-retained",
+        "file": "firefox-375-invalid-range-retained.json",
+        "sha256": "e8ea6c8a6bead0034bac1da15d602127115cd8c9e6cbd0479edf386523d0fddf",
+        "bytes": 56271
+      },
+      {
+        "label": "whole-history-offline",
+        "file": "firefox-375-whole-history-offline.json",
+        "sha256": "def2ee1a3569d020d66ad9db0d4d93eb82eba1ca20ee1a1feb29c19f2a348c73",
+        "bytes": 220761
+      },
+      {
+        "label": "native-controls",
+        "file": "firefox-375-native-controls.json",
+        "sha256": "64be0983c8caccc1372e18aa1122c76df3e67da03efdb609d67d427b4c476c49",
+        "bytes": 13554
+      },
+      {
+        "label": "overlap-outside-groups",
+        "file": "firefox-375-overlap-outside-groups.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      },
+      {
+        "label": "controls-offline",
+        "file": "firefox-375-controls-offline.json",
+        "sha256": "fec08d887223c67b9a4075c28616fbd7a3439929a4ec6b78289cf4b7274c5dd1",
+        "bytes": 9124
+      }
+    ],
+    "interactions": [
+      "real native example",
+      "time order",
+      "exact reset members",
+      "raw timestamp and absent pause",
+      "saved zero duration",
+      "timing-method and theme preservation",
+      "offline filtered and complete exports",
+      "historical cohorts",
+      "invalid range retains report",
+      "native writer pauses, missing end and reversed clocks",
+      "overlap witness outside both groups",
+      "upload provenance unknown"
+    ],
+    "screenshot": "recorded-phone.png",
+    "axeViolations": 0,
+    "externalRequests": 0,
+    "runtimeErrors": 0,
+    "elapsedMilliseconds": 4070
+  }
+]

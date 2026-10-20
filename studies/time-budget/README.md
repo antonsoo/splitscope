@@ -132,3 +132,17 @@ The browser checker accepts a public base URL and a `before` mode for the
 original UI. Input hashes and the retained native source remain the authority;
 neither a matching version number nor a successful build establishes which
 bytes a hosted page serves. No registry release or tag is created by this study.
+
+## Publication
+
+The source is pushed and the existing GitHub Pages site serves the new build.
+All 20 canonical static files match the clean Node 24 artifact, with root/index
+responses checked before and after the inventory. The live site passes the same
+four-profile study: 32 actual JSON downloads, native data and clock controls,
+offline interactions and zero observed accessibility, runtime or off-origin
+request failures. Its two captured views match the inspected local screenshots
+byte for byte. Thirty-six changed files at immutable source `1b8dd7c` also match
+the public Git responses. [Publication boundaries](results/publication.json),
+[static bytes](results/hosted-after.json), [live interactions](results/public-browser.json)
+and [source bytes](results/source-publication.json) are retained separately.
+No registry release or tag accompanies this publication.

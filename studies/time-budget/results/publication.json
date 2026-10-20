@@ -1,0 +1,27 @@
+{
+  "checkedAtUtc": "2026-10-20T08:19:33.973593+00:00",
+  "sourceHead": "1b8dd7c5be61dc017c55423f863a184cd966f590",
+  "artifactRuntimeSource": "ead059941916073f4aff8d1c3df47784a2c5dcec",
+  "pagesHead": "3239699ec8ebd48396acf20851dfbf78bd448b67",
+  "pagesParent": "fb235031f72932456d5a229d5bd03b8f6d4a1828",
+  "url": "https://antonsoo.github.io/splitscope/",
+  "canonicalFilesVerified": 20,
+  "immutableChangedSourceFilesVerified": 36,
+  "liveBrowserProfiles": 4,
+  "liveJsonDownloadsVerified": 32,
+  "screenshots": [
+    {
+      "file": "recorded-desktop.png",
+      "sha256": "f4584500a8196abb89ada88bfe3a02b9ac2081c9c7dd9215ad422700bc73eb9b",
+      "matchesInspectedLocalScreenshot": true
+    },
+    {
+      "file": "recorded-phone.png",
+      "sha256": "a1edcd60a04418549d9440f5efcde3115fb3eda3e47e4329c11b7bd5eb45dc10",
+      "matchesInspectedLocalScreenshot": true
+    }
+  ],
+  "registryPublication": false,
+  "tagsCreated": false,
+  "scope": "Source bytes, static bytes and browser observations are separate receipts; no claim of hosted extra-file absence, CI execution or registry release."
+}
