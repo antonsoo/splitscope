@@ -3,7 +3,7 @@
   "version": "0.2.4",
   "description": "Local LiveSplit history review: inspectable resets, elapsed attempt budgets, segment consistency, and hypothetical best-time routes.",
   "type": "module",
-  "author": "Anton Soloviev",
+  "author": "Anthony Mercer",
   "license": "MIT",
   "engines": {
     "node": ">=20"
