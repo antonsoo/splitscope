@@ -14,7 +14,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache")
-UA = "splitscope-study (read-only research; contact anton@praviel.com)"
+UA = "splitscope-study (read-only research; contact anthony@praviel.com)"
 
 REPOS = [
     "AmenAnthem/speedrun-livesplit-splits",
