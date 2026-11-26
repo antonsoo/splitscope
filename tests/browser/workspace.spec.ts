@@ -46,6 +46,9 @@ test.afterEach(async ({ page }) => {
 test("intake and both sample workspaces are accessible in both themes and widths", async ({
   page,
 }) => {
+  // Nine axe scans and two sample loads: about 34 s alone in Firefox, which two parallel
+  // workers on a busy machine push past the 45 s default.
+  test.slow();
   await scan(page);
   for (const label of ["Load sample (450 attempts)", "Load sample (fresh splits, 10 attempts)"]) {
     await page.getByRole("button", { name: label, exact: true }).click();
